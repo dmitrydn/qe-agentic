@@ -1,0 +1,143 @@
+{
+  "accuracy": 1,
+  "correct": 16,
+  "total": 16,
+  "matrix": {
+    "testable": {
+      "testable": 5,
+      "needs_clarification": 0,
+      "untestable": 0
+    },
+    "needs_clarification": {
+      "testable": 0,
+      "needs_clarification": 3,
+      "untestable": 0
+    },
+    "untestable": {
+      "testable": 0,
+      "needs_clarification": 0,
+      "untestable": 8
+    }
+  },
+  "misclassifiedIds": [],
+  "cases": [
+    {
+      "id": "good-users-001",
+      "expectedVerdict": "testable",
+      "predicted": "testable",
+      "score": 1
+    },
+    {
+      "id": "good-bankaccounts-001",
+      "expectedVerdict": "testable",
+      "predicted": "testable",
+      "score": 1
+    },
+    {
+      "id": "ambiguous-link-expiry",
+      "expectedVerdict": "needs_clarification",
+      "predicted": "needs_clarification",
+      "score": 0.8333333333333334
+    },
+    {
+      "id": "ambiguous-bulk-export-large",
+      "expectedVerdict": "needs_clarification",
+      "predicted": "needs_clarification",
+      "score": 0.5
+    },
+    {
+      "id": "no-oracle-form-submit",
+      "expectedVerdict": "untestable",
+      "predicted": "untestable",
+      "score": 0.75
+    },
+    {
+      "id": "no-interface-loyalty-points",
+      "expectedVerdict": "untestable",
+      "predicted": "untestable",
+      "score": 0.75
+    },
+    {
+      "id": "epic-payments-module",
+      "expectedVerdict": "untestable",
+      "predicted": "untestable",
+      "score": 0.25
+    },
+    {
+      "id": "clear-create-bankaccount",
+      "expectedVerdict": "testable",
+      "predicted": "testable",
+      "score": 1
+    },
+    {
+      "id": "clear-list-users",
+      "expectedVerdict": "testable",
+      "predicted": "testable",
+      "score": 1
+    },
+    {
+      "id": "borderline-single-transaction",
+      "expectedVerdict": "testable",
+      "predicted": "testable",
+      "score": 1
+    },
+    {
+      "id": "ambiguous-fast-export",
+      "expectedVerdict": "untestable",
+      "predicted": "untestable",
+      "score": 0.6666666666666666
+    },
+    {
+      "id": "missing-actor-update",
+      "expectedVerdict": "needs_clarification",
+      "predicted": "needs_clarification",
+      "score": 0.8333333333333334
+    },
+    {
+      "id": "contradiction-conflicting-status",
+      "expectedVerdict": "untestable",
+      "predicted": "untestable",
+      "score": 0.5
+    },
+    {
+      "id": "no-oracle-navigate",
+      "expectedVerdict": "untestable",
+      "predicted": "untestable",
+      "score": 0.8333333333333334
+    },
+    {
+      "id": "no-interface-nightly-report",
+      "expectedVerdict": "untestable",
+      "predicted": "untestable",
+      "score": 0.5
+    },
+    {
+      "id": "epic-security",
+      "expectedVerdict": "untestable",
+      "predicted": "untestable",
+      "score": 0.16666666666666666
+    }
+  ],
+  "cost": {
+    "calls": 16,
+    "promptTokens": 23331,
+    "completionTokens": 7026,
+    "pricing": {
+      "inputUsdPerMTok": 3,
+      "outputUsdPerMTok": 15
+    },
+    "inputUsd": 0.069993,
+    "outputUsd": 0.10539,
+    "totalUsd": 0.175383,
+    "byPhase": {
+      "assess": {
+        "calls": 16,
+        "promptTokens": 23331,
+        "completionTokens": 7026,
+        "inputUsd": 0.069993,
+        "outputUsd": 0.10539,
+        "totalUsd": 0.175383
+      }
+    }
+  }
+}

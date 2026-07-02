@@ -1,0 +1,23 @@
+{
+  "generatedAt": "2026-06-26T15:09:03.735Z",
+  "model": "anthropic/claude-sonnet-4.5",
+  "n": 3,
+  "requirements": {
+    "total": 44,
+    "covered": 38
+  },
+  "tests": {
+    "generated": 132,
+    "passed": 70,
+    "failed": 24,
+    "quarantinedFlaky": 38,
+    "errored": 0
+  },
+  "falsePositiveRate": 0.18181818181818182,
+  "traceability": {
+    "orphanTestIds": []
+  },
+  "errors": [],
+  "defects": [],
+  "catchRate": null
+}

@@ -1,0 +1,16 @@
+{
+  "name": "agentic-qe-sandbox",
+  "private": true,
+  "type": "module",
+  "description": "App-agnostic agentic-QE sandbox: one containerized live runtime (Cypress RWA) + two decoupled requirements formats (realworld-spec, Cypress RWA tests-as-requirements).",
+  "scripts": {
+    "build-requirements": "node requirements/build.js",
+    "check:boundaries": "node tools/check-boundaries.js",
+    "workflow": "node run-workflow.js",
+    "test": "npm run check:boundaries && node --test",
+    "eval": "node eval/run-eval.js"
+  },
+  "dependencies": {
+    "ajv": "^8.20.0"
+  }
+}

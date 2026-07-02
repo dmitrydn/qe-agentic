@@ -1,0 +1,6094 @@
+{
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "nodes": [
+    {
+      "id": "app",
+      "label": "app.ts",
+      "file_type": "code",
+      "source_file": "app.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_corsoption",
+      "label": "corsOption",
+      "file_type": "code",
+      "source_file": "app.ts",
+      "source_location": "L31",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_schema",
+      "label": "schema",
+      "file_type": "code",
+      "source_file": "app.ts",
+      "source_location": "L36",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_schemawithresolvers",
+      "label": "schemaWithResolvers",
+      "file_type": "code",
+      "source_file": "app.ts",
+      "source_location": "L40",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_app",
+      "label": "app",
+      "file_type": "code",
+      "source_file": "app.ts",
+      "source_location": "L45",
+      "_origin": "ast"
+    },
+    {
+      "id": "auth",
+      "label": "auth.ts",
+      "file_type": "code",
+      "source_file": "auth.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "auth_router",
+      "label": "router",
+      "file_type": "code",
+      "source_file": "auth.ts",
+      "source_location": "L8",
+      "_origin": "ast"
+    },
+    {
+      "id": "bankaccount_routes",
+      "label": "bankaccount-routes.ts",
+      "file_type": "code",
+      "source_file": "bankaccount-routes.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "bankaccount_routes_router",
+      "label": "router",
+      "file_type": "code",
+      "source_file": "bankaccount-routes.ts",
+      "source_location": "L13",
+      "_origin": "ast"
+    },
+    {
+      "id": "banktransfer_routes",
+      "label": "banktransfer-routes.ts",
+      "file_type": "code",
+      "source_file": "banktransfer-routes.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "banktransfer_routes_router",
+      "label": "router",
+      "file_type": "code",
+      "source_file": "banktransfer-routes.ts",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "comment_routes",
+      "label": "comment-routes.ts",
+      "file_type": "code",
+      "source_file": "comment-routes.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "comment_routes_router",
+      "label": "router",
+      "file_type": "code",
+      "source_file": "comment-routes.ts",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "contact_routes",
+      "label": "contact-routes.ts",
+      "file_type": "code",
+      "source_file": "contact-routes.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "contact_routes_router",
+      "label": "router",
+      "file_type": "code",
+      "source_file": "contact-routes.ts",
+      "source_location": "L8",
+      "_origin": "ast"
+    },
+    {
+      "id": "database",
+      "label": "database.ts",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_tdatabase",
+      "label": "TDatabase",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L69",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_databasefile",
+      "label": "databaseFile",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L89",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_adapter",
+      "label": "adapter",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L90",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_db",
+      "label": "db",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L92",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_seeddatabase",
+      "label": "seedDatabase()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L94",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getallusers",
+      "label": "getAllUsers()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L104",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getallpublictransactions",
+      "label": "getAllPublicTransactions()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L106",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getallforentity",
+      "label": "getAllForEntity()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L109",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getallby",
+      "label": "getAllBy()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L111",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getby",
+      "label": "getBy()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L121",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getallbyobj",
+      "label": "getAllByObj()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L131",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_cleansearchquery",
+      "label": "cleanSearchQuery()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L142",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_setupsearch",
+      "label": "setupSearch",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L144",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_performsearch",
+      "label": "performSearch()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L149",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_searchusers",
+      "label": "searchUsers()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L156",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_removeuserfromresults",
+      "label": "removeUserFromResults()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L167",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getuserby",
+      "label": "getUserBy()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L173",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getuserid",
+      "label": "getUserId()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L174",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getuserbyid",
+      "label": "getUserById()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L175",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getuserbyusername",
+      "label": "getUserByUsername()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L176",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_createuser",
+      "label": "createUser()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L178",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_saveuser",
+      "label": "saveUser()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L200",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_updateuserbyid",
+      "label": "updateUserById()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L204",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getcontactby",
+      "label": "getContactBy()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L211",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getcontactsby",
+      "label": "getContactsBy()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L213",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getcontactsbyusername",
+      "label": "getContactsByUsername()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L215",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getcontactsbyuserid",
+      "label": "getContactsByUserId()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L218",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_createcontact",
+      "label": "createContact()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L220",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_removecontactbyid",
+      "label": "removeContactById()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L227",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_createcontactforuser",
+      "label": "createContactForUser()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L233",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getbankaccountby",
+      "label": "getBankAccountBy()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L251",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getbankaccountbyid",
+      "label": "getBankAccountById()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L253",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getbankaccountsby",
+      "label": "getBankAccountsBy()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L255",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_createbankaccount",
+      "label": "createBankAccount()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L258",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_createbankaccountforuser",
+      "label": "createBankAccountForUser()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L265",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_removebankaccountbyid",
+      "label": "removeBankAccountById()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L285",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getbanktransferby",
+      "label": "getBankTransferBy()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L297",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getbanktransfersby",
+      "label": "getBankTransfersBy()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L300",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getbanktransfersbyuserid",
+      "label": "getBankTransfersByUserId()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L303",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_createbanktransfer",
+      "label": "createBankTransfer()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L306",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_savebanktransfer",
+      "label": "saveBankTransfer()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L320",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_gettransactionby",
+      "label": "getTransactionBy()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L329",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_gettransactionbyid",
+      "label": "getTransactionById()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L331",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_gettransactionsbyobj",
+      "label": "getTransactionsByObj()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L333",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_gettransactionbyidforapi",
+      "label": "getTransactionByIdForApi()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L335",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_gettransactionsforuserforapi",
+      "label": "getTransactionsForUserForApi()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L338",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getfullnameforuser",
+      "label": "getFullNameForUser()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L341",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_formattransactionforapiresponse",
+      "label": "formatTransactionForApiResponse()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L343",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_formattransactionsforapiresponse",
+      "label": "formatTransactionsForApiResponse()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L365",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getalltransactionsforuserbyobj",
+      "label": "getAllTransactionsForUserByObj",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L374",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_transactionswithinamountrange",
+      "label": "transactionsWithinAmountRange",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L402",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_transactionswithindaterange",
+      "label": "transactionsWithinDateRange",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L415",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_gettransactionsforuserbyobj",
+      "label": "getTransactionsForUserByObj",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L432",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getcontactidsforuser",
+      "label": "getContactIdsForUser()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L436",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_gettransactionsforusercontacts",
+      "label": "getTransactionsForUserContacts()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L439",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_gettransactionids",
+      "label": "getTransactionIds()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L448",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getcontactstransactionids",
+      "label": "getContactsTransactionIds()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L450",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_noncontactpublictransactions",
+      "label": "nonContactPublicTransactions()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L453",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getnoncontactpublictransactionsforapi",
+      "label": "getNonContactPublicTransactionsForApi()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L461",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getpublictransactionsdefaultsort",
+      "label": "getPublicTransactionsDefaultSort()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L464",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getpublictransactionsbyquery",
+      "label": "getPublicTransactionsByQuery()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L469",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_resetpayappbalance",
+      "label": "resetPayAppBalance",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L489",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_debitpayappbalance",
+      "label": "debitPayAppBalance()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L491",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_creditpayappbalance",
+      "label": "creditPayAppBalance()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L505",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_createbanktransferwithdrawal",
+      "label": "createBankTransferWithdrawal",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L509",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_savepayappbalance",
+      "label": "savePayAppBalance",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L520",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_createtransaction",
+      "label": "createTransaction()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L524",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_savetransaction",
+      "label": "saveTransaction()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L571",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_updatetransactionbyid",
+      "label": "updateTransactionById()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L578",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getlikeby",
+      "label": "getLikeBy()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L602",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getlikesbyobj",
+      "label": "getLikesByObj()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L603",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getlikebyid",
+      "label": "getLikeById()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L605",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getlikesbytransactionid",
+      "label": "getLikesByTransactionId()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L606",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_createlike",
+      "label": "createLike()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L608",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_createlikes",
+      "label": "createLikes()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L622",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_savelike",
+      "label": "saveLike()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L638",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getcommentby",
+      "label": "getCommentBy()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L647",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getcommentsbyobj",
+      "label": "getCommentsByObj()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L648",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getcommentbyid",
+      "label": "getCommentById()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L650",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getcommentsbytransactionid",
+      "label": "getCommentsByTransactionId()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L651",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_createcomment",
+      "label": "createComment()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L654",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_createcomments",
+      "label": "createComments()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L669",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_savecomment",
+      "label": "saveComment()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L685",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getnotificationby",
+      "label": "getNotificationBy()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L694",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getnotificationsbyobj",
+      "label": "getNotificationsByObj()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L697",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getunreadnotificationsbyuserid",
+      "label": "getUnreadNotificationsByUserId()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L700",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_createpaymentnotification",
+      "label": "createPaymentNotification()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L703",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_createlikenotification",
+      "label": "createLikeNotification()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L723",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_createcommentnotification",
+      "label": "createCommentNotification()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L743",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_savenotification",
+      "label": "saveNotification()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L763",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_createnotifications",
+      "label": "createNotifications()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L767",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_updatenotificationbyid",
+      "label": "updateNotificationById()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L781",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_formatnotificationforapiresponse",
+      "label": "formatNotificationForApiResponse()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L791",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_formatnotificationsforapiresponse",
+      "label": "formatNotificationsForApiResponse()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L817",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getrandomuser",
+      "label": "getRandomUser()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L828",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getallcontacts",
+      "label": "getAllContacts()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L834",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getalltransactions",
+      "label": "getAllTransactions()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L837",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getbankaccountsbyuserid",
+      "label": "getBankAccountsByUserId()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L840",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getnotificationbyid",
+      "label": "getNotificationById()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L843",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getnotificationsbyuserid",
+      "label": "getNotificationsByUserId()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L846",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_getbanktransferbytransactionid",
+      "label": "getBankTransferByTransactionId()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L849",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_gettransactionsby",
+      "label": "getTransactionsBy()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L853",
+      "_origin": "ast"
+    },
+    {
+      "id": "database_gettransactionsbyuserid",
+      "label": "getTransactionsByUserId()",
+      "file_type": "code",
+      "source_file": "database.ts",
+      "source_location": "L857",
+      "_origin": "ast"
+    },
+    {
+      "id": "gql_playground_routes",
+      "label": "gql-playground-routes.ts",
+      "file_type": "code",
+      "source_file": "gql-playground-routes.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "gql_playground_routes_router",
+      "label": "router",
+      "file_type": "code",
+      "source_file": "gql-playground-routes.ts",
+      "source_location": "L4",
+      "_origin": "ast"
+    },
+    {
+      "id": "graphql_resolvers_mutation",
+      "label": "Mutation.ts",
+      "file_type": "code",
+      "source_file": "graphql/resolvers/Mutation.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "graphql_resolvers_mutation_mutation",
+      "label": "Mutation",
+      "file_type": "code",
+      "source_file": "graphql/resolvers/Mutation.ts",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "graphql_resolvers_query",
+      "label": "Query.ts",
+      "file_type": "code",
+      "source_file": "graphql/resolvers/Query.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "graphql_resolvers_query_query",
+      "label": "Query",
+      "file_type": "code",
+      "source_file": "graphql/resolvers/Query.ts",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "graphql_resolvers_index",
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "graphql/resolvers/index.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "graphql_resolvers_index_items",
+      "label": "items",
+      "file_type": "code",
+      "source_file": "graphql/resolvers/index.ts",
+      "source_location": "L4",
+      "_origin": "ast"
+    },
+    {
+      "id": "helpers",
+      "label": "helpers.ts",
+      "file_type": "code",
+      "source_file": "helpers.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "helpers_auth0jwtconfig",
+      "label": "auth0JwtConfig",
+      "file_type": "code",
+      "source_file": "helpers.ts",
+      "source_location": "L15",
+      "_origin": "ast"
+    },
+    {
+      "id": "helpers_oktajwtverifier",
+      "label": "oktaJwtVerifier",
+      "file_type": "code",
+      "source_file": "helpers.ts",
+      "source_location": "L30",
+      "_origin": "ast"
+    },
+    {
+      "id": "helpers_googlejwtconfig",
+      "label": "googleJwtConfig",
+      "file_type": "code",
+      "source_file": "helpers.ts",
+      "source_location": "L38",
+      "_origin": "ast"
+    },
+    {
+      "id": "helpers_verifyoktatoken",
+      "label": "verifyOktaToken()",
+      "file_type": "code",
+      "source_file": "helpers.ts",
+      "source_location": "L53",
+      "_origin": "ast"
+    },
+    {
+      "id": "helpers_awscognitojwtconfig",
+      "label": "awsCognitoJwtConfig",
+      "file_type": "code",
+      "source_file": "helpers.ts",
+      "source_location": "L85",
+      "_origin": "ast"
+    },
+    {
+      "id": "helpers_checkauth0jwt",
+      "label": "checkAuth0Jwt",
+      "file_type": "code",
+      "source_file": "helpers.ts",
+      "source_location": "L94",
+      "_origin": "ast"
+    },
+    {
+      "id": "helpers_checkcognitojwt",
+      "label": "checkCognitoJwt",
+      "file_type": "code",
+      "source_file": "helpers.ts",
+      "source_location": "L95",
+      "_origin": "ast"
+    },
+    {
+      "id": "helpers_checkgooglejwt",
+      "label": "checkGoogleJwt",
+      "file_type": "code",
+      "source_file": "helpers.ts",
+      "source_location": "L96",
+      "_origin": "ast"
+    },
+    {
+      "id": "helpers_ensureauthenticated",
+      "label": "ensureAuthenticated()",
+      "file_type": "code",
+      "source_file": "helpers.ts",
+      "source_location": "L98",
+      "_origin": "ast"
+    },
+    {
+      "id": "helpers_validatemiddleware",
+      "label": "validateMiddleware()",
+      "file_type": "code",
+      "source_file": "helpers.ts",
+      "source_location": "L115",
+      "_origin": "ast"
+    },
+    {
+      "id": "like_routes",
+      "label": "like-routes.ts",
+      "file_type": "code",
+      "source_file": "like-routes.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "like_routes_router",
+      "label": "router",
+      "file_type": "code",
+      "source_file": "like-routes.ts",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "notification_routes",
+      "label": "notification-routes.ts",
+      "file_type": "code",
+      "source_file": "notification-routes.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "notification_routes_router",
+      "label": "router",
+      "file_type": "code",
+      "source_file": "notification-routes.ts",
+      "source_location": "L15",
+      "_origin": "ast"
+    },
+    {
+      "id": "testdata_routes",
+      "label": "testdata-routes.ts",
+      "file_type": "code",
+      "source_file": "testdata-routes.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "testdata_routes_router",
+      "label": "router",
+      "file_type": "code",
+      "source_file": "testdata-routes.ts",
+      "source_location": "L8",
+      "_origin": "ast"
+    },
+    {
+      "id": "transaction_routes",
+      "label": "transaction-routes.ts",
+      "file_type": "code",
+      "source_file": "transaction-routes.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "transaction_routes_router",
+      "label": "router",
+      "file_type": "code",
+      "source_file": "transaction-routes.ts",
+      "source_location": "L25",
+      "_origin": "ast"
+    },
+    {
+      "id": "types",
+      "label": "types.ts",
+      "file_type": "code",
+      "source_file": "types.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "types_user",
+      "label": "User",
+      "file_type": "code",
+      "source_file": "types.ts",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
+      "id": "user_routes",
+      "label": "user-routes.ts",
+      "file_type": "code",
+      "source_file": "user-routes.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "user_routes_router",
+      "label": "router",
+      "file_type": "code",
+      "source_file": "user-routes.ts",
+      "source_location": "L23",
+      "_origin": "ast"
+    },
+    {
+      "id": "validators",
+      "label": "validators.ts",
+      "file_type": "code",
+      "source_file": "validators.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "validators_transactionstatusvalues",
+      "label": "TransactionStatusValues",
+      "file_type": "code",
+      "source_file": "validators.ts",
+      "source_location": "L11",
+      "_origin": "ast"
+    },
+    {
+      "id": "validators_requeststatusvalues",
+      "label": "RequestStatusValues",
+      "file_type": "code",
+      "source_file": "validators.ts",
+      "source_location": "L12",
+      "_origin": "ast"
+    },
+    {
+      "id": "validators_defaultprivacylevelvalues",
+      "label": "DefaultPrivacyLevelValues",
+      "file_type": "code",
+      "source_file": "validators.ts",
+      "source_location": "L13",
+      "_origin": "ast"
+    },
+    {
+      "id": "validators_notificationstypevalues",
+      "label": "NotificationsTypeValues",
+      "file_type": "code",
+      "source_file": "validators.ts",
+      "source_location": "L14",
+      "_origin": "ast"
+    },
+    {
+      "id": "validators_isshortid",
+      "label": "isShortId()",
+      "file_type": "code",
+      "source_file": "validators.ts",
+      "source_location": "L18",
+      "_origin": "ast"
+    },
+    {
+      "id": "validators_shortidvalidation",
+      "label": "shortIdValidation()",
+      "file_type": "code",
+      "source_file": "validators.ts",
+      "source_location": "L20",
+      "_origin": "ast"
+    },
+    {
+      "id": "validators_searchvalidation",
+      "label": "searchValidation",
+      "file_type": "code",
+      "source_file": "validators.ts",
+      "source_location": "L22",
+      "_origin": "ast"
+    },
+    {
+      "id": "validators_userfieldsvalidator",
+      "label": "userFieldsValidator",
+      "file_type": "code",
+      "source_file": "validators.ts",
+      "source_location": "L24",
+      "_origin": "ast"
+    },
+    {
+      "id": "validators_isbankaccountvalidator",
+      "label": "isBankAccountValidator",
+      "file_type": "code",
+      "source_file": "validators.ts",
+      "source_location": "L33",
+      "_origin": "ast"
+    },
+    {
+      "id": "validators_isuservalidator",
+      "label": "isUserValidator",
+      "file_type": "code",
+      "source_file": "validators.ts",
+      "source_location": "L39",
+      "_origin": "ast"
+    },
+    {
+      "id": "validators_sanitizetransactionstatus",
+      "label": "sanitizeTransactionStatus",
+      "file_type": "code",
+      "source_file": "validators.ts",
+      "source_location": "L53",
+      "_origin": "ast"
+    },
+    {
+      "id": "validators_sanitizerequeststatus",
+      "label": "sanitizeRequestStatus",
+      "file_type": "code",
+      "source_file": "validators.ts",
+      "source_location": "L62",
+      "_origin": "ast"
+    },
+    {
+      "id": "validators_istransactionqsvalidator",
+      "label": "isTransactionQSValidator",
+      "file_type": "code",
+      "source_file": "validators.ts",
+      "source_location": "L70",
+      "_origin": "ast"
+    },
+    {
+      "id": "validators_istransactionpayloadvalidator",
+      "label": "isTransactionPayloadValidator",
+      "file_type": "code",
+      "source_file": "validators.ts",
+      "source_location": "L81",
+      "_origin": "ast"
+    },
+    {
+      "id": "validators_istransactionpatchvalidator",
+      "label": "isTransactionPatchValidator",
+      "file_type": "code",
+      "source_file": "validators.ts",
+      "source_location": "L90",
+      "_origin": "ast"
+    },
+    {
+      "id": "validators_istransactionpublicqsvalidator",
+      "label": "isTransactionPublicQSValidator",
+      "file_type": "code",
+      "source_file": "validators.ts",
+      "source_location": "L92",
+      "_origin": "ast"
+    },
+    {
+      "id": "validators_iscommentvalidator",
+      "label": "isCommentValidator",
+      "file_type": "code",
+      "source_file": "validators.ts",
+      "source_location": "L96",
+      "_origin": "ast"
+    },
+    {
+      "id": "validators_isnotificationsbodyvalidator",
+      "label": "isNotificationsBodyValidator",
+      "file_type": "code",
+      "source_file": "validators.ts",
+      "source_location": "L98",
+      "_origin": "ast"
+    },
+    {
+      "id": "validators_isnotificationpatchvalidator",
+      "label": "isNotificationPatchValidator",
+      "file_type": "code",
+      "source_file": "validators.ts",
+      "source_location": "L103",
+      "_origin": "ast"
+    },
+    {
+      "id": "validators_isvalidentityvalidator",
+      "label": "isValidEntityValidator",
+      "file_type": "code",
+      "source_file": "validators.ts",
+      "source_location": "L105",
+      "_origin": "ast"
+    }
+  ],
+  "links": [
+    {
+      "source": "app",
+      "target": "express",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "path",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "morgan",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "passport",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "express_session",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "body_parser",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "cors",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "express_paginate",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "load",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "graphql_file_loader",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "schema",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "auth",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "user_routes",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "contact_routes",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "bankaccount_routes",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "gql_playground_routes",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "transaction_routes",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "like_routes",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "comment_routes",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "notification_routes",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "banktransfer_routes",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "testdata_routes",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "helpers",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "helpers_checkauth0jwt",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "helpers_verifyoktatoken",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "helpers_checkcognitojwt",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "helpers_checkgooglejwt",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "graphql_resolvers_index",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_utils_portutils_ts",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_utils_portutils_frontendport",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_utils_portutils_getbackendport",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_corsoption",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_schema",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_schemawithresolvers",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_app",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "auth",
+      "target": "bcryptjs",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "auth.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "auth",
+      "target": "passport",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "auth.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "auth",
+      "target": "express",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "auth.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "auth",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_user_ts",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "auth.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "auth",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_user_user",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "auth.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "auth",
+      "target": "database",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "auth.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "auth",
+      "target": "database_getuserby",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "auth.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "auth",
+      "target": "database_getuserbyid",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "auth.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "auth",
+      "target": "passport_local",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "auth.ts",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "auth",
+      "target": "auth_router",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "auth.ts",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "bankaccount_routes",
+      "target": "express",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bankaccount-routes.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "bankaccount_routes",
+      "target": "database",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bankaccount-routes.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "bankaccount_routes",
+      "target": "database_getbankaccountsbyuserid",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bankaccount-routes.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "bankaccount_routes",
+      "target": "database_getbankaccountbyid",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bankaccount-routes.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "bankaccount_routes",
+      "target": "database_createbankaccountforuser",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bankaccount-routes.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "bankaccount_routes",
+      "target": "database_removebankaccountbyid",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bankaccount-routes.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "bankaccount_routes",
+      "target": "helpers",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bankaccount-routes.ts",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "bankaccount_routes",
+      "target": "helpers_ensureauthenticated",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bankaccount-routes.ts",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "bankaccount_routes",
+      "target": "helpers_validatemiddleware",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bankaccount-routes.ts",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "bankaccount_routes",
+      "target": "validators",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bankaccount-routes.ts",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "bankaccount_routes",
+      "target": "validators_shortidvalidation",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bankaccount-routes.ts",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "bankaccount_routes",
+      "target": "validators_isbankaccountvalidator",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bankaccount-routes.ts",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "bankaccount_routes",
+      "target": "bankaccount_routes_router",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bankaccount-routes.ts",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "banktransfer_routes",
+      "target": "express",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "banktransfer-routes.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "banktransfer_routes",
+      "target": "database",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "banktransfer-routes.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "banktransfer_routes",
+      "target": "database_getbanktransfersbyuserid",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "banktransfer-routes.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "banktransfer_routes",
+      "target": "helpers",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "banktransfer-routes.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "banktransfer_routes",
+      "target": "helpers_ensureauthenticated",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "banktransfer-routes.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "banktransfer_routes",
+      "target": "banktransfer_routes_router",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "banktransfer-routes.ts",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "comment_routes",
+      "target": "express",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "comment-routes.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "comment_routes",
+      "target": "database",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "comment-routes.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "comment_routes",
+      "target": "database_getcommentsbytransactionid",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "comment-routes.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "comment_routes",
+      "target": "database_createcomments",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "comment-routes.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "comment_routes",
+      "target": "helpers",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "comment-routes.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "comment_routes",
+      "target": "helpers_ensureauthenticated",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "comment-routes.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "comment_routes",
+      "target": "helpers_validatemiddleware",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "comment-routes.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "comment_routes",
+      "target": "validators",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "comment-routes.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "comment_routes",
+      "target": "validators_shortidvalidation",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "comment-routes.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "comment_routes",
+      "target": "validators_iscommentvalidator",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "comment-routes.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "comment_routes",
+      "target": "comment_routes_router",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "comment-routes.ts",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "contact_routes",
+      "target": "express",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "contact-routes.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "contact_routes",
+      "target": "database",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "contact-routes.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "contact_routes",
+      "target": "database_getcontactsbyusername",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "contact-routes.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "contact_routes",
+      "target": "database_removecontactbyid",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "contact-routes.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "contact_routes",
+      "target": "database_createcontactforuser",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "contact-routes.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "contact_routes",
+      "target": "helpers",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "contact-routes.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "contact_routes",
+      "target": "helpers_ensureauthenticated",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "contact-routes.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "contact_routes",
+      "target": "helpers_validatemiddleware",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "contact-routes.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "contact_routes",
+      "target": "validators",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "contact-routes.ts",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "contact_routes",
+      "target": "validators_shortidvalidation",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "contact-routes.ts",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "contact_routes",
+      "target": "contact_routes_router",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "contact-routes.ts",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "path",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "bcryptjs",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "fs",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "uuid",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "fp",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "date_fns",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "lowdb",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "filesync",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "shortid",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_index_ts",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_index_bankaccount",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_index_transaction",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_index_user",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_index_contact",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_index_transactionstatus",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_index_transactionrequeststatus",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_index_like",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_index_comment",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_index_paymentnotification",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_index_paymentnotificationstatus",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_index_likenotification",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_index_commentnotification",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_index_notificationtype",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_index_notificationpayloadtype",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_index_notificationstype",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_index_transactionresponseitem",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_index_transactionpayload",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_index_banktransfer",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_index_banktransferpayload",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_index_banktransfertype",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_index_notificationresponseitem",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_index_transactionquerypayload",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_index_defaultprivacylevel",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "fuse_js",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L50",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_utils_transactionutils_ts",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_utils_transactionutils_ispayment",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_utils_transactionutils_gettransferamount",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_utils_transactionutils_hassufficientfunds",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_utils_transactionutils_getchargeamount",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_utils_transactionutils_hasdatequeryfields",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_utils_transactionutils_getdatequeryfields",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_utils_transactionutils_hasamountqueryfields",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_utils_transactionutils_getamountqueryfields",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_utils_transactionutils_getquerywithoutfilterfields",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_utils_transactionutils_getpayappcreditedamount",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_utils_transactionutils_isrequesttransaction",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_utils_transactionutils_formatfullname",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_utils_transactionutils_islikenotification",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_utils_transactionutils_iscommentnotification",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_db_schema_ts",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L67",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_db_schema_dbschema",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L67",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_tdatabase",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_databasefile",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L89",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_adapter",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L90",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_db",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L92",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_seeddatabase",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L94",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getallusers",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L104",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getallpublictransactions",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L106",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getallforentity",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L109",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getallby",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L111",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getby",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L121",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getallbyobj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L131",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_cleansearchquery",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L142",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_setupsearch",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L144",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_performsearch",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L149",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_searchusers",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L156",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_removeuserfromresults",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L167",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getuserby",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L173",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getuserid",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L174",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getuserbyid",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L175",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getuserbyusername",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L176",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_createuser",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L178",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_saveuser",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L200",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_updateuserbyid",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L204",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getcontactby",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L211",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getcontactsby",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L213",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getcontactsbyusername",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L215",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getcontactsbyuserid",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L218",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_createcontact",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L220",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_removecontactbyid",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L227",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_createcontactforuser",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L233",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getbankaccountby",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L251",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getbankaccountbyid",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L253",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getbankaccountsby",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L255",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_createbankaccount",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L258",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_createbankaccountforuser",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L265",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_removebankaccountbyid",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L285",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getbanktransferby",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L297",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getbanktransfersby",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L300",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getbanktransfersbyuserid",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L303",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_createbanktransfer",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L306",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_savebanktransfer",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L320",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_gettransactionby",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L329",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_gettransactionbyid",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L331",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_gettransactionsbyobj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L333",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_gettransactionbyidforapi",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L335",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_gettransactionsforuserforapi",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L338",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getfullnameforuser",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L341",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_formattransactionforapiresponse",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L343",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_formattransactionsforapiresponse",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L365",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getalltransactionsforuserbyobj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L374",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_transactionswithinamountrange",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L402",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_transactionswithindaterange",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L415",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_gettransactionsforuserbyobj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L432",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getcontactidsforuser",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L436",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_gettransactionsforusercontacts",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L439",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_gettransactionids",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L448",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getcontactstransactionids",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L450",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_noncontactpublictransactions",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L453",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getnoncontactpublictransactionsforapi",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L461",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getpublictransactionsdefaultsort",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L464",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getpublictransactionsbyquery",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L469",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_resetpayappbalance",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L489",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_debitpayappbalance",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L491",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_creditpayappbalance",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L505",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_createbanktransferwithdrawal",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L509",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_savepayappbalance",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L520",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_createtransaction",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L524",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_savetransaction",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L571",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_updatetransactionbyid",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L578",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getlikeby",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L602",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getlikesbyobj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L603",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getlikebyid",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L605",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getlikesbytransactionid",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L606",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_createlike",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L608",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_createlikes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L622",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_savelike",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L638",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getcommentby",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L647",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getcommentsbyobj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L648",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getcommentbyid",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L650",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getcommentsbytransactionid",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L651",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_createcomment",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L654",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_createcomments",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L669",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_savecomment",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L685",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getnotificationby",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L694",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getnotificationsbyobj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L697",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getunreadnotificationsbyuserid",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L700",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_createpaymentnotification",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L703",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_createlikenotification",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L723",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_createcommentnotification",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L743",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_savenotification",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L763",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_createnotifications",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L767",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_updatenotificationbyid",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L781",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_formatnotificationforapiresponse",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L791",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_formatnotificationsforapiresponse",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L817",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getrandomuser",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L828",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getallcontacts",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L834",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getalltransactions",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L837",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getbankaccountsbyuserid",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L840",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getnotificationbyid",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L843",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getnotificationsbyuserid",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L846",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_getbanktransferbytransactionid",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L849",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_gettransactionsby",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L853",
+      "weight": 1.0
+    },
+    {
+      "source": "database",
+      "target": "database_gettransactionsbyuserid",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L857",
+      "weight": 1.0
+    },
+    {
+      "source": "database_performsearch",
+      "target": "database_setupsearch",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L152",
+      "weight": 1.0
+    },
+    {
+      "source": "database_searchusers",
+      "target": "database_getallusers",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L157",
+      "weight": 1.0
+    },
+    {
+      "source": "database_searchusers",
+      "target": "database_performsearch",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L158",
+      "weight": 1.0
+    },
+    {
+      "source": "database_getuserby",
+      "target": "database_getby",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L173",
+      "weight": 1.0
+    },
+    {
+      "source": "database_getuserbyid",
+      "target": "database_getuserby",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L175",
+      "weight": 1.0
+    },
+    {
+      "source": "database_getuserbyusername",
+      "target": "database_getuserby",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L176",
+      "weight": 1.0
+    },
+    {
+      "source": "database_createuser",
+      "target": "database_saveuser",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L196",
+      "weight": 1.0
+    },
+    {
+      "source": "database_updateuserbyid",
+      "target": "database_getuserbyid",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L205",
+      "weight": 1.0
+    },
+    {
+      "source": "database_getcontactby",
+      "target": "database_getby",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L211",
+      "weight": 1.0
+    },
+    {
+      "source": "database_getcontactsby",
+      "target": "database_getallby",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L213",
+      "weight": 1.0
+    },
+    {
+      "source": "database_getcontactsbyuserid",
+      "target": "database_getcontactsby",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L218",
+      "weight": 1.0
+    },
+    {
+      "source": "database_createcontact",
+      "target": "database_getcontactby",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L224",
+      "weight": 1.0
+    },
+    {
+      "source": "database_removecontactbyid",
+      "target": "database_getcontactby",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L228",
+      "weight": 1.0
+    },
+    {
+      "source": "database_createcontactforuser",
+      "target": "database_createcontact",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L245",
+      "weight": 1.0
+    },
+    {
+      "source": "database_getbankaccountby",
+      "target": "database_getby",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L251",
+      "weight": 1.0
+    },
+    {
+      "source": "database_getbankaccountbyid",
+      "target": "database_getbankaccountby",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L253",
+      "weight": 1.0
+    },
+    {
+      "source": "database_getbankaccountsby",
+      "target": "database_getallby",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L256",
+      "weight": 1.0
+    },
+    {
+      "source": "database_createbankaccount",
+      "target": "database_getbankaccountby",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L262",
+      "weight": 1.0
+    },
+    {
+      "source": "database_createbankaccountforuser",
+      "target": "database_createbankaccount",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L280",
+      "weight": 1.0
+    },
+    {
+      "source": "database_getbanktransferby",
+      "target": "database_getby",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L298",
+      "weight": 1.0
+    },
+    {
+      "source": "database_getbanktransfersby",
+      "target": "database_getallby",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L301",
+      "weight": 1.0
+    },
+    {
+      "source": "database_getbanktransfersbyuserid",
+      "target": "database_getbanktransfersby",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L303",
+      "weight": 1.0
+    },
+    {
+      "source": "database_createbanktransfer",
+      "target": "database_savebanktransfer",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L315",
+      "weight": 1.0
+    },
+    {
+      "source": "database_savebanktransfer",
+      "target": "database_getbanktransferby",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L324",
+      "weight": 1.0
+    },
+    {
+      "source": "database_gettransactionby",
+      "target": "database_getby",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L329",
+      "weight": 1.0
+    },
+    {
+      "source": "database_gettransactionbyid",
+      "target": "database_gettransactionby",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L331",
+      "weight": 1.0
+    },
+    {
+      "source": "database_gettransactionsbyobj",
+      "target": "database_getallbyobj",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L333",
+      "weight": 1.0
+    },
+    {
+      "source": "database_gettransactionbyidforapi",
+      "target": "database_formattransactionforapiresponse",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L336",
+      "weight": 1.0
+    },
+    {
+      "source": "database_gettransactionbyidforapi",
+      "target": "database_gettransactionby",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L336",
+      "weight": 1.0
+    },
+    {
+      "source": "database_gettransactionsforuserforapi",
+      "target": "database_gettransactionsforuserbyobj",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L339",
+      "weight": 1.0
+    },
+    {
+      "source": "database_formattransactionforapiresponse",
+      "target": "database_getuserbyid",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L346",
+      "weight": 1.0
+    },
+    {
+      "source": "database_formattransactionforapiresponse",
+      "target": "database_getfullnameforuser",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L349",
+      "weight": 1.0
+    },
+    {
+      "source": "database_formattransactionforapiresponse",
+      "target": "database_getlikesbytransactionid",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L351",
+      "weight": 1.0
+    },
+    {
+      "source": "database_formattransactionforapiresponse",
+      "target": "database_getcommentsbytransactionid",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L352",
+      "weight": 1.0
+    },
+    {
+      "source": "database_gettransactionsforusercontacts",
+      "target": "database_getcontactidsforuser",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L444",
+      "weight": 1.0
+    },
+    {
+      "source": "database_noncontactpublictransactions",
+      "target": "database_getcontactstransactionids",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L454",
+      "weight": 1.0
+    },
+    {
+      "source": "database_getpublictransactionsdefaultsort",
+      "target": "database_gettransactionsforusercontacts",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L465",
+      "weight": 1.0
+    },
+    {
+      "source": "database_getpublictransactionsdefaultsort",
+      "target": "database_getnoncontactpublictransactionsforapi",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L466",
+      "weight": 1.0
+    },
+    {
+      "source": "database_getpublictransactionsbyquery",
+      "target": "database_gettransactionsforusercontacts",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L475",
+      "weight": 1.0
+    },
+    {
+      "source": "database_getpublictransactionsbyquery",
+      "target": "database_transactionswithindaterange",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L477",
+      "weight": 1.0
+    },
+    {
+      "source": "database_getpublictransactionsbyquery",
+      "target": "database_transactionswithinamountrange",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L478",
+      "weight": 1.0
+    },
+    {
+      "source": "database_getpublictransactionsbyquery",
+      "target": "database_getnoncontactpublictransactionsforapi",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L479",
+      "weight": 1.0
+    },
+    {
+      "source": "database_debitpayappbalance",
+      "target": "database_savepayappbalance",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L493",
+      "weight": 1.0
+    },
+    {
+      "source": "database_debitpayappbalance",
+      "target": "database_createbanktransferwithdrawal",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L498",
+      "weight": 1.0
+    },
+    {
+      "source": "database_creditpayappbalance",
+      "target": "database_savepayappbalance",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L506",
+      "weight": 1.0
+    },
+    {
+      "source": "database_createtransaction",
+      "target": "database_getuserbyid",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L529",
+      "weight": 1.0
+    },
+    {
+      "source": "database_createtransaction",
+      "target": "database_savetransaction",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L546",
+      "weight": 1.0
+    },
+    {
+      "source": "database_createtransaction",
+      "target": "database_debitpayappbalance",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L550",
+      "weight": 1.0
+    },
+    {
+      "source": "database_createtransaction",
+      "target": "database_creditpayappbalance",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L551",
+      "weight": 1.0
+    },
+    {
+      "source": "database_createtransaction",
+      "target": "database_updatetransactionbyid",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L552",
+      "weight": 1.0
+    },
+    {
+      "source": "database_createtransaction",
+      "target": "database_createpaymentnotification",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L555",
+      "weight": 1.0
+    },
+    {
+      "source": "database_savetransaction",
+      "target": "database_gettransactionby",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L575",
+      "weight": 1.0
+    },
+    {
+      "source": "database_updatetransactionbyid",
+      "target": "database_gettransactionby",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L579",
+      "weight": 1.0
+    },
+    {
+      "source": "database_updatetransactionbyid",
+      "target": "database_getuserbyid",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L581",
+      "weight": 1.0
+    },
+    {
+      "source": "database_updatetransactionbyid",
+      "target": "database_debitpayappbalance",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L586",
+      "weight": 1.0
+    },
+    {
+      "source": "database_updatetransactionbyid",
+      "target": "database_creditpayappbalance",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L587",
+      "weight": 1.0
+    },
+    {
+      "source": "database_updatetransactionbyid",
+      "target": "database_createpaymentnotification",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L590",
+      "weight": 1.0
+    },
+    {
+      "source": "database_getlikeby",
+      "target": "database_getby",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L602",
+      "weight": 1.0
+    },
+    {
+      "source": "database_getlikesbyobj",
+      "target": "database_getallbyobj",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L603",
+      "weight": 1.0
+    },
+    {
+      "source": "database_getlikebyid",
+      "target": "database_getlikeby",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L605",
+      "weight": 1.0
+    },
+    {
+      "source": "database_getlikesbytransactionid",
+      "target": "database_getlikesbyobj",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L606",
+      "weight": 1.0
+    },
+    {
+      "source": "database_createlike",
+      "target": "database_savelike",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L618",
+      "weight": 1.0
+    },
+    {
+      "source": "database_createlikes",
+      "target": "database_gettransactionbyid",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L623",
+      "weight": 1.0
+    },
+    {
+      "source": "database_createlikes",
+      "target": "database_createlike",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L625",
+      "weight": 1.0
+    },
+    {
+      "source": "database_createlikes",
+      "target": "database_createlikenotification",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L629",
+      "weight": 1.0
+    },
+    {
+      "source": "database_savelike",
+      "target": "database_getlikebyid",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L642",
+      "weight": 1.0
+    },
+    {
+      "source": "database_getcommentby",
+      "target": "database_getby",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L647",
+      "weight": 1.0
+    },
+    {
+      "source": "database_getcommentsbyobj",
+      "target": "database_getallbyobj",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L648",
+      "weight": 1.0
+    },
+    {
+      "source": "database_getcommentbyid",
+      "target": "database_getcommentby",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L650",
+      "weight": 1.0
+    },
+    {
+      "source": "database_getcommentsbytransactionid",
+      "target": "database_getcommentsbyobj",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L652",
+      "weight": 1.0
+    },
+    {
+      "source": "database_createcomment",
+      "target": "database_savecomment",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L665",
+      "weight": 1.0
+    },
+    {
+      "source": "database_createcomments",
+      "target": "database_gettransactionbyid",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L670",
+      "weight": 1.0
+    },
+    {
+      "source": "database_createcomments",
+      "target": "database_createcomment",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L672",
+      "weight": 1.0
+    },
+    {
+      "source": "database_createcomments",
+      "target": "database_createcommentnotification",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L676",
+      "weight": 1.0
+    },
+    {
+      "source": "database_savecomment",
+      "target": "database_getcommentbyid",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L689",
+      "weight": 1.0
+    },
+    {
+      "source": "database_getnotificationby",
+      "target": "database_getby",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L695",
+      "weight": 1.0
+    },
+    {
+      "source": "database_getnotificationsbyobj",
+      "target": "database_getallbyobj",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L698",
+      "weight": 1.0
+    },
+    {
+      "source": "database_createpaymentnotification",
+      "target": "database_savenotification",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L719",
+      "weight": 1.0
+    },
+    {
+      "source": "database_createlikenotification",
+      "target": "database_savenotification",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L739",
+      "weight": 1.0
+    },
+    {
+      "source": "database_createcommentnotification",
+      "target": "database_savenotification",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L759",
+      "weight": 1.0
+    },
+    {
+      "source": "database_updatenotificationbyid",
+      "target": "database_getnotificationby",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L786",
+      "weight": 1.0
+    },
+    {
+      "source": "database_formatnotificationforapiresponse",
+      "target": "database_getfullnameforuser",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L794",
+      "weight": 1.0
+    },
+    {
+      "source": "database_formatnotificationforapiresponse",
+      "target": "database_gettransactionbyid",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L795",
+      "weight": 1.0
+    },
+    {
+      "source": "database_formatnotificationforapiresponse",
+      "target": "database_getlikebyid",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L802",
+      "weight": 1.0
+    },
+    {
+      "source": "database_formatnotificationforapiresponse",
+      "target": "database_getcommentbyid",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L807",
+      "weight": 1.0
+    },
+    {
+      "source": "database_getrandomuser",
+      "target": "database_getallusers",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L829",
+      "weight": 1.0
+    },
+    {
+      "source": "database_getbankaccountsbyuserid",
+      "target": "database_getbankaccountsby",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L840",
+      "weight": 1.0
+    },
+    {
+      "source": "database_getnotificationbyid",
+      "target": "database_getnotificationby",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L843",
+      "weight": 1.0
+    },
+    {
+      "source": "database_getnotificationsbyuserid",
+      "target": "database_getnotificationsbyobj",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L846",
+      "weight": 1.0
+    },
+    {
+      "source": "database_getbanktransferbytransactionid",
+      "target": "database_getbanktransferby",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L850",
+      "weight": 1.0
+    },
+    {
+      "source": "database_gettransactionsby",
+      "target": "database_getallby",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L854",
+      "weight": 1.0
+    },
+    {
+      "source": "database_gettransactionsbyuserid",
+      "target": "database_gettransactionsby",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "database.ts",
+      "source_location": "L857",
+      "weight": 1.0
+    },
+    {
+      "source": "gql_playground_routes",
+      "target": "express",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "gql-playground-routes.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "gql_playground_routes",
+      "target": "graphql_playground_middleware_express",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "gql-playground-routes.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "gql_playground_routes",
+      "target": "gql_playground_routes_router",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gql-playground-routes.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "graphql_resolvers_mutation",
+      "target": "database",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "graphql/resolvers/Mutation.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "graphql_resolvers_mutation",
+      "target": "database_createbankaccountforuser",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "graphql/resolvers/Mutation.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "graphql_resolvers_mutation",
+      "target": "database_removebankaccountbyid",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "graphql/resolvers/Mutation.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "graphql_resolvers_mutation",
+      "target": "graphql_resolvers_mutation_mutation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphql/resolvers/Mutation.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "graphql_resolvers_query",
+      "target": "database",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "graphql/resolvers/Query.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "graphql_resolvers_query",
+      "target": "database_getbankaccountsbyuserid",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "graphql/resolvers/Query.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "graphql_resolvers_query",
+      "target": "graphql_resolvers_query_query",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphql/resolvers/Query.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "graphql_resolvers_index",
+      "target": "graphql_resolvers_query",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "graphql/resolvers/index.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "graphql_resolvers_index",
+      "target": "graphql_resolvers_mutation",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "graphql/resolvers/index.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "graphql_resolvers_index",
+      "target": "graphql_resolvers_index_items",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphql/resolvers/index.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "helpers",
+      "target": "dotenv",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "helpers.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "helpers",
+      "target": "lodash",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "helpers.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "helpers",
+      "target": "express",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "helpers.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "helpers",
+      "target": "express_validator",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "helpers.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "helpers",
+      "target": "express_jwt",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "helpers.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "helpers",
+      "target": "jwks_rsa",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "helpers.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "helpers",
+      "target": "jwt_verifier",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "helpers.ts",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "helpers",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_aws_exports_js",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "helpers.ts",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "helpers",
+      "target": "helpers_auth0jwtconfig",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "helpers.ts",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "helpers",
+      "target": "helpers_oktajwtverifier",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "helpers.ts",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "helpers",
+      "target": "helpers_googlejwtconfig",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "helpers.ts",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "helpers",
+      "target": "helpers_verifyoktatoken",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "helpers.ts",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "helpers",
+      "target": "helpers_awscognitojwtconfig",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "helpers.ts",
+      "source_location": "L85",
+      "weight": 1.0
+    },
+    {
+      "source": "helpers",
+      "target": "helpers_checkauth0jwt",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "helpers.ts",
+      "source_location": "L94",
+      "weight": 1.0
+    },
+    {
+      "source": "helpers",
+      "target": "helpers_checkcognitojwt",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "helpers.ts",
+      "source_location": "L95",
+      "weight": 1.0
+    },
+    {
+      "source": "helpers",
+      "target": "helpers_checkgooglejwt",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "helpers.ts",
+      "source_location": "L96",
+      "weight": 1.0
+    },
+    {
+      "source": "helpers",
+      "target": "helpers_ensureauthenticated",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "helpers.ts",
+      "source_location": "L98",
+      "weight": 1.0
+    },
+    {
+      "source": "helpers",
+      "target": "helpers_validatemiddleware",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "helpers.ts",
+      "source_location": "L115",
+      "weight": 1.0
+    },
+    {
+      "source": "like_routes",
+      "target": "express",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "like-routes.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "like_routes",
+      "target": "database",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "like-routes.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "like_routes",
+      "target": "database_getlikesbytransactionid",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "like-routes.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "like_routes",
+      "target": "database_createlikes",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "like-routes.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "like_routes",
+      "target": "helpers",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "like-routes.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "like_routes",
+      "target": "helpers_ensureauthenticated",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "like-routes.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "like_routes",
+      "target": "helpers_validatemiddleware",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "like-routes.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "like_routes",
+      "target": "validators",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "like-routes.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "like_routes",
+      "target": "validators_shortidvalidation",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "like-routes.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "like_routes",
+      "target": "like_routes_router",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "like-routes.ts",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "notification_routes",
+      "target": "express",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "notification-routes.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "notification_routes",
+      "target": "database",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "notification-routes.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "notification_routes",
+      "target": "database_createnotifications",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "notification-routes.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "notification_routes",
+      "target": "database_updatenotificationbyid",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "notification-routes.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "notification_routes",
+      "target": "database_getunreadnotificationsbyuserid",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "notification-routes.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "notification_routes",
+      "target": "helpers",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "notification-routes.ts",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "notification_routes",
+      "target": "helpers_ensureauthenticated",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "notification-routes.ts",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "notification_routes",
+      "target": "helpers_validatemiddleware",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "notification-routes.ts",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "notification_routes",
+      "target": "validators",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "notification-routes.ts",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "notification_routes",
+      "target": "validators_isnotificationsbodyvalidator",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "notification-routes.ts",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "notification_routes",
+      "target": "validators_shortidvalidation",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "notification-routes.ts",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "notification_routes",
+      "target": "validators_isnotificationpatchvalidator",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "notification-routes.ts",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "notification_routes",
+      "target": "notification_routes_router",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "notification-routes.ts",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "testdata_routes",
+      "target": "express",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "testdata-routes.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "testdata_routes",
+      "target": "database",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "testdata-routes.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "testdata_routes",
+      "target": "database_getallforentity",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "testdata-routes.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "testdata_routes",
+      "target": "database_seeddatabase",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "testdata-routes.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "testdata_routes",
+      "target": "helpers",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "testdata-routes.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "testdata_routes",
+      "target": "helpers_validatemiddleware",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "testdata-routes.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "testdata_routes",
+      "target": "validators",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "testdata-routes.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "testdata_routes",
+      "target": "validators_isvalidentityvalidator",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "testdata-routes.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "testdata_routes",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_db_schema_ts",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "testdata-routes.ts",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "testdata_routes",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_db_schema_dbschema",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "testdata-routes.ts",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "testdata_routes",
+      "target": "testdata_routes_router",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "testdata-routes.ts",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "transaction_routes",
+      "target": "express",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "transaction-routes.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "transaction_routes",
+      "target": "fp",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "transaction-routes.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "transaction_routes",
+      "target": "database",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "transaction-routes.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "transaction_routes",
+      "target": "database_gettransactionsforusercontacts",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "transaction-routes.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "transaction_routes",
+      "target": "database_createtransaction",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "transaction-routes.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "transaction_routes",
+      "target": "database_updatetransactionbyid",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "transaction-routes.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "transaction_routes",
+      "target": "database_getpublictransactionsdefaultsort",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "transaction-routes.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "transaction_routes",
+      "target": "database_gettransactionbyidforapi",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "transaction-routes.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "transaction_routes",
+      "target": "database_gettransactionsforuserforapi",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "transaction-routes.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "transaction_routes",
+      "target": "database_getpublictransactionsbyquery",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "transaction-routes.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "transaction_routes",
+      "target": "helpers",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "transaction-routes.ts",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "transaction_routes",
+      "target": "helpers_ensureauthenticated",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "transaction-routes.ts",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "transaction_routes",
+      "target": "helpers_validatemiddleware",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "transaction-routes.ts",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "transaction_routes",
+      "target": "validators",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "transaction-routes.ts",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "transaction_routes",
+      "target": "validators_sanitizetransactionstatus",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "transaction-routes.ts",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "transaction_routes",
+      "target": "validators_sanitizerequeststatus",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "transaction-routes.ts",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "transaction_routes",
+      "target": "validators_istransactionqsvalidator",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "transaction-routes.ts",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "transaction_routes",
+      "target": "validators_istransactionpayloadvalidator",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "transaction-routes.ts",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "transaction_routes",
+      "target": "validators_shortidvalidation",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "transaction-routes.ts",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "transaction_routes",
+      "target": "validators_istransactionpatchvalidator",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "transaction-routes.ts",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "transaction_routes",
+      "target": "validators_istransactionpublicqsvalidator",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "transaction-routes.ts",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "transaction_routes",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_utils_transactionutils_ts",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "transaction-routes.ts",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "transaction_routes",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_utils_transactionutils_getpaginateditems",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "transaction-routes.ts",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "transaction_routes",
+      "target": "transaction_routes_router",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "transaction-routes.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "types",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_user_ts",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "types.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "types",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_user_user",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "types.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "types",
+      "target": "types_user",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "types.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "user_routes",
+      "target": "express",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "user-routes.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "user_routes",
+      "target": "fp",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "user-routes.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "user_routes",
+      "target": "database",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "user-routes.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "user_routes",
+      "target": "database_getallusers",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "user-routes.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "user_routes",
+      "target": "database_createuser",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "user-routes.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "user_routes",
+      "target": "database_updateuserbyid",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "user-routes.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "user_routes",
+      "target": "database_getuserbyid",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "user-routes.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "user_routes",
+      "target": "database_getuserbyusername",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "user-routes.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "user_routes",
+      "target": "database_searchusers",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "user-routes.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "user_routes",
+      "target": "database_removeuserfromresults",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "user-routes.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "user_routes",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_user_ts",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "user-routes.ts",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "user_routes",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_user_user",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "user-routes.ts",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "user_routes",
+      "target": "helpers",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "user-routes.ts",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "user_routes",
+      "target": "helpers_ensureauthenticated",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "user-routes.ts",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "user_routes",
+      "target": "helpers_validatemiddleware",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "user-routes.ts",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "user_routes",
+      "target": "validators",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "user-routes.ts",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "user_routes",
+      "target": "validators_shortidvalidation",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "user-routes.ts",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "user_routes",
+      "target": "validators_searchvalidation",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "user-routes.ts",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "user_routes",
+      "target": "validators_userfieldsvalidator",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "user-routes.ts",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "user_routes",
+      "target": "validators_isuservalidator",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "user-routes.ts",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "user_routes",
+      "target": "user_routes_router",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "user-routes.ts",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "validators",
+      "target": "express_validator",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "validators.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "validators",
+      "target": "shortid",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "validators.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "validators",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_index_ts",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "validators.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "validators",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_index_transactionstatus",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "validators.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "validators",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_index_transactionrequeststatus",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "validators.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "validators",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_index_defaultprivacylevel",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "validators.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "validators",
+      "target": "sessions_hopeful_confident_johnson_mnt_qe_agentic_sandbox_eval_cypress_realworld_app_src_models_index_notificationstype",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "validators.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "validators",
+      "target": "fp",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "validators.ts",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "validators",
+      "target": "validators_transactionstatusvalues",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validators.ts",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "validators",
+      "target": "validators_requeststatusvalues",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validators.ts",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "validators",
+      "target": "validators_defaultprivacylevelvalues",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validators.ts",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "validators",
+      "target": "validators_notificationstypevalues",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validators.ts",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "validators",
+      "target": "validators_isshortid",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validators.ts",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "validators",
+      "target": "validators_shortidvalidation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validators.ts",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "validators",
+      "target": "validators_searchvalidation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validators.ts",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "validators",
+      "target": "validators_userfieldsvalidator",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validators.ts",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "validators",
+      "target": "validators_isbankaccountvalidator",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validators.ts",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "validators",
+      "target": "validators_isuservalidator",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validators.ts",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "validators",
+      "target": "validators_sanitizetransactionstatus",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validators.ts",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "validators",
+      "target": "validators_sanitizerequeststatus",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validators.ts",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "validators",
+      "target": "validators_istransactionqsvalidator",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validators.ts",
+      "source_location": "L70",
+      "weight": 1.0
+    },
+    {
+      "source": "validators",
+      "target": "validators_istransactionpayloadvalidator",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validators.ts",
+      "source_location": "L81",
+      "weight": 1.0
+    },
+    {
+      "source": "validators",
+      "target": "validators_istransactionpatchvalidator",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validators.ts",
+      "source_location": "L90",
+      "weight": 1.0
+    },
+    {
+      "source": "validators",
+      "target": "validators_istransactionpublicqsvalidator",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validators.ts",
+      "source_location": "L92",
+      "weight": 1.0
+    },
+    {
+      "source": "validators",
+      "target": "validators_iscommentvalidator",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validators.ts",
+      "source_location": "L96",
+      "weight": 1.0
+    },
+    {
+      "source": "validators",
+      "target": "validators_isnotificationsbodyvalidator",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validators.ts",
+      "source_location": "L98",
+      "weight": 1.0
+    },
+    {
+      "source": "validators",
+      "target": "validators_isnotificationpatchvalidator",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validators.ts",
+      "source_location": "L103",
+      "weight": 1.0
+    },
+    {
+      "source": "validators",
+      "target": "validators_isvalidentityvalidator",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validators.ts",
+      "source_location": "L105",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "auth_router",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "user_routes_router",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "contact_routes_router",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "bankaccount_routes_router",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "gql_playground_routes_router",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "transaction_routes_router",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "like_routes_router",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "comment_routes_router",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "notification_routes_router",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "banktransfer_routes_router",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "testdata_routes_router",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "graphql_resolvers_index_items",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.ts",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "graphql_resolvers_index",
+      "target": "graphql_resolvers_query_query",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "graphql/resolvers/index.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "graphql_resolvers_index",
+      "target": "graphql_resolvers_mutation_mutation",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "graphql/resolvers/index.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "scorecard.schema.json",
+  "title": "Scorecard",
+  "type": "object",
+  "required": ["generatedAt", "model", "n", "requirements", "tests", "falsePositiveRate", "traceability", "defects", "catchRate"],
+  "additionalProperties": false,
+  "properties": {
+    "generatedAt": { "type": "string" },
+    "model": { "type": "string" },
+    "n": { "type": "integer" },
+    "requirements": {
+      "type": "object",
+      "required": ["total", "covered"],
+      "additionalProperties": false,
+      "properties": {
+        "total": { "type": "integer" },
+        "covered": { "type": "integer" }
+      }
+    },
+    "tests": {
+      "type": "object",
+      "required": ["generated", "passed", "failed", "quarantinedFlaky"],
+      "additionalProperties": false,
+      "properties": {
+        "generated": { "type": "integer" },
+        "passed": { "type": "integer" },
+        "failed": { "type": "integer" },
+        "quarantinedFlaky": { "type": "integer" },
+        "errored": { "type": "integer" }
+      }
+    },
+    "falsePositiveRate": { "type": "number" },
+    "traceability": {
+      "type": "object",
+      "required": ["orphanTestIds"],
+      "additionalProperties": false,
+      "properties": {
+        "orphanTestIds": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["requirementId", "message"],
+        "additionalProperties": false,
+        "properties": {
+          "requirementId": { "type": "string" },
+          "message": { "type": "string" }
+        }
+      }
+    },
+    "defects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "caught", "byTestIds"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "caught": { "type": "boolean" },
+          "byTestIds": { "type": "array", "items": { "type": "string" } },
+          "severity": { "type": "string" },
+          "expectCaught": { "type": "boolean" }
+        }
+      }
+    },
+    "catchRate": { "type": ["number", "null"] },
+    "unmeasuredTestIds": { "type": "array", "items": { "type": "string" } },
+    "negativeControls": {
+      "type": "object",
+      "required": ["total", "correctlyUncaught", "unexpectedlyCaught"],
+      "additionalProperties": false,
+      "properties": {
+        "total": { "type": "integer" },
+        "correctlyUncaught": { "type": "integer" },
+        "unexpectedlyCaught": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "testability": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "counts": {
+          "type": "object",
+          "required": ["testable", "needs_clarification", "untestable"],
+          "additionalProperties": false,
+          "properties": {
+            "testable": { "type": "integer" },
+            "needs_clarification": { "type": "integer" },
+            "untestable": { "type": "integer" }
+          }
+        },
+        "gated": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["requirementId", "verdict", "score", "blockedBy"],
+            "additionalProperties": false,
+            "properties": {
+              "requirementId": { "type": "string" },
+              "verdict": { "type": "string", "enum": ["needs_clarification", "untestable"] },
+              "score": { "type": "number" },
+              "blockedBy": { "type": "array", "items": { "type": "string" } }
+            }
+          }
+        }
+      }
+    }
+  }
+}

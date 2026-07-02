@@ -1,0 +1,562 @@
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1366 completion_tokens=396
+[run] CYPRESS-RWA-BANK-ACCOUNTS-001-TC-001 (CYPRESS-RWA-BANK-ACCOUNTS-001) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-BANK-ACCOUNTS-001-TC-002 (CYPRESS-RWA-BANK-ACCOUNTS-001) n=3 runs=[pass,pass,pass] -> PASS
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1360 completion_tokens=651
+[run] CYPRESS-RWA-BANK-ACCOUNTS-002-positive-001 (CYPRESS-RWA-BANK-ACCOUNTS-002) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1287 completion_tokens=184
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1319 completion_tokens=173
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1360 completion_tokens=651
+[run] CYPRESS-RWA-BANK-ACCOUNTS-002-positive-001 (CYPRESS-RWA-BANK-ACCOUNTS-002) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1287 completion_tokens=184
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1319 completion_tokens=173
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1360 completion_tokens=651
+[run] CYPRESS-RWA-BANK-ACCOUNTS-002-positive-001 (CYPRESS-RWA-BANK-ACCOUNTS-002) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1287 completion_tokens=184
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1319 completion_tokens=173
+[run] CYPRESS-RWA-BANK-ACCOUNTS-002-auth-001 (CYPRESS-RWA-BANK-ACCOUNTS-002) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-BANK-ACCOUNTS-002-negative-001 (CYPRESS-RWA-BANK-ACCOUNTS-002) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1061 completion_tokens=274
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1403 completion_tokens=858
+[run] CYPRESS-RWA-BANK-ACCOUNTS-003-positive-001 (CYPRESS-RWA-BANK-ACCOUNTS-003) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-BANK-ACCOUNTS-003-auth-001 (CYPRESS-RWA-BANK-ACCOUNTS-003) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-BANK-ACCOUNTS-003-negative-001 (CYPRESS-RWA-BANK-ACCOUNTS-003) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-BANK-ACCOUNTS-003-negative-002 (CYPRESS-RWA-BANK-ACCOUNTS-003) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1772 completion_tokens=273
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1295 completion_tokens=485
+[run] CYPRESS-RWA-BANK-ACCOUNTS-005-positive-001 (CYPRESS-RWA-BANK-ACCOUNTS-005) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1166 completion_tokens=217
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1295 completion_tokens=483
+[run] CYPRESS-RWA-BANK-ACCOUNTS-005-positive-001 (CYPRESS-RWA-BANK-ACCOUNTS-005) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1166 completion_tokens=221
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1295 completion_tokens=483
+[run] CYPRESS-RWA-BANK-ACCOUNTS-005-positive-001 (CYPRESS-RWA-BANK-ACCOUNTS-005) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1166 completion_tokens=217
+[run] CYPRESS-RWA-BANK-ACCOUNTS-005-auth-001 (CYPRESS-RWA-BANK-ACCOUNTS-005) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1071 completion_tokens=245
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1295 completion_tokens=483
+[run] CYPRESS-RWA-BANK-ACCOUNTS-005-positive-001 (CYPRESS-RWA-BANK-ACCOUNTS-005) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1166 completion_tokens=221
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1295 completion_tokens=483
+[run] CYPRESS-RWA-BANK-ACCOUNTS-005-positive-001 (CYPRESS-RWA-BANK-ACCOUNTS-005) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1166 completion_tokens=221
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1286 completion_tokens=824
+[run] CYPRESS-RWA-BANK-ACCOUNTS-006-positive-001 (CYPRESS-RWA-BANK-ACCOUNTS-006) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-BANK-ACCOUNTS-006-auth-001 (CYPRESS-RWA-BANK-ACCOUNTS-006) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1194 completion_tokens=289
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1280 completion_tokens=408
+[run] CYPRESS-RWA-BANK-ACCOUNTS-007-positive-001 (CYPRESS-RWA-BANK-ACCOUNTS-007) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-BANK-ACCOUNTS-007-auth-001 (CYPRESS-RWA-BANK-ACCOUNTS-007) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1050 completion_tokens=233
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1280 completion_tokens=408
+[run] CYPRESS-RWA-BANK-ACCOUNTS-007-positive-001 (CYPRESS-RWA-BANK-ACCOUNTS-007) n=3 runs=[pass,pass,pass] -> PASS
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1369 completion_tokens=403
+[run] CYPRESS-RWA-COMMENTS-001-TC001 (CYPRESS-RWA-COMMENTS-001) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1183 completion_tokens=191
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1215 completion_tokens=159
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1369 completion_tokens=408
+[run] CYPRESS-RWA-COMMENTS-001-TC001 (CYPRESS-RWA-COMMENTS-001) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1183 completion_tokens=165
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1369 completion_tokens=408
+[run] CYPRESS-RWA-COMMENTS-001-TC001 (CYPRESS-RWA-COMMENTS-001) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1183 completion_tokens=183
+[run] CYPRESS-RWA-COMMENTS-001-TC002 (CYPRESS-RWA-COMMENTS-001) n=3 runs=[pass,pass,pass] -> PASS
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1340 completion_tokens=749
+[run] CYPRESS-RWA-COMMENTS-002-positive-001 (CYPRESS-RWA-COMMENTS-002) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1065 completion_tokens=187
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1097 completion_tokens=173
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1340 completion_tokens=565
+[run] CYPRESS-RWA-COMMENTS-002-positive-001 (CYPRESS-RWA-COMMENTS-002) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1068 completion_tokens=188
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1340 completion_tokens=565
+[run] CYPRESS-RWA-COMMENTS-002-positive-001 (CYPRESS-RWA-COMMENTS-002) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1068 completion_tokens=188
+[run] CYPRESS-RWA-COMMENTS-002-auth-001 (CYPRESS-RWA-COMMENTS-002) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-COMMENTS-002-negative-001 (CYPRESS-RWA-COMMENTS-002) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-COMMENTS-002-negative-002 (CYPRESS-RWA-COMMENTS-002) n=3 runs=[pass,pass,pass] -> PASS
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1351 completion_tokens=576
+[run] CYPRESS-RWA-CONTACTS-001-TC001 (CYPRESS-RWA-CONTACTS-001) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1906 completion_tokens=295
+[run] CYPRESS-RWA-CONTACTS-001-TC002 (CYPRESS-RWA-CONTACTS-001) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1794 completion_tokens=290
+[run] CYPRESS-RWA-CONTACTS-001-TC003 (CYPRESS-RWA-CONTACTS-001) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1816 completion_tokens=246
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1370 completion_tokens=403
+[run] CYPRESS-RWA-CONTACTS-002-positive-001 (CYPRESS-RWA-CONTACTS-002) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1194 completion_tokens=185
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1370 completion_tokens=403
+[run] CYPRESS-RWA-CONTACTS-002-positive-001 (CYPRESS-RWA-CONTACTS-002) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1194 completion_tokens=185
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1370 completion_tokens=403
+[run] CYPRESS-RWA-CONTACTS-002-positive-001 (CYPRESS-RWA-CONTACTS-002) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1194 completion_tokens=219
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1226 completion_tokens=216
+[run] CYPRESS-RWA-CONTACTS-002-auth-001 (CYPRESS-RWA-CONTACTS-002) n=3 runs=[pass,pass,pass] -> PASS
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1356 completion_tokens=427
+[run] CYPRESS-RWA-CONTACTS-003-TC1 (CYPRESS-RWA-CONTACTS-003) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1827 completion_tokens=256
+[run] CYPRESS-RWA-CONTACTS-003-TC2 (CYPRESS-RWA-CONTACTS-003) n=3 runs=[pass,pass,pass] -> PASS
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1322 completion_tokens=330
+[run] CYPRESS-RWA-CONTACTS-004-positive-001 (CYPRESS-RWA-CONTACTS-004) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1013 completion_tokens=182
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1322 completion_tokens=330
+[run] CYPRESS-RWA-CONTACTS-004-positive-001 (CYPRESS-RWA-CONTACTS-004) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1013 completion_tokens=182
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1322 completion_tokens=333
+[run] CYPRESS-RWA-CONTACTS-004-positive-001 (CYPRESS-RWA-CONTACTS-004) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1013 completion_tokens=160
+[run] CYPRESS-RWA-CONTACTS-004-auth-001 (CYPRESS-RWA-CONTACTS-004) n=3 runs=[pass,pass,pass] -> PASS
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1362 completion_tokens=410
+[run] CYPRESS-RWA-LIKES-001-TC01 (CYPRESS-RWA-LIKES-001) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1175 completion_tokens=172
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1362 completion_tokens=410
+[run] CYPRESS-RWA-LIKES-001-TC01 (CYPRESS-RWA-LIKES-001) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1175 completion_tokens=172
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1362 completion_tokens=410
+[run] CYPRESS-RWA-LIKES-001-TC01 (CYPRESS-RWA-LIKES-001) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1175 completion_tokens=178
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1207 completion_tokens=168
+[run] CYPRESS-RWA-LIKES-001-TC02 (CYPRESS-RWA-LIKES-001) n=3 runs=[pass,pass,pass] -> PASS
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1333 completion_tokens=351
+[run] CYPRESS-RWA-LIKES-002-positive-001 (CYPRESS-RWA-LIKES-002) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1039 completion_tokens=174
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1333 completion_tokens=351
+[run] CYPRESS-RWA-LIKES-002-positive-001 (CYPRESS-RWA-LIKES-002) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1039 completion_tokens=173
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1333 completion_tokens=351
+[run] CYPRESS-RWA-LIKES-002-positive-001 (CYPRESS-RWA-LIKES-002) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1039 completion_tokens=174
+[run] CYPRESS-RWA-LIKES-002-auth-001 (CYPRESS-RWA-LIKES-002) n=3 runs=[pass,pass,pass] -> PASS
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1359 completion_tokens=357
+[run] CYPRESS-RWA-NOTIFICATIONS-001-TC-001 (CYPRESS-RWA-NOTIFICATIONS-001) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-NOTIFICATIONS-001-TC-002 (CYPRESS-RWA-NOTIFICATIONS-001) n=3 runs=[pass,pass,pass] -> PASS
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1332 completion_tokens=1107
+[run] CYPRESS-RWA-NOTIFICATIONS-003-positive-001 (CYPRESS-RWA-NOTIFICATIONS-003) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1046 completion_tokens=167
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1078 completion_tokens=161
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1332 completion_tokens=921
+[run] CYPRESS-RWA-NOTIFICATIONS-003-positive-001 (CYPRESS-RWA-NOTIFICATIONS-003) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1046 completion_tokens=166
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1332 completion_tokens=921
+[run] CYPRESS-RWA-NOTIFICATIONS-003-positive-001 (CYPRESS-RWA-NOTIFICATIONS-003) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1046 completion_tokens=166
+[run] CYPRESS-RWA-NOTIFICATIONS-003-positive-002 (CYPRESS-RWA-NOTIFICATIONS-003) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1052 completion_tokens=188
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1084 completion_tokens=163
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1332 completion_tokens=921
+[run] CYPRESS-RWA-NOTIFICATIONS-003-positive-001 (CYPRESS-RWA-NOTIFICATIONS-003) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1046 completion_tokens=167
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1332 completion_tokens=921
+[run] CYPRESS-RWA-NOTIFICATIONS-003-positive-001 (CYPRESS-RWA-NOTIFICATIONS-003) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1046 completion_tokens=167
+[run] CYPRESS-RWA-NOTIFICATIONS-003-auth-001 (CYPRESS-RWA-NOTIFICATIONS-003) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-NOTIFICATIONS-003-negative-001 (CYPRESS-RWA-NOTIFICATIONS-003) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-NOTIFICATIONS-003-negative-002 (CYPRESS-RWA-NOTIFICATIONS-003) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-NOTIFICATIONS-003-negative-003 (CYPRESS-RWA-NOTIFICATIONS-003) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1059 completion_tokens=211
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1332 completion_tokens=1107
+[run] CYPRESS-RWA-NOTIFICATIONS-003-positive-001 (CYPRESS-RWA-NOTIFICATIONS-003) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1046 completion_tokens=166
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1332 completion_tokens=921
+[run] CYPRESS-RWA-NOTIFICATIONS-003-positive-001 (CYPRESS-RWA-NOTIFICATIONS-003) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1046 completion_tokens=167
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1364 completion_tokens=647
+[run] CYPRESS-RWA-NOTIFICATIONS-004-001 (CYPRESS-RWA-NOTIFICATIONS-004) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=2462 completion_tokens=235
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1364 completion_tokens=647
+[run] CYPRESS-RWA-NOTIFICATIONS-004-001 (CYPRESS-RWA-NOTIFICATIONS-004) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=2462 completion_tokens=236
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1364 completion_tokens=647
+[run] CYPRESS-RWA-NOTIFICATIONS-004-001 (CYPRESS-RWA-NOTIFICATIONS-004) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=2462 completion_tokens=259
+[run] CYPRESS-RWA-NOTIFICATIONS-004-002 (CYPRESS-RWA-NOTIFICATIONS-004) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=2480 completion_tokens=355
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1390 completion_tokens=1995
+[run] CYPRESS-RWA-TEST-DATA-001-positive-users (CYPRESS-RWA-TEST-DATA-001) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1193 completion_tokens=178
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1390 completion_tokens=1995
+[run] CYPRESS-RWA-TEST-DATA-001-positive-users (CYPRESS-RWA-TEST-DATA-001) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1193 completion_tokens=178
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1390 completion_tokens=1997
+[run] CYPRESS-RWA-TEST-DATA-001-positive-users (CYPRESS-RWA-TEST-DATA-001) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1193 completion_tokens=182
+[run] CYPRESS-RWA-TEST-DATA-001-positive-contacts (CYPRESS-RWA-TEST-DATA-001) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1193 completion_tokens=178
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1390 completion_tokens=1995
+[run] CYPRESS-RWA-TEST-DATA-001-positive-users (CYPRESS-RWA-TEST-DATA-001) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1193 completion_tokens=178
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1390 completion_tokens=1995
+[run] CYPRESS-RWA-TEST-DATA-001-positive-users (CYPRESS-RWA-TEST-DATA-001) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1193 completion_tokens=182
+[run] CYPRESS-RWA-TEST-DATA-001-positive-bankaccounts (CYPRESS-RWA-TEST-DATA-001) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1203 completion_tokens=197
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1390 completion_tokens=1995
+[run] CYPRESS-RWA-TEST-DATA-001-positive-users (CYPRESS-RWA-TEST-DATA-001) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1193 completion_tokens=193
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1225 completion_tokens=160
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1390 completion_tokens=1995
+[run] CYPRESS-RWA-TEST-DATA-001-positive-users (CYPRESS-RWA-TEST-DATA-001) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1193 completion_tokens=182
+[run] CYPRESS-RWA-TEST-DATA-001-positive-notifications (CYPRESS-RWA-TEST-DATA-001) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1193 completion_tokens=190
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1225 completion_tokens=174
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1390 completion_tokens=1995
+[run] CYPRESS-RWA-TEST-DATA-001-positive-users (CYPRESS-RWA-TEST-DATA-001) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1193 completion_tokens=182
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1390 completion_tokens=1995
+[run] CYPRESS-RWA-TEST-DATA-001-positive-users (CYPRESS-RWA-TEST-DATA-001) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1193 completion_tokens=193
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1225 completion_tokens=160
+[run] CYPRESS-RWA-TEST-DATA-001-positive-transactions (CYPRESS-RWA-TEST-DATA-001) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1193 completion_tokens=179
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1390 completion_tokens=1995
+[run] CYPRESS-RWA-TEST-DATA-001-positive-users (CYPRESS-RWA-TEST-DATA-001) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1193 completion_tokens=178
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1390 completion_tokens=1995
+[run] CYPRESS-RWA-TEST-DATA-001-positive-users (CYPRESS-RWA-TEST-DATA-001) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1193 completion_tokens=178
+[run] CYPRESS-RWA-TEST-DATA-001-positive-likes (CYPRESS-RWA-TEST-DATA-001) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1193 completion_tokens=179
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1390 completion_tokens=1997
+[run] CYPRESS-RWA-TEST-DATA-001-positive-users (CYPRESS-RWA-TEST-DATA-001) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1193 completion_tokens=182
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1390 completion_tokens=1997
+[run] CYPRESS-RWA-TEST-DATA-001-positive-users (CYPRESS-RWA-TEST-DATA-001) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1193 completion_tokens=178
+[run] CYPRESS-RWA-TEST-DATA-001-positive-comments (CYPRESS-RWA-TEST-DATA-001) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1193 completion_tokens=208
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1225 completion_tokens=152
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1390 completion_tokens=1995
+[run] CYPRESS-RWA-TEST-DATA-001-positive-users (CYPRESS-RWA-TEST-DATA-001) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1193 completion_tokens=178
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1390 completion_tokens=1995
+[run] CYPRESS-RWA-TEST-DATA-001-positive-users (CYPRESS-RWA-TEST-DATA-001) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1193 completion_tokens=182
+[run] CYPRESS-RWA-TEST-DATA-001-positive-banktransfers (CYPRESS-RWA-TEST-DATA-001) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1208 completion_tokens=234
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1390 completion_tokens=1995
+[run] CYPRESS-RWA-TEST-DATA-001-positive-users (CYPRESS-RWA-TEST-DATA-001) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1193 completion_tokens=178
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1390 completion_tokens=1995
+[run] CYPRESS-RWA-TEST-DATA-001-positive-users (CYPRESS-RWA-TEST-DATA-001) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1193 completion_tokens=193
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1225 completion_tokens=160
+[run] CYPRESS-RWA-TEST-DATA-001-negative-invalid-entity (CYPRESS-RWA-TEST-DATA-001) n=3 runs=[pass,pass,pass] -> PASS
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1439 completion_tokens=380
+[run] CYPRESS-RWA-TRANSACTIONS-001-TC1 (CYPRESS-RWA-TRANSACTIONS-001) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-TRANSACTIONS-001-TC2 (CYPRESS-RWA-TRANSACTIONS-001) n=3 runs=[pass,pass,pass] -> PASS
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1437 completion_tokens=558
+[run] CYPRESS-RWA-TRANSACTIONS-002-positive-001 (CYPRESS-RWA-TRANSACTIONS-002) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-TRANSACTIONS-002-positive-002 (CYPRESS-RWA-TRANSACTIONS-002) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-TRANSACTIONS-002-auth-001 (CYPRESS-RWA-TRANSACTIONS-002) n=3 runs=[pass,pass,pass] -> PASS
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1449 completion_tokens=980
+[run] CYPRESS-RWA-TRANSACTIONS-003-positive-001 (CYPRESS-RWA-TRANSACTIONS-003) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1470 completion_tokens=379
+[run] CYPRESS-RWA-TRANSACTIONS-003-positive-002 (CYPRESS-RWA-TRANSACTIONS-003) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-TRANSACTIONS-003-positive-003 (CYPRESS-RWA-TRANSACTIONS-003) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-TRANSACTIONS-003-auth-001 (CYPRESS-RWA-TRANSACTIONS-003) n=3 runs=[pass,pass,pass] -> PASS
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1453 completion_tokens=983
+[run] CYPRESS-RWA-TRANSACTIONS-004-positive-001 (CYPRESS-RWA-TRANSACTIONS-004) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-TRANSACTIONS-004-auth-001 (CYPRESS-RWA-TRANSACTIONS-004) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-TRANSACTIONS-004-positive-002 (CYPRESS-RWA-TRANSACTIONS-004) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-TRANSACTIONS-004-positive-003 (CYPRESS-RWA-TRANSACTIONS-004) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-TRANSACTIONS-004-positive-004 (CYPRESS-RWA-TRANSACTIONS-004) n=3 runs=[pass,pass,pass] -> PASS
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1453 completion_tokens=389
+[run] CYPRESS-RWA-TRANSACTIONS-005-positive-001 (CYPRESS-RWA-TRANSACTIONS-005) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-TRANSACTIONS-005-auth-001 (CYPRESS-RWA-TRANSACTIONS-005) n=3 runs=[pass,pass,pass] -> PASS
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1368 completion_tokens=588
+[run] CYPRESS-RWA-TRANSACTIONS-006-positive-001 (CYPRESS-RWA-TRANSACTIONS-006) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-TRANSACTIONS-006-positive-002 (CYPRESS-RWA-TRANSACTIONS-006) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-TRANSACTIONS-006-auth-001 (CYPRESS-RWA-TRANSACTIONS-006) n=3 runs=[pass,pass,pass] -> PASS
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1680 completion_tokens=1150
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1875 completion_tokens=1115
+[run] CYPRESS-RWA-TRANSACTIONS-007-positive-001 (CYPRESS-RWA-TRANSACTIONS-007) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-TRANSACTIONS-007-auth-001 (CYPRESS-RWA-TRANSACTIONS-007) n=3 runs=[pass,pass,pass] -> PASS
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1448 completion_tokens=1105
+[run] CYPRESS-RWA-TRANSACTIONS-008-positive-001 (CYPRESS-RWA-TRANSACTIONS-008) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1385 completion_tokens=237
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1417 completion_tokens=202
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1448 completion_tokens=1105
+[run] CYPRESS-RWA-TRANSACTIONS-008-positive-001 (CYPRESS-RWA-TRANSACTIONS-008) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1385 completion_tokens=223
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1448 completion_tokens=1043
+[run] CYPRESS-RWA-TRANSACTIONS-008-positive-001 (CYPRESS-RWA-TRANSACTIONS-008) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1364 completion_tokens=241
+[run] CYPRESS-RWA-TRANSACTIONS-008-auth-001 (CYPRESS-RWA-TRANSACTIONS-008) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-TRANSACTIONS-008-negative-001 (CYPRESS-RWA-TRANSACTIONS-008) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-TRANSACTIONS-008-negative-002 (CYPRESS-RWA-TRANSACTIONS-008) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-TRANSACTIONS-008-negative-003 (CYPRESS-RWA-TRANSACTIONS-008) n=3 runs=[pass,pass,pass] -> PASS
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1338 completion_tokens=763
+[run] CYPRESS-RWA-TRANSACTIONS-009-positive-001 (CYPRESS-RWA-TRANSACTIONS-009) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1086 completion_tokens=257
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1118 completion_tokens=226
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1338 completion_tokens=957
+[run] CYPRESS-RWA-TRANSACTIONS-009-positive-001 (CYPRESS-RWA-TRANSACTIONS-009) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1090 completion_tokens=245
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1338 completion_tokens=957
+[run] CYPRESS-RWA-TRANSACTIONS-009-positive-001 (CYPRESS-RWA-TRANSACTIONS-009) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1090 completion_tokens=216
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1122 completion_tokens=158
+[run] CYPRESS-RWA-TRANSACTIONS-009-negative-001 (CYPRESS-RWA-TRANSACTIONS-009) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-TRANSACTIONS-009-negative-002 (CYPRESS-RWA-TRANSACTIONS-009) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1121 completion_tokens=260
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1338 completion_tokens=763
+[run] CYPRESS-RWA-TRANSACTIONS-009-positive-001 (CYPRESS-RWA-TRANSACTIONS-009) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1086 completion_tokens=226
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1118 completion_tokens=215
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1338 completion_tokens=763
+[run] CYPRESS-RWA-TRANSACTIONS-009-positive-001 (CYPRESS-RWA-TRANSACTIONS-009) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1056 completion_tokens=173
+[run] CYPRESS-RWA-TRANSACTIONS-009-auth-001 (CYPRESS-RWA-TRANSACTIONS-009) n=3 runs=[pass,pass,pass] -> PASS
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1373 completion_tokens=925
+[run] CYPRESS-RWA-TRANSACTIONS-010-TC1 (CYPRESS-RWA-TRANSACTIONS-010) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1789 completion_tokens=216
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1373 completion_tokens=925
+[run] CYPRESS-RWA-TRANSACTIONS-010-TC1 (CYPRESS-RWA-TRANSACTIONS-010) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1789 completion_tokens=251
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1821 completion_tokens=175
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1373 completion_tokens=924
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1489 completion_tokens=747
+[run] CYPRESS-RWA-TRANSACTIONS-010-negative-001 (CYPRESS-RWA-TRANSACTIONS-010) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1267 completion_tokens=234
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1299 completion_tokens=193
+[run] CYPRESS-RWA-TRANSACTIONS-010-TC2 (CYPRESS-RWA-TRANSACTIONS-010) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1792 completion_tokens=297
+[run] CYPRESS-RWA-TRANSACTIONS-010-TC3 (CYPRESS-RWA-TRANSACTIONS-010) n=3 runs=[pass,pass,pass] -> PASS
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1349 completion_tokens=361
+[run] CYPRESS-RWA-USERS-001-TC-001 (CYPRESS-RWA-USERS-001) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-USERS-001-TC-002 (CYPRESS-RWA-USERS-001) n=3 runs=[pass,pass,pass] -> PASS
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1342 completion_tokens=382
+[run] CYPRESS-RWA-USERS-002-positive-001 (CYPRESS-RWA-USERS-002) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1107 completion_tokens=190
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1139 completion_tokens=149
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1342 completion_tokens=382
+[run] CYPRESS-RWA-USERS-002-positive-001 (CYPRESS-RWA-USERS-002) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1107 completion_tokens=173
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1342 completion_tokens=373
+[run] CYPRESS-RWA-USERS-002-positive-001 (CYPRESS-RWA-USERS-002) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1101 completion_tokens=178
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1133 completion_tokens=189
+[run] CYPRESS-RWA-USERS-002-auth-001 (CYPRESS-RWA-USERS-002) n=3 runs=[pass,pass,pass] -> PASS
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1345 completion_tokens=220
+[run] CYPRESS-RWA-USERS-003-TC001 (CYPRESS-RWA-USERS-003) n=3 runs=[pass,pass,pass] -> PASS
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1374 completion_tokens=794
+[run] CYPRESS-RWA-USERS-004-positive-001 (CYPRESS-RWA-USERS-004) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1107 completion_tokens=181
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1139 completion_tokens=203
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1374 completion_tokens=793
+[run] CYPRESS-RWA-USERS-004-positive-001 (CYPRESS-RWA-USERS-004) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1107 completion_tokens=181
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1139 completion_tokens=203
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1374 completion_tokens=800
+[run] CYPRESS-RWA-USERS-004-positive-001 (CYPRESS-RWA-USERS-004) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1107 completion_tokens=211
+[run] CYPRESS-RWA-USERS-004-positive-002 (CYPRESS-RWA-USERS-004) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-USERS-004-auth-001 (CYPRESS-RWA-USERS-004) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-USERS-004-negative-001 (CYPRESS-RWA-USERS-004) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1073 completion_tokens=237
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1342 completion_tokens=405
+[run] CYPRESS-RWA-USERS-005-positive-01 (CYPRESS-RWA-USERS-005) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1181 completion_tokens=259
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1342 completion_tokens=405
+[run] CYPRESS-RWA-USERS-005-positive-01 (CYPRESS-RWA-USERS-005) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1181 completion_tokens=193
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1213 completion_tokens=188
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1342 completion_tokens=405
+[run] CYPRESS-RWA-USERS-005-positive-01 (CYPRESS-RWA-USERS-005) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1181 completion_tokens=190
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1213 completion_tokens=188
+[run] CYPRESS-RWA-USERS-005-auth-01 (CYPRESS-RWA-USERS-005) n=3 runs=[pass,pass,pass] -> PASS
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1345 completion_tokens=406
+[run] CYPRESS-RWA-USERS-006-positive-001 (CYPRESS-RWA-USERS-006) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-USERS-006-auth-001 (CYPRESS-RWA-USERS-006) n=3 runs=[pass,pass,pass] -> PASS
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1342 completion_tokens=398
+[run] CYPRESS-RWA-USERS-007-positive-01 (CYPRESS-RWA-USERS-007) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1181 completion_tokens=218
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1213 completion_tokens=198
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1342 completion_tokens=398
+[run] CYPRESS-RWA-USERS-007-positive-01 (CYPRESS-RWA-USERS-007) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1181 completion_tokens=218
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1213 completion_tokens=198
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1342 completion_tokens=398
+[run] CYPRESS-RWA-USERS-007-positive-01 (CYPRESS-RWA-USERS-007) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1181 completion_tokens=218
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1213 completion_tokens=198
+[run] CYPRESS-RWA-USERS-007-auth-01 (CYPRESS-RWA-USERS-007) n=3 runs=[pass,pass,pass] -> PASS
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1404 completion_tokens=899
+[run] CYPRESS-RWA-USERS-008-positive-001 (CYPRESS-RWA-USERS-008) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-USERS-008-positive-002 (CYPRESS-RWA-USERS-008) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-USERS-008-positive-003 (CYPRESS-RWA-USERS-008) n=3 runs=[pass,pass,pass] -> PASS
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1450 completion_tokens=797
+[run] CYPRESS-RWA-USERS-009-positive-001 (CYPRESS-RWA-USERS-009) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-USERS-009-negative-001 (CYPRESS-RWA-USERS-009) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-USERS-009-negative-002 (CYPRESS-RWA-USERS-009) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1408 completion_tokens=262
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1412 completion_tokens=1003
+[run] CYPRESS-RWA-USERS-010-TC1 (CYPRESS-RWA-USERS-010) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1986 completion_tokens=333
+[run] CYPRESS-RWA-USERS-010-TC2 (CYPRESS-RWA-USERS-010) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=2024 completion_tokens=318
+[run] CYPRESS-RWA-USERS-010-TC3 (CYPRESS-RWA-USERS-010) n=3 runs=[pass,pass,pass] -> PASS
+[run] CYPRESS-RWA-USERS-010-TC4 (CYPRESS-RWA-USERS-010) n=3 runs=[pass,pass,pass] -> PASS
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1389 completion_tokens=1580
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1641 completion_tokens=1675
+[run] CYPRESS-RWA-USERS-011-001 (CYPRESS-RWA-USERS-011) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1003 completion_tokens=174
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1389 completion_tokens=1580
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1641 completion_tokens=1675
+[run] CYPRESS-RWA-USERS-011-001 (CYPRESS-RWA-USERS-011) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1003 completion_tokens=174
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1389 completion_tokens=1580
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1641 completion_tokens=1503
+[run] CYPRESS-RWA-USERS-011-TC01 (CYPRESS-RWA-USERS-011) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1004 completion_tokens=163
+[run] CYPRESS-RWA-USERS-011-002 (CYPRESS-RWA-USERS-011) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1003 completion_tokens=170
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1389 completion_tokens=1580
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1641 completion_tokens=1675
+[run] CYPRESS-RWA-USERS-011-001 (CYPRESS-RWA-USERS-011) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1003 completion_tokens=174
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1389 completion_tokens=1421
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1595 completion_tokens=1339
+[run] CYPRESS-RWA-USERS-011-TC01 (CYPRESS-RWA-USERS-011) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1004 completion_tokens=163
+[run] CYPRESS-RWA-USERS-011-003 (CYPRESS-RWA-USERS-011) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1002 completion_tokens=170
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1389 completion_tokens=1421
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1595 completion_tokens=1362
+[run] CYPRESS-RWA-USERS-011-positive-01 (CYPRESS-RWA-USERS-011) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1021 completion_tokens=184
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1389 completion_tokens=1580
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1641 completion_tokens=1675
+[run] CYPRESS-RWA-USERS-011-001 (CYPRESS-RWA-USERS-011) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1003 completion_tokens=174
+[run] CYPRESS-RWA-USERS-011-004 (CYPRESS-RWA-USERS-011) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1004 completion_tokens=147
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1389 completion_tokens=1580
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1641 completion_tokens=1675
+[run] CYPRESS-RWA-USERS-011-001 (CYPRESS-RWA-USERS-011) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1003 completion_tokens=174
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1389 completion_tokens=1580
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1641 completion_tokens=1675
+[run] CYPRESS-RWA-USERS-011-001 (CYPRESS-RWA-USERS-011) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1003 completion_tokens=170
+[run] CYPRESS-RWA-USERS-011-005 (CYPRESS-RWA-USERS-011) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1006 completion_tokens=177
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1389 completion_tokens=1580
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1641 completion_tokens=1675
+[run] CYPRESS-RWA-USERS-011-001 (CYPRESS-RWA-USERS-011) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1003 completion_tokens=174
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1389 completion_tokens=1421
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1595 completion_tokens=1362
+[run] CYPRESS-RWA-USERS-011-positive-01 (CYPRESS-RWA-USERS-011) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1021 completion_tokens=166
+[run] CYPRESS-RWA-USERS-011-006 (CYPRESS-RWA-USERS-011) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1000 completion_tokens=169
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1389 completion_tokens=1580
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1641 completion_tokens=1675
+[run] CYPRESS-RWA-USERS-011-001 (CYPRESS-RWA-USERS-011) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1003 completion_tokens=174
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1389 completion_tokens=1580
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1641 completion_tokens=1675
+[run] CYPRESS-RWA-USERS-011-001 (CYPRESS-RWA-USERS-011) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1003 completion_tokens=174
+[run] CYPRESS-RWA-USERS-011-007 (CYPRESS-RWA-USERS-011) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1012 completion_tokens=176
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1389 completion_tokens=1189
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1595 completion_tokens=1337
+[run] CYPRESS-RWA-USERS-011-TC01 (CYPRESS-RWA-USERS-011) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1005 completion_tokens=174
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1389 completion_tokens=1421
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1595 completion_tokens=1362
+[run] CYPRESS-RWA-USERS-011-positive-01 (CYPRESS-RWA-USERS-011) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1021 completion_tokens=166
+[run] CYPRESS-RWA-USERS-011-008 (CYPRESS-RWA-USERS-011) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1028 completion_tokens=149
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1389 completion_tokens=1189
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1595 completion_tokens=1342
+[run] CYPRESS-RWA-USERS-011-TC01 (CYPRESS-RWA-USERS-011) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1005 completion_tokens=174
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1389 completion_tokens=1189
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1595 completion_tokens=1337
+[run] CYPRESS-RWA-USERS-011-TC01 (CYPRESS-RWA-USERS-011) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1005 completion_tokens=174
+[run] CYPRESS-RWA-USERS-011-009 (CYPRESS-RWA-USERS-011) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1004 completion_tokens=147
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1389 completion_tokens=1580
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1641 completion_tokens=1503
+[run] CYPRESS-RWA-USERS-011-TC01 (CYPRESS-RWA-USERS-011) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1004 completion_tokens=163
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1389 completion_tokens=1580
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1641 completion_tokens=1675
+[run] CYPRESS-RWA-USERS-011-001 (CYPRESS-RWA-USERS-011) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1003 completion_tokens=181
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1424 completion_tokens=227
+[run] CYPRESS-RWA-USERS-012-TC1 (CYPRESS-RWA-USERS-012) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1355 completion_tokens=241
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1387 completion_tokens=261
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1310 completion_tokens=298
+[run] CYPRESS-RWA-USERS-013-TC001 (CYPRESS-RWA-USERS-013) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=946 completion_tokens=294
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1310 completion_tokens=298
+[run] CYPRESS-RWA-USERS-013-TC001 (CYPRESS-RWA-USERS-013) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=946 completion_tokens=233
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=1310 completion_tokens=298
+[run] CYPRESS-RWA-USERS-013-TC001 (CYPRESS-RWA-USERS-013) n=3 runs=[fail,fail,fail] -> FAIL
+[llm] model=anthropic/claude-sonnet-4.5 prompt_tokens=946 completion_tokens=294
+[run] CYPRESS-RWA-USERS-013-TC002 (CYPRESS-RWA-USERS-013) n=3 runs=[pass,pass,pass] -> PASS
+[quarantine] 39 test(s) excluded from scoring: CYPRESS-RWA-BANK-ACCOUNTS-002-positive-001, CYPRESS-RWA-BANK-ACCOUNTS-005-positive-001, CYPRESS-RWA-BANK-ACCOUNTS-005-positive-001, CYPRESS-RWA-COMMENTS-001-TC001, CYPRESS-RWA-COMMENTS-002-positive-001, CYPRESS-RWA-CONTACTS-002-positive-001, CYPRESS-RWA-CONTACTS-004-positive-001, CYPRESS-RWA-LIKES-001-TC01, CYPRESS-RWA-LIKES-002-positive-001, CYPRESS-RWA-NOTIFICATIONS-003-positive-001, CYPRESS-RWA-NOTIFICATIONS-003-positive-001, CYPRESS-RWA-NOTIFICATIONS-003-positive-001, CYPRESS-RWA-NOTIFICATIONS-004-001, CYPRESS-RWA-TEST-DATA-001-positive-users, CYPRESS-RWA-TEST-DATA-001-positive-users, CYPRESS-RWA-TEST-DATA-001-positive-users, CYPRESS-RWA-TEST-DATA-001-positive-users, CYPRESS-RWA-TEST-DATA-001-positive-users, CYPRESS-RWA-TEST-DATA-001-positive-users, CYPRESS-RWA-TEST-DATA-001-positive-users, CYPRESS-RWA-TEST-DATA-001-positive-users, CYPRESS-RWA-TRANSACTIONS-008-positive-001, CYPRESS-RWA-TRANSACTIONS-009-positive-001, CYPRESS-RWA-TRANSACTIONS-009-positive-001, CYPRESS-RWA-TRANSACTIONS-010-negative-001, CYPRESS-RWA-USERS-002-positive-001, CYPRESS-RWA-USERS-004-positive-001, CYPRESS-RWA-USERS-005-positive-01, CYPRESS-RWA-USERS-007-positive-01, CYPRESS-RWA-USERS-011-TC01, CYPRESS-RWA-USERS-011-TC01, CYPRESS-RWA-USERS-011-001, CYPRESS-RWA-USERS-011-001, CYPRESS-RWA-USERS-011-positive-01, CYPRESS-RWA-USERS-011-001, CYPRESS-RWA-USERS-011-positive-01, CYPRESS-RWA-USERS-011-TC01, CYPRESS-RWA-USERS-011-001, CYPRESS-RWA-USERS-013-TC001
+[cost] $3.8416 over 304 LLM call(s) (396865 in + 176735 out tok)
+{
+  "generatedAt": "2026-07-01T08:21:26.496Z",
+  "model": "anthropic/claude-sonnet-4.5",
+  "n": 3,
+  "requirements": {
+    "total": 41,
+    "covered": 36
+  },
+  "tests": {
+    "generated": 123,
+    "passed": 69,
+    "failed": 15,
+    "quarantinedFlaky": 39,
+    "errored": 0
+  },
+  "falsePositiveRate": 0.12195121951219512,
+  "traceability": {
+    "orphanTestIds": []
+  },
+  "errors": [],
+  "defects": [],
+  "catchRate": null,
+  "cost": {
+    "calls": 304,
+    "promptTokens": 396865,
+    "completionTokens": 176735,
+    "pricing": {
+      "inputUsdPerMTok": 3,
+      "outputUsdPerMTok": 15
+    },
+    "inputUsd": 1.190595,
+    "outputUsd": 2.651025,
+    "totalUsd": 3.84162,
+    "byPhase": {
+      "generate": {
+        "calls": 141,
+        "promptTokens": 198473,
+        "completionTokens": 144156,
+        "inputUsd": 0.595419,
+        "outputUsd": 2.16234,
+        "totalUsd": 2.757759
+      },
+      "triage": {
+        "calls": 163,
+        "promptTokens": 198392,
+        "completionTokens": 32579,
+        "inputUsd": 0.595176,
+        "outputUsd": 0.488685,
+        "totalUsd": 1.083861
+      }
+    }
+  },
+  "testability": null
+}

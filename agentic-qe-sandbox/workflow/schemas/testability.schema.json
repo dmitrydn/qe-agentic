@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "testability.schema.json",
+  "title": "Testability",
+  "type": "object",
+  "required": ["requirementId", "dimensions", "clarifications", "assumptions"],
+  "additionalProperties": false,
+  "properties": {
+    "requirementId": { "type": "string", "minLength": 1 },
+    "dimensions": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "required": ["id", "rating", "finding"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "enum": ["D1", "D2", "D3", "D4", "D5", "D6"] },
+          "rating": { "type": "string", "enum": ["pass", "partial", "fail"] },
+          "finding": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "clarifications": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+    "assumptions": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+  }
+}

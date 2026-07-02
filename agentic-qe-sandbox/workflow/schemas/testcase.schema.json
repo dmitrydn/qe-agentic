@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "testcase.schema.json",
+  "title": "TestCaseArray",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "type": "object",
+    "required": ["id", "requirementId", "title", "kind", "actor", "requests"],
+    "additionalProperties": false,
+    "properties": {
+      "id": { "type": "string", "minLength": 1 },
+      "requirementId": { "type": "string", "minLength": 1 },
+      "title": { "type": "string", "minLength": 1 },
+      "kind": { "type": "string", "enum": ["positive", "negative", "auth"] },
+      "actor": { "type": "string", "minLength": 1 },
+      "requests": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "required": ["name", "method", "pathTemplate", "expect"],
+          "additionalProperties": false,
+          "properties": {
+            "name": { "type": "string" },
+            "method": { "type": "string", "enum": ["GET", "POST", "PUT", "PATCH", "DELETE"] },
+            "pathTemplate": { "type": "string" },
+            "pathParams": { "type": "object" },
+            "query": { "type": "object" },
+            "headers": { "type": "object" },
+            "body": {},
+            "capture": { "type": "object" },
+            "expect": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "status": { "type": "integer" },
+                "statusIn": { "type": "array", "items": { "type": "integer" } },
+                "jsonPath": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["path", "op"],
+                    "additionalProperties": false,
+                    "properties": {
+                      "path": { "type": "string" },
+                      "op": { "type": "string", "enum": ["eq", "neq", "exists", "gte", "lte", "isType"] },
+                      "value": {}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+# App-under-test fixtures — each is its own clone with its own git history
+# and node_modules; not part of this project.
+sandbox-eval/
+
+# Dependencies
+node_modules/
+
+# Secrets / local environment
+.env
+
+# Local Claude Code settings (per-developer, not shared)
+.claude/settings.local.json
+.claude/scheduled_tasks.lock
+
+# OS / editor cruft
+.DS_Store
+*.tmp
+.~lock.*#

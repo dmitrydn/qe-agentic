@@ -1,0 +1,54 @@
+{
+  "generatedAt": "2026-06-30T12:59:28.238Z",
+  "model": "anthropic/claude-sonnet-4.5",
+  "n": 3,
+  "requirements": {
+    "total": 44,
+    "covered": 37
+  },
+  "tests": {
+    "generated": 137,
+    "passed": 70,
+    "failed": 26,
+    "quarantinedFlaky": 41,
+    "errored": 0
+  },
+  "falsePositiveRate": 0.1897810218978102,
+  "traceability": {
+    "orphanTestIds": []
+  },
+  "errors": [],
+  "defects": [],
+  "catchRate": null,
+  "cost": {
+    "calls": 341,
+    "promptTokens": 454417,
+    "completionTokens": 181958,
+    "pricing": {
+      "inputUsdPerMTok": 3,
+      "outputUsdPerMTok": 15
+    },
+    "inputUsd": 1.363251,
+    "outputUsd": 2.72937,
+    "totalUsd": 4.092621,
+    "byPhase": {
+      "generate": {
+        "calls": 150,
+        "promptTokens": 211556,
+        "completionTokens": 143176,
+        "inputUsd": 0.634668,
+        "outputUsd": 2.14764,
+        "totalUsd": 2.782308
+      },
+      "triage": {
+        "calls": 191,
+        "promptTokens": 242861,
+        "completionTokens": 38782,
+        "inputUsd": 0.728583,
+        "outputUsd": 0.58173,
+        "totalUsd": 1.310313
+      }
+    }
+  },
+  "testability": null
+}

@@ -1,0 +1,18 @@
+{
+  "id": "conduit",
+  "specRoot": "sandbox-eval/realworld-spec",
+  "appRoot": "sandbox-eval/conduit-realworld",
+  "runtime": {
+    "status": "deferred",
+    "notes": "See DEFERRAL.md — run()/seed()/auth()/teardown() are stubs that throw NotImplementedError."
+  },
+  "requirements": {
+    "format": "openapi+hurl+playwright+selectors",
+    "artifacts": [
+      "specs/api/openapi.yml",
+      "specs/api/hurl/*.hurl",
+      "specs/e2e/*.spec.ts",
+      "specs/e2e/SELECTORS.md"
+    ]
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "generatedAt": "2026-06-26T15:17:57.012Z",
+  "model": "anthropic/claude-sonnet-4.5",
+  "n": 3,
+  "requirements": {
+    "total": 4,
+    "covered": 4
+  },
+  "tests": {
+    "generated": 8,
+    "passed": 8,
+    "failed": 0,
+    "quarantinedFlaky": 0,
+    "errored": 0
+  },
+  "falsePositiveRate": 0,
+  "traceability": {
+    "orphanTestIds": []
+  },
+  "errors": [],
+  "defects": [
+    {
+      "id": "payment-amount-cents",
+      "caught": true,
+      "byTestIds": [
+        "CYPRESS-RWA-TRANSACTIONS-007-positive-001"
+      ],
+      "severity": "blatant",
+      "expectCaught": true
+    },
+    {
+      "id": "auth-gate-post-transactions",
+      "caught": true,
+      "byTestIds": [
+        "CYPRESS-RWA-TRANSACTIONS-007-auth-001"
+      ],
+      "severity": "blatant",
+      "expectCaught": true
+    },
+    {
+      "id": "receiver-balance-not-credited",
+      "caught": true,
+      "byTestIds": [
+        "CYPRESS-RWA-TRANSACTIONS-007-positive-001"
+      ],
+      "severity": "blatant",
+      "expectCaught": true
+    },
+    {
+      "id": "payment-amount-rounding-shaved-cent",
+      "caught": true,
+      "byTestIds": [
+        "CYPRESS-RWA-TRANSACTIONS-007-positive-001"
+      ],
+      "severity": "subtle",
+      "expectCaught": true
+    },
+    {
+      "id": "auth-gate-get-bankaccounts",
+      "caught": true,
+      "byTestIds": [
+        "CYPRESS-RWA-BANK-ACCOUNTS-001-TC-002"
+      ],
+      "severity": "blatant",
+      "expectCaught": true
+    },
+    {
+      "id": "bankaccounts-missing-userid-field",
+      "caught": true,
+      "byTestIds": [
+        "CYPRESS-RWA-BANK-ACCOUNTS-001-TC-001"
+      ],
+      "severity": "moderate",
+      "expectCaught": true
+    },
+    {
+      "id": "bankaccounts-routingnumber-hardcoded",
+      "caught": false,
+      "byTestIds": [],
+      "severity": "moderate",
+      "expectCaught": false
+    },
+    {
+      "id": "auth-gate-get-users",
+      "caught": true,
+      "byTestIds": [
+        "CYPRESS-RWA-USERS-001-TC-002"
+      ],
+      "severity": "blatant",
+      "expectCaught": true
+    },
+    {
+      "id": "users-results-not-array",
+      "caught": true,
+      "byTestIds": [
+        "CYPRESS-RWA-USERS-001-TC-001"
+      ],
+      "severity": "moderate",
+      "expectCaught": true
+    },
+    {
+      "id": "users-self-not-excluded",
+      "caught": false,
+      "byTestIds": [],
+      "severity": "subtle",
+      "expectCaught": false
+    },
+    {
+      "id": "auth-gate-get-transactions",
+      "caught": true,
+      "byTestIds": [
+        "CYPRESS-RWA-TRANSACTIONS-001-TC2"
+      ],
+      "severity": "blatant",
+      "expectCaught": true
+    },
+    {
+      "id": "transactions-pagination-off-by-one",
+      "caught": false,
+      "byTestIds": [],
+      "severity": "subtle",
+      "expectCaught": true
+    }
+  ],
+  "catchRate": 0.9,
+  "unmeasuredTestIds": [
+    "CYPRESS-RWA-TRANSACTIONS-001-TC1"
+  ],
+  "negativeControls": {
+    "total": 2,
+    "correctlyUncaught": 2,
+    "unexpectedlyCaught": []
+  }
+}

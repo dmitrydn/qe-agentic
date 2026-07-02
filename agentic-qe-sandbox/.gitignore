@@ -1,0 +1,8 @@
+node_modules/
+.env
+# Workflow-run output: auto-generated test cases + suite-manifest state, all
+# regenerable via `node run-workflow.js` — every generated-tests* variant
+# from this session's experiments (baseline/graph-l1/grounded/gate runs).
+generated-tests/
+generated-tests*/
+state/

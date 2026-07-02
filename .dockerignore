@@ -1,0 +1,16 @@
+**/node_modules
+**/.git
+**/cypress/videos
+**/cypress/screenshots
+**/cypress/results
+**/.nyc_output
+**/coverage
+**/dist
+**/build
+**/data/database.json
+**/.DS_Store
+*.docx
+*.xlsx
+
+# project docs (not part of the build)
+docs/

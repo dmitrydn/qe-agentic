@@ -1,0 +1,57 @@
+<svg viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="1080" height="1080" fill="#f7f6f3"/>
+
+  <!-- title -->
+  <text x="64" y="118" font-size="52" font-weight="500" fill="#1a1a19">The 18.2% that wasn't</text>
+  <text x="64" y="164" font-size="24" fill="#52514e">Full-breadth run — 44 requirements, 132 generated tests.</text>
+  <text x="64" y="196" font-size="24" fill="#52514e">What the “false positives” actually turned out to be.</text>
+
+  <!-- stat tiles -->
+  <rect x="64" y="238" width="440" height="172" rx="14" fill="#f0eee9"/>
+  <text x="90" y="286" font-size="22" fill="#52514e">Reported false-positive rate</text>
+  <text x="90" y="360" font-size="68" font-weight="500" fill="#b3261e">18.2%</text>
+  <text x="90" y="394" font-size="17" fill="#898781">24 of 132 tests failed on the clean app</text>
+
+  <text x="540" y="342" font-size="46" fill="#a8a49c" text-anchor="middle">→</text>
+
+  <rect x="576" y="238" width="440" height="172" rx="14" fill="#e7f4ec"/>
+  <text x="602" y="286" font-size="22" fill="#52514e">True false-positive rate</text>
+  <text x="602" y="360" font-size="68" font-weight="500" fill="#1f7a3d">≈2–3%</text>
+  <text x="602" y="394" font-size="17" fill="#898781">after adjudicating every failure</text>
+
+  <!-- grounding gate note -->
+  <text x="64" y="462" font-size="22" fill="#52514e">A deterministic grounding gate first cut it 15.4% → 12.2% (tests hitting routes that</text>
+  <text x="64" y="492" font-size="22" fill="#52514e">don't exist). Then every remaining failure was read by hand:</text>
+
+  <!-- breakdown label -->
+  <text x="64" y="548" font-size="18" fill="#898781">THE 15 RESIDUAL FAILURES, ADJUDICATED</text>
+
+  <!-- row 1 -->
+  <text x="120" y="600" font-size="24" font-weight="500" fill="#1a1a19" text-anchor="end">~11</text>
+  <rect x="150" y="574" width="780" height="44" rx="8" fill="#eae8e2"/>
+  <rect x="150" y="574" width="569" height="44" rx="8" fill="#c6e6d3"/>
+  <text x="172" y="602" font-size="19" fill="#1f7a3d">real bugs the system correctly caught</text>
+
+  <!-- row 2 -->
+  <text x="120" y="664" font-size="24" font-weight="500" fill="#1a1a19" text-anchor="end">~3</text>
+  <rect x="150" y="638" width="780" height="44" rx="8" fill="#eae8e2"/>
+  <rect x="150" y="638" width="156" height="44" rx="8" fill="#f4d3ce"/>
+  <text x="330" y="666" font-size="19" fill="#b3261e">true false positives (over-strict assertions)</text>
+
+  <!-- row 3 -->
+  <text x="120" y="728" font-size="24" font-weight="500" fill="#1a1a19" text-anchor="end">~1</text>
+  <rect x="150" y="702" width="780" height="44" rx="8" fill="#eae8e2"/>
+  <rect x="150" y="702" width="55" height="44" rx="8" fill="#d3cfc7"/>
+  <text x="225" y="730" font-size="19" fill="#898781">data-setup gap</text>
+
+  <!-- real bugs card -->
+  <rect x="64" y="784" width="952" height="212" rx="14" fill="#ffffff" stroke="#e5e3de" stroke-width="1"/>
+  <text x="90" y="826" font-size="20" font-weight="500" fill="#1a1a19">Real defects caught in the banking app — reclassified out of “false positive”</text>
+  <text x="90" y="866" font-size="18" fill="#52514e">•  API 500-crashes when a password is omitted (should be a clean 4xx)</text>
+  <text x="90" y="902" font-size="18" fill="#52514e">•  GraphQL createBankAccount mutation runs with no authentication</text>
+  <text x="90" y="938" font-size="18" fill="#52514e">•  empty account numbers &amp; invalid emails accepted without validation</text>
+  <text x="90" y="974" font-size="18" fill="#52514e">•  a crash on a contacts lookup</text>
+
+  <!-- footer -->
+  <text x="64" y="1038" font-size="15" fill="#898781">Human adjudication on one app; ≈2–3% is a bounded estimate, not a constant.  Source: MAKE-THE-CASE.md · Cypress Real World App</text>
+</svg>

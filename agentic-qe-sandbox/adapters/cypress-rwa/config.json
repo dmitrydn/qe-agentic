@@ -1,0 +1,30 @@
+{
+  "id": "cypress-rwa",
+  "appRoot": "sandbox-eval/cypress-realworld-app",
+  "dockerImage": "agentic-qe/cypress-rwa:latest",
+  "dockerfile": "agentic-qe-sandbox/docker/Dockerfile",
+  "containerName": "agentic-qe-cypress-rwa",
+  "baseUrls": {
+    "web": "http://localhost:3000",
+    "api": "http://localhost:3001"
+  },
+  "seed": {
+    "endpoint": "/testData/seed",
+    "method": "POST",
+    "seedFile": "data/database-seed.json",
+    "defaultPassword": "s3cret"
+  },
+  "auth": {
+    "type": "cookie",
+    "loginEndpoint": "/login",
+    "cookieName": "connect.sid"
+  },
+  "requirements": {
+    "format": "ts-models+validators+cypress-specs",
+    "artifacts": [
+      "backend/validators.ts",
+      "src/models/*.ts",
+      "cypress/tests/api/*.spec.ts"
+    ]
+  }
+}

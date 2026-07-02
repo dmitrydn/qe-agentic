@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "triage.schema.json",
+  "title": "TriageVerdict",
+  "type": "object",
+  "required": ["class", "confidence", "requirementId", "rationale"],
+  "additionalProperties": false,
+  "properties": {
+    "class": { "type": "string", "enum": ["real_defect", "flaky_or_bad_test", "environment"] },
+    "confidence": { "type": "string", "enum": ["low", "medium", "high"] },
+    "requirementId": { "type": "string", "minLength": 1 },
+    "rationale": { "type": "string", "minLength": 1 },
+    "repro": { "type": "array", "items": { "type": "string" } }
+  }
+}

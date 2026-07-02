@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agentic QE — the evidence</title>
+<!--
+  Self-contained evidence dashboard. No external dependencies — drop into a
+  GitHub Pages repo (Settings → Pages → source = /docs or root) and it just works.
+  BEFORE PUBLISHING, replace the two tokens:
+    REPO_URL  → your public repo
+    DEMO_URL  → the demo GIF/MP4
+-->
+<style>
+  :root{
+    --page:#f7f6f3; --card:#ffffff; --tile:#f0eee9;
+    --ink:#1a1a19; --sub:#52514e; --muted:#8b8983; --line:#e5e3de;
+    --danger:#b3261e; --danger-bg:#f4d3ce; --danger-tint:#fbeae8;
+    --success:#1f7a3d; --success-bg:#c6e6d3; --success-tint:#e7f4ec;
+    --accent:#1a1a19;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--page);color:var(--ink);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:860px;margin:0 auto;padding:0 24px}
+  header{padding:72px 0 40px}
+  .eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
+  h1{font-size:40px;font-weight:600;line-height:1.15;margin:0 0 16px;letter-spacing:-.01em}
+  .lede{font-size:19px;color:var(--sub);margin:0 0 22px}
+  .links a{display:inline-block;font-size:14px;font-weight:500;text-decoration:none;border:1px solid var(--line);background:var(--card);border-radius:8px;padding:9px 16px;margin:0 8px 8px 0;transition:border-color .15s}
+  .links a:hover{border-color:var(--muted)}
+  .note{font-size:13px;color:var(--muted);margin-top:8px}
+  section{padding:34px 0;border-top:1px solid var(--line)}
+  h2{font-size:24px;font-weight:600;margin:0 0 8px;letter-spacing:-.01em}
+  h2 .n{color:var(--muted);font-weight:500;margin-right:10px}
+  .say{font-size:15px;color:var(--sub);margin:0 0 22px;max-width:64ch}
+  /* loop */
+  .loop{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+  .stage{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+  .stage .k{font-family:var(--mono);font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+  .stage .t{font-weight:600;font-size:15px;margin:6px 0 4px}
+  .stage .d{font-size:13px;color:var(--sub)}
+  /* tiles */
+  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+  .tile{background:var(--tile);border-radius:12px;padding:16px}
+  .tile .lab{font-size:13px;color:var(--sub)}
+  .tile .big{font-size:30px;font-weight:600;margin:6px 0 2px}
+  .tile .sub{font-size:12px;color:var(--muted)}
+  .tile.good .big{color:var(--success)} .tile.good{background:var(--success-tint)}
+  .tile.bad .big{color:var(--danger)}
+  /* transform row */
+  .xform{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:8px 0 22px}
+  .xform .arrow{font-size:26px;color:var(--muted)}
+  .xform .tile{flex:1;min-width:200px}
+  /* bars */
+  .bars{margin:6px 0 22px}
+  .bar{display:flex;align-items:center;gap:12px;margin-bottom:9px}
+  .bar .num{width:40px;text-align:right;font-weight:600}
+  .bar .track{flex:1;height:30px;background:var(--tile);border-radius:7px;position:relative;overflow:hidden}
+  .bar .fill{height:100%;border-radius:7px;display:flex;align-items:center;padding-left:12px;font-size:13px}
+  .fill.g{background:var(--success-bg);color:var(--success)}
+  .fill.r{background:var(--danger-bg);color:var(--danger)}
+  .fill.m{background:#d3cfc7}
+  .bar .side{font-size:13px;color:var(--sub)}
+  /* generic table */
+  table{width:100%;border-collapse:collapse;font-size:14px;margin-top:6px}
+  td,th{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
+  th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:500}
+  td.v{text-align:right;font-weight:600;font-family:var(--mono)}
+  .buglist{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-top:14px}
+  .buglist b{font-weight:600}
+  .buglist ul{margin:10px 0 0;padding-left:18px} .buglist li{font-size:14px;color:var(--sub);margin-bottom:6px}
+  code{font-family:var(--mono);font-size:.9em;background:var(--tile);padding:1px 6px;border-radius:5px}
+  .diff{font-family:var(--mono);font-size:13px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:12px 0;white-space:pre;overflow-x:auto}
+  .diff .del{color:var(--danger)} .diff .add{color:var(--success)}
+  .callout{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:14px 16px;font-size:14px;color:var(--sub);margin-top:8px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}h1{font-size:32px}}
+  .caveat{font-size:13px;color:var(--muted);margin-top:12px}
+  footer{padding:40px 0 72px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+  .tag{display:inline-block;font-family:var(--mono);font-size:11px;color:var(--sub);background:var(--tile);border-radius:20px;padding:3px 11px;margin:0 6px 6px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <p class="eyebrow">Personal R&amp;D · Agentic Quality Engineering</p>
+    <h1>An agent that writes, runs, and triages its own API tests — and holds up under audit.</h1>
+    <p class="lede">Point it at a plain-English requirement. It writes an executable API test, runs it three times against a real app, and — on failure — a second agent triages the result blind. Only real bugs get reported, each with a five-step repro. Every number below is a measurement against a known-answer key, not a claim.</p>
+    <div class="links">
+      <a href="REPO_URL">Code &amp; harness →</a>
+      <a href="DEMO_URL">60-sec live demo →</a>
+      <a href="REPO_URL/blob/main/agentic-qe-sandbox/MAKE-THE-CASE.md">Full evidence doc →</a>
+    </div>
+    <p class="note">Run live against the Cypress Real World App (a full-stack banking demo) with Claude Sonnet 4.5. Nothing mocked.</p>
+  </header>
+
+  <section>
+    <h2><span class="n">01</span>The loop</h2>
+    <p class="say">Each stage exists to remove one class of false positive. The agent (LLM) does judgement; deterministic code does selection, running, scoring, and every gating decision.</p>
+    <div class="loop">
+      <div class="stage"><div class="k">select</div><div class="t">Requirement</div><div class="d">Plain-English user story + acceptance criteria. No test code.</div></div>
+      <div class="stage"><div class="k">generate · agent</div><div class="t">Write the test</div><div class="d">An executable API test, inferred from the requirement's domain.</div></div>
+      <div class="stage"><div class="k">run ×3 · engine</div><div class="t">Flake-guard</div><div class="d">Three runs with state reset. Nondeterministic results are discarded.</div></div>
+      <div class="stage"><div class="k">triage · agent</div><div class="t">Judge blind</div><div class="d">A second agent classifies the failure without the generator's reasoning.</div></div>
+      <div class="stage"><div class="k">report · engine</div><div class="t">Real bugs only</div><div class="d">Each with a 5-step reproduction a human can run.</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="n">02</span>Watch it work</h2>
+    <p class="say">One requirement — <code>CYPRESS-RWA-TRANSACTIONS-007</code>, "creates a new payment" — start to finish. From prose alone the agent wrote a test that re-fetches both balances and asserts the money moved, in cents. Nobody wrote that assertion.</p>
+    <div class="diff">Run 3× against the clean app        <span class="add">pass, pass, pass</span>
+Break the backend on purpose:
+  <span class="del">- amount: transactionDetails.amount * 100,</span>
+  <span class="add">+ amount: transactionDetails.amount,</span>
+Same test, no changes                <span class="del">fail, fail, fail</span>
+Triage (blind)                       <span class="del">real_defect</span>, high confidence, 5-step repro
+Revert the one line                  <span class="add">pass, pass, pass</span></div>
+    <p class="caveat">The app, not the test, was the variable the whole time.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">03</span>The numbers, with the caveats that bound them</h2>
+    <p class="say">Two runs answer two questions, kept separate so neither overstates the other.</p>
+    <div class="grid2">
+      <div>
+        <p style="font-weight:600;margin:0 0 4px">Run A — accuracy (curated slice, 4 of 44)</p>
+        <p class="caveat" style="margin-top:0">With field-level API hints. "How good is the loop when it isn't guessing."</p>
+        <table>
+          <tr><td>False-positive rate</td><td class="v">0%</td></tr>
+          <tr><td>Defect catch rate</td><td class="v">90% (9/10)</td></tr>
+          <tr><td>Negative controls correctly ignored</td><td class="v">2 / 2</td></tr>
+          <tr><td>Triage accuracy</td><td class="v">100% (12/12)</td></tr>
+          <tr><td>Orphan tests</td><td class="v">0</td></tr>
+        </table>
+      </div>
+      <div>
+        <p style="font-weight:600;margin:0 0 4px">Run B — breadth (uncurated, all 44)</p>
+        <p class="caveat" style="margin-top:0">No hints. "What happens when you stop holding its hand."</p>
+        <table>
+          <tr><td>Requirements with a passing test</td><td class="v">38/44</td></tr>
+          <tr><td>Tests generated</td><td class="v">132</td></tr>
+          <tr><td>…passed</td><td class="v">70</td></tr>
+          <tr><td>…failed on clean app</td><td class="v">24 (18.2%)</td></tr>
+          <tr><td>…flaky / excluded</td><td class="v">38 (28.8%)</td></tr>
+        </table>
+      </div>
+    </div>
+    <p class="caveat">The one missed defect isn't hidden: a deliberately subtle off-by-one in pagination the generated test structurally can't see. The 2 negative controls being correctly ignored is what makes the 90%/100% a measurement, not a stacked catalog.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">04</span>The 18.2% that wasn't</h2>
+    <p class="say">The breadth run's raw false-positive rate looked like 18.2%. Instead of tuning it down, every failure was adjudicated by hand.</p>
+    <div class="xform">
+      <div class="tile bad"><div class="lab">Reported false-positive rate</div><div class="big">18.2%</div><div class="sub">24 of 132 tests failed on the clean app</div></div>
+      <div class="arrow">→</div>
+      <div class="tile good"><div class="lab">True false-positive rate</div><div class="big">≈2–3%</div><div class="sub">after adjudicating every failure</div></div>
+    </div>
+    <p class="say">A deterministic grounding gate first cut it <b>15.4% → 12.2%</b> (tests asserting against routes that don't exist). Then the 15 residual failures were read one by one:</p>
+    <div class="bars">
+      <div class="bar"><div class="num">~11</div><div class="track"><div class="fill g" style="width:73%">real bugs the system correctly caught</div></div></div>
+      <div class="bar"><div class="num">~3</div><div class="track"><div class="fill r" style="width:20%"></div></div><div class="side">true false positives (over-strict assertions)</div></div>
+      <div class="bar"><div class="num">~1</div><div class="track"><div class="fill m" style="width:7%"></div></div><div class="side">data-setup gap</div></div>
+    </div>
+    <div class="buglist">
+      <b>Real defects caught in the banking app — reclassified out of "false positive":</b>
+      <ul>
+        <li>API <b>500-crashes</b> when a password is omitted (should be a clean 4xx)</li>
+        <li>GraphQL <b>createBankAccount</b> mutation runs with <b>no authentication</b></li>
+        <li>empty account numbers &amp; invalid emails accepted without validation</li>
+        <li>a crash on a contacts lookup</li>
+      </ul>
+    </div>
+    <p class="caveat">Human adjudication on one app; ≈2–3% is a bounded estimate, not a constant. The "accuracy problem" was, in large part, the system doing exactly its job against a backend with weak validation.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">05</span>The hypothesis I killed</h2>
+    <p class="say">The obvious fix for false positives: give the agent a code knowledge graph — a dependency/side-effect map of the backend. I built it and ran a controlled A/B.</p>
+    <div class="callout">It did <b>not</b> reduce false positives; coverage even slipped by one. <b>Why, from first principles:</b> a test checks behaviour against an <i>expected</i> behaviour — the oracle. The oracle is a statement of <b>intent</b>, and intent is not present in the implementation. Deriving "what it should do" from the code under test is circular. No amount of code knowledge can supply a missing oracle. The real lever is the fidelity of the requirement itself.</div>
+    <p class="caveat">Measured, not assumed — and killed cheaply rather than shipped on faith. Full A/B in the graphify decision memo.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">06</span>The standing red gate</h2>
+    <p class="say">Run end-to-end, the project's own acceptance gate (<code>verify.sh</code>) is <b>red</b> — it fails at the defect-catch step on that same structurally-unfixable pagination miss. Found while preparing this package, run twice to confirm it wasn't a flaky LLM call.</p>
+    <div class="callout">It's reported here rather than special-cased green. A green gate that lies makes every future green meaningless. Fixing it for real means earning a genuine catch or deliberately reclassifying that defect as an accepted gap — both real work, not a checkbox to tick.</div>
+  </section>
+
+  <section>
+    <h2><span class="n">07</span>What this proves — and what it doesn't</h2>
+    <div class="grid2">
+      <div>
+        <p style="font-weight:600;margin:0 0 6px;color:var(--success)">Proven, live</p>
+        <p class="say" style="margin:0">Prose → runnable, meaningful API tests without seeing test code. Real bugs told apart from bad tests and noise (100% on a 12-case battery). Flake-guard and negative controls exercised live, not just unit-tested.</p>
+      </div>
+      <div>
+        <p style="font-weight:600;margin:0 0 6px;color:var(--muted)">Out of scope</p>
+        <p class="say" style="margin:0">UI/E2E generation (API-level by design). A second, structurally different app (the core/adapter split is built for it; one wired up). A fully green standing gate. Rare, intermittent flakiness beyond a 3-run guard.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>
+      <span class="tag">agentic</span><span class="tag">LLM evaluation</span><span class="tag">negative controls</span><span class="tag">test generation</span><span class="tag">API testing</span><span class="tag">oracle / intent</span>
+    </div>
+    <p>All metrics are scoped to the Cypress Real World App and the requirement set described in <a href="REPO_URL/blob/main/agentic-qe-sandbox/MAKE-THE-CASE.md">MAKE-THE-CASE.md</a> and the full audited record <a href="REPO_URL/blob/main/agentic-qe-sandbox/VERIFICATION.md">VERIFICATION.md</a>. A personal, own-initiative research project, shared to document method.</p>
+  </footer>
+
+</div>
+</body>
+</html>
