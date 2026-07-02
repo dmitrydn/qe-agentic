@@ -95,7 +95,7 @@ What would you attack first in a loop like this?
 ```
 
 *Hook length check: first 3 lines ≈ 165 chars, under the ~210 fold.*
-*Comment to pin:* link to `[DEMO VIDEO/GIF]` (the `demo/run-demo.js` walkthrough) and `[REPO]`.
+*Comment to pin:* link to the demo GIF (record via `record-demo.sh`) and the repo `https://github.com/dmitrydn/qe-agentic`. Ready-to-paste comment in `PUBLISH-PACKAGE.md`.
 *Folded-in theme 4 (guardrails):* the "every stage kills one class of false positive" framing carries the flake-guard architecture without a separate post.
 
 ---
@@ -288,7 +288,7 @@ Architecture notes in comments.
 **Comments section — the real reach engine.**
 
 - **Reply to every substantive comment within the first 90 minutes.** LinkedIn's algorithm weights early engagement heavily; your own replies count. Draft 3–4 anticipated replies before posting.
-- **Put links in the first comment, not the post body.** Outbound links in the body suppress reach. Post the body, then immediately drop the `[REPO]` / `MAKE-THE-CASE.md` / demo link as your own first comment and say "link in comments" in the post.
+- **Put links in the first comment, not the post body.** Outbound links in the body suppress reach. Post the body, then immediately drop the repo / `MAKE-THE-CASE.md` / demo link as your own first comment and say "link in comments" in the post.
 - **Seed one genuine question at the end of each post** (already written in). Questions that invite war stories ("have you ever kept something red on principle?") outperform yes/no prompts.
 - **Handle skeptics as gifts.** If someone challenges a metric, agree on the caveat first, then show the evidence. "Fair — 2–3% is a bounded estimate from hand-adjudicating one app's failures; here's exactly how I got there" converts critics into credibility. Never get defensive; your whole brand here is that you audit yourself harder than they will.
 - **You have the receipts.** Every number in these posts is in `MAKE-THE-CASE.md` and `VERIFICATION.md`. When pushed, link the line — the depth of the audit trail is itself the flex.

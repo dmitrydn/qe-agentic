@@ -6,10 +6,10 @@
 <title>Agentic QE — the evidence</title>
 <!--
   Self-contained evidence dashboard. No external dependencies — drop into a
-  GitHub Pages repo (Settings → Pages → source = /docs or root) and it just works.
-  BEFORE PUBLISHING, replace the two tokens:
-    REPO_URL  → your public repo
-    DEMO_URL  → the demo GIF/MP4
+  GitHub Pages repo (Settings → Pages → source = main, root) and it just works.
+  Repo links are filled (github.com/dmitrydn/qe-agentic, main). The "60-sec live
+  demo" link currently points to demo/run-demo.js — swap it to your hosted demo
+  GIF/MP4 once recorded (search this file for run-demo.js).
 -->
 <style>
   :root{
@@ -91,9 +91,9 @@
     <h1>An agent that writes, runs, and triages its own API tests — and holds up under audit.</h1>
     <p class="lede">Point it at a plain-English requirement. It writes an executable API test, runs it three times against a real app, and — on failure — a second agent triages the result blind. Only real bugs get reported, each with a five-step repro. Every number below is a measurement against a known-answer key, not a claim.</p>
     <div class="links">
-      <a href="REPO_URL">Code &amp; harness →</a>
-      <a href="DEMO_URL">60-sec live demo →</a>
-      <a href="REPO_URL/blob/main/agentic-qe-sandbox/MAKE-THE-CASE.md">Full evidence doc →</a>
+      <a href="https://github.com/dmitrydn/qe-agentic">Code &amp; harness →</a>
+      <a href="https://github.com/dmitrydn/qe-agentic/blob/main/agentic-qe-sandbox/demo/run-demo.js">60-sec live demo →</a>
+      <a href="https://github.com/dmitrydn/qe-agentic/blob/main/agentic-qe-sandbox/MAKE-THE-CASE.md">Full evidence doc →</a>
     </div>
     <p class="note">Run live against the Cypress Real World App (a full-stack banking demo) with Claude Sonnet 4.5. Nothing mocked.</p>
   </header>
@@ -210,7 +210,7 @@ Revert the one line                  <span class="add">pass, pass, pass</span></
     <div>
       <span class="tag">agentic</span><span class="tag">LLM evaluation</span><span class="tag">negative controls</span><span class="tag">test generation</span><span class="tag">API testing</span><span class="tag">oracle / intent</span>
     </div>
-    <p>All metrics are scoped to the Cypress Real World App and the requirement set described in <a href="REPO_URL/blob/main/agentic-qe-sandbox/MAKE-THE-CASE.md">MAKE-THE-CASE.md</a> and the full audited record <a href="REPO_URL/blob/main/agentic-qe-sandbox/VERIFICATION.md">VERIFICATION.md</a>. A personal, own-initiative research project, shared to document method.</p>
+    <p>All metrics are scoped to the Cypress Real World App and the requirement set described in <a href="https://github.com/dmitrydn/qe-agentic/blob/main/agentic-qe-sandbox/MAKE-THE-CASE.md">MAKE-THE-CASE.md</a> and the full audited record <a href="https://github.com/dmitrydn/qe-agentic/blob/main/agentic-qe-sandbox/VERIFICATION.md">VERIFICATION.md</a>. A personal, own-initiative research project, shared to document method.</p>
   </footer>
 
 </div>

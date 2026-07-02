@@ -2,12 +2,10 @@
 
 Everything needed to publish the 3-post campaign: the exact first-comment link blocks, an asset-to-post map, and a step-by-step publishing runbook. Post bodies live in `LinkedIn-Content-Plan.md`; this file is the operational layer around them.
 
-Fill these placeholders once, everywhere:
+Links are filled from your repo (`github.com/dmitrydn/qe-agentic`, branch `main`). Two remain for you:
 
-- `[REPO]` → your personal GitHub repo root (e.g. `github.com/you/agentic-qe`)
-- `[CASE]` → `MAKE-THE-CASE.md` on GitHub (`[REPO]/blob/main/agentic-qe-sandbox/MAKE-THE-CASE.md`)
-- `[GIF]` → the demo GIF from `record-demo.sh`
-- `[DASH]` → the interactive evidence dashboard (if you host it — see "Assets")
+- `[GIF]` → the demo GIF from `record-demo.sh` (paste after you record it)
+- `[DASH]` → `https://dmitrydn.github.io/qe-agentic/evidence-dashboard/` — live **only after** you push `evidence-dashboard/` and enable GitHub Pages (Settings → Pages → Source: `main`, root). Until then, use `https://github.com/dmitrydn/qe-agentic/blob/main/agentic-qe-sandbox/MAKE-THE-CASE.md` as the Featured anchor.
 
 ---
 
@@ -15,7 +13,7 @@ Fill these placeholders once, everywhere:
 
 Your profile is the conversion surface — every strong post drives a profile visit. Get it ready first.
 
-1. **Featured section populated**, in this order: (1) the evidence dashboard `[DASH]` or `[CASE]`, (2) the repo `[REPO]`, (3) the demo GIF/MP4.
+1. **Featured section populated**, in this order: (1) the evidence dashboard `[DASH]` (or `MAKE-THE-CASE.md` until Pages is live), (2) the repo `https://github.com/dmitrydn/qe-agentic`, (3) the demo GIF/MP4.
 2. **"Open to work — recruiters only" is ON.** Settings → this is invisible to your network and to Accenture, visible only to recruiters searching. This is the entire recruiter ask; no post ever states it.
 3. **Headline reads how-you-think, not what-you-want.** e.g. "I build agentic systems, then try to prove them wrong." Never "seeking / open to opportunities."
 4. **About section** seeds the search vocabulary in real sentences: agentic, LLM evaluation, negative controls, test generation, API testing, oracle/intent.
@@ -41,8 +39,8 @@ Native visuals lift reach — every post gets one image. Keep the primary link i
 Write-up, code, and the live demo:
 
 → 60-sec demo (generate → run 3× → break it → catch → revert): [GIF]
-→ How it works + all metrics with caveats: [CASE]
-→ Runnable code (this exact walkthrough is demo/run-demo.js): [REPO]
+→ How it works + all metrics with caveats: https://github.com/dmitrydn/qe-agentic/blob/main/agentic-qe-sandbox/MAKE-THE-CASE.md
+→ Runnable code (this exact walkthrough is demo/run-demo.js): https://github.com/dmitrydn/qe-agentic
 
 Built solo as an own-initiative R&D project. Real banking app (Cypress
 Real World App), real LLM (Claude Sonnet 4.5), nothing mocked. Happy to
@@ -54,9 +52,9 @@ go deep on any part in the replies.
 ```
 The receipts:
 
-→ Every one of the 15 residual failures, and what each actually was: [CASE] (see "After Stage 7")
-→ Why more code knowledge didn't help — the first-principles write-up: [REPO]/docs/design/requirements-first-principles.md
-→ Raw full-breadth run output (132 tests): [REPO]/reports-all
+→ Every one of the 15 residual failures, and what each actually was: https://github.com/dmitrydn/qe-agentic/blob/main/agentic-qe-sandbox/MAKE-THE-CASE.md (see "After Stage 7")
+→ Why more code knowledge didn't help — the first-principles write-up: https://github.com/dmitrydn/qe-agentic/blob/main/docs/design/requirements-first-principles.md
+→ Raw full-breadth run output (132 tests): https://github.com/dmitrydn/qe-agentic/tree/main/agentic-qe-sandbox/reports-all
 
 Adjudication was by hand, on one app — so ~2–3% is a bounded estimate,
 not a universal constant. The method is all in the open; poke holes in it.
@@ -67,9 +65,9 @@ not a universal constant. The method is all in the open; poke holes in it.
 ```
 For the curious:
 
-→ The gate's status, in the project's own words: [CASE] (see "Where the gate currently stands")
-→ The knowledge-graph A/B I killed: [REPO]/docs/design/graphify-decision-memo.md
-→ Full audited record (every metric, every caveat): [REPO]/agentic-qe-sandbox/VERIFICATION.md
+→ The gate's status, in the project's own words: https://github.com/dmitrydn/qe-agentic/blob/main/agentic-qe-sandbox/MAKE-THE-CASE.md (see "Where the gate currently stands")
+→ The knowledge-graph A/B I killed: https://github.com/dmitrydn/qe-agentic/blob/main/docs/design/graphify-decision-memo.md
+→ Full audited record (every metric, every caveat): https://github.com/dmitrydn/qe-agentic/blob/main/agentic-qe-sandbox/VERIFICATION.md
 
 The red gate is still red as of posting. If I ever quietly turn it green,
 call me out.
@@ -100,10 +98,10 @@ LinkedIn weights early engagement heavily, and your own replies count.
 
 **Pre-drafted replies (adapt per post):**
 
-- *"Isn't this just <tool>?"* → "Fair question. The difference is the loop generates the test from prose and a *second* agent triages the failure blind — it's the separation that keeps false positives down. Details: [CASE]."
-- *"2–3% seems too good."* → "Agreed it deserves scrutiny — that's why every one of the 15 failures is adjudicated in the open: [CASE] 'After Stage 7'. It's a bounded estimate on one app, not a universal number."
-- *"Why keep the gate red?"* → "Because a green that lies makes every future green meaningless. The bug is real and reported rather than special-cased. Full account: [CASE]."
-- *"Can I try it?"* → "Yes — it's public: [REPO]. `node demo/run-demo.js` runs the exact walkthrough from the post."
+- *"Isn't this just <tool>?"* → "Fair question. The difference is the loop generates the test from prose and a *second* agent triages the failure blind — it's the separation that keeps false positives down. Details: https://github.com/dmitrydn/qe-agentic/blob/main/agentic-qe-sandbox/MAKE-THE-CASE.md."
+- *"2–3% seems too good."* → "Agreed it deserves scrutiny — that's why every one of the 15 failures is adjudicated in the open: https://github.com/dmitrydn/qe-agentic/blob/main/agentic-qe-sandbox/MAKE-THE-CASE.md 'After Stage 7'. It's a bounded estimate on one app, not a universal number."
+- *"Why keep the gate red?"* → "Because a green that lies makes every future green meaningless. The bug is real and reported rather than special-cased. Full account: https://github.com/dmitrydn/qe-agentic/blob/main/agentic-qe-sandbox/MAKE-THE-CASE.md."
+- *"Can I try it?"* → "Yes — it's public: https://github.com/dmitrydn/qe-agentic. `node demo/run-demo.js` runs the exact walkthrough from the post."
 
 ---
 
