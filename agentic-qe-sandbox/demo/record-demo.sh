@@ -56,8 +56,15 @@ agg --theme monokai --font-size 20 --speed 2 "$CAST" "$GIF"
 
 # --- render MP4 (Featured / longer cut), if ffmpeg present ------------------
 if command -v ffmpeg >/dev/null; then
-  ffmpeg -y -i "$GIF" -movflags faststart -pix_fmt yuv420p \
-    -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" "$MP4"
+  # LinkedIn-safe encode: H.264 + yuv420p, constant 30fps, and a SILENT AAC
+  # audio track. LinkedIn's video processor frequently rejects clips that have
+  # no audio stream and/or a variable frame rate (the "error processing this
+  # video" message), both of which a GIF-sourced encode otherwise produces.
+  ffmpeg -y -i "$GIF" \
+    -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=44100 \
+    -c:v libx264 -pix_fmt yuv420p -r 30 \
+    -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" \
+    -c:a aac -shortest -movflags +faststart "$MP4"
 fi
 
 echo ">> done:"

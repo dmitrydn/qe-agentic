@@ -2,10 +2,11 @@
 
 Everything needed to publish the 3-post campaign: the exact first-comment link blocks, an asset-to-post map, and a step-by-step publishing runbook. Post bodies live in `LinkedIn-Content-Plan.md`; this file is the operational layer around them.
 
-Links are filled from your repo (`github.com/dmitrydn/qe-agentic`, branch `main`). Two remain for you:
+All links are filled and live-checked:
 
-- `[GIF]` → the demo GIF from `record-demo.sh` (paste after you record it)
-- `[DASH]` → `https://dmitrydn.github.io/qe-agentic/evidence-dashboard/` — live **only after** you push `evidence-dashboard/` and enable GitHub Pages (Settings → Pages → Source: `main`, root). Until then, use `https://github.com/dmitrydn/qe-agentic/blob/main/agentic-qe-sandbox/MAKE-THE-CASE.md` as the Featured anchor.
+- Repo, evidence doc, memos, breadth output → `github.com/dmitrydn/qe-agentic` (branch `main`)
+- **Dashboard (live):** `https://dmitrydn.github.io/qe-agentic/evidence-dashboard/`
+- **Demo (recorded):** GIF + MP4 at `agentic-qe-sandbox/demo/recordings/demo-20260702-141935.{gif,mp4}` — attach the MP4 (or GIF) as Post 1's native media.
 
 ---
 
@@ -13,7 +14,7 @@ Links are filled from your repo (`github.com/dmitrydn/qe-agentic`, branch `main`
 
 Your profile is the conversion surface — every strong post drives a profile visit. Get it ready first.
 
-1. **Featured section populated**, in this order: (1) the evidence dashboard `[DASH]` (or `MAKE-THE-CASE.md` until Pages is live), (2) the repo `https://github.com/dmitrydn/qe-agentic`, (3) the demo GIF/MP4.
+1. **Featured section populated**, in this order: (1) the live evidence dashboard `https://dmitrydn.github.io/qe-agentic/evidence-dashboard/`, (2) the repo `https://github.com/dmitrydn/qe-agentic`, (3) the demo GIF/MP4.
 2. **"Open to work — recruiters only" is ON.** Settings → this is invisible to your network and to Accenture, visible only to recruiters searching. This is the entire recruiter ask; no post ever states it.
 3. **Headline reads how-you-think, not what-you-want.** e.g. "I build agentic systems, then try to prove them wrong." Never "seeking / open to opportunities."
 4. **About section** seeds the search vocabulary in real sentences: agentic, LLM evaluation, negative controls, test generation, API testing, oracle/intent.
@@ -25,7 +26,7 @@ Your profile is the conversion surface — every strong post drives a profile vi
 
 | Post | Image to attach | First comment |
 |---|---|---|
-| **Post 1** — the loop / demo | The **loop diagram** (Generate → Run×3 → Triage → Report) | demo GIF + repo + evidence |
+| **Post 1** — the loop / demo | The **demo MP4/GIF** as native media (`demo/recordings/demo-20260702-141935.*`) | dashboard + repo + evidence |
 | **Post 2** — the 18.2% reframe | The **"18.2% that wasn't" chart** | failure adjudication + first-principles memo |
 | **Post 3** — the standing red gate | The **scorecard** (0% / 90% / 100% + the honest red gate) | gate status + A/B memo |
 
@@ -35,11 +36,14 @@ Native visuals lift reach — every post gets one image. Keep the primary link i
 
 ## Post 1 — first comment (paste immediately after posting)
 
-```
-Write-up, code, and the live demo:
+(The demo itself — generate → run 3× → break it → catch → revert — is the
+video/GIF attached to this post.)
 
-→ 60-sec demo (generate → run 3× → break it → catch → revert): [GIF]
-→ How it works + all metrics with caveats: https://github.com/dmitrydn/qe-agentic/blob/main/agentic-qe-sandbox/MAKE-THE-CASE.md
+```
+More, for anyone who wants to dig in:
+
+→ Interactive evidence dashboard (the loop, the numbers, the caveats): https://dmitrydn.github.io/qe-agentic/evidence-dashboard/
+→ The evidence doc behind every number: https://github.com/dmitrydn/qe-agentic/blob/main/agentic-qe-sandbox/MAKE-THE-CASE.md
 → Runnable code (this exact walkthrough is demo/run-demo.js): https://github.com/dmitrydn/qe-agentic
 
 Built solo as an own-initiative R&D project. Real banking app (Cypress

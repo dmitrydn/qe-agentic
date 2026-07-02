@@ -95,7 +95,7 @@ What would you attack first in a loop like this?
 ```
 
 *Hook length check: first 3 lines ≈ 165 chars, under the ~210 fold.*
-*Comment to pin:* link to the demo GIF (record via `record-demo.sh`) and the repo `https://github.com/dmitrydn/qe-agentic`. Ready-to-paste comment in `PUBLISH-PACKAGE.md`.
+*Comment to pin:* the demo MP4/GIF is attached as the post's native media; the first comment links the live dashboard, evidence doc, and repo. Ready-to-paste comment in `PUBLISH-PACKAGE.md`.
 *Folded-in theme 4 (guardrails):* the "every stage kills one class of false positive" framing carries the flake-guard architecture without a separate post.
 
 ---
@@ -296,8 +296,8 @@ Architecture notes in comments.
 **Profile "Featured" section — your evidence wall.**
 
 Add, in this order:
-1. **`MAKE-THE-CASE.md`** (or a rendered version) — the evidence anchor. This is what a VP of Engineering or recruiter opens after your post hooks them.
-2. **The repo** — clean README, runnable loop (`demo/run-demo.js`), the A/B and adjudication visible.
+1. **The live evidence dashboard** (`https://dmitrydn.github.io/qe-agentic/evidence-dashboard/`) — the polished one-page anchor a VP of Engineering or recruiter opens after your post hooks them. (`MAKE-THE-CASE.md` in the repo is the same content, if you prefer that.)
+2. **The repo** (`https://github.com/dmitrydn/qe-agentic`) — clean README, runnable loop (`demo/run-demo.js`), the A/B and adjudication visible.
 3. **The demo video/GIF** — the loop running end to end (the dollar-to-cents walkthrough).
 
 Pin Post 2 (the 18.2% plot twist) or Post 3 (standing red gate) to the top of your profile once it performs — those two do the most positioning work.
