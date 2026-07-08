@@ -11,7 +11,7 @@ Operator‑facing documentation for the Agentic QE framework. Start here.
 ## Related material (not operator guides)
 
 - **Design specs** — [`../design/testability-gate.md`](../design/testability-gate.md), [`../design/sdlc-flows.md`](../design/sdlc-flows.md): how two of the newer features are built and were calibrated.
-- **Architecture & rationale** — `../specs/Agentic_QE_Architecture_Proposal.docx` (the first‑principles proposal) and `Agentic-QE-Architecture.pptx` (the 11‑slide briefing).
+- **Architecture & rationale** — `../specs/Agentic_QE_Architecture_Proposal.docx` (the first‑principles proposal) and `../../linkedin-campaign/slides/Agentic-QE-Architecture.pptx` (the 11‑slide briefing).
 - **Verification record** — `../../agentic-qe-sandbox/VERIFICATION.md`: what was verified, how, and what wasn't.
 - **Project narrative** — `../../PROGRESS.md`: how the app/requirements/scope decisions were made.
 
