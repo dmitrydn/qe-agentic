@@ -20,8 +20,8 @@
   <text x="602" y="394" font-size="17" fill="#898781">after adjudicating every failure</text>
 
   <!-- grounding gate note -->
-  <text x="64" y="462" font-size="22" fill="#52514e">A deterministic grounding gate first cut it 15.4% → 12.2% (tests hitting routes that</text>
-  <text x="64" y="492" font-size="22" fill="#52514e">don't exist). Then every remaining failure was read by hand:</text>
+  <text x="64" y="462" font-size="22" fill="#52514e">A deterministic grounding gate first removed tests hitting routes that don't exist.</text>
+  <text x="64" y="492" font-size="22" fill="#52514e">Then every remaining failure was read by hand:</text>
 
   <!-- breakdown label -->
   <text x="64" y="548" font-size="18" fill="#898781">THE 15 RESIDUAL FAILURES, ADJUDICATED</text>
@@ -42,7 +42,7 @@
   <text x="120" y="728" font-size="24" font-weight="500" fill="#1a1a19" text-anchor="end">~1</text>
   <rect x="150" y="702" width="780" height="44" rx="8" fill="#eae8e2"/>
   <rect x="150" y="702" width="55" height="44" rx="8" fill="#d3cfc7"/>
-  <text x="225" y="730" font-size="19" fill="#898781">data-setup gap</text>
+  <text x="225" y="730" font-size="19" fill="#898781">empty-collection gap (test precondition)</text>
 
   <!-- real bugs card -->
   <rect x="64" y="784" width="952" height="212" rx="14" fill="#ffffff" stroke="#e5e3de" stroke-width="1"/>

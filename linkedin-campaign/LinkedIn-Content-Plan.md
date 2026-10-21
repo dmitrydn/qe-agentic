@@ -28,7 +28,7 @@ You don't add features because they sound smart; you form hypotheses, build nega
 The 18.2% → ~2–3% reframe. You distrusted your own headline number enough to adjudicate every failure by hand — and found the system was catching real vulnerabilities (unauthenticated mutations, 500-crashes, missing validation). Signal: *this person interrogates their own results and finds the truth in the residuals.*
 
 **Arc 3 — The Craftsman's Standing Red Gate.**
-Your acceptance gate (`verify.sh`) is genuinely red because of one structurally-unfixable pagination miss — and you report it rather than fake green. Signal: *this person's definition of "done" is honest, not convenient.* This is the arc recruiters remember.
+Your acceptance gate (`verify.sh`) is genuinely red because of one structurally-unfixable pagination miss — and you report it rather than fake green. Signal: *this person's definition of "done" is honest, not convenient.* This is the arc recruiters remember. *(Restructured: this is no longer a standalone post — it lands as the closing, falsifiable one-liner inside the Post 3 finale, which avoids spending the highest-value week defending "standing red" as a thesis.)*
 
 The throughline across all three: **rigor as a personality.** Not "I built an AI thing," but "I built an AI thing and then spent most of my effort trying to prove it wrong."
 
@@ -104,108 +104,141 @@ What would you attack first in a loop like this?
 **Week 2. Arc: 2 (with a nod to 1).**
 
 ```
-My test system reported 18.2% false positives at full scale.
+My test system said 18.2% of its results were false alarms.
 
-I almost "fixed" it. Instead I adjudicated every failure by hand.
+I almost "fixed" that number. Instead I opened every single one by hand.
 
-Most of them weren't false positives. They were real bugs. ↓
+Most of them weren't false alarms. They were real bugs. ↓
 
 —
 
-Full breadth: all 44 requirements, no field hints, just auto-extracted
-text. 132 tests generated. 24 failed against the clean app — an 18.2%
-false-positive rate. The lazy move is to tune the system down until
-that number drops. The number improves. The system gets worse.
+Quick recap: last week I showed a system that writes its own API tests,
+runs each one 3× to kill flukes, and has a second AI judge the failures.
+On a small, careful slice it looked near-perfect. Then I turned it loose
+on everything — and the numbers got messy. Here's what happened.
 
-So I did two things instead.
+The full run: all 44 requirements, no hand-holding. The system wrote 132
+tests. 24 of them failed against an app I knew was clean — an 18.2%
+false-alarm rate.
 
-First, a small deterministic grounding gate: an endpoint has to exist in
-the app's real route table before a test can assert against it. That
-alone took the rate from 15.4% to 12.2% — a chunk of the "failures" were
-tests asserting against routes that don't exist.
+The easy move is to quietly tune the system down until that number looks
+good. The number improves. The system gets worse. So I did the opposite:
+I opened all 24 and read them, one by one.
 
-Then I adjudicated the 15 remaining failures one by one. About 11 were
-REAL bugs the system correctly caught in the banking app, including:
+Two things fell out.
 
-→ the API 500-crashes when a password is omitted (instead of a clean 4xx)
-→ a GraphQL createBankAccount mutation runs with NO authentication
-→ empty account numbers and invalid emails accepted without validation
-→ a crash on a contacts lookup
+First, a dead-simple check: does the endpoint the test is calling even
+exist in the app? A chunk of the "failures" were tests hitting routes
+that aren't there. I gated those out — you shouldn't test a door that
+isn't in the building.
 
-Only ~3 were true false positives (over-strict "exactly one error"
-assertions) and ~1 was a data-setup gap.
+Then I read every remaining failure by hand. About 11 were REAL bugs the
+system had correctly caught in the banking app:
 
-Reclassify the real bugs and the true false-positive rate is ≈ 2–3%,
-not 18.2%.
+→ the app crashes with a 500 error when you leave out the password
+  (instead of politely rejecting it)
+→ you can create a bank account without being logged in at all
+→ it accepts empty account numbers and invalid emails without complaint
+→ it crashes on a simple contacts lookup
 
-The caveat I owe you: this is human adjudication on one specific app;
-2–3% is a bounded estimate, not a constant. But the direction isn't in
-doubt — the "accuracy problem" was, in large part, the system doing
-exactly its job against a backend with weak validation.
+Only ~3 were genuine false alarms (the test was too fussy). ~1 was on
+me — a test that assumed seeded data that wasn't there.
 
-The lesson: your headline metric is a hypothesis, not a fact.
-Adjudicate your residuals. The truth is usually hiding in them.
+Take the real bugs back out of the "false alarm" pile, and the true rate
+is about 2–3% — not 18.2%.
 
-Full failure-by-failure breakdown in comments.
+Honest caveat: I checked these by hand, on one app, so 2–3% is a careful
+estimate, not a law of nature. But the direction is clear — most of the
+"accuracy problem" was the system doing its job against an app with weak
+checks.
+
+The lesson I keep relearning: your headline number is a guess until you
+read what's underneath it. Go read your failures. The truth is usually
+hiding there.
+
+Full breakdown in the comments.
+
+Next week, the finale: the fix I was sure would work — and the controlled
+experiment that killed it.
+
+What's the most "wrong" number you've ever trusted?
 ```
 
 *Hook length check: first 3 lines ≈ 160 chars.*
 *Comment to pin:* link to `MAKE-THE-CASE.md` ("After Stage 7" chapter) + `docs/design/requirements-first-principles.md`.
-*Accuracy note:* the chain is now correct — 18.2% (24/132) raw → grounding gate 15.4%→12.2% → 15 residuals adjudicated → ~11 real → ~2–3% true.
+*Accuracy note:* post body deliberately omits the 15.4%/12.2% figures — those come from a *separate* grounding A/B run (baseline band 15.4–19.1%, grounded 12.2%), NOT the 132-test/24-fail breadth run, so citing them inline created an unreconciled denominator (24/132=18.2%, not 15.4%; the 15 residuals are 15/123, not 15/132). Public arc kept single-threaded and un-attackable on arithmetic: 18.2% (24/132) raw → gate out phantom-route tests → adjudicate the residuals (~15) → ~11 real → ≈2–3% true. Full multi-run detail lives in `docs/design/requirements-first-principles.md` §8.2–8.3 and is linked in the first comment for anyone who digs.
 
 ---
 
-### POST 3 — The Standing Red Gate (craftsmanship flex / recruiter magnet)
-**Week 3. Arc: 3 (with a nod to 1).**
+### POST 3 — I was sure it would work; the experiment killed it (finale / the crown jewel)
+**Week 3. Arc: 1 (the first-principles engineer), closing on 3 (honest "done"). Image: the A/B chart.**
 
 ```
-My project's acceptance gate is red. I could make it green in minutes.
+Last week: my system's "false alarms" turned out to be mostly real bugs.
 
-I won't — and leaving it red is the more honest engineering.
+So I built the obvious fix — and I was sure it would work.
 
-Here's the bug I refuse to paper over. ↓
+I ran a controlled experiment to prove it. It failed. ↓
 
 —
 
-Run end-to-end, my own gate (verify.sh) fails at the defect-catch step.
-The cause: one deliberately subtle off-by-one in pagination that the
-generated test's assertions structurally can't see. I found it while
-preparing the evidence package, ran it twice to confirm it wasn't a
-flaky LLM call — identical both times.
+Recap: a system that writes its own API tests flagged an 18.2% false-alarm
+rate at full breadth. I read those failures by hand — most were real bugs
+in the app. But a residual ~3% were genuine false positives: the tests
+themselves being wrong. The obvious cause? The agent doesn't understand the
+app's code well enough.
 
-The tempting move: special-case that one assertion, get the green
-checkmark, ship. Everyone's happy. Nobody knows.
+So I built the fix I believed in: a code knowledge graph. A dependency and
+side-effect map of the backend, feeding the agent what each endpoint actually
+touches — "this payment mutates the sender and receiver balance." More code
+knowledge → better tests. Obvious. I was sure.
 
-I left it red.
+Then I did the part that's easy to skip: I ran a controlled A/B before
+trusting it. Baseline vs. graph, on the exact write-flow requirements the
+graph was built to help — three runs each.
 
-A green gate that lies is worse than a red gate that's honest. The whole
-point of a verification layer is that "green" means something. The first
-time you fake it, green means nothing forever after.
+The result:
 
-A red gate is a to-do list with integrity: here is a real gap,
-unresolved, visible, not swept under a conditional. Fixing it for real
-means either earning a genuine catch or deliberately reclassifying it as
-an accepted gap — both real work, not a checkbox to tick.
+→ False positives: 31.5% → 32.8%. It didn't move. If anything, slightly worse.
+→ Coverage: 8 of 8 requirements → 7 of 8. The graph cost me one.
 
-Same discipline ran through the whole project:
-→ a second agent triages failures BLIND, so nothing marks its own homework
-→ I A/B tested a knowledge-graph feature I was excited about; it failed,
-  and I killed it instead of keeping it because I'd built it
+The fix I was certain about did nothing. So I killed it — cheaply, before it
+shipped, instead of defending it because I'd built it.
 
-Rigor isn't the tests you write. It's the results you refuse to fake.
+Then the part that mattered: WHY it couldn't work, from first principles.
 
-Write-up in comments.
+A test checks the app's actual behaviour against its EXPECTED behaviour — the
+oracle. The oracle is a statement of intent. And intent is not in the code.
+Deriving "what it should do" from the code under test is circular — it just
+asserts the code does what it does, which catches nothing. No amount of code
+knowledge can supply a missing oracle. The lever was never code knowledge.
+It's the fidelity of the requirement itself.
 
-Have you ever kept something red on principle? What was it?
+That one insight reframed the entire roadmap — and it only exists because the
+experiment was allowed to fail.
+
+The same discipline runs through the rest of the project: I keep my own
+acceptance gate red over one pagination bug I won't paper over. A green light
+that lies makes every future green meaningless. It's still red as of posting —
+if I ever quietly turn it green, call me out.
+
+Cheap experiments that can prove me wrong beat expensive features I'm attached
+to. Every time.
+
+A/B write-up + the first-principles memo in comments.
+
+What's a fix you were certain about that the data killed?
 ```
 
-*Hook length check: first 3 lines ≈ 150 chars.*
-*Comment to pin:* link to `MAKE-THE-CASE.md` ("Where the gate currently stands") + the graphify decision memo.
-*Folded-in theme 2 (killed knowledge graph):* the A/B kill lands here as supporting proof, no standalone post needed.
+*Hook length check: first 3 lines ≈ 165 chars, under the ~210 fold.*
+*Comment to pin:* `docs/design/graphify-decision-memo.md` (the A/B, §12) + `docs/design/requirements-first-principles.md` (the first-principles why) + `MAKE-THE-CASE.md` ("Where the gate currently stands") for the red gate.
+*Accuracy / anti-seam note:* the A/B figures (31.5% → 32.8%) are the **differential on the 8 write-flow requirements graph-L1 augmented** (3 runs/arm, `graphify-decision-memo.md` §12) — a harder subset than the 18.2% full-breadth number, which is why they're higher. Post scopes them explicitly ("the write-flow requirements the graph was built to help") so 18.2% and 31.5% never read as a contradiction. Honest limits per the memo: small sample (8 reqs), directional signal not a significance test. The red gate is demoted from a standalone post to a one-line falsifiable commitment — its strongest, least-attackable form.
+*Retired:* the standalone "Standing Red Gate" post. Its content survives as the closing beat above; no separate Week-4 post needed.
 
 ---
 
-### OPTIONAL FOLLOW-UP A — The knowledge-graph that failed (deploy only if Post 3 lands well)
+### ~~OPTIONAL FOLLOW-UP A~~ — PROMOTED TO POST 3 (do not double-ship)
+**This content is now the Post 3 finale above.** The graphify A/B kill is no longer an optional extra — it is the crown-jewel finale, with the A/B chart as its image. The draft below is kept only as a shorter alternate phrasing / raw material; do not publish it as a separate post.
 **Arc: 1.** Expands the graphify kill into its own post.
 
 ```
@@ -318,3 +351,72 @@ Track per post: impressions, "see more" click-through (the hook test), comments-
 ---
 
 *This is a personal research project shared to document method. All metrics are scoped to the target app (Cypress Real World App) and requirement set described in `MAKE-THE-CASE.md`.*
+
+---
+
+## POST 4 — Executive summary (added after CTO feedback: series read "too technical")
+**Audience: CEO / CTO / CIO. Plain, business-language translation of the whole 3-post arc. No code, no jargon. Written in response to a CTO's "too technical" feedback — publishing it also signals coachability.**
+
+```
+For three weeks I let an AI do a job we normally trust only to senior
+engineers: write and judge software tests.
+
+Here's what actually matters about it — for anyone who leads engineers. ↓
+
+—
+
+For three weeks I shared a side-project: an AI system that writes, runs,
+and checks its own software tests — work you'd normally trust only to
+experienced engineers.
+
+The engineers liked the details. But the people who decide whether to bet
+on this wanted the "so what." Here it is — three takeaways for anyone
+leading an engineering org:
+
+1) AI can do real judgment work now — if you verify it honestly.
+Pointed at a banking app, the system found genuine, serious bugs on its
+own: security holes and crashes, not toy problems. The capability is real.
+The catch: it's only trustworthy if you measure it against a known answer,
+not against a gut feeling.
+
+2) Your dashboards lie until you look underneath.
+My system's headline error rate was 18%. Alarming — until I read every
+case by hand. Most of those "errors" were it correctly finding real bugs.
+The true rate was ~2–3%. The dashboard was off by 6x. How many of your
+green metrics has anyone actually opened up?
+
+3) Kill your best ideas cheaply.
+I was sure one upgrade would make it better. I built it, ran one clean
+experiment, and it changed nothing — so I deleted it. A day's work, not a
+quarter's. The discipline that matters isn't having good ideas; it's
+running the cheap test that tells you when you're wrong.
+
+And the one I keep coming back to: a green dashboard that lies is worse
+than a red one that's honest. I left my own project's final quality check
+failing on purpose, because the failure was real. Faking the green would
+have made every future green meaningless.
+
+None of this needed a bigger model or a bigger budget. It needed
+measurement, honesty, and cheap experiments — three things that scale to
+any team.
+
+The whole thing, with the evidence, is in the comments.
+
+If you lead engineers: how much of what your AI tools report do you
+actually verify?
+
+#EngineeringLeadership #AI #QualityEngineering #CTO #SoftwareDelivery
+```
+
+*First comment (matches the minimalist style of Posts 1–3 — links + one R&D line, no soft-CTA "otsylka"):*
+
+```
+The receipts:
+
+→ One-page evidence summary: https://dmitrydn.github.io/qe-agentic/evidence-dashboard/
+→ Full write-up + code: https://github.com/dmitrydn/qe-agentic
+
+A personal, own-initiative R&D project.
+```
+
+*Notes:* folds in the "standing red gate" lesson (which never got its own post) as the fourth takeaway. Zero implementation jargon by design — every technical idea is translated to a business term (risk, dashboards, cheap experiments, honesty). Employer-safe, no availability language.

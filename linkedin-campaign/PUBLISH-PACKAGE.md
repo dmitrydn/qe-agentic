@@ -28,7 +28,7 @@ Your profile is the conversion surface — every strong post drives a profile vi
 |---|---|---|
 | **Post 1** — the loop / demo | The **demo MP4/GIF** as native media (`demo/recordings/demo-20260702-141935.*`) | dashboard + repo + evidence |
 | **Post 2** — the 18.2% reframe | The **"18.2% that wasn't" chart** | failure adjudication + first-principles memo |
-| **Post 3** — the standing red gate | The **scorecard** (0% / 90% / 100% + the honest red gate) | gate status + A/B memo |
+| **Post 3** — the A/B kill (finale) | The **A/B chart** (`assets/ab-chart.png`) | graphify A/B memo + first-principles memo + gate status |
 
 Native visuals lift reach — every post gets one image. Keep the primary link in the first comment, not the body.
 
@@ -60,21 +60,24 @@ The receipts:
 → Why more code knowledge didn't help — the first-principles write-up: https://github.com/dmitrydn/qe-agentic/blob/main/docs/design/requirements-first-principles.md
 → Raw full-breadth run output (132 tests): https://github.com/dmitrydn/qe-agentic/tree/main/agentic-qe-sandbox/reports-all
 
-Adjudication was by hand, on one app — so ~2–3% is a bounded estimate,
-not a universal constant. The method is all in the open; poke holes in it.
+I checked every one of those 15 by hand, on a single app — so treat 2–3%
+as a careful estimate, not gospel. Everything's in the open. Try to prove
+me wrong.
 ```
 
 ## Post 3 — first comment
 
 ```
-For the curious:
+The receipts:
 
-→ The gate's status, in the project's own words: https://github.com/dmitrydn/qe-agentic/blob/main/agentic-qe-sandbox/MAKE-THE-CASE.md (see "Where the gate currently stands")
-→ The knowledge-graph A/B I killed: https://github.com/dmitrydn/qe-agentic/blob/main/docs/design/graphify-decision-memo.md
+→ The knowledge-graph A/B I killed (design, execution, §12 result): https://github.com/dmitrydn/qe-agentic/blob/main/docs/design/graphify-decision-memo.md
+→ Why more code knowledge can't help — the first-principles write-up: https://github.com/dmitrydn/qe-agentic/blob/main/docs/design/requirements-first-principles.md
+→ The still-red gate, in the project's own words: https://github.com/dmitrydn/qe-agentic/blob/main/agentic-qe-sandbox/MAKE-THE-CASE.md (see "Where the gate currently stands")
 → Full audited record (every metric, every caveat): https://github.com/dmitrydn/qe-agentic/blob/main/agentic-qe-sandbox/VERIFICATION.md
 
-The red gate is still red as of posting. If I ever quietly turn it green,
-call me out.
+The A/B was 8 requirements, 3 runs each — a directional result, not a
+significance test; I say exactly that in the memo. The gate is still red as
+of posting. If I ever quietly turn it green, call me out.
 ```
 
 ---
@@ -106,6 +109,7 @@ LinkedIn weights early engagement heavily, and your own replies count.
 - *"2–3% seems too good."* → "Agreed it deserves scrutiny — that's why every one of the 15 failures is adjudicated in the open: https://github.com/dmitrydn/qe-agentic/blob/main/agentic-qe-sandbox/MAKE-THE-CASE.md 'After Stage 7'. It's a bounded estimate on one app, not a universal number."
 - *"Why keep the gate red?"* → "Because a green that lies makes every future green meaningless. The bug is real and reported rather than special-cased. Full account: https://github.com/dmitrydn/qe-agentic/blob/main/agentic-qe-sandbox/MAKE-THE-CASE.md."
 - *"Can I try it?"* → "Yes — it's public: https://github.com/dmitrydn/qe-agentic. `node demo/run-demo.js` runs the exact walkthrough from the post."
+- *"8 requirements isn't significant."* (Post 3) → "Completely agree, and I say so in the memo — it's a differential on the 8 write-flows the graph targeted, ~2 distinct graph samples at temp 0, so a directional signal, not a significance test. It was enough to stop investing in graph-L1: it moved FP the wrong way and cost a requirement. The stronger claim isn't the p-value, it's the first-principles reason it *couldn't* help: https://github.com/dmitrydn/qe-agentic/blob/main/docs/design/requirements-first-principles.md."
 
 ---
 
@@ -114,8 +118,8 @@ LinkedIn weights early engagement heavily, and your own replies count.
 | Week | Day/time (your audience TZ) | Post | Deploy-if-strong follow-up |
 |---|---|---|---|
 | 1 | Tue, 8–10am | Post 1 (loop + demo) | — |
-| 2 | Tue, 8–10am | Post 2 (the 18.2% reframe) | Optional A (knowledge-graph kill) later that week if Post 2 lands |
-| 3 | Tue, 8–10am | Post 3 (standing red gate) | Optional B (guardrails) if the technical crowd is engaged |
+| 2 | Tue, 8–10am | Post 2 (the 18.2% reframe) | — (Optional A promoted into Post 3) |
+| 3 | Tue, 8–10am | Post 3 (the A/B kill / first-principles finale) | Optional B (guardrails) if the technical crowd is engaged |
 
 Tue–Thu mornings are the sweet spot for a technical audience. One post/week keeps your network un-fatigued while each post gathers a full engagement cycle.
 

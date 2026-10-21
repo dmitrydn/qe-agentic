@@ -1,0 +1,45 @@
+<svg viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="1080" height="1080" fill="#f7f6f3"/>
+
+  <!-- title -->
+  <text x="64" y="112" font-size="50" font-weight="500" fill="#1a1a19">The fix I was sure would work</text>
+  <text x="64" y="158" font-size="24" fill="#52514e">A code knowledge graph, A/B-tested against baseline on the 8 write-flow</text>
+  <text x="64" y="190" font-size="24" fill="#52514e">requirements it was built to help. What it actually did:</text>
+
+  <!-- FP comparison tiles -->
+  <text x="64" y="242" font-size="18" fill="#898781">FALSE-POSITIVE RATE — THE NUMBER THAT MATTERS</text>
+
+  <rect x="64" y="262" width="440" height="168" rx="14" fill="#f0eee9"/>
+  <text x="90" y="308" font-size="22" fill="#52514e">Baseline (regex hints)</text>
+  <text x="90" y="382" font-size="66" font-weight="500" fill="#52514e">31.5%</text>
+  <text x="90" y="414" font-size="17" fill="#898781">false positives</text>
+
+  <text x="540" y="360" font-size="42" fill="#a8a49c" text-anchor="middle">→</text>
+
+  <rect x="576" y="262" width="440" height="168" rx="14" fill="#f7ecea"/>
+  <text x="602" y="308" font-size="22" fill="#52514e">With the code knowledge graph</text>
+  <text x="602" y="382" font-size="66" font-weight="500" fill="#b3261e">32.8%</text>
+  <text x="602" y="414" font-size="17" fill="#898781">no improvement — if anything, worse</text>
+
+  <!-- coverage line -->
+  <text x="64" y="484" font-size="18" fill="#898781">COVERAGE, SAME REQUIREMENTS</text>
+  <text x="64" y="520" font-size="26" font-weight="500" fill="#1a1a19">8 of 8  →  7 of 8</text>
+  <text x="300" y="520" font-size="22" fill="#b3261e">the graph cost one requirement</text>
+
+  <!-- verdict -->
+  <text x="64" y="586" font-size="18" fill="#898781">THE VERDICT</text>
+  <text x="64" y="628" font-size="30" font-weight="500" fill="#1a1a19">NO-GO. More code knowledge didn't move the metric.</text>
+
+  <!-- first-principles insight card -->
+  <rect x="64" y="666" width="952" height="278" rx="14" fill="#ffffff" stroke="#e5e3de" stroke-width="1"/>
+  <text x="90" y="712" font-size="22" font-weight="500" fill="#1a1a19">Why it couldn't work — from first principles</text>
+  <text x="90" y="756" font-size="19" fill="#52514e">A test checks the app's actual behaviour against its EXPECTED behaviour — the oracle.</text>
+  <text x="90" y="790" font-size="19" fill="#52514e">The oracle is a statement of intent. Intent is not in the code.</text>
+  <text x="90" y="824" font-size="19" fill="#52514e">Deriving "what it should do" from the code under test is circular — it catches nothing.</text>
+  <text x="90" y="874" font-size="21" font-weight="500" fill="#1f7a3d">No amount of code knowledge can supply a missing oracle.</text>
+  <text x="90" y="912" font-size="18" fill="#898781">The lever was never code knowledge — it's the fidelity of the requirement itself.</text>
+
+  <!-- footer -->
+  <text x="64" y="1004" font-size="15" fill="#898781">Differential A/B on the 8 write-flow requirements graph-L1 augmented, 3 runs per arm — a strong directional signal, not a</text>
+  <text x="64" y="1026" font-size="15" fill="#898781">significance test. The 31.5% is on this harder subset, not the 18.2% full-breadth rate.  Source: graphify-decision-memo.md §12 · Cypress RWA</text>
+</svg>
