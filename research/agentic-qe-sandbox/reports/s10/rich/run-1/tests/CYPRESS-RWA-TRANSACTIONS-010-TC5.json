@@ -1,0 +1,30 @@
+{
+  "id": "CYPRESS-RWA-TRANSACTIONS-010-TC5",
+  "requirementId": "CYPRESS-RWA-TRANSACTIONS-010",
+  "title": "PATCH transaction unauthenticated returns 401",
+  "kind": "auth",
+  "actor": "anonymous",
+  "requests": [
+    {
+      "name": "PATCH transaction without authentication",
+      "method": "PATCH",
+      "pathTemplate": "/transactions/{id}",
+      "pathParams": {
+        "id": "1"
+      },
+      "body": {
+        "requestStatus": "accepted"
+      },
+      "expect": {
+        "status": 401,
+        "jsonPath": [
+          {
+            "path": "error",
+            "op": "eq",
+            "value": "Unauthorized"
+          }
+        ]
+      }
+    }
+  ]
+}

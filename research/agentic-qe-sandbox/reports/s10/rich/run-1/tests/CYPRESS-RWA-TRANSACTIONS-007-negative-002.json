@@ -1,0 +1,35 @@
+{
+  "id": "CYPRESS-RWA-TRANSACTIONS-007-negative-002",
+  "requirementId": "CYPRESS-RWA-TRANSACTIONS-007",
+  "title": "Create payment fails with invalid transactionType",
+  "kind": "negative",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Create payment with invalid transactionType",
+      "method": "POST",
+      "pathTemplate": "/transactions",
+      "body": {
+        "transactionType": "not-a-real-type",
+        "receiverId": "{{other_user_id}}",
+        "description": "Invalid type",
+        "amount": 1500
+      },
+      "expect": {
+        "status": 422,
+        "jsonPath": [
+          {
+            "path": "errors",
+            "op": "isType",
+            "value": "array"
+          },
+          {
+            "path": "errors[0].param",
+            "op": "eq",
+            "value": "transactionType"
+          }
+        ]
+      }
+    }
+  ]
+}

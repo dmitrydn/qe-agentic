@@ -1,0 +1,29 @@
+{
+  "id": "CYPRESS-RWA-TRANSACTIONS-003-TC003",
+  "requirementId": "CYPRESS-RWA-TRANSACTIONS-003",
+  "title": "Get pending transactions returns 401 for unauthenticated request",
+  "kind": "auth",
+  "actor": "anonymous",
+  "requests": [
+    {
+      "name": "Get pending transactions without authentication",
+      "method": "GET",
+      "pathTemplate": "/transactions",
+      "query": {
+        "requestStatus": "pending",
+        "rangeStartTs": "2018-01-01T00:00:00.000Z",
+        "rangeEndTs": "2030-12-05T00:00:00.000Z"
+      },
+      "expect": {
+        "status": 401,
+        "jsonPath": [
+          {
+            "path": "error",
+            "op": "eq",
+            "value": "Unauthorized"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "CYPRESS-RWA-TRANSACTIONS-010-002",
+  "requirementId": "CYPRESS-RWA-TRANSACTIONS-010",
+  "title": "PATCH /transactions with invalid requestStatus enum value returns 422",
+  "kind": "negative",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get transactions to capture transaction_id",
+      "method": "GET",
+      "pathTemplate": "/transactions",
+      "expect": {
+        "status": 200
+      },
+      "capture": {
+        "transaction_id": "results[0].id"
+      }
+    },
+    {
+      "name": "PATCH transaction with invalid requestStatus",
+      "method": "PATCH",
+      "pathTemplate": "/transactions/{{transaction_id}}",
+      "pathParams": {
+        "transaction_id": "{{transaction_id}}"
+      },
+      "body": {
+        "requestStatus": "not-a-real-status"
+      },
+      "expect": {
+        "status": 422,
+        "jsonPath": [
+          {
+            "path": "errors",
+            "op": "exists"
+          },
+          {
+            "path": "errors",
+            "op": "isType",
+            "value": "array"
+          },
+          {
+            "path": "errors[0].param",
+            "op": "eq",
+            "value": "requestStatus"
+          }
+        ]
+      }
+    }
+  ]
+}

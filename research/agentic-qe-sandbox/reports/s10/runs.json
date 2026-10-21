@@ -1,0 +1,175 @@
+[
+  {
+    "dose": "sparse",
+    "fpRateRaw": 0.1206896551724138,
+    "groundingRejections": 0,
+    "requirementsTotal": 24,
+    "catchRate": 0.4,
+    "defects": [
+      {
+        "id": "payment-amount-cents",
+        "caught": false,
+        "expectCaught": true
+      },
+      {
+        "id": "auth-gate-post-transactions",
+        "caught": true,
+        "expectCaught": true
+      },
+      {
+        "id": "receiver-balance-not-credited",
+        "caught": false,
+        "expectCaught": true
+      },
+      {
+        "id": "payment-amount-rounding-shaved-cent",
+        "caught": false,
+        "expectCaught": true
+      },
+      {
+        "id": "auth-gate-get-bankaccounts",
+        "caught": true,
+        "expectCaught": true
+      },
+      {
+        "id": "bankaccounts-missing-userid-field",
+        "caught": false,
+        "expectCaught": true
+      },
+      {
+        "id": "bankaccounts-routingnumber-hardcoded",
+        "caught": false,
+        "expectCaught": false
+      },
+      {
+        "id": "auth-gate-get-users",
+        "caught": true,
+        "expectCaught": true
+      },
+      {
+        "id": "users-results-not-array",
+        "caught": false,
+        "expectCaught": true
+      },
+      {
+        "id": "users-self-not-excluded",
+        "caught": false,
+        "expectCaught": false
+      },
+      {
+        "id": "auth-gate-get-transactions",
+        "caught": true,
+        "expectCaught": true
+      },
+      {
+        "id": "transactions-pagination-off-by-one",
+        "caught": false,
+        "expectCaught": true
+      }
+    ],
+    "perRequirementFp": {
+      "CYPRESS-RWA-BANK-ACCOUNTS-004": 1,
+      "CYPRESS-RWA-TEST-DATA-001": 1,
+      "CYPRESS-RWA-TRANSACTIONS-008": 1,
+      "CYPRESS-RWA-USERS-011": 1
+    },
+    "tests": {
+      "generated": 58,
+      "passed": 50,
+      "failed": 7,
+      "quarantinedFlaky": 1,
+      "errored": 0
+    }
+  },
+  {
+    "dose": "rich",
+    "fpRateRaw": 0.1511627906976744,
+    "groundingRejections": 0,
+    "requirementsTotal": 24,
+    "catchRate": 0.5,
+    "defects": [
+      {
+        "id": "payment-amount-cents",
+        "caught": false,
+        "expectCaught": true
+      },
+      {
+        "id": "auth-gate-post-transactions",
+        "caught": true,
+        "expectCaught": true
+      },
+      {
+        "id": "receiver-balance-not-credited",
+        "caught": false,
+        "expectCaught": true
+      },
+      {
+        "id": "payment-amount-rounding-shaved-cent",
+        "caught": false,
+        "expectCaught": true
+      },
+      {
+        "id": "auth-gate-get-bankaccounts",
+        "caught": true,
+        "expectCaught": true
+      },
+      {
+        "id": "bankaccounts-missing-userid-field",
+        "caught": false,
+        "expectCaught": true
+      },
+      {
+        "id": "bankaccounts-routingnumber-hardcoded",
+        "caught": false,
+        "expectCaught": false
+      },
+      {
+        "id": "auth-gate-get-users",
+        "caught": true,
+        "expectCaught": true
+      },
+      {
+        "id": "users-results-not-array",
+        "caught": true,
+        "expectCaught": true
+      },
+      {
+        "id": "users-self-not-excluded",
+        "caught": false,
+        "expectCaught": false
+      },
+      {
+        "id": "auth-gate-get-transactions",
+        "caught": true,
+        "expectCaught": true
+      },
+      {
+        "id": "transactions-pagination-off-by-one",
+        "caught": false,
+        "expectCaught": true
+      }
+    ],
+    "perRequirementFp": {
+      "CYPRESS-RWA-BANK-ACCOUNTS-001": 1,
+      "CYPRESS-RWA-BANK-ACCOUNTS-002": 1,
+      "CYPRESS-RWA-BANK-ACCOUNTS-004": 1,
+      "CYPRESS-RWA-COMMENTS-002": 1,
+      "CYPRESS-RWA-LIKES-002": 1,
+      "CYPRESS-RWA-NOTIFICATIONS-004": 1,
+      "CYPRESS-RWA-TEST-DATA-001": 1,
+      "CYPRESS-RWA-TRANSACTIONS-002": 1,
+      "CYPRESS-RWA-TRANSACTIONS-003": 1,
+      "CYPRESS-RWA-TRANSACTIONS-007": 1,
+      "CYPRESS-RWA-TRANSACTIONS-008": 1,
+      "CYPRESS-RWA-USERS-002": 1,
+      "CYPRESS-RWA-USERS-011": 1
+    },
+    "tests": {
+      "generated": 86,
+      "passed": 67,
+      "failed": 13,
+      "quarantinedFlaky": 6,
+      "errored": 0
+    }
+  }
+]

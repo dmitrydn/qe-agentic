@@ -1,0 +1,66 @@
+{
+  "id": "CYPRESS-RWA-TRANSACTIONS-007-TC001",
+  "requirementId": "CYPRESS-RWA-TRANSACTIONS-007",
+  "title": "Create a new payment with authenticated user",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get primary user details",
+      "method": "GET",
+      "pathTemplate": "/users/{{user_id}}",
+      "capture": {
+        "userId": "id",
+        "userAccountId": "defaultPrivateAccount"
+      },
+      "expect": {
+        "status": 200,
+        "jsonPath": [
+          {
+            "path": "id",
+            "op": "exists"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Get secondary user details",
+      "method": "GET",
+      "pathTemplate": "/users/{{user_id}}",
+      "capture": {
+        "otherUserId": "id"
+      },
+      "expect": {
+        "status": 200,
+        "jsonPath": [
+          {
+            "path": "id",
+            "op": "exists"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Create payment transaction",
+      "method": "POST",
+      "pathTemplate": "/transactions",
+      "body": {
+        "transactionType": "payment",
+        "source": "{{userAccountId}}",
+        "receiverId": "{{otherUserId}}",
+        "description": "Rich oracle payment test",
+        "amount": 1500,
+        "privacyLevel": "public"
+      },
+      "expect": {
+        "status": 200,
+        "jsonPath": [
+          {
+            "path": "id",
+            "op": "exists"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "CYPRESS-RWA-BANK-ACCOUNTS-001-TC002",
+  "requirementId": "CYPRESS-RWA-BANK-ACCOUNTS-001",
+  "title": "Unauthenticated user cannot get bank accounts list",
+  "kind": "auth",
+  "actor": "anonymous",
+  "requests": [
+    {
+      "name": "Get bank accounts without authentication",
+      "method": "GET",
+      "pathTemplate": "/bankAccounts",
+      "expect": {
+        "status": 401
+      }
+    }
+  ]
+}

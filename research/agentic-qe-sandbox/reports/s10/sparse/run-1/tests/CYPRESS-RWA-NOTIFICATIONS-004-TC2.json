@@ -1,0 +1,34 @@
+{
+  "id": "CYPRESS-RWA-NOTIFICATIONS-004-TC2",
+  "requirementId": "CYPRESS-RWA-NOTIFICATIONS-004",
+  "title": "PATCH notification with invalid field returns 422",
+  "kind": "negative",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get notifications to capture id",
+      "method": "GET",
+      "pathTemplate": "/notifications",
+      "capture": {
+        "notification_id": "results[0].id"
+      },
+      "expect": {
+        "status": 200
+      }
+    },
+    {
+      "name": "PATCH notification with invalid field",
+      "method": "PATCH",
+      "pathTemplate": "/notifications/{{notification_id}}",
+      "pathParams": {
+        "notification_id": "{{notification_id}}"
+      },
+      "body": {
+        "notANotificationField": "not a notification field"
+      },
+      "expect": {
+        "status": 422
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "CYPRESS-RWA-USERS-005-TC03",
+  "requirementId": "CYPRESS-RWA-USERS-005",
+  "title": "Search users without query parameter returns validation error",
+  "kind": "negative",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Search users without query parameter",
+      "method": "GET",
+      "pathTemplate": "/users/search",
+      "expect": {
+        "status": 422,
+        "jsonPath": [
+          {
+            "path": "errors",
+            "op": "isType",
+            "value": "array"
+          }
+        ]
+      }
+    }
+  ]
+}

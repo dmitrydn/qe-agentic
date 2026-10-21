@@ -1,0 +1,20 @@
+{
+  "id": "CYPRESS-RWA-TRANSACTIONS-005-TC001",
+  "requirementId": "CYPRESS-RWA-TRANSACTIONS-005",
+  "title": "Get contacts' transactions page 1 with authenticated user",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get contacts' transactions page 1",
+      "method": "GET",
+      "pathTemplate": "/transactions/contacts",
+      "query": {
+        "page": "1"
+      },
+      "expect": {
+        "status": 200
+      }
+    }
+  ]
+}

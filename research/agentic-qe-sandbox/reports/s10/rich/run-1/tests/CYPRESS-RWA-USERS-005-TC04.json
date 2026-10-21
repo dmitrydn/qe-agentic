@@ -1,0 +1,27 @@
+{
+  "id": "CYPRESS-RWA-USERS-005-TC04",
+  "requirementId": "CYPRESS-RWA-USERS-005",
+  "title": "Search users without authentication returns unauthorized",
+  "kind": "auth",
+  "actor": "anonymous",
+  "requests": [
+    {
+      "name": "Search users unauthenticated",
+      "method": "GET",
+      "pathTemplate": "/users/search",
+      "query": {
+        "q": "{{other_user_email}}"
+      },
+      "expect": {
+        "status": 401,
+        "jsonPath": [
+          {
+            "path": "error",
+            "op": "eq",
+            "value": "Unauthorized"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "CYPRESS-RWA-TRANSACTIONS-003-TC002",
+  "requirementId": "CYPRESS-RWA-TRANSACTIONS-003",
+  "title": "Get pending transactions returns empty results for future time range",
+  "kind": "negative",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get pending transactions in future time range",
+      "method": "GET",
+      "pathTemplate": "/transactions",
+      "query": {
+        "requestStatus": "pending",
+        "rangeStartTs": "2999-01-01T00:00:00.000Z",
+        "rangeEndTs": "2999-01-02T00:00:00.000Z"
+      },
+      "expect": {
+        "status": 200,
+        "jsonPath": [
+          {
+            "path": "results",
+            "op": "isType",
+            "value": "array"
+          }
+        ]
+      }
+    }
+  ]
+}

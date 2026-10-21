@@ -1,0 +1,17 @@
+{
+  "id": "CYPRESS-RWA-TRANSACTIONS-004-positive-002",
+  "requirementId": "CYPRESS-RWA-TRANSACTIONS-004",
+  "title": "Get contacts' transactions, page one (default page) - authenticated secondaryUser",
+  "kind": "positive",
+  "actor": "secondaryUser",
+  "requests": [
+    {
+      "name": "Get contacts' transactions",
+      "method": "GET",
+      "pathTemplate": "/transactions/contacts",
+      "expect": {
+        "status": 200
+      }
+    }
+  ]
+}

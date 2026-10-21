@@ -1,0 +1,20 @@
+{
+  "id": "CYPRESS-RWA-TRANSACTIONS-010-TC1",
+  "requirementId": "CYPRESS-RWA-TRANSACTIONS-010",
+  "title": "GET /transactions returns 200 and capture transaction_id",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get transactions",
+      "method": "GET",
+      "pathTemplate": "/transactions",
+      "capture": {
+        "transaction_id": "results[0].id"
+      },
+      "expect": {
+        "status": 200
+      }
+    }
+  ]
+}

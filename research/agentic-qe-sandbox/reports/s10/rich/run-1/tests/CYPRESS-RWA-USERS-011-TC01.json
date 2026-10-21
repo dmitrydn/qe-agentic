@@ -1,0 +1,35 @@
+{
+  "id": "CYPRESS-RWA-USERS-011-TC01",
+  "requirementId": "CYPRESS-RWA-USERS-011",
+  "title": "Update authenticated user's firstName successfully",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Update user firstName",
+      "method": "PATCH",
+      "pathTemplate": "/users/{{user_id}}",
+      "body": {
+        "firstName": "UpdatedRichOracleName"
+      },
+      "expect": {
+        "status": 204
+      }
+    },
+    {
+      "name": "Verify firstName was updated",
+      "method": "GET",
+      "pathTemplate": "/users/{{user_id}}",
+      "expect": {
+        "status": 200,
+        "jsonPath": [
+          {
+            "path": "$.user.firstName",
+            "op": "eq",
+            "value": "UpdatedRichOracleName"
+          }
+        ]
+      }
+    }
+  ]
+}

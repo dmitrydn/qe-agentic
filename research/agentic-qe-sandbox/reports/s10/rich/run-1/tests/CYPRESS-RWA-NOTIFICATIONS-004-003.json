@@ -1,0 +1,45 @@
+{
+  "id": "CYPRESS-RWA-NOTIFICATIONS-004-003",
+  "requirementId": "CYPRESS-RWA-NOTIFICATIONS-004",
+  "title": "PATCH notification with non-boolean isRead returns 422",
+  "kind": "negative",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get notifications to capture id",
+      "method": "GET",
+      "pathTemplate": "/notifications",
+      "capture": {
+        "notification_id": "results[0].id"
+      },
+      "expect": {
+        "status": 200
+      }
+    },
+    {
+      "name": "PATCH notification with non-boolean isRead",
+      "method": "PATCH",
+      "pathTemplate": "/notifications/{{notification_id}}",
+      "pathParams": {
+        "notification_id": "{{notification_id}}"
+      },
+      "body": {
+        "isRead": "not-a-boolean"
+      },
+      "expect": {
+        "status": 422,
+        "jsonPath": [
+          {
+            "path": "errors",
+            "op": "exists"
+          },
+          {
+            "path": "errors[0].param",
+            "op": "eq",
+            "value": "isRead"
+          }
+        ]
+      }
+    }
+  ]
+}

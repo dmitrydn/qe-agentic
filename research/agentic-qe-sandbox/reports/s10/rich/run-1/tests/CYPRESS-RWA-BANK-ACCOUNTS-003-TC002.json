@@ -1,0 +1,33 @@
+{
+  "id": "CYPRESS-RWA-BANK-ACCOUNTS-003-TC002",
+  "requirementId": "CYPRESS-RWA-BANK-ACCOUNTS-003",
+  "title": "Create bank account without bankName returns validation error",
+  "kind": "negative",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Create bank account with missing bankName",
+      "method": "POST",
+      "pathTemplate": "/bankAccounts",
+      "body": {
+        "accountNumber": "123456789",
+        "routingNumber": "987654321"
+      },
+      "expect": {
+        "status": 422,
+        "jsonPath": [
+          {
+            "path": "errors",
+            "op": "isType",
+            "value": "array"
+          },
+          {
+            "path": "errors[0].param",
+            "op": "eq",
+            "value": "bankName"
+          }
+        ]
+      }
+    }
+  ]
+}

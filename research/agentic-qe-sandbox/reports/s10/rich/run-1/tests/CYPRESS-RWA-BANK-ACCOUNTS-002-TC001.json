@@ -1,0 +1,68 @@
+{
+  "id": "CYPRESS-RWA-BANK-ACCOUNTS-002-TC001",
+  "requirementId": "CYPRESS-RWA-BANK-ACCOUNTS-002",
+  "title": "List bank accounts and retrieve a single bank account successfully",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "List bank accounts",
+      "method": "GET",
+      "pathTemplate": "/bankAccounts",
+      "expect": {
+        "status": 200
+      },
+      "capture": {
+        "bank_account_id": "results[0].id"
+      }
+    },
+    {
+      "name": "Get single bank account",
+      "method": "GET",
+      "pathTemplate": "/bankAccounts/{{bank_account_id}}",
+      "pathParams": {
+        "bank_account_id": "{{bank_account_id}}"
+      },
+      "expect": {
+        "status": 200,
+        "jsonPath": [
+          {
+            "path": "account.id",
+            "op": "eq",
+            "value": "{{bank_account_id}}"
+          },
+          {
+            "path": "account.userId",
+            "op": "eq",
+            "value": "{{user_id}}"
+          },
+          {
+            "path": "account.bankName",
+            "op": "isType",
+            "value": "string"
+          },
+          {
+            "path": "account.accountNumber",
+            "op": "isType",
+            "value": "string"
+          },
+          {
+            "path": "account.routingNumber",
+            "op": "isType",
+            "value": "string"
+          },
+          {
+            "path": "account.isDeleted",
+            "op": "isType",
+            "value": "boolean"
+          },
+          {
+            "path": "account.createdAt",
+            "op": "eq",
+            "value": "^\\d{4}-\\d{2}-\\d{2}T"
+          }
+        ]
+      }
+    }
+  ]
+}

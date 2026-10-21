@@ -1,0 +1,20 @@
+{
+  "id": "CYPRESS-RWA-TRANSACTIONS-006-TC002",
+  "requirementId": "CYPRESS-RWA-TRANSACTIONS-006",
+  "title": "Get public transactions without authentication",
+  "kind": "auth",
+  "actor": "anonymous",
+  "requests": [
+    {
+      "name": "Get public transactions unauthenticated",
+      "method": "GET",
+      "pathTemplate": "/transactions/public",
+      "expect": {
+        "statusIn": [
+          401,
+          403
+        ]
+      }
+    }
+  ]
+}

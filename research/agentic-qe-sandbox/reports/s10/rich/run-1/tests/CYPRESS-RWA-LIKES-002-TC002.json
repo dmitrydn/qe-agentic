@@ -1,0 +1,59 @@
+{
+  "id": "CYPRESS-RWA-LIKES-002-TC002",
+  "requirementId": "CYPRESS-RWA-LIKES-002",
+  "title": "Like a transaction and verify the like is recorded",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get transactions",
+      "method": "GET",
+      "pathTemplate": "/transactions",
+      "capture": {
+        "transaction_id": "results[0].id"
+      },
+      "expect": {
+        "status": 200
+      }
+    },
+    {
+      "name": "Like the transaction",
+      "method": "POST",
+      "pathTemplate": "/likes/{{transaction_id}}",
+      "pathParams": {
+        "transaction_id": "{{transaction_id}}"
+      },
+      "expect": {
+        "status": 200
+      }
+    },
+    {
+      "name": "Get likes for transaction after liking",
+      "method": "GET",
+      "pathTemplate": "/likes/{{transaction_id}}",
+      "pathParams": {
+        "transaction_id": "{{transaction_id}}"
+      },
+      "expect": {
+        "status": 200,
+        "jsonPath": [
+          {
+            "path": "$.likes",
+            "op": "isType",
+            "value": "array"
+          },
+          {
+            "path": "$.likes[-1].userId",
+            "op": "eq",
+            "value": "{{user_id}}"
+          },
+          {
+            "path": "$.likes[-1].transactionId",
+            "op": "eq",
+            "value": "{{transaction_id}}"
+          }
+        ]
+      }
+    }
+  ]
+}

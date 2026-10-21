@@ -1,0 +1,20 @@
+{
+  "id": "CYPRESS-RWA-BANK-ACCOUNTS-002-TC004",
+  "requirementId": "CYPRESS-RWA-BANK-ACCOUNTS-002",
+  "title": "Get bank account with non-existent id returns 404",
+  "kind": "negative",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get non-existent bank account",
+      "method": "GET",
+      "pathTemplate": "/bankAccounts/{{unknown_id}}",
+      "pathParams": {
+        "unknown_id": "{{unknown_id}}"
+      },
+      "expect": {
+        "status": 404
+      }
+    }
+  ]
+}

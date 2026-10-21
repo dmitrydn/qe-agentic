@@ -1,0 +1,24 @@
+{
+  "id": "CYPRESS-RWA-BANK-ACCOUNTS-003-negative-002",
+  "requirementId": "CYPRESS-RWA-BANK-ACCOUNTS-003",
+  "title": "Create bank account fails with missing accountNumber",
+  "kind": "negative",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Attempt to create bank account without accountNumber",
+      "method": "POST",
+      "pathTemplate": "/bankAccounts",
+      "body": {
+        "bankName": "Rich Oracle Test Bank",
+        "routingNumber": "987654321"
+      },
+      "expect": {
+        "statusIn": [
+          400,
+          422
+        ]
+      }
+    }
+  ]
+}

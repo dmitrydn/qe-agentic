@@ -1,0 +1,30 @@
+{
+  "id": "CYPRESS-RWA-TRANSACTIONS-008-auth-001",
+  "requirementId": "CYPRESS-RWA-TRANSACTIONS-008",
+  "title": "Create request transaction fails when unauthenticated",
+  "kind": "auth",
+  "actor": "anonymous",
+  "requests": [
+    {
+      "name": "Create request transaction without authentication",
+      "method": "POST",
+      "pathTemplate": "/transactions",
+      "body": {
+        "transactionType": "request",
+        "receiverId": "{{other_user_id}}",
+        "description": "No auth",
+        "amount": 2500
+      },
+      "expect": {
+        "status": 401,
+        "jsonPath": [
+          {
+            "path": "error",
+            "op": "eq",
+            "value": "Unauthorized"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "CYPRESS-RWA-LIKES-002-TC003",
+  "requirementId": "CYPRESS-RWA-LIKES-002",
+  "title": "Unauthenticated user cannot get likes for a transaction",
+  "kind": "auth",
+  "actor": "anonymous",
+  "requests": [
+    {
+      "name": "Get likes without authentication",
+      "method": "GET",
+      "pathTemplate": "/likes/{{transaction_id}}",
+      "pathParams": {
+        "transaction_id": "dummy-transaction-id"
+      },
+      "expect": {
+        "status": 401
+      }
+    }
+  ]
+}

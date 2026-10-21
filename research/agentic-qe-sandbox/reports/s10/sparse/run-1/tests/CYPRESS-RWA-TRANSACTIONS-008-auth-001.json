@@ -1,0 +1,25 @@
+{
+  "id": "CYPRESS-RWA-TRANSACTIONS-008-auth-001",
+  "requirementId": "CYPRESS-RWA-TRANSACTIONS-008",
+  "title": "Create request transaction without authentication",
+  "kind": "auth",
+  "actor": "anonymous",
+  "requests": [
+    {
+      "name": "Attempt to create request transaction unauthenticated",
+      "method": "POST",
+      "pathTemplate": "/transactions",
+      "body": {
+        "transactionType": "request",
+        "source": "{{other_user_bank_account_id}}",
+        "receiverId": "{{other_user_id}}",
+        "description": "Rich oracle request test",
+        "amount": 2500,
+        "privacyLevel": "public"
+      },
+      "expect": {
+        "status": 401
+      }
+    }
+  ]
+}

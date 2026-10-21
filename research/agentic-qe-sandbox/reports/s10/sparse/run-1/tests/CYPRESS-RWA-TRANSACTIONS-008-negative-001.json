@@ -1,0 +1,28 @@
+{
+  "id": "CYPRESS-RWA-TRANSACTIONS-008-negative-001",
+  "requirementId": "CYPRESS-RWA-TRANSACTIONS-008",
+  "title": "Create request transaction with invalid receiver id",
+  "kind": "negative",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Create request transaction with unknown receiver",
+      "method": "POST",
+      "pathTemplate": "/transactions",
+      "body": {
+        "transactionType": "request",
+        "source": "{{other_user_bank_account_id}}",
+        "receiverId": "{{unknown_id}}",
+        "description": "Rich oracle request test",
+        "amount": 2500,
+        "privacyLevel": "public"
+      },
+      "expect": {
+        "statusIn": [
+          400,
+          404
+        ]
+      }
+    }
+  ]
+}

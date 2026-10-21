@@ -1,0 +1,20 @@
+{
+  "id": "CYPRESS-RWA-NOTIFICATIONS-004-001",
+  "requirementId": "CYPRESS-RWA-NOTIFICATIONS-004",
+  "title": "GET notifications returns 200",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get notifications",
+      "method": "GET",
+      "pathTemplate": "/notifications",
+      "capture": {
+        "notification_id": "results[0].id"
+      },
+      "expect": {
+        "status": 200
+      }
+    }
+  ]
+}

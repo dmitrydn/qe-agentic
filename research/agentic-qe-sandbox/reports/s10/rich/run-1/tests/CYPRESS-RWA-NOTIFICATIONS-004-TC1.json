@@ -1,0 +1,20 @@
+{
+  "id": "CYPRESS-RWA-NOTIFICATIONS-004-TC1",
+  "requirementId": "CYPRESS-RWA-NOTIFICATIONS-004",
+  "title": "Get notifications and capture notification_id for subsequent tests",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "GET /notifications",
+      "method": "GET",
+      "pathTemplate": "/notifications",
+      "capture": {
+        "notification_id": "results[0].id"
+      },
+      "expect": {
+        "status": 200
+      }
+    }
+  ]
+}

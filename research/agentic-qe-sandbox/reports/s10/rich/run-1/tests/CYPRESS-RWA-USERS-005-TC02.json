@@ -1,0 +1,32 @@
+{
+  "id": "CYPRESS-RWA-USERS-005-TC02",
+  "requirementId": "CYPRESS-RWA-USERS-005",
+  "title": "Search users by non-existent email returns empty results",
+  "kind": "negative",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Search users by non-existent email",
+      "method": "GET",
+      "pathTemplate": "/users/search",
+      "query": {
+        "q": "no-such-user-should-ever-match-this-string@example.com"
+      },
+      "expect": {
+        "status": 200,
+        "jsonPath": [
+          {
+            "path": "results",
+            "op": "isType",
+            "value": "array"
+          },
+          {
+            "path": "results.length",
+            "op": "eq",
+            "value": 0
+          }
+        ]
+      }
+    }
+  ]
+}

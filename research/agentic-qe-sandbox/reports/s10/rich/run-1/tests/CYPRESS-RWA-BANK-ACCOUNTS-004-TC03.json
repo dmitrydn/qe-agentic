@@ -1,0 +1,31 @@
+{
+  "id": "CYPRESS-RWA-BANK-ACCOUNTS-004-TC03",
+  "requirementId": "CYPRESS-RWA-BANK-ACCOUNTS-004",
+  "title": "Delete bank account fails with invalid id format",
+  "kind": "negative",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Attempt to delete with invalid id format",
+      "method": "DELETE",
+      "pathTemplate": "/bankAccounts/1234",
+      "pathParams": {
+        "bankAccountId": "1234"
+      },
+      "expect": {
+        "status": 422,
+        "jsonPath": [
+          {
+            "path": "errors",
+            "op": "exists"
+          },
+          {
+            "path": "errors[0].param",
+            "op": "eq",
+            "value": "bankAccountId"
+          }
+        ]
+      }
+    }
+  ]
+}

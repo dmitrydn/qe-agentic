@@ -1,0 +1,17 @@
+{
+  "id": "CYPRESS-RWA-TEST-DATA-001-TC-005",
+  "requirementId": "CYPRESS-RWA-TEST-DATA-001",
+  "title": "Unauthenticated request to get users test data",
+  "kind": "auth",
+  "actor": "anonymous",
+  "requests": [
+    {
+      "name": "GET /testData/users without authentication",
+      "method": "GET",
+      "pathTemplate": "/testData/users",
+      "expect": {
+        "status": 401
+      }
+    }
+  ]
+}

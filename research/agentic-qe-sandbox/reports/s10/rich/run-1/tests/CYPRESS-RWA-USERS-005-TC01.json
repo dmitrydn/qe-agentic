@@ -1,0 +1,47 @@
+{
+  "id": "CYPRESS-RWA-USERS-005-TC01",
+  "requirementId": "CYPRESS-RWA-USERS-005",
+  "title": "Search users by email returns matching user",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Search users by other user email",
+      "method": "GET",
+      "pathTemplate": "/users/search",
+      "query": {
+        "q": "{{other_user_email}}"
+      },
+      "expect": {
+        "status": 200,
+        "jsonPath": [
+          {
+            "path": "results",
+            "op": "isType",
+            "value": "array"
+          },
+          {
+            "path": "results.length",
+            "op": "gte",
+            "value": 1
+          },
+          {
+            "path": "results[0].firstName",
+            "op": "isType",
+            "value": "string"
+          },
+          {
+            "path": "results[0].email",
+            "op": "eq",
+            "value": "{{other_user_email}}"
+          },
+          {
+            "path": "results[?(@.email!='{{other_user_email}}')].length",
+            "op": "eq",
+            "value": 0
+          }
+        ]
+      }
+    }
+  ]
+}

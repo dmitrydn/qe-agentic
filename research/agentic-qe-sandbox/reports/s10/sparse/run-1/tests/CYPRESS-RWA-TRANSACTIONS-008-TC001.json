@@ -1,0 +1,47 @@
+{
+  "id": "CYPRESS-RWA-TRANSACTIONS-008-TC001",
+  "requirementId": "CYPRESS-RWA-TRANSACTIONS-008",
+  "title": "Create a new request transaction with authenticated user",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get primary user details",
+      "method": "GET",
+      "pathTemplate": "/users/{{user_id}}",
+      "capture": {
+        "primaryUserId": "id"
+      },
+      "expect": {
+        "status": 200
+      }
+    },
+    {
+      "name": "Get secondary user details",
+      "method": "GET",
+      "pathTemplate": "/users/{{user_id}}",
+      "capture": {
+        "secondaryUserId": "id"
+      },
+      "expect": {
+        "status": 200
+      }
+    },
+    {
+      "name": "Create request transaction",
+      "method": "POST",
+      "pathTemplate": "/transactions",
+      "body": {
+        "transactionType": "request",
+        "source": "{{primaryUserId}}",
+        "receiverId": "{{secondaryUserId}}",
+        "description": "Rich oracle request test",
+        "amount": 2500,
+        "privacyLevel": "public"
+      },
+      "expect": {
+        "status": 200
+      }
+    }
+  ]
+}

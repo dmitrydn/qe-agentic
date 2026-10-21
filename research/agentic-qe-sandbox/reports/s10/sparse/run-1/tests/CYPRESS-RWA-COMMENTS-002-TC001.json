@@ -1,0 +1,37 @@
+{
+  "id": "CYPRESS-RWA-COMMENTS-002-TC001",
+  "requirementId": "CYPRESS-RWA-COMMENTS-002",
+  "title": "Get transactions and retrieve comments for a transaction",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get transactions",
+      "method": "GET",
+      "pathTemplate": "/transactions",
+      "capture": {
+        "transaction_id": "results[0].id"
+      },
+      "expect": {
+        "status": 200,
+        "jsonPath": [
+          {
+            "path": "results",
+            "op": "exists"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Get comments for transaction",
+      "method": "GET",
+      "pathTemplate": "/comments/{{transaction_id}}",
+      "pathParams": {
+        "transaction_id": "{{transaction_id}}"
+      },
+      "expect": {
+        "status": 200
+      }
+    }
+  ]
+}

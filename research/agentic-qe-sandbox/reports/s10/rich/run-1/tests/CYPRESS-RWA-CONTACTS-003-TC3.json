@@ -1,0 +1,34 @@
+{
+  "id": "CYPRESS-RWA-CONTACTS-003-TC3",
+  "requirementId": "CYPRESS-RWA-CONTACTS-003",
+  "title": "POST /contacts with missing contactUserId returns 422 with validation error",
+  "kind": "negative",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Create contact with missing contactUserId",
+      "method": "POST",
+      "pathTemplate": "/contacts",
+      "body": {},
+      "expect": {
+        "status": 422,
+        "jsonPath": [
+          {
+            "path": "errors",
+            "op": "exists"
+          },
+          {
+            "path": "errors",
+            "op": "isType",
+            "value": "array"
+          },
+          {
+            "path": "errors[0].param",
+            "op": "eq",
+            "value": "contactUserId"
+          }
+        ]
+      }
+    }
+  ]
+}

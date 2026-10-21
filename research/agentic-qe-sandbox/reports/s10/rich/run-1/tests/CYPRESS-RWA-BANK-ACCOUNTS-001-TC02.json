@@ -1,0 +1,24 @@
+{
+  "id": "CYPRESS-RWA-BANK-ACCOUNTS-001-TC02",
+  "requirementId": "CYPRESS-RWA-BANK-ACCOUNTS-001",
+  "title": "Get bank accounts list returns only authenticated user's accounts",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get bank accounts and verify ownership",
+      "method": "GET",
+      "pathTemplate": "/bankAccounts",
+      "expect": {
+        "status": 200,
+        "jsonPath": [
+          {
+            "path": "$.results[?(@.userId!='{{user_id}}')]",
+            "op": "eq",
+            "value": []
+          }
+        ]
+      }
+    }
+  ]
+}

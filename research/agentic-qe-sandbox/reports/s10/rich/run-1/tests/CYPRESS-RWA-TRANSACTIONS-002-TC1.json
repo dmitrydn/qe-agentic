@@ -1,0 +1,57 @@
+{
+  "id": "CYPRESS-RWA-TRANSACTIONS-002-TC1",
+  "requirementId": "CYPRESS-RWA-TRANSACTIONS-002",
+  "title": "Get pending request transactions for authenticated user",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get pending transactions",
+      "method": "GET",
+      "pathTemplate": "/transactions",
+      "query": {
+        "requestStatus": "pending"
+      },
+      "expect": {
+        "status": 200,
+        "jsonPath": [
+          {
+            "path": "$.results",
+            "op": "isType",
+            "value": "array"
+          },
+          {
+            "path": "$.pageData.page",
+            "op": "exists"
+          },
+          {
+            "path": "$.pageData.limit",
+            "op": "exists"
+          },
+          {
+            "path": "$.pageData.totalPages",
+            "op": "exists"
+          },
+          {
+            "path": "$.results[0].senderId",
+            "op": "exists"
+          },
+          {
+            "path": "$.results[0].receiverId",
+            "op": "exists"
+          },
+          {
+            "path": "$.results[?(@.requestStatus!='pending')]",
+            "op": "eq",
+            "value": []
+          },
+          {
+            "path": "$.results[?(@.senderId!='{{user_id}}' && @.receiverId!='{{user_id}}')]",
+            "op": "eq",
+            "value": []
+          }
+        ]
+      }
+    }
+  ]
+}

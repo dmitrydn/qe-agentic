@@ -1,0 +1,36 @@
+{
+  "id": "CYPRESS-RWA-USERS-010-TC1",
+  "requirementId": "CYPRESS-RWA-USERS-010",
+  "title": "POST /users with unrecognized field returns 422",
+  "kind": "negative",
+  "actor": "anonymous",
+  "requests": [
+    {
+      "name": "Create user with invalid field",
+      "method": "POST",
+      "pathTemplate": "/users",
+      "body": {
+        "notAUserField": "not a user field"
+      },
+      "expect": {
+        "status": 422,
+        "jsonPath": [
+          {
+            "path": "errors",
+            "op": "exists"
+          },
+          {
+            "path": "errors",
+            "op": "isType",
+            "value": "array"
+          },
+          {
+            "path": "errors.length",
+            "op": "eq",
+            "value": 1
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "CYPRESS-RWA-TRANSACTIONS-008-negative-001",
+  "requirementId": "CYPRESS-RWA-TRANSACTIONS-008",
+  "title": "Create request transaction fails when amount is missing",
+  "kind": "negative",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Create request transaction without amount",
+      "method": "POST",
+      "pathTemplate": "/transactions",
+      "body": {
+        "transactionType": "request",
+        "receiverId": "{{other_user_id}}",
+        "description": "Missing amount"
+      },
+      "expect": {
+        "status": 422,
+        "jsonPath": [
+          {
+            "path": "errors",
+            "op": "exists"
+          },
+          {
+            "path": "errors[0].param",
+            "op": "eq",
+            "value": "amount"
+          }
+        ]
+      }
+    }
+  ]
+}

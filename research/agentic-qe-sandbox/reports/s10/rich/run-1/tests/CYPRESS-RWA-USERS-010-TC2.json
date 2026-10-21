@@ -1,0 +1,40 @@
+{
+  "id": "CYPRESS-RWA-USERS-010-TC2",
+  "requirementId": "CYPRESS-RWA-USERS-010",
+  "title": "POST /users with invalid defaultPrivacyLevel returns 422",
+  "kind": "negative",
+  "actor": "anonymous",
+  "requests": [
+    {
+      "name": "Create user with invalid privacy level",
+      "method": "POST",
+      "pathTemplate": "/users",
+      "body": {
+        "firstName": "Rich",
+        "lastName": "Oracle",
+        "username": "rich_oracle_user",
+        "password": "password123",
+        "defaultPrivacyLevel": "not-a-real-privacy-level"
+      },
+      "expect": {
+        "status": 422,
+        "jsonPath": [
+          {
+            "path": "errors",
+            "op": "exists"
+          },
+          {
+            "path": "errors",
+            "op": "isType",
+            "value": "array"
+          },
+          {
+            "path": "errors[0].param",
+            "op": "eq",
+            "value": "defaultPrivacyLevel"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "CYPRESS-RWA-BANK-ACCOUNTS-004-TC05",
+  "requirementId": "CYPRESS-RWA-BANK-ACCOUNTS-004",
+  "title": "Delete bank account fails when accessing another user's account",
+  "kind": "auth",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Attempt to delete another user's bank account",
+      "method": "DELETE",
+      "pathTemplate": "/bankAccounts/{{other_user_bank_account_id}}",
+      "pathParams": {
+        "bankAccountId": "{{other_user_bank_account_id}}"
+      },
+      "expect": {
+        "status": 403
+      }
+    }
+  ]
+}

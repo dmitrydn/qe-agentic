@@ -1,0 +1,17 @@
+{
+  "id": "CYPRESS-RWA-BANK-ACCOUNTS-002-TC004",
+  "requirementId": "CYPRESS-RWA-BANK-ACCOUNTS-002",
+  "title": "Get single bank account without authentication",
+  "kind": "auth",
+  "actor": "anonymous",
+  "requests": [
+    {
+      "name": "Get single bank account unauthenticated",
+      "method": "GET",
+      "pathTemplate": "/bankAccounts/{{bank_account_id}}",
+      "expect": {
+        "status": 401
+      }
+    }
+  ]
+}

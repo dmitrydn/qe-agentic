@@ -1,0 +1,17 @@
+{
+  "id": "CYPRESS-RWA-TRANSACTIONS-001-TC002",
+  "requirementId": "CYPRESS-RWA-TRANSACTIONS-001",
+  "title": "Get personal transactions list without authentication returns 401",
+  "kind": "auth",
+  "actor": "anonymous",
+  "requests": [
+    {
+      "name": "Get transactions unauthenticated",
+      "method": "GET",
+      "pathTemplate": "/transactions",
+      "expect": {
+        "status": 401
+      }
+    }
+  ]
+}

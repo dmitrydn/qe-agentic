@@ -1,0 +1,22 @@
+{
+  "id": "CYPRESS-RWA-USERS-011-negative-002",
+  "requirementId": "CYPRESS-RWA-USERS-011",
+  "title": "Update non-existent user should fail",
+  "kind": "negative",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Attempt to update non-existent user",
+      "method": "PATCH",
+      "pathTemplate": "/users/{{unknown_id}}",
+      "body": {
+        "firstName": "UpdatedName"
+      },
+      "expect": {
+        "statusIn": [
+          404
+        ]
+      }
+    }
+  ]
+}

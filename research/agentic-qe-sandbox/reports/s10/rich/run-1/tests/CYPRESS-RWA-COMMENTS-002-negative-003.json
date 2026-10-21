@@ -1,0 +1,23 @@
+{
+  "id": "CYPRESS-RWA-COMMENTS-002-negative-003",
+  "requirementId": "CYPRESS-RWA-COMMENTS-002",
+  "title": "Post comment on unknown transaction returns 404",
+  "kind": "negative",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Post comment on unknown transaction",
+      "method": "POST",
+      "pathTemplate": "/comments/99999999",
+      "pathParams": {
+        "unknown_id": "99999999"
+      },
+      "body": {
+        "content": "Comment on unknown transaction"
+      },
+      "expect": {
+        "status": 404
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "CYPRESS-RWA-TRANSACTIONS-010-004",
+  "requirementId": "CYPRESS-RWA-TRANSACTIONS-010",
+  "title": "PATCH /transactions with invalid transactionId returns 422",
+  "kind": "negative",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "PATCH transaction with invalid transactionId",
+      "method": "PATCH",
+      "pathTemplate": "/transactions/1234",
+      "body": {
+        "requestStatus": "accepted"
+      },
+      "expect": {
+        "status": 422,
+        "jsonPath": [
+          {
+            "path": "errors",
+            "op": "exists"
+          },
+          {
+            "path": "errors[0].param",
+            "op": "eq",
+            "value": "transactionId"
+          }
+        ]
+      }
+    }
+  ]
+}

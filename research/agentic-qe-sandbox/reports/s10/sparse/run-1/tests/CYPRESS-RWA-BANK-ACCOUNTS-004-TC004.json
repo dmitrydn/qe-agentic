@@ -1,0 +1,23 @@
+{
+  "id": "CYPRESS-RWA-BANK-ACCOUNTS-004-TC004",
+  "requirementId": "CYPRESS-RWA-BANK-ACCOUNTS-004",
+  "title": "Delete a bank account - non-existent account",
+  "kind": "negative",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Attempt to delete non-existent bank account",
+      "method": "DELETE",
+      "pathTemplate": "/bankAccounts/{{unknown_id}}",
+      "pathParams": {
+        "unknown_id": "{{unknown_id}}"
+      },
+      "expect": {
+        "statusIn": [
+          404,
+          400
+        ]
+      }
+    }
+  ]
+}

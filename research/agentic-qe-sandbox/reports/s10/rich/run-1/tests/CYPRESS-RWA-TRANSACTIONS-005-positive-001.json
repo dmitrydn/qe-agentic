@@ -1,0 +1,78 @@
+{
+  "id": "CYPRESS-RWA-TRANSACTIONS-005-positive-001",
+  "requirementId": "CYPRESS-RWA-TRANSACTIONS-005",
+  "title": "Get contacts' transactions page 1 and page 2",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get contacts' transactions page 1",
+      "method": "GET",
+      "pathTemplate": "/transactions/contacts",
+      "query": {
+        "page": "1"
+      },
+      "capture": {
+        "page1_first_id": "results[0].id",
+        "total_pages": "pageData.totalPages"
+      },
+      "expect": {
+        "status": 200,
+        "jsonPath": [
+          {
+            "path": "pageData.page",
+            "op": "eq",
+            "value": 1
+          },
+          {
+            "path": "results",
+            "op": "isType",
+            "value": "array"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Get contacts' transactions page 2",
+      "method": "GET",
+      "pathTemplate": "/transactions/contacts",
+      "query": {
+        "page": "2"
+      },
+      "expect": {
+        "status": 200,
+        "jsonPath": [
+          {
+            "path": "results",
+            "op": "isType",
+            "value": "array"
+          },
+          {
+            "path": "pageData.page",
+            "op": "eq",
+            "value": 2
+          },
+          {
+            "path": "pageData.limit",
+            "op": "exists"
+          },
+          {
+            "path": "pageData.totalPages",
+            "op": "eq",
+            "value": "{{total_pages}}"
+          },
+          {
+            "path": "results[0].id",
+            "op": "isType",
+            "value": "string"
+          },
+          {
+            "path": "results[0].id",
+            "op": "neq",
+            "value": "{{page1_first_id}}"
+          }
+        ]
+      }
+    }
+  ]
+}

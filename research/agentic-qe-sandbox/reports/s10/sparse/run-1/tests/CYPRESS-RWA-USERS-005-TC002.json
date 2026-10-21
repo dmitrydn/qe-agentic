@@ -1,0 +1,20 @@
+{
+  "id": "CYPRESS-RWA-USERS-005-TC002",
+  "requirementId": "CYPRESS-RWA-USERS-005",
+  "title": "Get users by email - unauthenticated request",
+  "kind": "auth",
+  "actor": "anonymous",
+  "requests": [
+    {
+      "name": "Search users by email without authentication",
+      "method": "GET",
+      "pathTemplate": "/users/search",
+      "query": {
+        "q": "{{other_user_email}}"
+      },
+      "expect": {
+        "status": 401
+      }
+    }
+  ]
+}

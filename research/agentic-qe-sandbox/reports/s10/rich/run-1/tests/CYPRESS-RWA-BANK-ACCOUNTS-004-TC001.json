@@ -1,0 +1,63 @@
+{
+  "id": "CYPRESS-RWA-BANK-ACCOUNTS-004-TC001",
+  "requirementId": "CYPRESS-RWA-BANK-ACCOUNTS-004",
+  "title": "Delete a bank account - positive flow",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Create bank account to delete",
+      "method": "POST",
+      "pathTemplate": "/bankAccounts",
+      "body": {
+        "bankName": "Delete Me Bank",
+        "accountNumber": "111111111",
+        "routingNumber": "222222222"
+      },
+      "capture": {
+        "delete_account_id": "id"
+      },
+      "expect": {
+        "status": 200
+      }
+    },
+    {
+      "name": "Delete the bank account",
+      "method": "DELETE",
+      "pathTemplate": "/bankAccounts/{{delete_account_id}}",
+      "pathParams": {
+        "delete_account_id": "{{delete_account_id}}"
+      },
+      "expect": {
+        "status": 200,
+        "jsonPath": [
+          {
+            "path": "$.account.id",
+            "op": "eq",
+            "value": "{{delete_account_id}}"
+          },
+          {
+            "path": "$.account.isDeleted",
+            "op": "eq",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Verify deleted account not in list",
+      "method": "GET",
+      "pathTemplate": "/bankAccounts",
+      "expect": {
+        "status": 200,
+        "jsonPath": [
+          {
+            "path": "$.results[?(@.id=='{{delete_account_id}}')]",
+            "op": "exists",
+            "value": false
+          }
+        ]
+      }
+    }
+  ]
+}

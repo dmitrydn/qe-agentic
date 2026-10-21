@@ -1,0 +1,20 @@
+{
+  "id": "CYPRESS-RWA-TRANSACTIONS-002-auth-001",
+  "requirementId": "CYPRESS-RWA-TRANSACTIONS-002",
+  "title": "Get pending request transactions without authentication returns 401",
+  "kind": "auth",
+  "actor": "anonymous",
+  "requests": [
+    {
+      "name": "Get pending request transactions unauthenticated",
+      "method": "GET",
+      "pathTemplate": "/transactions",
+      "query": {
+        "requestStatus": "pending"
+      },
+      "expect": {
+        "status": 401
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "CYPRESS-RWA-BANK-ACCOUNTS-001-TC03",
+  "requirementId": "CYPRESS-RWA-BANK-ACCOUNTS-001",
+  "title": "Get bank accounts list excludes deleted accounts",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get bank accounts and verify no deleted accounts",
+      "method": "GET",
+      "pathTemplate": "/bankAccounts",
+      "expect": {
+        "status": 200,
+        "jsonPath": [
+          {
+            "path": "$.results[?(@.isDeleted==true)]",
+            "op": "eq",
+            "value": []
+          }
+        ]
+      }
+    }
+  ]
+}

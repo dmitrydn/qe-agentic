@@ -1,0 +1,33 @@
+{
+  "id": "CYPRESS-RWA-TRANSACTIONS-008-positive-001",
+  "requirementId": "CYPRESS-RWA-TRANSACTIONS-008",
+  "title": "Create a new request transaction successfully",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get authenticated user details",
+      "method": "GET",
+      "pathTemplate": "/users/{{user_id}}",
+      "expect": {
+        "status": 200
+      }
+    },
+    {
+      "name": "Create request transaction",
+      "method": "POST",
+      "pathTemplate": "/transactions",
+      "body": {
+        "transactionType": "request",
+        "source": "{{other_user_bank_account_id}}",
+        "receiverId": "{{other_user_id}}",
+        "description": "Rich oracle request test",
+        "amount": 2500,
+        "privacyLevel": "public"
+      },
+      "expect": {
+        "status": 200
+      }
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "CYPRESS-RWA-USERS-001-TC01",
+  "requirementId": "CYPRESS-RWA-USERS-001",
+  "title": "Get users list - authenticated user receives list without own record and no passwords",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get users list",
+      "method": "GET",
+      "pathTemplate": "/users",
+      "expect": {
+        "status": 200,
+        "jsonPath": [
+          {
+            "path": "results",
+            "op": "isType",
+            "value": "array"
+          },
+          {
+            "path": "results.length",
+            "op": "gte",
+            "value": 1
+          },
+          {
+            "path": "results[0].id",
+            "op": "isType",
+            "value": "string"
+          },
+          {
+            "path": "results[0].username",
+            "op": "isType",
+            "value": "string"
+          },
+          {
+            "path": "results[0].firstName",
+            "op": "isType",
+            "value": "string"
+          },
+          {
+            "path": "results[0].lastName",
+            "op": "isType",
+            "value": "string"
+          },
+          {
+            "path": "results[?(@.id=='{{user_id}}')]",
+            "op": "exists",
+            "value": false
+          },
+          {
+            "path": "results[0].password",
+            "op": "exists",
+            "value": false
+          }
+        ]
+      }
+    }
+  ]
+}

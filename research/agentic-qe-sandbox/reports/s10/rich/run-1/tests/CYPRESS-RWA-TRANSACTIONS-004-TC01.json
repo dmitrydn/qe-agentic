@@ -1,0 +1,60 @@
+{
+  "id": "CYPRESS-RWA-TRANSACTIONS-004-TC01",
+  "requirementId": "CYPRESS-RWA-TRANSACTIONS-004",
+  "title": "Get contacts' transactions default page returns page 1 with valid structure",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get contacts transactions default page",
+      "method": "GET",
+      "pathTemplate": "/transactions/contacts",
+      "expect": {
+        "status": 200,
+        "jsonPath": [
+          {
+            "path": "results",
+            "op": "isType",
+            "value": "array"
+          },
+          {
+            "path": "results.length",
+            "op": "gte",
+            "value": 1
+          },
+          {
+            "path": "pageData.page",
+            "op": "eq",
+            "value": 1
+          },
+          {
+            "path": "pageData.limit",
+            "op": "exists"
+          },
+          {
+            "path": "pageData.totalPages",
+            "op": "exists"
+          },
+          {
+            "path": "pageData.hasNextPages",
+            "op": "isType",
+            "value": "boolean"
+          },
+          {
+            "path": "results[0].id",
+            "op": "isType",
+            "value": "string"
+          },
+          {
+            "path": "results[0].senderId",
+            "op": "exists"
+          },
+          {
+            "path": "results[0].receiverId",
+            "op": "exists"
+          }
+        ]
+      }
+    }
+  ]
+}

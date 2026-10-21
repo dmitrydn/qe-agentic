@@ -1,0 +1,23 @@
+{
+  "id": "CYPRESS-RWA-USERS-011-negative-001",
+  "requirementId": "CYPRESS-RWA-USERS-011",
+  "title": "Update another user's profile should fail",
+  "kind": "negative",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Attempt to update another user",
+      "method": "PATCH",
+      "pathTemplate": "/users/{{other_user_id}}",
+      "body": {
+        "firstName": "UnauthorizedUpdate"
+      },
+      "expect": {
+        "statusIn": [
+          401,
+          403
+        ]
+      }
+    }
+  ]
+}

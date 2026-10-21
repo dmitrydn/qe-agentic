@@ -1,0 +1,44 @@
+{
+  "id": "CYPRESS-RWA-COMMENTS-002-negative-001",
+  "requirementId": "CYPRESS-RWA-COMMENTS-002",
+  "title": "Post comment with empty body returns 422",
+  "kind": "negative",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get transactions",
+      "method": "GET",
+      "pathTemplate": "/transactions",
+      "capture": {
+        "transaction_id": "results[0].id"
+      },
+      "expect": {
+        "status": 200
+      }
+    },
+    {
+      "name": "Post comment with empty body",
+      "method": "POST",
+      "pathTemplate": "/comments/{{transaction_id}}",
+      "pathParams": {
+        "transaction_id": "{{transaction_id}}"
+      },
+      "body": {},
+      "expect": {
+        "status": 422,
+        "jsonPath": [
+          {
+            "path": "$.errors",
+            "op": "isType",
+            "value": "array"
+          },
+          {
+            "path": "$.errors[0].param",
+            "op": "eq",
+            "value": "content"
+          }
+        ]
+      }
+    }
+  ]
+}

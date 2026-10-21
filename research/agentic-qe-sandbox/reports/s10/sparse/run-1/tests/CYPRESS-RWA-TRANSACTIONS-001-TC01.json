@@ -1,0 +1,17 @@
+{
+  "id": "CYPRESS-RWA-TRANSACTIONS-001-TC01",
+  "requirementId": "CYPRESS-RWA-TRANSACTIONS-001",
+  "title": "Get personal transactions list as authenticated user returns 200",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get transactions",
+      "method": "GET",
+      "pathTemplate": "/transactions",
+      "expect": {
+        "status": 200
+      }
+    }
+  ]
+}

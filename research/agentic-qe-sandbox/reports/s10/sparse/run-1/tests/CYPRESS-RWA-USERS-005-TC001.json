@@ -1,0 +1,20 @@
+{
+  "id": "CYPRESS-RWA-USERS-005-TC001",
+  "requirementId": "CYPRESS-RWA-USERS-005",
+  "title": "Get users by email - authenticated user searches for another user by email",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Search users by email",
+      "method": "GET",
+      "pathTemplate": "/users/search",
+      "query": {
+        "q": "{{other_user_email}}"
+      },
+      "expect": {
+        "status": 200
+      }
+    }
+  ]
+}

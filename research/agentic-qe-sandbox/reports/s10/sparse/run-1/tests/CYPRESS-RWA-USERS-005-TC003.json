@@ -1,0 +1,23 @@
+{
+  "id": "CYPRESS-RWA-USERS-005-TC003",
+  "requirementId": "CYPRESS-RWA-USERS-005",
+  "title": "Get users by email - search with empty query parameter",
+  "kind": "negative",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Search users with empty query",
+      "method": "GET",
+      "pathTemplate": "/users/search",
+      "query": {
+        "q": ""
+      },
+      "expect": {
+        "statusIn": [
+          200,
+          400
+        ]
+      }
+    }
+  ]
+}

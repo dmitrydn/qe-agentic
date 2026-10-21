@@ -1,0 +1,20 @@
+{
+  "id": "CYPRESS-RWA-CONTACTS-003-TC001",
+  "requirementId": "CYPRESS-RWA-CONTACTS-003",
+  "title": "POST /contacts with malformed contactUserId returns 422",
+  "kind": "negative",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Create contact with malformed contactUserId",
+      "method": "POST",
+      "pathTemplate": "/contacts",
+      "body": {
+        "contactUserId": "1234"
+      },
+      "expect": {
+        "status": 422
+      }
+    }
+  ]
+}

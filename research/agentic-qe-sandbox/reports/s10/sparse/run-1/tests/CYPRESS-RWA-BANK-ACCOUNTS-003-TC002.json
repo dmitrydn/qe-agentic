@@ -1,0 +1,22 @@
+{
+  "id": "CYPRESS-RWA-BANK-ACCOUNTS-003-TC002",
+  "requirementId": "CYPRESS-RWA-BANK-ACCOUNTS-003",
+  "title": "Create bank account without authentication",
+  "kind": "auth",
+  "actor": "anonymous",
+  "requests": [
+    {
+      "name": "Attempt to create bank account unauthenticated",
+      "method": "POST",
+      "pathTemplate": "/bankAccounts",
+      "body": {
+        "bankName": "Rich Oracle Test Bank",
+        "accountNumber": "123456789",
+        "routingNumber": "987654321"
+      },
+      "expect": {
+        "status": 401
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "CYPRESS-RWA-LIKES-002-TC005",
+  "requirementId": "CYPRESS-RWA-LIKES-002",
+  "title": "Like transaction with non-existent transaction id",
+  "kind": "negative",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Like non-existent transaction",
+      "method": "POST",
+      "pathTemplate": "/likes/{{unknown_id}}",
+      "pathParams": {
+        "unknown_id": "{{unknown_id}}"
+      },
+      "expect": {
+        "status": 404
+      }
+    }
+  ]
+}

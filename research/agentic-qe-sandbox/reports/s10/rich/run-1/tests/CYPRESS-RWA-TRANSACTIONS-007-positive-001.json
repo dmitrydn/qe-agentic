@@ -1,0 +1,98 @@
+{
+  "id": "CYPRESS-RWA-TRANSACTIONS-007-positive-001",
+  "requirementId": "CYPRESS-RWA-TRANSACTIONS-007",
+  "title": "Create a new payment successfully",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get sender user balance before payment",
+      "method": "GET",
+      "pathTemplate": "/users/{{user_id}}",
+      "expect": {
+        "status": 200
+      },
+      "capture": {
+        "sender_balance_before": "user.balance"
+      }
+    },
+    {
+      "name": "Create payment transaction",
+      "method": "POST",
+      "pathTemplate": "/transactions",
+      "body": {
+        "transactionType": "payment",
+        "source": "{{other_user_bank_account_id}}",
+        "receiverId": "{{other_user_id}}",
+        "description": "Rich oracle payment test",
+        "amount": 1500,
+        "privacyLevel": "public"
+      },
+      "expect": {
+        "status": 200,
+        "jsonPath": [
+          {
+            "path": "transaction.id",
+            "op": "isType",
+            "value": "string"
+          },
+          {
+            "path": "transaction.senderId",
+            "op": "eq",
+            "value": "{{user_id}}"
+          },
+          {
+            "path": "transaction.receiverId",
+            "op": "eq",
+            "value": "{{other_user_id}}"
+          },
+          {
+            "path": "transaction.description",
+            "op": "eq",
+            "value": "Rich oracle payment test"
+          },
+          {
+            "path": "transaction.privacyLevel",
+            "op": "eq",
+            "value": "public"
+          },
+          {
+            "path": "transaction.amount",
+            "op": "eq",
+            "value": 1500
+          },
+          {
+            "path": "transaction.status",
+            "op": "eq",
+            "value": "complete"
+          },
+          {
+            "path": "transaction.createdAt",
+            "op": "isType",
+            "value": "string"
+          },
+          {
+            "path": "transaction.modifiedAt",
+            "op": "isType",
+            "value": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Verify sender balance changed after payment",
+      "method": "GET",
+      "pathTemplate": "/users/{{user_id}}",
+      "expect": {
+        "status": 200,
+        "jsonPath": [
+          {
+            "path": "user.balance",
+            "op": "neq",
+            "value": "{{sender_balance_before}}"
+          }
+        ]
+      }
+    }
+  ]
+}

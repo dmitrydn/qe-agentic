@@ -1,0 +1,22 @@
+{
+  "id": "CYPRESS-RWA-TRANSACTIONS-003-auth-001",
+  "requirementId": "CYPRESS-RWA-TRANSACTIONS-003",
+  "title": "Get pending request transactions - unauthenticated should fail",
+  "kind": "auth",
+  "actor": "anonymous",
+  "requests": [
+    {
+      "name": "Get pending request transactions without authentication",
+      "method": "GET",
+      "pathTemplate": "/transactions",
+      "query": {
+        "requestStatus": "pending",
+        "rangeStartTs": "2018-01-01T00:00:00.000Z",
+        "rangeEndTs": "2030-12-05T00:00:00.000Z"
+      },
+      "expect": {
+        "status": 401
+      }
+    }
+  ]
+}

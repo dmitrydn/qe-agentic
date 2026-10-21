@@ -1,0 +1,85 @@
+{
+  "id": "CYPRESS-RWA-COMMENTS-002-TC001",
+  "requirementId": "CYPRESS-RWA-COMMENTS-002",
+  "title": "Successfully retrieve transactions and add comment to transaction",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get transactions",
+      "method": "GET",
+      "pathTemplate": "/transactions",
+      "expect": {
+        "status": 200
+      },
+      "capture": {
+        "transaction_id": "results[0].id"
+      }
+    },
+    {
+      "name": "Get comments for transaction (before adding)",
+      "method": "GET",
+      "pathTemplate": "/comments/{{transaction_id}}",
+      "pathParams": {
+        "transaction_id": "{{transaction_id}}"
+      },
+      "expect": {
+        "status": 200,
+        "jsonPath": [
+          {
+            "path": "comments",
+            "op": "isType",
+            "value": "array"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Post comment to transaction",
+      "method": "POST",
+      "pathTemplate": "/comments/{{transaction_id}}",
+      "pathParams": {
+        "transaction_id": "{{transaction_id}}"
+      },
+      "body": {
+        "content": "This is a rich oracle test comment"
+      },
+      "expect": {
+        "status": 200
+      }
+    },
+    {
+      "name": "Get comments for transaction (after adding)",
+      "method": "GET",
+      "pathTemplate": "/comments/{{transaction_id}}",
+      "pathParams": {
+        "transaction_id": "{{transaction_id}}"
+      },
+      "expect": {
+        "status": 200,
+        "jsonPath": [
+          {
+            "path": "comments",
+            "op": "isType",
+            "value": "array"
+          },
+          {
+            "path": "comments[-1].content",
+            "op": "eq",
+            "value": "This is a rich oracle test comment"
+          },
+          {
+            "path": "comments[-1].userId",
+            "op": "eq",
+            "value": "{{user_id}}"
+          },
+          {
+            "path": "comments[-1].transactionId",
+            "op": "eq",
+            "value": "{{transaction_id}}"
+          }
+        ]
+      }
+    }
+  ]
+}

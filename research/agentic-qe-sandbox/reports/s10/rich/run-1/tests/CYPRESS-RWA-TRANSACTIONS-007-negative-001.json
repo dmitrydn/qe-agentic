@@ -1,0 +1,34 @@
+{
+  "id": "CYPRESS-RWA-TRANSACTIONS-007-negative-001",
+  "requirementId": "CYPRESS-RWA-TRANSACTIONS-007",
+  "title": "Create payment fails when receiverId is missing",
+  "kind": "negative",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Create payment without receiverId",
+      "method": "POST",
+      "pathTemplate": "/transactions",
+      "body": {
+        "transactionType": "payment",
+        "description": "Missing receiver",
+        "amount": 1500
+      },
+      "expect": {
+        "status": 422,
+        "jsonPath": [
+          {
+            "path": "errors",
+            "op": "isType",
+            "value": "array"
+          },
+          {
+            "path": "errors[0].param",
+            "op": "eq",
+            "value": "receiverId"
+          }
+        ]
+      }
+    }
+  ]
+}

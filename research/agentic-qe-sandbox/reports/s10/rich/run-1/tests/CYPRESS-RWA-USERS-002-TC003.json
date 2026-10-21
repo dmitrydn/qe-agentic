@@ -1,0 +1,17 @@
+{
+  "id": "CYPRESS-RWA-USERS-002-TC003",
+  "requirementId": "CYPRESS-RWA-USERS-002",
+  "title": "Get another user's profile returns 403",
+  "kind": "negative",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get other user profile",
+      "method": "GET",
+      "pathTemplate": "/users/{{other_user_id}}",
+      "expect": {
+        "status": 403
+      }
+    }
+  ]
+}

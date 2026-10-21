@@ -1,0 +1,17 @@
+{
+  "id": "CYPRESS-RWA-LIKES-002-TC002",
+  "requirementId": "CYPRESS-RWA-LIKES-002",
+  "title": "Unauthenticated user cannot get transactions",
+  "kind": "auth",
+  "actor": "anonymous",
+  "requests": [
+    {
+      "name": "Get transactions without authentication",
+      "method": "GET",
+      "pathTemplate": "/transactions",
+      "expect": {
+        "status": 401
+      }
+    }
+  ]
+}

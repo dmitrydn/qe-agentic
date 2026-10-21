@@ -1,0 +1,24 @@
+{
+  "id": "CYPRESS-RWA-USERS-001-TC02",
+  "requirementId": "CYPRESS-RWA-USERS-001",
+  "title": "Get users list - unauthenticated request returns 401",
+  "kind": "auth",
+  "actor": "anonymous",
+  "requests": [
+    {
+      "name": "Get users list without authentication",
+      "method": "GET",
+      "pathTemplate": "/users",
+      "expect": {
+        "status": 401,
+        "jsonPath": [
+          {
+            "path": "error",
+            "op": "eq",
+            "value": "Unauthorized"
+          }
+        ]
+      }
+    }
+  ]
+}

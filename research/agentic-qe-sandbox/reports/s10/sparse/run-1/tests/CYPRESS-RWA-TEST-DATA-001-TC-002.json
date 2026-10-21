@@ -1,0 +1,17 @@
+{
+  "id": "CYPRESS-RWA-TEST-DATA-001-TC-002",
+  "requirementId": "CYPRESS-RWA-TEST-DATA-001",
+  "title": "Get remote mock data for users entity without authentication",
+  "kind": "auth",
+  "actor": "anonymous",
+  "requests": [
+    {
+      "name": "Get test data users unauthenticated",
+      "method": "GET",
+      "pathTemplate": "/testData/users",
+      "expect": {
+        "status": 401
+      }
+    }
+  ]
+}

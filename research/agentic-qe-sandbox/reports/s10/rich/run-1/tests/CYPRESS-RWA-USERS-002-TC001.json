@@ -1,0 +1,54 @@
+{
+  "id": "CYPRESS-RWA-USERS-002-TC001",
+  "requirementId": "CYPRESS-RWA-USERS-002",
+  "title": "Get authenticated user's own profile successfully",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get own user profile",
+      "method": "GET",
+      "pathTemplate": "/users/{{user_id}}",
+      "expect": {
+        "status": 200,
+        "jsonPath": [
+          {
+            "path": "$.user.id",
+            "op": "eq",
+            "value": "{{user_id}}"
+          },
+          {
+            "path": "$.user.firstName",
+            "op": "isType",
+            "value": "string"
+          },
+          {
+            "path": "$.user.lastName",
+            "op": "isType",
+            "value": "string"
+          },
+          {
+            "path": "$.user.username",
+            "op": "isType",
+            "value": "string"
+          },
+          {
+            "path": "$.user.email",
+            "op": "isType",
+            "value": "string"
+          },
+          {
+            "path": "$.user.balance",
+            "op": "isType",
+            "value": "number"
+          },
+          {
+            "path": "$.user.password",
+            "op": "exists",
+            "value": false
+          }
+        ]
+      }
+    }
+  ]
+}

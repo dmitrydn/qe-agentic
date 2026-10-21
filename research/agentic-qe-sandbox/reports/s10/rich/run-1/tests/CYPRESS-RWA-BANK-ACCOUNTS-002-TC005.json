@@ -1,0 +1,20 @@
+{
+  "id": "CYPRESS-RWA-BANK-ACCOUNTS-002-TC005",
+  "requirementId": "CYPRESS-RWA-BANK-ACCOUNTS-002",
+  "title": "Get bank account owned by another user returns 403",
+  "kind": "negative",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get other user's bank account",
+      "method": "GET",
+      "pathTemplate": "/bankAccounts/{{other_user_bank_account_id}}",
+      "pathParams": {
+        "other_user_bank_account_id": "{{other_user_bank_account_id}}"
+      },
+      "expect": {
+        "status": 403
+      }
+    }
+  ]
+}

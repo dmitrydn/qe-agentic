@@ -1,0 +1,41 @@
+{
+  "id": "CYPRESS-RWA-LIKES-002-TC001",
+  "requirementId": "CYPRESS-RWA-LIKES-002",
+  "title": "Authenticated user can get transactions and then get likes for a transaction",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get transactions",
+      "method": "GET",
+      "pathTemplate": "/transactions",
+      "expect": {
+        "status": 200,
+        "jsonPath": [
+          {
+            "path": "results",
+            "op": "exists"
+          },
+          {
+            "path": "results[0].id",
+            "op": "exists"
+          }
+        ]
+      },
+      "capture": {
+        "transaction_id": "results[0].id"
+      }
+    },
+    {
+      "name": "Get likes for transaction",
+      "method": "GET",
+      "pathTemplate": "/likes/{{transaction_id}}",
+      "pathParams": {
+        "transaction_id": "{{transaction_id}}"
+      },
+      "expect": {
+        "status": 200
+      }
+    }
+  ]
+}

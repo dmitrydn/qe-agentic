@@ -1,0 +1,27 @@
+{
+  "id": "CYPRESS-RWA-TRANSACTIONS-007-TC004",
+  "requirementId": "CYPRESS-RWA-TRANSACTIONS-007",
+  "title": "Create payment fails with missing required fields",
+  "kind": "negative",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Attempt to create payment without receiverId",
+      "method": "POST",
+      "pathTemplate": "/transactions",
+      "body": {
+        "transactionType": "payment",
+        "source": "test-account-id",
+        "description": "Rich oracle payment test",
+        "amount": 1500,
+        "privacyLevel": "public"
+      },
+      "expect": {
+        "statusIn": [
+          400,
+          422
+        ]
+      }
+    }
+  ]
+}

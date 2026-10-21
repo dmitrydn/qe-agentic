@@ -1,0 +1,55 @@
+{
+  "id": "CYPRESS-RWA-NOTIFICATIONS-004-TC3",
+  "requirementId": "CYPRESS-RWA-NOTIFICATIONS-004",
+  "title": "PATCH notification with invalid isRead type returns 422",
+  "kind": "negative",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "GET /notifications to capture notification_id",
+      "method": "GET",
+      "pathTemplate": "/notifications",
+      "capture": {
+        "notification_id": "results[0].id"
+      },
+      "expect": {
+        "status": 200
+      }
+    },
+    {
+      "name": "PATCH /notifications/{notification_id} with invalid isRead type",
+      "method": "PATCH",
+      "pathTemplate": "/notifications/{{notification_id}}",
+      "pathParams": {
+        "notification_id": "{{notification_id}}"
+      },
+      "body": {
+        "isRead": "not-a-boolean"
+      },
+      "expect": {
+        "status": 422,
+        "jsonPath": [
+          {
+            "path": "errors",
+            "op": "exists"
+          },
+          {
+            "path": "errors",
+            "op": "isType",
+            "value": "array"
+          },
+          {
+            "path": "errors.length",
+            "op": "eq",
+            "value": 1
+          },
+          {
+            "path": "errors[0].param",
+            "op": "eq",
+            "value": "isRead"
+          }
+        ]
+      }
+    }
+  ]
+}

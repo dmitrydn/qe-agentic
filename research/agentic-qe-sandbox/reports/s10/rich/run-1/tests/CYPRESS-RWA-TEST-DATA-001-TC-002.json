@@ -1,0 +1,28 @@
+{
+  "id": "CYPRESS-RWA-TEST-DATA-001-TC-002",
+  "requirementId": "CYPRESS-RWA-TEST-DATA-001",
+  "title": "Get remote mock data for transactions entity",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get transactions test data",
+      "method": "GET",
+      "pathTemplate": "/testData/transactions",
+      "expect": {
+        "status": 200,
+        "jsonPath": [
+          {
+            "path": "$.results",
+            "op": "exists"
+          },
+          {
+            "path": "$.results",
+            "op": "isType",
+            "value": "array"
+          }
+        ]
+      }
+    }
+  ]
+}

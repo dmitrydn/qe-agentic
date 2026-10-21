@@ -1,0 +1,20 @@
+{
+  "id": "CYPRESS-RWA-USERS-003-TC002",
+  "requirementId": "CYPRESS-RWA-USERS-003",
+  "title": "GET /users/1234 returns 422 for malformed userId with unauthenticated user",
+  "kind": "auth",
+  "actor": "anonymous",
+  "requests": [
+    {
+      "name": "Get user with malformed userId without authentication",
+      "method": "GET",
+      "pathTemplate": "/users/1234",
+      "expect": {
+        "statusIn": [
+          401,
+          422
+        ]
+      }
+    }
+  ]
+}

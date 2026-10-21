@@ -1,0 +1,17 @@
+{
+  "id": "CYPRESS-RWA-BANK-ACCOUNTS-002-TC001",
+  "requirementId": "CYPRESS-RWA-BANK-ACCOUNTS-002",
+  "title": "Get all bank accounts for authenticated user",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get all bank accounts",
+      "method": "GET",
+      "pathTemplate": "/bankAccounts",
+      "expect": {
+        "status": 200
+      }
+    }
+  ]
+}

@@ -1,0 +1,235 @@
+{
+  "generatedAt": "2026-07-21T06:47:37.702Z",
+  "model": "anthropic/claude-sonnet-4.5",
+  "n": 3,
+  "requirements": {
+    "total": 24,
+    "covered": 24
+  },
+  "tests": {
+    "generated": 86,
+    "passed": 67,
+    "failed": 13,
+    "quarantinedFlaky": 6,
+    "errored": 0
+  },
+  "falsePositiveRate": 0.1511627906976744,
+  "traceability": {
+    "orphanTestIds": []
+  },
+  "errors": [],
+  "defects": [
+    {
+      "id": "payment-amount-cents",
+      "caught": false,
+      "byTestIds": [],
+      "severity": "blatant",
+      "expectCaught": true
+    },
+    {
+      "id": "auth-gate-post-transactions",
+      "caught": true,
+      "byTestIds": [
+        "CYPRESS-RWA-TRANSACTIONS-007-auth-001",
+        "CYPRESS-RWA-TRANSACTIONS-008-auth-001"
+      ],
+      "severity": "blatant",
+      "expectCaught": true
+    },
+    {
+      "id": "receiver-balance-not-credited",
+      "caught": false,
+      "byTestIds": [],
+      "severity": "blatant",
+      "expectCaught": true
+    },
+    {
+      "id": "payment-amount-rounding-shaved-cent",
+      "caught": false,
+      "byTestIds": [],
+      "severity": "subtle",
+      "expectCaught": true
+    },
+    {
+      "id": "auth-gate-get-bankaccounts",
+      "caught": true,
+      "byTestIds": [
+        "CYPRESS-RWA-BANK-ACCOUNTS-001-TC-003",
+        "CYPRESS-RWA-BANK-ACCOUNTS-001-TC04",
+        "CYPRESS-RWA-BANK-ACCOUNTS-002-TC002"
+      ],
+      "severity": "blatant",
+      "expectCaught": true
+    },
+    {
+      "id": "bankaccounts-missing-userid-field",
+      "caught": false,
+      "byTestIds": [],
+      "severity": "moderate",
+      "expectCaught": true
+    },
+    {
+      "id": "bankaccounts-routingnumber-hardcoded",
+      "caught": false,
+      "byTestIds": [],
+      "severity": "moderate",
+      "expectCaught": false
+    },
+    {
+      "id": "auth-gate-get-users",
+      "caught": true,
+      "byTestIds": [
+        "CYPRESS-RWA-USERS-001-TC02",
+        "CYPRESS-RWA-USERS-002-TC002"
+      ],
+      "severity": "blatant",
+      "expectCaught": true
+    },
+    {
+      "id": "users-results-not-array",
+      "caught": true,
+      "byTestIds": [
+        "CYPRESS-RWA-USERS-001-TC01"
+      ],
+      "severity": "moderate",
+      "expectCaught": true
+    },
+    {
+      "id": "users-self-not-excluded",
+      "caught": false,
+      "byTestIds": [],
+      "severity": "subtle",
+      "expectCaught": false
+    },
+    {
+      "id": "auth-gate-get-transactions",
+      "caught": true,
+      "byTestIds": [
+        "CYPRESS-RWA-TRANSACTIONS-001-TC02",
+        "CYPRESS-RWA-TRANSACTIONS-002-TC2",
+        "CYPRESS-RWA-TRANSACTIONS-002-auth-001",
+        "CYPRESS-RWA-TRANSACTIONS-003-TC003",
+        "CYPRESS-RWA-TRANSACTIONS-003-TC3"
+      ],
+      "severity": "blatant",
+      "expectCaught": true
+    },
+    {
+      "id": "transactions-pagination-off-by-one",
+      "caught": false,
+      "byTestIds": [],
+      "severity": "subtle",
+      "expectCaught": true
+    }
+  ],
+  "catchRate": 0.5,
+  "cost": {
+    "calls": 122,
+    "promptTokens": 208744,
+    "completionTokens": 74064,
+    "pricing": {
+      "inputUsdPerMTok": 3,
+      "outputUsdPerMTok": 15
+    },
+    "inputUsd": 0.626232,
+    "outputUsd": 1.11096,
+    "totalUsd": 1.737192,
+    "byPhase": {
+      "generate": {
+        "calls": 71,
+        "promptTokens": 105211,
+        "completionTokens": 60818,
+        "inputUsd": 0.315633,
+        "outputUsd": 0.91227,
+        "totalUsd": 1.227903
+      },
+      "triage": {
+        "calls": 51,
+        "promptTokens": 103533,
+        "completionTokens": 13246,
+        "inputUsd": 0.310599,
+        "outputUsd": 0.19869,
+        "totalUsd": 0.509289
+      }
+    }
+  },
+  "testability": null,
+  "unmeasuredTestIds": [
+    "CYPRESS-RWA-BANK-ACCOUNTS-001-TC01",
+    "CYPRESS-RWA-BANK-ACCOUNTS-001-TC03",
+    "CYPRESS-RWA-BANK-ACCOUNTS-002-TC003",
+    "CYPRESS-RWA-BANK-ACCOUNTS-003-TC002",
+    "CYPRESS-RWA-BANK-ACCOUNTS-003-TC003",
+    "CYPRESS-RWA-BANK-ACCOUNTS-004-TC003",
+    "CYPRESS-RWA-BANK-ACCOUNTS-004-TC03",
+    "CYPRESS-RWA-COMMENTS-002-TC001",
+    "CYPRESS-RWA-COMMENTS-002-TC002",
+    "CYPRESS-RWA-COMMENTS-002-TC004",
+    "CYPRESS-RWA-COMMENTS-002-auth-001",
+    "CYPRESS-RWA-COMMENTS-002-negative-001",
+    "CYPRESS-RWA-COMMENTS-002-negative-002",
+    "CYPRESS-RWA-CONTACTS-003-TC1",
+    "CYPRESS-RWA-CONTACTS-003-TC2",
+    "CYPRESS-RWA-CONTACTS-003-TC3",
+    "CYPRESS-RWA-CONTACTS-003-TC4",
+    "CYPRESS-RWA-LIKES-002-TC001",
+    "CYPRESS-RWA-LIKES-002-TC002",
+    "CYPRESS-RWA-LIKES-002-TC003",
+    "CYPRESS-RWA-LIKES-002-TC004",
+    "CYPRESS-RWA-NOTIFICATIONS-004-001",
+    "CYPRESS-RWA-NOTIFICATIONS-004-002",
+    "CYPRESS-RWA-NOTIFICATIONS-004-003",
+    "CYPRESS-RWA-NOTIFICATIONS-004-004",
+    "CYPRESS-RWA-NOTIFICATIONS-004-TC1",
+    "CYPRESS-RWA-NOTIFICATIONS-004-TC2",
+    "CYPRESS-RWA-NOTIFICATIONS-004-TC3",
+    "CYPRESS-RWA-NOTIFICATIONS-004-TC4",
+    "CYPRESS-RWA-NOTIFICATIONS-004-TC5",
+    "CYPRESS-RWA-TEST-DATA-001-TC-001",
+    "CYPRESS-RWA-TEST-DATA-001-TC-002",
+    "CYPRESS-RWA-TEST-DATA-001-TC-003",
+    "CYPRESS-RWA-TEST-DATA-001-TC-004",
+    "CYPRESS-RWA-TRANSACTIONS-001-TC01",
+    "CYPRESS-RWA-TRANSACTIONS-002-positive-001",
+    "CYPRESS-RWA-TRANSACTIONS-003-TC002",
+    "CYPRESS-RWA-TRANSACTIONS-003-TC2",
+    "CYPRESS-RWA-TRANSACTIONS-004-TC01",
+    "CYPRESS-RWA-TRANSACTIONS-004-TC02",
+    "CYPRESS-RWA-TRANSACTIONS-004-TC03",
+    "CYPRESS-RWA-TRANSACTIONS-004-TC1",
+    "CYPRESS-RWA-TRANSACTIONS-004-TC2",
+    "CYPRESS-RWA-TRANSACTIONS-004-TC3",
+    "CYPRESS-RWA-TRANSACTIONS-005-auth-001",
+    "CYPRESS-RWA-TRANSACTIONS-005-positive-001",
+    "CYPRESS-RWA-TRANSACTIONS-006-auth-001",
+    "CYPRESS-RWA-TRANSACTIONS-007-negative-001",
+    "CYPRESS-RWA-TRANSACTIONS-007-negative-002",
+    "CYPRESS-RWA-TRANSACTIONS-008-negative-001",
+    "CYPRESS-RWA-TRANSACTIONS-010-001",
+    "CYPRESS-RWA-TRANSACTIONS-010-002",
+    "CYPRESS-RWA-TRANSACTIONS-010-003",
+    "CYPRESS-RWA-TRANSACTIONS-010-004",
+    "CYPRESS-RWA-TRANSACTIONS-010-TC1",
+    "CYPRESS-RWA-TRANSACTIONS-010-TC2",
+    "CYPRESS-RWA-TRANSACTIONS-010-TC3",
+    "CYPRESS-RWA-TRANSACTIONS-010-TC4",
+    "CYPRESS-RWA-TRANSACTIONS-010-TC5",
+    "CYPRESS-RWA-USERS-002-TC001",
+    "CYPRESS-RWA-USERS-003-TC1",
+    "CYPRESS-RWA-USERS-003-TC2",
+    "CYPRESS-RWA-USERS-003-TC3",
+    "CYPRESS-RWA-USERS-005-TC02",
+    "CYPRESS-RWA-USERS-005-TC03",
+    "CYPRESS-RWA-USERS-005-TC04",
+    "CYPRESS-RWA-USERS-010-TC1",
+    "CYPRESS-RWA-USERS-010-TC2",
+    "CYPRESS-RWA-USERS-010-TC3",
+    "CYPRESS-RWA-USERS-011-TC01",
+    "CYPRESS-RWA-USERS-011-TC04"
+  ],
+  "negativeControls": {
+    "total": 2,
+    "correctlyUncaught": 2,
+    "unexpectedlyCaught": []
+  }
+}

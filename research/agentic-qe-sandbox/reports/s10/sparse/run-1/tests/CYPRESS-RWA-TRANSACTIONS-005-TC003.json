@@ -1,0 +1,31 @@
+{
+  "id": "CYPRESS-RWA-TRANSACTIONS-005-TC003",
+  "requirementId": "CYPRESS-RWA-TRANSACTIONS-005",
+  "title": "Get contacts' transactions page 1 and page 2 sequentially",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get contacts' transactions page 1",
+      "method": "GET",
+      "pathTemplate": "/transactions/contacts",
+      "query": {
+        "page": "1"
+      },
+      "expect": {
+        "status": 200
+      }
+    },
+    {
+      "name": "Get contacts' transactions page 2",
+      "method": "GET",
+      "pathTemplate": "/transactions/contacts",
+      "query": {
+        "page": "2"
+      },
+      "expect": {
+        "status": 200
+      }
+    }
+  ]
+}

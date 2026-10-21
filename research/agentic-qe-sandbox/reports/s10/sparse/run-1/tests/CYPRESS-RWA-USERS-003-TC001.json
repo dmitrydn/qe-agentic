@@ -1,0 +1,17 @@
+{
+  "id": "CYPRESS-RWA-USERS-003-TC001",
+  "requirementId": "CYPRESS-RWA-USERS-003",
+  "title": "GET /users/1234 returns 422 for malformed userId",
+  "kind": "negative",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get user with malformed userId",
+      "method": "GET",
+      "pathTemplate": "/users/1234",
+      "expect": {
+        "status": 422
+      }
+    }
+  ]
+}

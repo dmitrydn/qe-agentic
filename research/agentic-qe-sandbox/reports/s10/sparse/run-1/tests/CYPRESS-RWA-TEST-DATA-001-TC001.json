@@ -1,0 +1,17 @@
+{
+  "id": "CYPRESS-RWA-TEST-DATA-001-TC001",
+  "requirementId": "CYPRESS-RWA-TEST-DATA-001",
+  "title": "Get remote mock data for users entity as authenticated user",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get test data users",
+      "method": "GET",
+      "pathTemplate": "/testData/users",
+      "expect": {
+        "status": 200
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "CYPRESS-RWA-TRANSACTIONS-006-TC001",
+  "requirementId": "CYPRESS-RWA-TRANSACTIONS-006",
+  "title": "Get public transactions with authenticated user",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get public transactions",
+      "method": "GET",
+      "pathTemplate": "/transactions/public",
+      "expect": {
+        "status": 200
+      }
+    }
+  ]
+}

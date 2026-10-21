@@ -1,0 +1,29 @@
+{
+  "id": "CYPRESS-RWA-LIKES-002-TC004",
+  "requirementId": "CYPRESS-RWA-LIKES-002",
+  "title": "Like transaction with invalid transaction id format",
+  "kind": "negative",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Like transaction with invalid id",
+      "method": "POST",
+      "pathTemplate": "/likes/1234",
+      "expect": {
+        "status": 422,
+        "jsonPath": [
+          {
+            "path": "$.errors",
+            "op": "isType",
+            "value": "array"
+          },
+          {
+            "path": "$.errors[0].param",
+            "op": "eq",
+            "value": "transactionId"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "CYPRESS-RWA-COMMENTS-002-TC005",
+  "requirementId": "CYPRESS-RWA-COMMENTS-002",
+  "title": "Fail to post comment on unknown transaction",
+  "kind": "negative",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Post comment on unknown transaction",
+      "method": "POST",
+      "pathTemplate": "/comments/{{unknown_id}}",
+      "pathParams": {
+        "unknown_id": "{{unknown_id}}"
+      },
+      "body": {
+        "content": "Comment on unknown transaction"
+      },
+      "expect": {
+        "status": 404
+      }
+    }
+  ]
+}

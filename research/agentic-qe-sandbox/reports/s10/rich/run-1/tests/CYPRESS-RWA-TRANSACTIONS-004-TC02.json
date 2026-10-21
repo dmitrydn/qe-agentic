@@ -1,0 +1,32 @@
+{
+  "id": "CYPRESS-RWA-TRANSACTIONS-004-TC02",
+  "requirementId": "CYPRESS-RWA-TRANSACTIONS-004",
+  "title": "Get contacts' transactions with explicit page=1 parameter",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get contacts transactions with page=1",
+      "method": "GET",
+      "pathTemplate": "/transactions/contacts",
+      "query": {
+        "page": "1"
+      },
+      "expect": {
+        "status": 200,
+        "jsonPath": [
+          {
+            "path": "pageData.page",
+            "op": "eq",
+            "value": 1
+          },
+          {
+            "path": "results",
+            "op": "isType",
+            "value": "array"
+          }
+        ]
+      }
+    }
+  ]
+}

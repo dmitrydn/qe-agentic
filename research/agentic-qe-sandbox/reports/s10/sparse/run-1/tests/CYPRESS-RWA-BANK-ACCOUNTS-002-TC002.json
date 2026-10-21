@@ -1,0 +1,34 @@
+{
+  "id": "CYPRESS-RWA-BANK-ACCOUNTS-002-TC002",
+  "requirementId": "CYPRESS-RWA-BANK-ACCOUNTS-002",
+  "title": "Get a single bank account by id",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get all bank accounts",
+      "method": "GET",
+      "pathTemplate": "/bankAccounts",
+      "capture": {
+        "bank_account_id": "results[0].id"
+      },
+      "expect": {
+        "status": 200,
+        "jsonPath": [
+          {
+            "path": "results[0].id",
+            "op": "exists"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Get single bank account",
+      "method": "GET",
+      "pathTemplate": "/bankAccounts/{{bank_account_id}}",
+      "expect": {
+        "status": 200
+      }
+    }
+  ]
+}

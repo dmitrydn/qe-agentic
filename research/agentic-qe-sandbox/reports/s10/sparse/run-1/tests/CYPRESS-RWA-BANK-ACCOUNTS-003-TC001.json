@@ -1,0 +1,22 @@
+{
+  "id": "CYPRESS-RWA-BANK-ACCOUNTS-003-TC001",
+  "requirementId": "CYPRESS-RWA-BANK-ACCOUNTS-003",
+  "title": "Create a new bank account with valid data",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Create bank account",
+      "method": "POST",
+      "pathTemplate": "/bankAccounts",
+      "body": {
+        "bankName": "Rich Oracle Test Bank",
+        "accountNumber": "123456789",
+        "routingNumber": "987654321"
+      },
+      "expect": {
+        "status": 200
+      }
+    }
+  ]
+}

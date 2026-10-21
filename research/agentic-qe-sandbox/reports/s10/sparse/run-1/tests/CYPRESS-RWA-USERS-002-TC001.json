@@ -1,0 +1,17 @@
+{
+  "id": "CYPRESS-RWA-USERS-002-TC001",
+  "requirementId": "CYPRESS-RWA-USERS-002",
+  "title": "Get authenticated user's own profile successfully",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get self user profile",
+      "method": "GET",
+      "pathTemplate": "/users/{{user_id}}",
+      "expect": {
+        "status": 200
+      }
+    }
+  ]
+}

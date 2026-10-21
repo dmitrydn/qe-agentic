@@ -1,0 +1,36 @@
+{
+  "id": "CYPRESS-RWA-CONTACTS-003-TC1",
+  "requirementId": "CYPRESS-RWA-CONTACTS-003",
+  "title": "POST /contacts with numeric string contactUserId returns 422 with validation error",
+  "kind": "negative",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Create contact with malformed contactUserId (numeric string)",
+      "method": "POST",
+      "pathTemplate": "/contacts",
+      "body": {
+        "contactUserId": "1234"
+      },
+      "expect": {
+        "status": 422,
+        "jsonPath": [
+          {
+            "path": "errors",
+            "op": "exists"
+          },
+          {
+            "path": "errors",
+            "op": "isType",
+            "value": "array"
+          },
+          {
+            "path": "errors[0].param",
+            "op": "eq",
+            "value": "contactUserId"
+          }
+        ]
+      }
+    }
+  ]
+}

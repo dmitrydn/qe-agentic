@@ -1,0 +1,17 @@
+{
+  "id": "CYPRESS-RWA-USERS-001-TC002",
+  "requirementId": "CYPRESS-RWA-USERS-001",
+  "title": "Get users list - unauthenticated request",
+  "kind": "auth",
+  "actor": "anonymous",
+  "requests": [
+    {
+      "name": "Get users list without authentication",
+      "method": "GET",
+      "pathTemplate": "/users",
+      "expect": {
+        "status": 401
+      }
+    }
+  ]
+}

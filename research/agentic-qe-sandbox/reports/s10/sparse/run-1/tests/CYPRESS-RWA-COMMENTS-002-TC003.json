@@ -1,0 +1,20 @@
+{
+  "id": "CYPRESS-RWA-COMMENTS-002-TC003",
+  "requirementId": "CYPRESS-RWA-COMMENTS-002",
+  "title": "Unauthenticated user cannot retrieve comments",
+  "kind": "auth",
+  "actor": "anonymous",
+  "requests": [
+    {
+      "name": "Get comments without authentication",
+      "method": "GET",
+      "pathTemplate": "/comments/{{transaction_id}}",
+      "pathParams": {
+        "transaction_id": "test-transaction-id"
+      },
+      "expect": {
+        "status": 401
+      }
+    }
+  ]
+}

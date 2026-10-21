@@ -1,0 +1,24 @@
+{
+  "id": "CYPRESS-RWA-USERS-002-TC002",
+  "requirementId": "CYPRESS-RWA-USERS-002",
+  "title": "Get user profile without authentication returns 401",
+  "kind": "auth",
+  "actor": "anonymous",
+  "requests": [
+    {
+      "name": "Get user profile unauthenticated",
+      "method": "GET",
+      "pathTemplate": "/users/{{user_id}}",
+      "expect": {
+        "status": 401,
+        "jsonPath": [
+          {
+            "path": "$.error",
+            "op": "eq",
+            "value": "Unauthorized"
+          }
+        ]
+      }
+    }
+  ]
+}

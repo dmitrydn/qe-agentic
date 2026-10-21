@@ -1,0 +1,20 @@
+{
+  "id": "CYPRESS-RWA-TRANSACTIONS-005-TC004",
+  "requirementId": "CYPRESS-RWA-TRANSACTIONS-005",
+  "title": "Get contacts' transactions page 1 without authentication",
+  "kind": "auth",
+  "actor": "anonymous",
+  "requests": [
+    {
+      "name": "Get contacts' transactions page 1 unauthenticated",
+      "method": "GET",
+      "pathTemplate": "/transactions/contacts",
+      "query": {
+        "page": "1"
+      },
+      "expect": {
+        "status": 401
+      }
+    }
+  ]
+}

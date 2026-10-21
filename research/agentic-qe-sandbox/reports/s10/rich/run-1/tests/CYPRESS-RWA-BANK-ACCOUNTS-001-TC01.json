@@ -1,0 +1,49 @@
+{
+  "id": "CYPRESS-RWA-BANK-ACCOUNTS-001-TC01",
+  "requirementId": "CYPRESS-RWA-BANK-ACCOUNTS-001",
+  "title": "Get bank accounts list for authenticated user returns 200 with valid structure",
+  "kind": "positive",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Get bank accounts",
+      "method": "GET",
+      "pathTemplate": "/bankAccounts",
+      "expect": {
+        "status": 200,
+        "jsonPath": [
+          {
+            "path": "$.results",
+            "op": "isType",
+            "value": "array"
+          },
+          {
+            "path": "$.results[0].id",
+            "op": "isType",
+            "value": "string"
+          },
+          {
+            "path": "$.results[0].bankName",
+            "op": "isType",
+            "value": "string"
+          },
+          {
+            "path": "$.results[0].accountNumber",
+            "op": "isType",
+            "value": "string"
+          },
+          {
+            "path": "$.results[0].routingNumber",
+            "op": "isType",
+            "value": "string"
+          },
+          {
+            "path": "$.results[0].isDeleted",
+            "op": "isType",
+            "value": "boolean"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "CYPRESS-RWA-COMMENTS-002-negative-002",
+  "requirementId": "CYPRESS-RWA-COMMENTS-002",
+  "title": "Post comment with malformed transaction id returns 422",
+  "kind": "negative",
+  "actor": "primaryUser",
+  "requests": [
+    {
+      "name": "Post comment with malformed id",
+      "method": "POST",
+      "pathTemplate": "/comments/1234",
+      "pathParams": {
+        "transaction_id": "1234"
+      },
+      "body": {
+        "content": "Malformed id comment"
+      },
+      "expect": {
+        "status": 422,
+        "jsonPath": [
+          {
+            "path": "$.errors",
+            "op": "isType",
+            "value": "array"
+          },
+          {
+            "path": "$.errors[0].param",
+            "op": "eq",
+            "value": "transactionId"
+          }
+        ]
+      }
+    }
+  ]
+}
