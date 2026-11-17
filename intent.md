@@ -141,7 +141,7 @@ BATC sets the delivery flow and governs the AI. These capabilities plug in at th
 ## 11. Assumptions, open questions and risks
 
 **Assumptions (correct me if wrong):**
-1. Demo app: RealWorld (Conduit), MIT. Its specification is written independently of the 100+ implementations, so it meets P2. Cypress Real World App is declined: its only "requirements" are its own tests. Conduit's specification is an API/UI contract, not business requirements; the BA layer (user stories, acceptance criteria) is derived from it and must be reviewed by a person before use: a QES tester from the bench acts as BA (D-04).
+1. Demo app: RealWorld (Conduit), MIT. Its specification is written independently of the 100+ implementations, so it meets P2. Cypress Real World App is declined: its only "requirements" are its own tests. Conduit's specification is an API/UI contract, not business requirements; the BA layer (user stories, acceptance criteria) is derived from it and must be reviewed by a person before use: a QES tester from the bench is assigned as Conduit's BA (D-04).
 2. A development AI connector is acceptable inside the sandbox only. Client providers come in Phase 2.
 3. Proven sandbox parts are copied into the new code and tested again; the research copy stays untouched.
 4. The BATC source in `reference/batc-accelerator-development/` is refreshed from Azure DevOps before the BATC connection is designed. The current copy is the 7 October release (3.2.5).

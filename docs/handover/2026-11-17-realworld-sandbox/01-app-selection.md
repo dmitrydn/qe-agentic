@@ -48,4 +48,4 @@ Recorded in `DECISIONS.md` (repo root), the single source for decisions:
 - **D-01** Phase 1 runs on Conduit only; no Java app until Phase 2.
 - **D-02** `openapi.yml` keeps its examples; they are requirements, not leaked answers.
 - **D-03** Four measures keep the held-out test suites away from agents; planted problems carry the eval scores.
-- **D-04** A QES tester from the bench reviews the derived backlog as BA.
+- **D-04** A QES tester from the bench is assigned the BA role for Conduit and decides the open questions.

@@ -6,7 +6,7 @@ Produce the **initial set of business requirements for Conduit**, ready for a **
 
 The output becomes the BA-style requirement source for the demo story "agents start from user stories and acceptance criteria" (`01-app-selection.md` §4), and the input format `intent.md` §7 names: Markdown user stories with Given-When-Then acceptance criteria, plus Gherkin feature files.
 
-**You prepare; a human decides.** You never answer open questions, approve stories or change their status beyond `Draft`. The reviewer is a QES tester from the bench acting as BA (`DECISIONS.md` D-04), so write `REVIEW-GUIDE.md` for a tester, not a seasoned BA: say what to decide, the options, and what each choice means for the app.
+**You prepare; a human decides.** You never answer open questions, approve stories or change their status beyond `Draft`. The reviewer is Conduit's BA: a QES tester from the bench assigned to that role (`DECISIONS.md` D-04), with a testing rather than BA background. Write `REVIEW-GUIDE.md` for someone new to the BA role: for each decision, say what to decide, the options, and what each choice means for the app.
 
 **Executor:** GitHub Copilot in agent mode in VS Code on Dmitry's Mac, with the repository root open. `.github/copilot-instructions.md` repeats the hard rules below. Terminal auto-approve stays **off**: Dmitry approves each command (D-03).
 
