@@ -1,0 +1,16 @@
+(node:33940) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2m[WebServer] [22m[0m[2m[35m$[0m [2m[1mng serve[0m
+
+Running 6 tests using 1 worker
+
+(node:34030) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✓  1 [chromium] › ../nitro/realworld/specs/e2e/social.spec.ts:22:7 › Social Features › should follow and unfollow a user (2.0s)
+  ✓  2 [chromium] › ../nitro/realworld/specs/e2e/social.spec.ts:45:7 › Social Features › should view own profile (1.5s)
+  ✓  3 [chromium] › ../nitro/realworld/specs/e2e/social.spec.ts:62:7 › Social Features › should view other user profile (1.5s)
+  ✓  4 [chromium] › ../nitro/realworld/specs/e2e/social.spec.ts:97:7 › Social Features › should display user articles on profile (1.6s)
+  ✓  5 [chromium] › ../nitro/realworld/specs/e2e/social.spec.ts:115:7 › Social Features › should display favorited articles on profile (1.8s)
+  ✓  6 [chromium] › ../nitro/realworld/specs/e2e/social.spec.ts:153:7 › Social Features › should display followed users articles in feed (1.7s)
+
+  6 passed (25.7s)

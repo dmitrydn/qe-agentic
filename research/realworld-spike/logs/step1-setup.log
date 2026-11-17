@@ -1,0 +1,57 @@
+make setup-install-dependencies
+bun install
+bun install v1.4.4 (38afee6c8)
+
+$ nitro prepare
+
+[nitro]  WARN  Please add compatibilityDate: '2026-10-23' to the config file. Using 2024-04-03 as fallback.
+       More info: https://nitro.build/deploy#compatibility-date
+
+
++ @ngneat/falso@5.7.0
++ nitropack@2.13.1
++ prisma@7.4.2
++ @prisma/adapter-libsql@7.4.2
++ @prisma/client@7.4.2
++ bcryptjs@3.0.3
++ jsonwebtoken@9.0.3
++ slugify@1.6.6
++ zod@3.25.76
+
+447 packages installed [12.65s]
+echo -e '\n\033[0;32m    INSTALLED DEPENDENCIES\033[0m\n'
+-e \n\033[0;32m    INSTALLED DEPENDENCIES\033[0m\n
+make setup-nitro-prepare
+bun run prepare
+$ nitro prepare
+
+[nitro]  WARN  Please add compatibilityDate: '2026-10-23' to the config file. Using 2024-04-03 as fallback.
+       More info: https://nitro.build/deploy#compatibility-date
+
+echo -e '\n\033[0;32m    PREPARED NITRO\033[0m\n'
+-e \n\033[0;32m    PREPARED NITRO\033[0m\n
+make setup-db-generate
+bun run db:generate
+$ bun x prisma generate
+Loaded Prisma config from prisma.config.ts.
+
+Prisma schema loaded from prisma/schema.prisma.
+
+✔ Generated Prisma Client (7.4.2) to ./generated/prisma in 20ms
+
+echo -e '\n\033[0;32m    GENERATED PRISMA\033[0m\n'
+-e \n\033[0;32m    GENERATED PRISMA\033[0m\n
+make setup-db-push
+bun run db:push
+$ bun x prisma db push
+Loaded Prisma config from prisma.config.ts.
+
+Prisma schema loaded from prisma/schema.prisma.
+Datasource "db": SQLite database "dev.db" at "file:./dev.db"
+
+SQLite database dev.db created at file:./dev.db
+
+🚀  Your database is now in sync with your Prisma schema. Done in 94ms
+
+echo -e '\n\033[0;32m    PUSHED DATABASE SCHEMA\033[0m\n'
+-e \n\033[0;32m    PUSHED DATABASE SCHEMA\033[0m\n

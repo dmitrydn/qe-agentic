@@ -1,0 +1,9 @@
+^D
+[90m[[90mnitro[90m][39m [43m[30m WARN [39m[49m Please add [36mcompatibilityDate: '2026-10-23'[39m to the config file. Using [36m2024-04-03[39m as fallback.
+       More info: [4mhttps://nitro.build/deploy#compatibility-date[24m
+
+
+[32m  ➜ Local:   [39m [36m[4mhttp://localhost:[1m3000[22m/[24m[39m
+[90m  ➜ Network:  use [37m--host[90m to expose[39m
+
+[90m[[90mnitro[90m][39m [32m✔[39m Nitro Server built in 469ms

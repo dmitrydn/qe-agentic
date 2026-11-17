@@ -1,0 +1,981 @@
+(node:12058) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2m[WebServer] [22m<s> [webpack.Progress] 3% setup watch run
+[2m[WebServer] [22m<s> [webpack.Progress] 3% setup watch run webpack-cli
+[2m[WebServer] [22m<s> [webpack.Progress] 3% setup watch run ForkTsCheckerWebpackPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 3% setup watch run webpack-dev-middleware
+[2m[WebServer] [22m<s> [webpack.Progress] 3% setup watch run
+[2m[WebServer] [22m<s> [webpack.Progress] 4% setup normal module factory
+[2m[WebServer] [22m<s> [webpack.Progress] 4% setup normal module factory
+[2m[WebServer] [22m<s> [webpack.Progress] 5% setup context module factory
+[2m[WebServer] [22m<s> [webpack.Progress] 5% setup context module factory
+[2m[WebServer] [22m<s> [webpack.Progress] 6% setup before compile
+[2m[WebServer] [22m<s> [webpack.Progress] 6% setup before compile ProgressPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 6% setup before compile
+[2m[WebServer] [22m<s> [webpack.Progress] 7% setup compile
+[2m[WebServer] [22m<s> [webpack.Progress] 7% setup compile ExternalsPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 7% setup compile
+[2m[WebServer] [22m<s> [webpack.Progress] 8% setup compilation
+[2m[WebServer] [22m<s> [webpack.Progress] 8% setup compilation HtmlWebpackPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 8% setup compilation ArrayPushCallbackChunkFormatPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 8% setup compilation JsonpChunkLoadingPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 8% setup compilation StartupChunkDependenciesPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 8% setup compilation ImportScriptsChunkLoadingPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 8% setup compilation WorkerPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 8% setup compilation SplitChunksPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 8% setup compilation RuntimeChunkPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 8% setup compilation ResolverCachePlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 8% setup compilation
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation DefinePlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation ProgressPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation ForkTsCheckerWebpackPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation EntryPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation DefinePlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation ProvidePlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation ReactRefreshPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation ChunkPrefetchPreloadPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation ModuleInfoHeaderPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation SourceMapDevToolPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation JavascriptModulesPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation JsonModulesPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation AssetModulesPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation EntryPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation RuntimePlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation InferAsyncModulesPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation DataUriPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation FileUriPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation CompatibilityPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation HarmonyModulesPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation AMDPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation RequireJsStuffPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation CommonJsPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation LoaderPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation LoaderPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation NodeStuffPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation APIPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation ExportsInfoApiPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation WebpackIsIncludedPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation ConstPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation UseStrictPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation RequireIncludePlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation RequireEnsurePlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation RequireContextPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation ImportPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation ImportMetaContextPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation SystemPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation ImportMetaPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation URLPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation DefaultStatsFactoryPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation DefaultStatsPresetPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation DefaultStatsPrinterPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation JavascriptMetaInfoPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation EnsureChunkConditionsPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation RemoveEmptyChunksPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation MergeDuplicateChunksPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation SideEffectsFlagPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation FlagDependencyExportsPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation NamedModuleIdsPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation NamedChunkIdsPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation DefinePlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation TemplatedPathPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation RecordIdsPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation WarnCaseSensitiveModulesPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation EntryPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation EntryPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation ProvidePlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation HotModuleReplacementPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 9% setup compilation
+[2m[WebServer] [22m<s> [webpack.Progress] 10% building
+[2m[WebServer] [22m<s> [webpack.Progress] 10% building 0/1 entries 0/0 dependencies 0/0 modules
+[2m[WebServer] [22m<i> [webpack-dev-server] Project is running at:
+[2m[WebServer] [22m<i> [webpack-dev-server] Loopback: [36mhttp://localhost:30401/[39m, [36mhttp://[::1]:30401/[39m
+[2m[WebServer] [22m<i> [webpack-dev-server] On Your Network (IPv4): [36mhttp://10.122.80.67:30401/[39m
+[2m[WebServer] [22m<i> [webpack-dev-server] Content not from webpack is served from '[36m/Users/dmitry.dayneko/Projects/realworld-spike/react/public[39m' directory
+[2m[WebServer] [22m<i> [webpack-dev-server] 404s will fallback to '[36m/index.html[39m'
+[2m[WebServer] [22m<s> [webpack.Progress] 10% building import loader ./node_modules/@pmmmwh/react-refresh-webpack-plugin/loader/index.js
+[2m[WebServer] [22m<s> [webpack.Progress] 10% building import loader ./node_modules/babel-loader/lib/index.js
+[2m[WebServer] [22m<s> [webpack.Progress] 10% building 0/4 entries 3/4 dependencies 0/3 modules
+[2m[WebServer] [22m<i> [webpack-dev-middleware] wait until bundle finished: /
+[2m[WebServer] [22m<s> [webpack.Progress] 10% building 0/4 entries 5/14 dependencies 0/4 modules
+[2m[WebServer] [22m<s> [webpack.Progress] 10% building import loader ./node_modules/style-loader/dist/cjs.js
+[2m[WebServer] [22m<s> [webpack.Progress] 10% building import loader ./node_modules/css-loader/dist/cjs.js
+[2m[WebServer] [22m<s> [webpack.Progress] 10% building 0/4 entries 42/68 dependencies 8/23 modules
+[2m[WebServer] [22m<s> [webpack.Progress] 23% building 1/4 entries 112/124 dependencies 23/75 modules
+[2m[WebServer] [22m<s> [webpack.Progress] 37% building 2/4 entries 112/124 dependencies 24/75 modules
+[2m[WebServer] [22m<s> [webpack.Progress] 37% building import loader ./node_modules/sass-loader/dist/cjs.js
+[2m[WebServer] [22m<s> [webpack.Progress] 37% building 2/4 entries 258/322 dependencies 51/114 modules
+[2m[WebServer] [22m<s> [webpack.Progress] 37% building 2/4 entries 400/456 dependencies 67/141 modules
+[2m[WebServer] [22m<s> [webpack.Progress] 51% building 3/4 entries 881/881 dependencies 265/292 modules
+[2m[WebServer] [22m<s> [webpack.Progress] 65% building 4/4 entries 919/919 dependencies 297/297 modules
+[2m[WebServer] [22m<s> [webpack.Progress] 65% building
+[2m[WebServer] [22m<s> [webpack.Progress] 69% building finish
+[2m[WebServer] [22m<s> [webpack.Progress] 69% building finish
+[2m[WebServer] [22m<s> [webpack.Progress] 70% sealing finish module graph
+[2m[WebServer] [22m<s> [webpack.Progress] 70% sealing finish module graph ResolverCachePlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 70% sealing finish module graph InferAsyncModulesPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 70% sealing finish module graph FlagDependencyExportsPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 70% sealing finish module graph
+[2m[WebServer] [22m<s> [webpack.Progress] 70% sealing plugins
+[2m[WebServer] [22m<s> [webpack.Progress] 70% sealing plugins WarnCaseSensitiveModulesPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 70% sealing plugins
+[2m[WebServer] [22m<s> [webpack.Progress] 71% sealing dependencies optimization
+[2m[WebServer] [22m<s> [webpack.Progress] 71% sealing dependencies optimization SideEffectsFlagPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 71% sealing dependencies optimization
+[2m[WebServer] [22m<s> [webpack.Progress] 71% sealing after dependencies optimization
+[2m[WebServer] [22m<s> [webpack.Progress] 71% sealing after dependencies optimization
+[2m[WebServer] [22m<s> [webpack.Progress] 72% sealing chunk graph
+[2m[WebServer] [22m<s> [webpack.Progress] 72% sealing chunk graph
+[2m[WebServer] [22m<s> [webpack.Progress] 73% sealing after chunk graph
+[2m[WebServer] [22m<s> [webpack.Progress] 73% sealing after chunk graph
+[2m[WebServer] [22m<s> [webpack.Progress] 73% sealing optimizing
+[2m[WebServer] [22m<s> [webpack.Progress] 73% sealing optimizing
+[2m[WebServer] [22m<s> [webpack.Progress] 74% sealing module optimization
+[2m[WebServer] [22m<s> [webpack.Progress] 74% sealing module optimization
+[2m[WebServer] [22m<s> [webpack.Progress] 75% sealing after module optimization
+[2m[WebServer] [22m<s> [webpack.Progress] 75% sealing after module optimization
+[2m[WebServer] [22m<s> [webpack.Progress] 75% sealing chunk optimization
+[2m[WebServer] [22m<s> [webpack.Progress] 75% sealing chunk optimization EnsureChunkConditionsPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 75% sealing chunk optimization RemoveEmptyChunksPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 75% sealing chunk optimization MergeDuplicateChunksPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 75% sealing chunk optimization SplitChunksPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 75% sealing chunk optimization RemoveEmptyChunksPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 75% sealing chunk optimization
+[2m[WebServer] [22m<s> [webpack.Progress] 76% sealing after chunk optimization
+[2m[WebServer] [22m<s> [webpack.Progress] 76% sealing after chunk optimization
+[2m[WebServer] [22m<s> [webpack.Progress] 77% sealing module and chunk tree optimization
+[2m[WebServer] [22m<s> [webpack.Progress] 77% sealing module and chunk tree optimization PersistentChildCompilerSingletonPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 77% sealing module and chunk tree optimization
+[2m[WebServer] [22m<s> [webpack.Progress] 77% sealing after module and chunk tree optimization
+[2m[WebServer] [22m<s> [webpack.Progress] 77% sealing after module and chunk tree optimization
+[2m[WebServer] [22m<s> [webpack.Progress] 78% sealing chunk modules optimization
+[2m[WebServer] [22m<s> [webpack.Progress] 78% sealing chunk modules optimization
+[2m[WebServer] [22m<s> [webpack.Progress] 78% sealing after chunk modules optimization
+[2m[WebServer] [22m<s> [webpack.Progress] 78% sealing after chunk modules optimization
+[2m[WebServer] [22m<s> [webpack.Progress] 79% sealing module reviving
+[2m[WebServer] [22m<s> [webpack.Progress] 79% sealing module reviving RecordIdsPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 79% sealing module reviving
+[2m[WebServer] [22m<s> [webpack.Progress] 80% sealing before module ids
+[2m[WebServer] [22m<s> [webpack.Progress] 80% sealing before module ids
+[2m[WebServer] [22m<s> [webpack.Progress] 80% sealing module ids
+[2m[WebServer] [22m<s> [webpack.Progress] 80% sealing module ids NamedModuleIdsPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 80% sealing module ids
+[2m[WebServer] [22m<s> [webpack.Progress] 81% sealing module id optimization
+[2m[WebServer] [22m<s> [webpack.Progress] 81% sealing module id optimization
+[2m[WebServer] [22m<s> [webpack.Progress] 82% sealing module id optimization
+[2m[WebServer] [22m<s> [webpack.Progress] 82% sealing module id optimization
+[2m[WebServer] [22m<s> [webpack.Progress] 82% sealing chunk reviving
+[2m[WebServer] [22m<s> [webpack.Progress] 82% sealing chunk reviving RecordIdsPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 82% sealing chunk reviving
+[2m[WebServer] [22m<s> [webpack.Progress] 83% sealing before chunk ids
+[2m[WebServer] [22m<s> [webpack.Progress] 83% sealing before chunk ids
+[2m[WebServer] [22m<s> [webpack.Progress] 84% sealing chunk ids
+[2m[WebServer] [22m<s> [webpack.Progress] 84% sealing chunk ids NamedChunkIdsPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 84% sealing chunk ids
+[2m[WebServer] [22m<s> [webpack.Progress] 84% sealing chunk id optimization
+[2m[WebServer] [22m<s> [webpack.Progress] 84% sealing chunk id optimization
+[2m[WebServer] [22m<s> [webpack.Progress] 85% sealing after chunk id optimization
+[2m[WebServer] [22m<s> [webpack.Progress] 85% sealing after chunk id optimization
+[2m[WebServer] [22m<s> [webpack.Progress] 86% sealing record modules
+[2m[WebServer] [22m<s> [webpack.Progress] 86% sealing record modules RecordIdsPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 86% sealing record modules
+[2m[WebServer] [22m<s> [webpack.Progress] 86% sealing record chunks
+[2m[WebServer] [22m<s> [webpack.Progress] 86% sealing record chunks RecordIdsPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 86% sealing record chunks
+[2m[WebServer] [22m<s> [webpack.Progress] 87% sealing module hashing
+[2m[WebServer] [22m<s> [webpack.Progress] 87% sealing module hashing
+[2m[WebServer] [22m<s> [webpack.Progress] 87% sealing code generation
+[2m[WebServer] [22m<s> [webpack.Progress] 87% sealing code generation
+[2m[WebServer] [22m<s> [webpack.Progress] 88% sealing runtime requirements
+[2m[WebServer] [22m<s> [webpack.Progress] 88% sealing runtime requirements
+[2m[WebServer] [22m<s> [webpack.Progress] 89% sealing hashing
+[2m[WebServer] [22m<s> [webpack.Progress] 89% sealing hashing
+[2m[WebServer] [22m<s> [webpack.Progress] 89% sealing after hashing
+[2m[WebServer] [22m<s> [webpack.Progress] 89% sealing after hashing
+[2m[WebServer] [22m<s> [webpack.Progress] 90% sealing record hash
+[2m[WebServer] [22m<s> [webpack.Progress] 90% sealing record hash
+[2m[WebServer] [22m<s> [webpack.Progress] 91% sealing module assets processing
+[2m[WebServer] [22m<s> [webpack.Progress] 91% sealing module assets processing
+[2m[WebServer] [22m<s> [webpack.Progress] 91% sealing chunk assets processing
+[2m[WebServer] [22m<s> [webpack.Progress] 91% sealing chunk assets processing
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing HotModuleReplacementPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing PersistentChildCompilerSingletonPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.a1bc9a9ea3081d76a585.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.a1bc9a9ea3081d76a585.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin runtime.2a2497515aa06c4d8b68.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin runtime.2a2497515aa06c4d8b68.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_article_article_ui_tsx.e412de508f8a94373a4e.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_article_article_ui_tsx.e412de508f8a94373a4e.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_article_article_loader_ts.d04fef94a2e7f7503d90.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_article_article_loader_ts.d04fef94a2e7f7503d90.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_article_actions_article-delete_action_ts.bcc103576869b086e602.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_article_actions_article-delete_action_ts.bcc103576869b086e602.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_article_actions_profile-follow-toggle_action_ts.35689c4e37dd8c4f3257.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_article_actions_profile-follow-toggle_action_ts.35689c4e37dd8c4f3257.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_article_actions_article-favorite-toggle_action_ts.80048a391a65ae37baad.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_article_actions_article-favorite-toggle_action_ts.80048a391a65ae37baad.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_article_actions_comment-create_action_ts.fb9d8de09e4c08557f65.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_article_actions_comment-create_action_ts.fb9d8de09e4c08557f65.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_article_actions_comment-delete_action_ts.fa87a1cad7cb1ada1051.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_article_actions_comment-delete_action_ts.fa87a1cad7cb1ada1051.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_editor_editor_ui_tsx.3c8f271a42baa1b10ab9.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_editor_editor_ui_tsx.3c8f271a42baa1b10ab9.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_editor_actions_article-create_action_ts.bc357ce0edc1c7365aca.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_editor_actions_article-create_action_ts.bc357ce0edc1c7365aca.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_editor_editor_loader_ts.5b2aea751c115579b513.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_editor_editor_loader_ts.5b2aea751c115579b513.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_editor_actions_article-update_action_ts.ccd6468bc78d32f52ea9.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_editor_actions_article-update_action_ts.ccd6468bc78d32f52ea9.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_home_home_ui_tsx.4f8bf31d662f051a98b1.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_home_home_ui_tsx.4f8bf31d662f051a98b1.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_home_home_loader_ts.6c363cd3453b6e499485.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_home_home_loader_ts.6c363cd3453b6e499485.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_home_actions_article-favorite-toggle_action_ts.81828f724b86b260b43e.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_home_actions_article-favorite-toggle_action_ts.81828f724b86b260b43e.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_login_login_ui_tsx.b2eb8b5d33dad466ca26.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_login_login_ui_tsx.b2eb8b5d33dad466ca26.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_login_actions_user-login_action_ts.6ce0e755276f3c9ccceb.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_login_actions_user-login_action_ts.6ce0e755276f3c9ccceb.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_page-404_page-404_ui_tsx.552ce58f7c0ad675bfc1.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_page-404_page-404_ui_tsx.552ce58f7c0ad675bfc1.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_profile_profile_ui_tsx.d7ba5f522c0429689d63.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_profile_profile_ui_tsx.d7ba5f522c0429689d63.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_profile_profile_loader_ts.c1f51d5bfd69b00023a3.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_profile_profile_loader_ts.c1f51d5bfd69b00023a3.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_profile_actions_profile-follow-toggle_action_ts.eee7b4621076629e1fee.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_profile_actions_profile-follow-toggle_action_ts.eee7b4621076629e1fee.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_profile_actions_article-favorite-toggle_action_ts.1967a2e4889a87432702.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_profile_actions_article-favorite-toggle_action_ts.1967a2e4889a87432702.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_register_register_ui_tsx.76580fca1df1ab854ac5.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_register_register_ui_tsx.76580fca1df1ab854ac5.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_register_actions_user-register_action_ts.49e7fcf7b92ce67cbd39.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_register_actions_user-register_action_ts.49e7fcf7b92ce67cbd39.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_settings_settings_ui_tsx.722b0dd80e7d690044b3.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_settings_settings_ui_tsx.722b0dd80e7d690044b3.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_settings_settings_loader_ts.4abfc0db0afa74d584b9.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_settings_settings_loader_ts.4abfc0db0afa74d584b9.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_settings_actions_user-update_action_ts.2f46d4b43ccdb85c95cf.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_settings_actions_user-update_action_ts.2f46d4b43ccdb85c95cf.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_settings_actions_user-logout_action_ts.f589fbb443cfc2946fce.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_settings_actions_user-logout_action_ts.f589fbb443cfc2946fce.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin react-vendor.e3eda6e3ca40cfaeca5c.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin react-vendor.e3eda6e3ca40cfaeca5c.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin router-vendor.692f5151c0ddaaa6c9a1.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin router-vendor.692f5151c0ddaaa6c9a1.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin tanstack-vendor.6dadb268dc6ff18daf0f.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin tanstack-vendor.6dadb268dc6ff18daf0f.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin common-vendor.18db23e7166d76abfbb9.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin common-vendor.18db23e7166d76abfbb9.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin vendors-node_modules_pmmmwh_react-refresh-webpack-plugin_lib_runtime_RefreshUtils_js-node_mod-b1bf15.c9caef3ee904d07bc3d1.js generate SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin vendors-node_modules_pmmmwh_react-refresh-webpack-plugin_lib_runtime_RefreshUtils_js-node_mod-b1bf15.c9caef3ee904d07bc3d1.js generated SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin resolve sources
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.a1bc9a9ea3081d76a585.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.a1bc9a9ea3081d76a585.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin runtime.2a2497515aa06c4d8b68.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin runtime.2a2497515aa06c4d8b68.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_article_article_ui_tsx.e412de508f8a94373a4e.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_article_article_ui_tsx.e412de508f8a94373a4e.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_article_article_loader_ts.d04fef94a2e7f7503d90.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_article_article_loader_ts.d04fef94a2e7f7503d90.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_article_actions_article-delete_action_ts.bcc103576869b086e602.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_article_actions_article-delete_action_ts.bcc103576869b086e602.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_article_actions_profile-follow-toggle_action_ts.35689c4e37dd8c4f3257.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_article_actions_profile-follow-toggle_action_ts.35689c4e37dd8c4f3257.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_article_actions_article-favorite-toggle_action_ts.80048a391a65ae37baad.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_article_actions_article-favorite-toggle_action_ts.80048a391a65ae37baad.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_article_actions_comment-create_action_ts.fb9d8de09e4c08557f65.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_article_actions_comment-create_action_ts.fb9d8de09e4c08557f65.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_article_actions_comment-delete_action_ts.fa87a1cad7cb1ada1051.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_article_actions_comment-delete_action_ts.fa87a1cad7cb1ada1051.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_editor_editor_ui_tsx.3c8f271a42baa1b10ab9.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_editor_editor_ui_tsx.3c8f271a42baa1b10ab9.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_editor_actions_article-create_action_ts.bc357ce0edc1c7365aca.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_editor_actions_article-create_action_ts.bc357ce0edc1c7365aca.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_editor_editor_loader_ts.5b2aea751c115579b513.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_editor_editor_loader_ts.5b2aea751c115579b513.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_editor_actions_article-update_action_ts.ccd6468bc78d32f52ea9.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_editor_actions_article-update_action_ts.ccd6468bc78d32f52ea9.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_home_home_ui_tsx.4f8bf31d662f051a98b1.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_home_home_ui_tsx.4f8bf31d662f051a98b1.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_home_home_loader_ts.6c363cd3453b6e499485.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_home_home_loader_ts.6c363cd3453b6e499485.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_home_actions_article-favorite-toggle_action_ts.81828f724b86b260b43e.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_home_actions_article-favorite-toggle_action_ts.81828f724b86b260b43e.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_login_login_ui_tsx.b2eb8b5d33dad466ca26.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_login_login_ui_tsx.b2eb8b5d33dad466ca26.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_login_actions_user-login_action_ts.6ce0e755276f3c9ccceb.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_login_actions_user-login_action_ts.6ce0e755276f3c9ccceb.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_page-404_page-404_ui_tsx.552ce58f7c0ad675bfc1.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_page-404_page-404_ui_tsx.552ce58f7c0ad675bfc1.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_profile_profile_ui_tsx.d7ba5f522c0429689d63.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_profile_profile_ui_tsx.d7ba5f522c0429689d63.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_profile_profile_loader_ts.c1f51d5bfd69b00023a3.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_profile_profile_loader_ts.c1f51d5bfd69b00023a3.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_profile_actions_profile-follow-toggle_action_ts.eee7b4621076629e1fee.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_profile_actions_profile-follow-toggle_action_ts.eee7b4621076629e1fee.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_profile_actions_article-favorite-toggle_action_ts.1967a2e4889a87432702.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_profile_actions_article-favorite-toggle_action_ts.1967a2e4889a87432702.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_register_register_ui_tsx.76580fca1df1ab854ac5.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_register_register_ui_tsx.76580fca1df1ab854ac5.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_register_actions_user-register_action_ts.49e7fcf7b92ce67cbd39.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_register_actions_user-register_action_ts.49e7fcf7b92ce67cbd39.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_settings_settings_ui_tsx.722b0dd80e7d690044b3.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_settings_settings_ui_tsx.722b0dd80e7d690044b3.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_settings_settings_loader_ts.4abfc0db0afa74d584b9.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_settings_settings_loader_ts.4abfc0db0afa74d584b9.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_settings_actions_user-update_action_ts.2f46d4b43ccdb85c95cf.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_settings_actions_user-update_action_ts.2f46d4b43ccdb85c95cf.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_settings_actions_user-logout_action_ts.f589fbb443cfc2946fce.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin src_pages_settings_actions_user-logout_action_ts.f589fbb443cfc2946fce.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin react-vendor.e3eda6e3ca40cfaeca5c.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin react-vendor.e3eda6e3ca40cfaeca5c.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin router-vendor.692f5151c0ddaaa6c9a1.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin router-vendor.692f5151c0ddaaa6c9a1.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin tanstack-vendor.6dadb268dc6ff18daf0f.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin tanstack-vendor.6dadb268dc6ff18daf0f.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin common-vendor.18db23e7166d76abfbb9.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin common-vendor.18db23e7166d76abfbb9.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin vendors-node_modules_pmmmwh_react-refresh-webpack-plugin_lib_runtime_RefreshUtils_js-node_mod-b1bf15.c9caef3ee904d07bc3d1.js attach SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin vendors-node_modules_pmmmwh_react-refresh-webpack-plugin_lib_runtime_RefreshUtils_js-node_mod-b1bf15.c9caef3ee904d07bc3d1.js attached SourceMap
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin resolve sources
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing HtmlWebpackPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing HtmlWebpackPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing HtmlWebpackPlugin resolve sources
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing HtmlWebpackPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 92% sealing asset processing
+[2m[WebServer] [22m<s> [webpack.Progress] 93% sealing after asset optimization
+[2m[WebServer] [22m<s> [webpack.Progress] 93% sealing after asset optimization
+[2m[WebServer] [22m<s> [webpack.Progress] 93% sealing recording
+[2m[WebServer] [22m<s> [webpack.Progress] 93% sealing recording HotModuleReplacementPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 93% sealing recording
+[2m[WebServer] [22m<s> [webpack.Progress] 94% sealing after seal
+[2m[WebServer] [22m<s> [webpack.Progress] 94% sealing after seal
+[2m[WebServer] [22m<s> [webpack.Progress] 95% emitting emit
+[2m[WebServer] [22m<s> [webpack.Progress] 95% emitting emit DevMiddleware
+[2m[WebServer] [22m<s> [webpack.Progress] 95% emitting emit CleanPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 95% emitting emit
+[2m[WebServer] [22m<s> [webpack.Progress] 98% emitting after emit
+[2m[WebServer] [22m<s> [webpack.Progress] 98% emitting after emit
+[2m[WebServer] [22m<s> [webpack.Progress] 99% done plugins
+[2m[WebServer] [22m<s> [webpack.Progress] 99% done plugins ForkTsCheckerWebpackPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 99% done plugins webpack-dev-server
+[2m[WebServer] [22m<s> [webpack.Progress] 99% done plugins webpack-dev-middleware
+[2m[WebServer] [22m<s> [webpack.Progress] 99% done plugins ForkTsCheckerWebpackPlugin
+[2m[WebServer] [22m<s> [webpack.Progress] 99% done plugins
+[2m[WebServer] [22m<s> [webpack.Progress] 99% 
+[2m[WebServer] [22m
+[2m[WebServer] [22m<s> [webpack.Progress] 99% cache store build dependencies
+[2m[WebServer] [22m<s> [webpack.Progress] 99% cache store build dependencies
+[2m[WebServer] [22m<s> [webpack.Progress] 99% cache begin idle
+[2m[WebServer] [22m<s> [webpack.Progress] 99% cache begin idle
+[2m[WebServer] [22m<s> [webpack.Progress] 100% 
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/app/app-layout.ui.tsx[22m:[32m[1m3:30[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/schemas/userResponse.zod' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 1 |[39m [36mimport[39m { [33mIoCreateOutline[39m[33m,[39m [33mIoSettingsSharp[39m } [36mfrom[39m [32m'react-icons/io5'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 2 |[39m [36mimport[39m { useLoaderData[33m,[39m [33mOutlet[39m[33m,[39m [33mNavLink[39m } [36mfrom[39m [32m'react-router'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m { [33mUserResponse[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/userResponse.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m                              [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 4 |[39m [36mimport[39m { [33mGlobalProgressBar[39m } [36mfrom[39m [32m'~shared/ui/global-progress-bar/global-progress-bar.ui'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 5 |[39m [36mimport[39m { [33mAppLoaderData[39m } [36mfrom[39m [32m'./app.loader'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 6 |[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/article/actions/article-delete.action.ts[22m:[32m[1m3:31[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/fetch/articles/articles' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 1 |[39m [36mimport[39m { redirect } [36mfrom[39m [32m'react-router'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 2 |[39m [36mimport[39m type { [33mActionFunctionArgs[39m[33m,[39m [33mRouterContextProvider[39m } [36mfrom[39m [32m'react-router'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m { deleteArticle } [36mfrom[39m [32m'~shared/api/generated/fetch/articles/articles'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m                               [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 4 |[39m [36mimport[39m { handleApiError } [36mfrom[39m [32m'~shared/api/handleApiError'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 5 |[39m
+[2m[WebServer] [22m   [90m 6 |[39m [36mexport[39m [36masync[39m [36mfunction[39m articleDeleteAction({ request[33m,[39m params }[33m:[39m [33mActionFunctionArgs[39m[33m<[39m[33mRouterContextProvider[39m[33m>[39m) {[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/article/actions/article-favorite-toggle.action.ts[22m:[32m[1m2:62[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/fetch/favorites/favorites' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 1 |[39m [36mimport[39m type { [33mActionFunctionArgs[39m[33m,[39m [33mRouterContextProvider[39m } [36mfrom[39m [32m'react-router'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m { createArticleFavorite[33m,[39m deleteArticleFavorite } [36mfrom[39m [32m'~shared/api/generated/fetch/favorites/favorites'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m                                                              [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 3 |[39m [36mimport[39m { handleApiError } [36mfrom[39m [32m'~shared/api/handleApiError'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 4 |[39m
+[2m[WebServer] [22m   [90m 5 |[39m [36mexport[39m [36masync[39m [36mfunction[39m articleFavoriteToggleAction({ request[33m,[39m params }[33m:[39m [33mActionFunctionArgs[39m[33m<[39m[33mRouterContextProvider[39m[33m>[39m) {[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/article/actions/comment-create.action.ts[22m:[32m[1m2:38[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/fetch/comments/comments' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 1 |[39m [36mimport[39m type { [33mActionFunctionArgs[39m[33m,[39m [33mRouterContextProvider[39m } [36mfrom[39m [32m'react-router'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m { createArticleComment } [36mfrom[39m [32m'~shared/api/generated/fetch/comments/comments'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m                                      [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 3 |[39m [36mimport[39m { [33mCreateArticleCommentBody[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/createArticleCommentBody.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 4 |[39m [36mimport[39m { handleApiError } [36mfrom[39m [32m'~shared/api/handleApiError'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 5 |[39m [36mimport[39m { validateSchema } [36mfrom[39m [32m'~shared/api/validateSchema'[39m[33m;[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/article/actions/comment-create.action.ts[22m:[32m[1m3:42[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/schemas/createArticleCommentBody.zod' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 1 |[39m [36mimport[39m type { [33mActionFunctionArgs[39m[33m,[39m [33mRouterContextProvider[39m } [36mfrom[39m [32m'react-router'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 2 |[39m [36mimport[39m { createArticleComment } [36mfrom[39m [32m'~shared/api/generated/fetch/comments/comments'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m { [33mCreateArticleCommentBody[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/createArticleCommentBody.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m                                          [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 4 |[39m [36mimport[39m { handleApiError } [36mfrom[39m [32m'~shared/api/handleApiError'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 5 |[39m [36mimport[39m { validateSchema } [36mfrom[39m [32m'~shared/api/validateSchema'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 6 |[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/article/actions/comment-delete.action.ts[22m:[32m[1m2:38[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/fetch/comments/comments' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 1 |[39m [36mimport[39m type { [33mActionFunctionArgs[39m[33m,[39m [33mRouterContextProvider[39m } [36mfrom[39m [32m'react-router'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m { deleteArticleComment } [36mfrom[39m [32m'~shared/api/generated/fetch/comments/comments'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m                                      [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 3 |[39m [36mimport[39m { handleApiError } [36mfrom[39m [32m'~shared/api/handleApiError'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 4 |[39m
+[2m[WebServer] [22m   [90m 5 |[39m [36mexport[39m [36masync[39m [36mfunction[39m commentDeleteAction({ request[33m,[39m params }[33m:[39m [33mActionFunctionArgs[39m[33m<[39m[33mRouterContextProvider[39m[33m>[39m) {[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/article/actions/profile-follow-toggle.action.ts[22m:[32m[1m3:62[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/fetch/profile/profile' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 1 |[39m [36mimport[39m type { [33mActionFunctionArgs[39m[33m,[39m [33mRouterContextProvider[39m } [36mfrom[39m [32m'react-router'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 2 |[39m [36mimport[39m [33m*[39m [36mas[39m zod [36mfrom[39m [32m'zod/mini'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m { followUserByUsername[33m,[39m unfollowUserByUsername } [36mfrom[39m [32m'~shared/api/generated/fetch/profile/profile'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m                                                              [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 4 |[39m [36mimport[39m { handleApiError } [36mfrom[39m [32m'~shared/api/handleApiError'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 5 |[39m
+[2m[WebServer] [22m   [90m 6 |[39m [36mexport[39m [36masync[39m [36mfunction[39m profileFollowToggleAction({ request }[33m:[39m [33mActionFunctionArgs[39m[33m<[39m[33mRouterContextProvider[39m[33m>[39m) {[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/article/article.loader.ts[22m:[32m[1m2:43[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/fetch/articles/articles' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 1 |[39m [36mimport[39m type { [33mLoaderFunctionArgs[39m[33m,[39m [33mRouterContextProvider[39m } [36mfrom[39m [32m'react-router'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m { getGetArticleQueryOptions } [36mfrom[39m [32m'~shared/api/generated/fetch/articles/articles'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m                                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 3 |[39m [36mimport[39m { getGetArticleCommentsQueryOptions } [36mfrom[39m [32m'~shared/api/generated/fetch/comments/comments'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 4 |[39m [36mimport[39m { queryClient } [36mfrom[39m [32m'~shared/api/queryClient'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 5 |[39m [36mimport[39m { userContext } [36mfrom[39m [32m'~shared/lib/react-router/userContext'[39m[33m;[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/article/article.loader.ts[22m:[32m[1m3:51[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/fetch/comments/comments' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 1 |[39m [36mimport[39m type { [33mLoaderFunctionArgs[39m[33m,[39m [33mRouterContextProvider[39m } [36mfrom[39m [32m'react-router'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 2 |[39m [36mimport[39m { getGetArticleQueryOptions } [36mfrom[39m [32m'~shared/api/generated/fetch/articles/articles'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m { getGetArticleCommentsQueryOptions } [36mfrom[39m [32m'~shared/api/generated/fetch/comments/comments'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m                                                   [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 4 |[39m [36mimport[39m { queryClient } [36mfrom[39m [32m'~shared/api/queryClient'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 5 |[39m [36mimport[39m { userContext } [36mfrom[39m [32m'~shared/lib/react-router/userContext'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 6 |[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/article/article.loader.ts[22m:[32m[1m16:25[22m[39m
+[2m[WebServer] [22m[90mTS18046: [39m'response' is of type 'unknown'.
+[2m[WebServer] [22m  [0m [90m 14 |[39m   [36mconst[39m articlePromise [33m=[39m queryClient
+[2m[WebServer] [22m   [90m 15 |[39m     [33m.[39mfetchQuery(getGetArticleQueryOptions(slug[33m,[39m { request[33m:[39m { signal[33m:[39m request[33m.[39msignal } }))
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 16 |[39m     [33m.[39mthen((response) [33m=>[39m response[33m.[39mdata)[33m;[39m
+[2m[WebServer] [22m   [90m    |[39m                         [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 17 |[39m
+[2m[WebServer] [22m   [90m 18 |[39m   [36mconst[39m commentsPromise [33m=[39m queryClient
+[2m[WebServer] [22m   [90m 19 |[39m     [33m.[39mfetchQuery(getGetArticleCommentsQueryOptions(slug[33m,[39m { request[33m:[39m { signal[33m:[39m request[33m.[39msignal } }))[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/article/article.loader.ts[22m:[32m[1m20:25[22m[39m
+[2m[WebServer] [22m[90mTS18046: [39m'response' is of type 'unknown'.
+[2m[WebServer] [22m  [0m [90m 18 |[39m   [36mconst[39m commentsPromise [33m=[39m queryClient
+[2m[WebServer] [22m   [90m 19 |[39m     [33m.[39mfetchQuery(getGetArticleCommentsQueryOptions(slug[33m,[39m { request[33m:[39m { signal[33m:[39m request[33m.[39msignal } }))
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 20 |[39m     [33m.[39mthen((response) [33m=>[39m response[33m.[39mdata)[33m;[39m
+[2m[WebServer] [22m   [90m    |[39m                         [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 21 |[39m
+[2m[WebServer] [22m   [90m 22 |[39m   [36mconst[39m userData [33m=[39m context[33m.[39m[36mget[39m(userContext)[33m;[39m
+[2m[WebServer] [22m   [90m 23 |[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/article/article.ui.tsx[22m:[32m[1m4:47[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/schemas/multipleCommentsResponse.zod' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 2 |[39m [36mimport[39m { [33mIoAdd[39m[33m,[39m [33mIoCreateOutline[39m[33m,[39m [33mIoHeart[39m[33m,[39m [33mIoRemove[39m[33m,[39m [33mIoTrash[39m } [36mfrom[39m [32m'react-icons/io5'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 3 |[39m [36mimport[39m { [33mAwait[39m[33m,[39m [33mLink[39m[33m,[39m useFetcher[33m,[39m useLoaderData[33m,[39m useParams } [36mfrom[39m [32m'react-router'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m type { [33mMultipleCommentsResponse[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/multipleCommentsResponse.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m                                               [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 5 |[39m [36mimport[39m type { [33mSingleArticleResponse[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/singleArticleResponse.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 6 |[39m [36mimport[39m { formatDate } [36mfrom[39m [32m'~shared/lib/date'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 7 |[39m [36mimport[39m { [33mAsyncErrorCard[39m } [36mfrom[39m [32m'~shared/ui/async-error-card/async-error-card.ui'[39m[33m;[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/article/article.ui.tsx[22m:[32m[1m5:44[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/schemas/singleArticleResponse.zod' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 3 |[39m [36mimport[39m { [33mAwait[39m[33m,[39m [33mLink[39m[33m,[39m useFetcher[33m,[39m useLoaderData[33m,[39m useParams } [36mfrom[39m [32m'react-router'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 4 |[39m [36mimport[39m type { [33mMultipleCommentsResponse[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/multipleCommentsResponse.zod'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m type { [33mSingleArticleResponse[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/singleArticleResponse.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m                                            [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 6 |[39m [36mimport[39m { formatDate } [36mfrom[39m [32m'~shared/lib/date'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 7 |[39m [36mimport[39m { [33mAsyncErrorCard[39m } [36mfrom[39m [32m'~shared/ui/async-error-card/async-error-card.ui'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 8 |[39m [36mimport[39m { [33mErrorMessages[39m } [36mfrom[39m [32m'~shared/ui/error-messages/error-messages.ui'[39m[33m;[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/article/article.ui.tsx[22m:[32m[1m57:31[22m[39m
+[2m[WebServer] [22m[90mTS7006: [39mParameter 'tag' implicitly has an 'any' type.
+[2m[WebServer] [22m  [0m [90m 55 |[39m             {tagList[33m.[39mlength [33m>[39m [35m0[39m [33m&&[39m (
+[2m[WebServer] [22m   [90m 56 |[39m               [33m<[39m[33mul[39m className[33m=[39m[32m"tag-list"[39m[33m>[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 57 |[39m                 {tagList[33m.[39mmap((tag) [33m=>[39m (
+[2m[WebServer] [22m   [90m    |[39m                               [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 58 |[39m                   [33m<[39m[33mli[39m key[33m=[39m{tag} className[33m=[39m[32m"tag-default tag-pill tag-outline"[39m[33m>[39m
+[2m[WebServer] [22m   [90m 59 |[39m                     {tag}
+[2m[WebServer] [22m   [90m 60 |[39m                   [33m<[39m[33m/[39m[33mli[39m[33m>[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/article/article.ui.tsx[22m:[32m[1m268:37[22m[39m
+[2m[WebServer] [22m[90mTS7031: [39mBinding element 'id' implicitly has an 'any' type.
+[2m[WebServer] [22m  [0m [90m 266 |[39m       )}
+[2m[WebServer] [22m   [90m 267 |[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 268 |[39m       {commentsData[33m.[39mcomments[33m.[39mmap(({ id[33m,[39m body[33m,[39m author[33m,[39m createdAt }) [33m=>[39m (
+[2m[WebServer] [22m   [90m     |[39m                                     [31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 269 |[39m         [33m<[39m[33mdiv[39m key[33m=[39m{id} className[33m=[39m[32m"card"[39m data[33m-[39mtest[33m=[39m[32m"comment-item"[39m[33m>[39m
+[2m[WebServer] [22m   [90m 270 |[39m           [33m<[39m[33mdiv[39m className[33m=[39m[32m"card-block"[39m[33m>[39m
+[2m[WebServer] [22m   [90m 271 |[39m             [33m<[39m[33mp[39m className[33m=[39m[32m"card-text"[39m[33m>[39m{body}[33m<[39m[33m/[39m[33mp[39m[33m>[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/article/article.ui.tsx[22m:[32m[1m268:41[22m[39m
+[2m[WebServer] [22m[90mTS7031: [39mBinding element 'body' implicitly has an 'any' type.
+[2m[WebServer] [22m  [0m [90m 266 |[39m       )}
+[2m[WebServer] [22m   [90m 267 |[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 268 |[39m       {commentsData[33m.[39mcomments[33m.[39mmap(({ id[33m,[39m body[33m,[39m author[33m,[39m createdAt }) [33m=>[39m (
+[2m[WebServer] [22m   [90m     |[39m                                         [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 269 |[39m         [33m<[39m[33mdiv[39m key[33m=[39m{id} className[33m=[39m[32m"card"[39m data[33m-[39mtest[33m=[39m[32m"comment-item"[39m[33m>[39m
+[2m[WebServer] [22m   [90m 270 |[39m           [33m<[39m[33mdiv[39m className[33m=[39m[32m"card-block"[39m[33m>[39m
+[2m[WebServer] [22m   [90m 271 |[39m             [33m<[39m[33mp[39m className[33m=[39m[32m"card-text"[39m[33m>[39m{body}[33m<[39m[33m/[39m[33mp[39m[33m>[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/article/article.ui.tsx[22m:[32m[1m268:47[22m[39m
+[2m[WebServer] [22m[90mTS7031: [39mBinding element 'author' implicitly has an 'any' type.
+[2m[WebServer] [22m  [0m [90m 266 |[39m       )}
+[2m[WebServer] [22m   [90m 267 |[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 268 |[39m       {commentsData[33m.[39mcomments[33m.[39mmap(({ id[33m,[39m body[33m,[39m author[33m,[39m createdAt }) [33m=>[39m (
+[2m[WebServer] [22m   [90m     |[39m                                               [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 269 |[39m         [33m<[39m[33mdiv[39m key[33m=[39m{id} className[33m=[39m[32m"card"[39m data[33m-[39mtest[33m=[39m[32m"comment-item"[39m[33m>[39m
+[2m[WebServer] [22m   [90m 270 |[39m           [33m<[39m[33mdiv[39m className[33m=[39m[32m"card-block"[39m[33m>[39m
+[2m[WebServer] [22m   [90m 271 |[39m             [33m<[39m[33mp[39m className[33m=[39m[32m"card-text"[39m[33m>[39m{body}[33m<[39m[33m/[39m[33mp[39m[33m>[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/article/article.ui.tsx[22m:[32m[1m268:55[22m[39m
+[2m[WebServer] [22m[90mTS7031: [39mBinding element 'createdAt' implicitly has an 'any' type.
+[2m[WebServer] [22m  [0m [90m 266 |[39m       )}
+[2m[WebServer] [22m   [90m 267 |[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 268 |[39m       {commentsData[33m.[39mcomments[33m.[39mmap(({ id[33m,[39m body[33m,[39m author[33m,[39m createdAt }) [33m=>[39m (
+[2m[WebServer] [22m   [90m     |[39m                                                       [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 269 |[39m         [33m<[39m[33mdiv[39m key[33m=[39m{id} className[33m=[39m[32m"card"[39m data[33m-[39mtest[33m=[39m[32m"comment-item"[39m[33m>[39m
+[2m[WebServer] [22m   [90m 270 |[39m           [33m<[39m[33mdiv[39m className[33m=[39m[32m"card-block"[39m[33m>[39m
+[2m[WebServer] [22m   [90m 271 |[39m             [33m<[39m[33mp[39m className[33m=[39m[32m"card-text"[39m[33m>[39m{body}[33m<[39m[33m/[39m[33mp[39m[33m>[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/editor/actions/article-create.action.ts[22m:[32m[1m3:31[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/fetch/articles/articles' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 1 |[39m [36mimport[39m { redirect } [36mfrom[39m [32m'react-router'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 2 |[39m [36mimport[39m type { [33mActionFunctionArgs[39m[33m,[39m [33mRouterContextProvider[39m } [36mfrom[39m [32m'react-router'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m { createArticle } [36mfrom[39m [32m'~shared/api/generated/fetch/articles/articles'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m                               [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 4 |[39m [36mimport[39m { [33mCreateArticleBody[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/createArticleBody.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 5 |[39m [36mimport[39m { handleApiError } [36mfrom[39m [32m'~shared/api/handleApiError'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 6 |[39m [36mimport[39m { validateSchema } [36mfrom[39m [32m'~shared/api/validateSchema'[39m[33m;[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/editor/actions/article-create.action.ts[22m:[32m[1m4:35[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/schemas/createArticleBody.zod' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 2 |[39m [36mimport[39m type { [33mActionFunctionArgs[39m[33m,[39m [33mRouterContextProvider[39m } [36mfrom[39m [32m'react-router'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 3 |[39m [36mimport[39m { createArticle } [36mfrom[39m [32m'~shared/api/generated/fetch/articles/articles'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mCreateArticleBody[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/createArticleBody.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m                                   [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 5 |[39m [36mimport[39m { handleApiError } [36mfrom[39m [32m'~shared/api/handleApiError'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 6 |[39m [36mimport[39m { validateSchema } [36mfrom[39m [32m'~shared/api/validateSchema'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 7 |[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/editor/actions/article-update.action.ts[22m:[32m[1m3:31[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/fetch/articles/articles' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 1 |[39m [36mimport[39m { redirect } [36mfrom[39m [32m'react-router'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 2 |[39m [36mimport[39m type { [33mActionFunctionArgs[39m[33m,[39m [33mRouterContextProvider[39m } [36mfrom[39m [32m'react-router'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m { updateArticle } [36mfrom[39m [32m'~shared/api/generated/fetch/articles/articles'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m                               [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 4 |[39m [36mimport[39m { [33mUpdateArticleBody[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/updateArticleBody.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 5 |[39m [36mimport[39m { handleApiError } [36mfrom[39m [32m'~shared/api/handleApiError'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 6 |[39m [36mimport[39m { validateSchema } [36mfrom[39m [32m'~shared/api/validateSchema'[39m[33m;[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/editor/actions/article-update.action.ts[22m:[32m[1m4:35[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/schemas/updateArticleBody.zod' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 2 |[39m [36mimport[39m type { [33mActionFunctionArgs[39m[33m,[39m [33mRouterContextProvider[39m } [36mfrom[39m [32m'react-router'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 3 |[39m [36mimport[39m { updateArticle } [36mfrom[39m [32m'~shared/api/generated/fetch/articles/articles'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mUpdateArticleBody[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/updateArticleBody.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m                                   [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 5 |[39m [36mimport[39m { handleApiError } [36mfrom[39m [32m'~shared/api/handleApiError'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 6 |[39m [36mimport[39m { validateSchema } [36mfrom[39m [32m'~shared/api/validateSchema'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 7 |[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/editor/editor.loader.ts[22m:[32m[1m2:43[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/fetch/articles/articles' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 1 |[39m [36mimport[39m type { [33mLoaderFunctionArgs[39m[33m,[39m [33mRouterContextProvider[39m } [36mfrom[39m [32m'react-router'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m { getGetArticleQueryOptions } [36mfrom[39m [32m'~shared/api/generated/fetch/articles/articles'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m                                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 3 |[39m [36mimport[39m { queryClient } [36mfrom[39m [32m'~shared/api/queryClient'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 4 |[39m
+[2m[WebServer] [22m   [90m 5 |[39m [36mexport[39m [36masync[39m [36mfunction[39m editorPageLoader({ request[33m,[39m params }[33m:[39m [33mLoaderFunctionArgs[39m[33m<[39m[33mRouterContextProvider[39m[33m>[39m) {[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/editor/editor.loader.ts[22m:[32m[1m14:25[22m[39m
+[2m[WebServer] [22m[90mTS18046: [39m'response' is of type 'unknown'.
+[2m[WebServer] [22m  [0m [90m 12 |[39m   [36mconst[39m articlePromise [33m=[39m queryClient
+[2m[WebServer] [22m   [90m 13 |[39m     [33m.[39mfetchQuery(getGetArticleQueryOptions(slug[33m,[39m { request[33m:[39m { signal[33m:[39m request[33m.[39msignal } }))
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 14 |[39m     [33m.[39mthen((response) [33m=>[39m response[33m.[39mdata)[33m;[39m
+[2m[WebServer] [22m   [90m    |[39m                         [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 15 |[39m
+[2m[WebServer] [22m   [90m 16 |[39m   [36mreturn[39m { articlePromise }[33m;[39m
+[2m[WebServer] [22m   [90m 17 |[39m }[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/editor/editor.ui.tsx[22m:[32m[1m3:44[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/schemas/singleArticleResponse.zod' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 1 |[39m [36mimport[39m { [33mSuspense[39m } [36mfrom[39m [32m'react'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 2 |[39m [36mimport[39m { [33mAwait[39m[33m,[39m [33mForm[39m[33m,[39m useActionData[33m,[39m useLoaderData[33m,[39m useNavigation } [36mfrom[39m [32m'react-router'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m type { [33mSingleArticleResponse[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/singleArticleResponse.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m                                            [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 4 |[39m [36mimport[39m { [33mAsyncErrorCard[39m } [36mfrom[39m [32m'~shared/ui/async-error-card/async-error-card.ui'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 5 |[39m [36mimport[39m { [33mErrorMessages[39m } [36mfrom[39m [32m'~shared/ui/error-messages/error-messages.ui'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 6 |[39m [36mimport[39m { [33mSpinner[39m } [36mfrom[39m [32m'~shared/ui/spinner/spinner.ui'[39m[33m;[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/home/actions/article-favorite-toggle.action.ts[22m:[32m[1m2:62[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/fetch/favorites/favorites' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 1 |[39m [36mimport[39m type { [33mActionFunctionArgs[39m[33m,[39m [33mRouterContextProvider[39m } [36mfrom[39m [32m'react-router'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m { createArticleFavorite[33m,[39m deleteArticleFavorite } [36mfrom[39m [32m'~shared/api/generated/fetch/favorites/favorites'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m                                                              [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 3 |[39m [36mimport[39m { handleApiError } [36mfrom[39m [32m'~shared/api/handleApiError'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 4 |[39m
+[2m[WebServer] [22m   [90m 5 |[39m [36mexport[39m [36masync[39m [36mfunction[39m articleFavoriteToggleAction({ request[33m,[39m params }[33m:[39m [33mActionFunctionArgs[39m[33m<[39m[33mRouterContextProvider[39m[33m>[39m) {[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/home/home.loader.ts[22m:[32m[1m6:8[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/fetch/articles/articles' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 4 |[39m   getGetArticlesFeedQueryOptions[33m,[39m
+[2m[WebServer] [22m   [90m 5 |[39m   getGetArticlesQueryOptions[33m,[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 6 |[39m } [36mfrom[39m [32m'~shared/api/generated/fetch/articles/articles'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m        [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 7 |[39m [36mimport[39m { getGetTagsQueryOptions } [36mfrom[39m [32m'~shared/api/generated/fetch/tags/tags'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 8 |[39m [36mimport[39m { queryClient } [36mfrom[39m [32m'~shared/api/queryClient'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 9 |[39m [36mimport[39m { userContext } [36mfrom[39m [32m'~shared/lib/react-router/userContext'[39m[33m;[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/home/home.loader.ts[22m:[32m[1m7:40[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/fetch/tags/tags' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m  5 |[39m   getGetArticlesQueryOptions[33m,[39m
+[2m[WebServer] [22m   [90m  6 |[39m } [36mfrom[39m [32m'~shared/api/generated/fetch/articles/articles'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m  7 |[39m [36mimport[39m { getGetTagsQueryOptions } [36mfrom[39m [32m'~shared/api/generated/fetch/tags/tags'[39m[33m;[39m
+[2m[WebServer] [22m   [90m    |[39m                                        [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m  8 |[39m [36mimport[39m { queryClient } [36mfrom[39m [32m'~shared/api/queryClient'[39m[33m;[39m
+[2m[WebServer] [22m   [90m  9 |[39m [36mimport[39m { userContext } [36mfrom[39m [32m'~shared/lib/react-router/userContext'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 10 |[39m [36mimport[39m { getHomeNavigation[33m,[39m parseHomeSearchParams[33m,[39m toHomeSearch } [36mfrom[39m [32m'./home.state'[39m[33m;[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/home/home.loader.ts[22m:[32m[1m32:25[22m[39m
+[2m[WebServer] [22m[90mTS18046: [39m'response' is of type 'unknown'.
+[2m[WebServer] [22m  [0m [90m 30 |[39m   [36mconst[39m tagsPromise [33m=[39m queryClient
+[2m[WebServer] [22m   [90m 31 |[39m     [33m.[39mfetchQuery(getGetTagsQueryOptions({ request[33m:[39m { signal[33m:[39m request[33m.[39msignal } }))
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 32 |[39m     [33m.[39mthen((response) [33m=>[39m response[33m.[39mdata)[33m;[39m
+[2m[WebServer] [22m   [90m    |[39m                         [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 33 |[39m
+[2m[WebServer] [22m   [90m 34 |[39m   [36mlet[39m articlesPromise[33m;[39m
+[2m[WebServer] [22m   [90m 35 |[39m   [36mif[39m (normalizedSearchParams[33m.[39mfeed [33m===[39m [32m'personal'[39m) {[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/home/home.loader.ts[22m:[32m[1m43:27[22m[39m
+[2m[WebServer] [22m[90mTS18046: [39m'response' is of type 'unknown'.
+[2m[WebServer] [22m  [0m [90m 41 |[39m         )[33m,[39m
+[2m[WebServer] [22m   [90m 42 |[39m       )
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 43 |[39m       [33m.[39mthen((response) [33m=>[39m response[33m.[39mdata)[33m;[39m
+[2m[WebServer] [22m   [90m    |[39m                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 44 |[39m   } [36melse[39m {
+[2m[WebServer] [22m   [90m 45 |[39m     articlesPromise [33m=[39m queryClient
+[2m[WebServer] [22m   [90m 46 |[39m       [33m.[39mfetchQuery(getGetArticlesQueryOptions(normalizedSearchParams[33m,[39m { request[33m:[39m { signal[33m:[39m request[33m.[39msignal } }))[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/home/home.loader.ts[22m:[32m[1m47:27[22m[39m
+[2m[WebServer] [22m[90mTS18046: [39m'response' is of type 'unknown'.
+[2m[WebServer] [22m  [0m [90m 45 |[39m     articlesPromise [33m=[39m queryClient
+[2m[WebServer] [22m   [90m 46 |[39m       [33m.[39mfetchQuery(getGetArticlesQueryOptions(normalizedSearchParams[33m,[39m { request[33m:[39m { signal[33m:[39m request[33m.[39msignal } }))
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 47 |[39m       [33m.[39mthen((response) [33m=>[39m response[33m.[39mdata)[33m;[39m
+[2m[WebServer] [22m   [90m    |[39m                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 48 |[39m   }
+[2m[WebServer] [22m   [90m 49 |[39m
+[2m[WebServer] [22m   [90m 50 |[39m   [36mreturn[39m { articlesPromise[33m,[39m tagsPromise[33m,[39m userData[33m,[39m searchParams[33m:[39m normalizedSearchParams[33m,[39m navigation }[33m;[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/home/home.ui.tsx[22m:[32m[1m4:37[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/schemas/articlePreview.zod' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 2 |[39m [36mimport[39m { [33mIoHeart[39m } [36mfrom[39m [32m'react-icons/io5'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 3 |[39m [36mimport[39m { [33mAwait[39m[33m,[39m [33mLink[39m[33m,[39m useFetcher[33m,[39m useLoaderData[33m,[39m useLocation } [36mfrom[39m [32m'react-router'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m type { [33mArticlePreview[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/articlePreview.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m                                     [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 5 |[39m [36mimport[39m type { [33mGetArticlesParams[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/getArticlesParams.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 6 |[39m [36mimport[39m type { [33mMultipleArticlesResponse[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/multipleArticlesResponse.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 7 |[39m [36mimport[39m { formatDate } [36mfrom[39m [32m'~shared/lib/date'[39m[33m;[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/home/home.ui.tsx[22m:[32m[1m5:40[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/schemas/getArticlesParams.zod' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 3 |[39m [36mimport[39m { [33mAwait[39m[33m,[39m [33mLink[39m[33m,[39m useFetcher[33m,[39m useLoaderData[33m,[39m useLocation } [36mfrom[39m [32m'react-router'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 4 |[39m [36mimport[39m type { [33mArticlePreview[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/articlePreview.zod'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m type { [33mGetArticlesParams[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/getArticlesParams.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m                                        [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 6 |[39m [36mimport[39m type { [33mMultipleArticlesResponse[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/multipleArticlesResponse.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 7 |[39m [36mimport[39m { formatDate } [36mfrom[39m [32m'~shared/lib/date'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 8 |[39m [36mimport[39m { [33mAsyncErrorCard[39m } [36mfrom[39m [32m'~shared/ui/async-error-card/async-error-card.ui'[39m[33m;[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/home/home.ui.tsx[22m:[32m[1m6:47[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/schemas/multipleArticlesResponse.zod' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 4 |[39m [36mimport[39m type { [33mArticlePreview[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/articlePreview.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 5 |[39m [36mimport[39m type { [33mGetArticlesParams[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/getArticlesParams.zod'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 6 |[39m [36mimport[39m type { [33mMultipleArticlesResponse[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/multipleArticlesResponse.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m                                               [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 7 |[39m [36mimport[39m { formatDate } [36mfrom[39m [32m'~shared/lib/date'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 8 |[39m [36mimport[39m { [33mAsyncErrorCard[39m } [36mfrom[39m [32m'~shared/ui/async-error-card/async-error-card.ui'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 9 |[39m [36mimport[39m { [33mSpinner[39m } [36mfrom[39m [32m'~shared/ui/spinner/spinner.ui'[39m[33m;[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/home/home.ui.tsx[22m:[32m[1m108:22[22m[39m
+[2m[WebServer] [22m[90mTS7006: [39mParameter 'article' implicitly has an 'any' type.
+[2m[WebServer] [22m  [0m [90m 106 |[39m   [36mreturn[39m (
+[2m[WebServer] [22m   [90m 107 |[39m     [33m<[39m[33m>[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 108 |[39m       {articles[33m.[39mmap((article) [33m=>[39m (
+[2m[WebServer] [22m   [90m     |[39m                      [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 109 |[39m         [33m<[39m[33mHomeArticlePreviewCard[39m key[33m=[39m{article[33m.[39mslug} article[33m=[39m{article} [33m/[39m[33m>[39m
+[2m[WebServer] [22m   [90m 110 |[39m       ))}
+[2m[WebServer] [22m   [90m 111 |[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/home/home.ui.tsx[22m:[32m[1m148:25[22m[39m
+[2m[WebServer] [22m[90mTS7006: [39mParameter 'tag' implicitly has an 'any' type.
+[2m[WebServer] [22m  [0m [90m 146 |[39m         [33m<[39m[33mspan[39m[33m>[39m[33mRead[39m more[33m...[39m[33m<[39m[33m/[39m[33mspan[39m[33m>[39m
+[2m[WebServer] [22m   [90m 147 |[39m         [33m<[39m[33mul[39m className[33m=[39m[32m"tag-list"[39m[33m>[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 148 |[39m           {tagList[33m.[39mmap((tag) [33m=>[39m (
+[2m[WebServer] [22m   [90m     |[39m                         [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 149 |[39m             [33m<[39m[33mli[39m key[33m=[39m{tag} className[33m=[39m[32m"tag-default tag-pill tag-outline"[39m[33m>[39m
+[2m[WebServer] [22m   [90m 150 |[39m               {tag}
+[2m[WebServer] [22m   [90m 151 |[39m             [33m<[39m[33m/[39m[33mli[39m[33m>[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/login/actions/user-login.action.ts[22m:[32m[1m7:8[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/fetch/user-and-authentication/user-and-authentication' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m  5 |[39m   getGetCurrentUserQueryKey[33m,[39m
+[2m[WebServer] [22m   [90m  6 |[39m   login[33m,[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m  7 |[39m } [36mfrom[39m [32m'~shared/api/generated/fetch/user-and-authentication/user-and-authentication'[39m[33m;[39m
+[2m[WebServer] [22m   [90m    |[39m        [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m  8 |[39m [36mimport[39m { [33mLoginBody[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/loginBody.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m  9 |[39m [36mimport[39m { handleApiError } [36mfrom[39m [32m'~shared/api/handleApiError'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 10 |[39m [36mimport[39m { queryClient } [36mfrom[39m [32m'~shared/api/queryClient'[39m[33m;[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/login/actions/user-login.action.ts[22m:[32m[1m8:27[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/schemas/loginBody.zod' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m  6 |[39m   login[33m,[39m
+[2m[WebServer] [22m   [90m  7 |[39m } [36mfrom[39m [32m'~shared/api/generated/fetch/user-and-authentication/user-and-authentication'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m { [33mLoginBody[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/loginBody.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m    |[39m                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m  9 |[39m [36mimport[39m { handleApiError } [36mfrom[39m [32m'~shared/api/handleApiError'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 10 |[39m [36mimport[39m { queryClient } [36mfrom[39m [32m'~shared/api/queryClient'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 11 |[39m [36mimport[39m { validateSchema } [36mfrom[39m [32m'~shared/api/validateSchema'[39m[33m;[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/profile/actions/article-favorite-toggle.action.ts[22m:[32m[1m2:62[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/fetch/favorites/favorites' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 1 |[39m [36mimport[39m type { [33mActionFunctionArgs[39m[33m,[39m [33mRouterContextProvider[39m } [36mfrom[39m [32m'react-router'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m { createArticleFavorite[33m,[39m deleteArticleFavorite } [36mfrom[39m [32m'~shared/api/generated/fetch/favorites/favorites'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m                                                              [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22[2m[WebServer] [22mm[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 3 |[39m [36mimport[39m { handleApiError } [36mfrom[39m [32m'~shared/api/handleApiError'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 4 |[39m
+[2m[WebServer] [22m   [90m 5 |[39m [36mexport[39m [36masync[39m [36mfunction[39m articleFavoriteToggleAction({ request[33m,[39m params }[33m:[39m [33mActionFunctionArgs[39m[33m<[39m[33mRouterContextProvider[39m[33m>[39m) {[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/profile/actions/profile-follow-toggle.action.ts[22m:[32m[1m3:62[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/fetch/profile/profile' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 1 |[39m [36mimport[39m type { [33mActionFunctionArgs[39m[33m,[39m [33mRouterContextProvider[39m } [36mfrom[39m [32m'react-router'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 2 |[39m [36mimport[39m [33m*[39m [36mas[39m zod [36mfrom[39m [32m'zod/mini'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m { followUserByUsername[33m,[39m unfollowUserByUsername } [36mfrom[39m [32m'~shared/api/generated/fetch/profile/profile'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m                                                              [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 4 |[39m [36mimport[39m { handleApiError } [36mfrom[39m [32m'~shared/api/handleApiError'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 5 |[39m
+[2m[WebServer] [22m   [90m 6 |[39m [36mexport[39m [36masync[39m [36mfunction[39m profileFollowToggleAction({ request }[33m:[39m [33mActionFunctionArgs[39m[33m<[39m[33mRouterContextProvider[39m[33m>[39m) {[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/profile/profile.loader.ts[22m:[32m[1m3:44[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/fetch/articles/articles' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 1 |[39m [36mimport[39m { replace } [36mfrom[39m [32m'react-router'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 2 |[39m [36mimport[39m type { [33mLoaderFunctionArgs[39m[33m,[39m [33mRouterContextProvider[39m } [36mfrom[39m [32m'react-router'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m { getGetArticlesQueryOptions } [36mfrom[39m [32m'~shared/api/generated/fetch/articles/articles'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m                                            [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 4 |[39m [36mimport[39m { getGetProfileByUsernameQueryOptions } [36mfrom[39m [32m'~shared/api/generated/fetch/profile/profile'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 5 |[39m [36mimport[39m { queryClient } [36mfrom[39m [32m'~shared/api/queryClient'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 6 |[39m [36mimport[39m { userContext } [36mfrom[39m [32m'~shared/lib/react-router/userContext'[39m[33m;[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/profile/profile.loader.ts[22m:[32m[1m4:53[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/fetch/profile/profile' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 2 |[39m [36mimport[39m type { [33mLoaderFunctionArgs[39m[33m,[39m [33mRouterContextProvider[39m } [36mfrom[39m [32m'react-router'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 3 |[39m [36mimport[39m { getGetArticlesQueryOptions } [36mfrom[39m [32m'~shared/api/generated/fetch/articles/articles'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { getGetProfileByUsernameQueryOptions } [36mfrom[39m [32m'~shared/api/generated/fetch/profile/profile'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m                                                     [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 5 |[39m [36mimport[39m { queryClient } [36mfrom[39m [32m'~shared/api/queryClient'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 6 |[39m [36mimport[39m { userContext } [36mfrom[39m [32m'~shared/lib/react-router/userContext'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 7 |[39m [36mimport[39m { getProfileNavigation[33m,[39m parseProfileSearchParams[33m,[39m toProfileSearch } [36mfrom[39m [32m'./profile.state'[39m[33m;[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/profile/profile.loader.ts[22m:[32m[1m27:25[22m[39m
+[2m[WebServer] [22m[90mTS18046: [39m'response' is of type 'unknown'.
+[2m[WebServer] [22m  [0m [90m 25 |[39m   [36mconst[39m profilePromise [33m=[39m queryClient
+[2m[WebServer] [22m   [90m 26 |[39m     [33m.[39mfetchQuery(getGetProfileByUsernameQueryOptions(params[33m.[39musername[33m,[39m { request[33m:[39m { signal[33m:[39m request[33m.[39msignal } }))
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 27 |[39m     [33m.[39mthen((response) [33m=>[39m response[33m.[39mdata)[33m;[39m
+[2m[WebServer] [22m   [90m    |[39m                         [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 28 |[39m
+[2m[WebServer] [22m   [90m 29 |[39m   [36mconst[39m articlesPromise [33m=[39m queryClient
+[2m[WebServer] [22m   [90m 30 |[39m     [33m.[39mfetchQuery(getGetArticlesQueryOptions(normalizedSearchParams[33m,[39m { request[33m:[39m { signal[33m:[39m request[33m.[39msignal } }))[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/profile/profile.loader.ts[22m:[32m[1m31:25[22m[39m
+[2m[WebServer] [22m[90mTS18046: [39m'response' is of type 'unknown'.
+[2m[WebServer] [22m  [0m [90m 29 |[39m   [36mconst[39m articlesPromise [33m=[39m queryClient
+[2m[WebServer] [22m   [90m 30 |[39m     [33m.[39mfetchQuery(getGetArticlesQueryOptions(normalizedSearchParams[33m,[39m { request[33m:[39m { signal[33m:[39m request[33m.[39msignal } }))
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 31 |[39m     [33m.[39mthen((response) [33m=>[39m response[33m.[39mdata)[33m;[39m
+[2m[WebServer] [22m   [90m    |[39m                         [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 32 |[39m
+[2m[WebServer] [22m   [90m 33 |[39m   [36mreturn[39m {
+[2m[WebServer] [22m   [90m 34 |[39m     profilePromise[33m,[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/profile/profile.ui.tsx[22m:[32m[1m4:37[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/schemas/articlePreview.zod' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 2 |[39m [36mimport[39m { [33mIoAdd[39m[33m,[39m [33mIoHeart[39m[33m,[39m [33mIoRemove[39m[33m,[39m [33mIoSettingsSharp[39m } [36mfrom[39m [32m'react-icons/io5'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 3 |[39m [36mimport[39m { [33mAwait[39m[33m,[39m [33mLink[39m[33m,[39m useFetcher[33m,[39m useLoaderData[33m,[39m useLocation[33m,[39m useParams } [36mfrom[39m [32m'react-router'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m type { [33mArticlePreview[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/articlePreview.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m                                     [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 5 |[39m [36mimport[39m type { [33mGetArticlesParams[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/getArticlesParams.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 6 |[39m [36mimport[39m type { [33mMultipleArticlesResponse[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/multipleArticlesResponse.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 7 |[39m [36mimport[39m type { [33mProfileResponse[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/profileResponse.zod'[39m[33m;[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/profile/profile.ui.tsx[22m:[32m[1m5:40[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/schemas/getArticlesParams.zod' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 3 |[39m [36mimport[39m { [33mAwait[39m[33m,[39m [33mLink[39m[33m,[39m useFetcher[33m,[39m useLoaderData[33m,[39m useLocation[33m,[39m useParams } [36mfrom[39m [32m'react-router'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 4 |[39m [36mimport[39m type { [33mArticlePreview[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/articlePreview.zod'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m type { [33mGetArticlesParams[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/getArticlesParams.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m                                        [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 6 |[39m [36mimport[39m type { [33mMultipleArticlesResponse[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/multipleArticlesResponse.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 7 |[39m [36mimport[39m type { [33mProfileResponse[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/profileResponse.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 8 |[39m [36mimport[39m { formatDate } [36mfrom[39m [32m'~shared/lib/date'[39m[33m;[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/profile/profile.ui.tsx[22m:[32m[1m6:47[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/schemas/multipleArticlesResponse.zod' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 4 |[39m [36mimport[39m type { [33mArticlePreview[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/articlePreview.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 5 |[39m [36mimport[39m type { [33mGetArticlesParams[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/getArticlesParams.zod'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 6 |[39m [36mimport[39m type { [33mMultipleArticlesResponse[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/multipleArticlesResponse.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m                                               [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 7 |[39m [36mimport[39m type { [33mProfileResponse[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/profileResponse.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 8 |[39m [36mimport[39m { formatDate } [36mfrom[39m [32m'~shared/lib/date'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 9 |[39m [36mimport[39m { [33mAsyncErrorCard[39m } [36mfrom[39m [32m'~shared/ui/async-error-card/async-error-card.ui'[39m[33m;[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/profile/profile.ui.tsx[22m:[32m[1m7:38[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/schemas/profileResponse.zod' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m  5 |[39m [36mimport[39m type { [33mGetArticlesParams[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/getArticlesParams.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m  6 |[39m [36mimport[39m type { [33mMultipleArticlesResponse[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/multipleArticlesResponse.zod'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m  7 |[39m [36mimport[39m type { [33mProfileResponse[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/profileResponse.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m    |[39m                                      [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m  8 |[39m [36mimport[39m { formatDate } [36mfrom[39m [32m'~shared/lib/date'[39m[33m;[39m
+[2m[WebServer] [22m   [90m  9 |[39m [36mimport[39m { [33mAsyncErrorCard[39m } [36mfrom[39m [32m'~shared/ui/async-error-card/async-error-card.ui'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 10 |[39m [36mimport[39m { [33mSpinner[39m } [36mfrom[39m [32m'~shared/ui/spinner/spinner.ui'[39m[33m;[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/profile/profile.ui.tsx[22m:[32m[1m176:22[22m[39m
+[2m[WebServer] [22m[90mTS7006: [39mParameter 'article' implicitly has an 'any' type.
+[2m[WebServer] [22m  [0m [90m 174 |[39m   [36mreturn[39m (
+[2m[WebServer] [22m   [90m 175 |[39m     [33m<[39m[33m>[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 176 |[39m       {articles[33m.[39mmap((article) [33m=>[39m (
+[2m[WebServer] [22m   [90m     |[39m                      [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 177 |[39m         [33m<[39m[33mProfileArticlePreviewCard[39m key[33m=[39m{article[33m.[39mslug} article[33m=[39m{article} [33m/[39m[33m>[39m
+[2m[WebServer] [22m   [90m 178 |[39m       ))}
+[2m[WebServer] [22m   [90m 179 |[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/profile/profile.ui.tsx[22m:[32m[1m216:25[22m[39m
+[2m[WebServer] [22m[90mTS7006: [39mParameter 'tag' implicitly has an 'any' type.
+[2m[WebServer] [22m  [0m [90m 214 |[39m         [33m<[39m[33mspan[39m[33m>[39m[33mRead[39m more[33m...[39m[33m<[39m[33m/[39m[33mspan[39m[33m>[39m
+[2m[WebServer] [22m   [90m 215 |[39m         [33m<[39m[33mul[39m className[33m=[39m[32m"tag-list"[39m[33m>[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 216 |[39m           {tagList[33m.[39mmap((tag) [33m=>[39m (
+[2m[WebServer] [22m   [90m     |[39m                         [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 217 |[39m             [33m<[39m[33mli[39m key[33m=[39m{tag} className[33m=[39m[32m"tag-default tag-pill tag-outline"[39m[33m>[39m
+[2m[WebServer] [22m   [90m 218 |[39m               {tag}
+[2m[WebServer] [22m   [90m 219 |[39m             [33m<[39m[33m/[39m[33mli[39m[33m>[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/register/actions/user-register.action.ts[22m:[32m[1m7:8[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/fetch/user-and-authentication/user-and-authentication' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m  5 |[39m   createUser[33m,[39m
+[2m[WebServer] [22m   [90m  6 |[39m   getGetCurrentUserQueryKey[33m,[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m  7 |[39m } [36mfrom[39m [32m'~shared/api/generated/fetch/user-and-authentication/user-and-authentication'[39m[33m;[39m
+[2m[WebServer] [22m   [90m    |[39m        [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m  8 |[39m [36mimport[39m { [33mCreateUserBody[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/createUserBody.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m  9 |[39m [36mimport[39m { handleApiError } [36mfrom[39m [32m'~shared/api/handleApiError'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 10 |[39m [36mimport[39m { queryClient } [36mfrom[39m [32m'~shared/api/queryClient'[39m[33m;[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/register/actions/user-register.action.ts[22m:[32m[1m8:32[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/schemas/createUserBody.zod' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m  6 |[39m   getGetCurrentUserQueryKey[33m,[39m
+[2m[WebServer] [22m   [90m  7 |[39m } [36mfrom[39m [32m'~shared/api/generated/fetch/user-and-authentication/user-and-authentication'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m { [33mCreateUserBody[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/createUserBody.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m    |[39m                                [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m  9 |[39m [36mimport[39m { handleApiError } [36mfrom[39m [32m'~shared/api/handleApiError'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 10 |[39m [36mimport[39m { queryClient } [36mfrom[39m [32m'~shared/api/queryClient'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 11 |[39m [36mimport[39m { validateSchema } [36mfrom[39m [32m'~shared/api/validateSchema'[39m[33m;[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/settings/actions/user-logout.action.ts[22m:[32m[1m3:43[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/fetch/user-and-authentication/user-and-authentication' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 1 |[39m [36mimport[39m { redirect } [36mfrom[39m [32m'react-router'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 2 |[39m [36mimport[39m { clearToken } [36mfrom[39m [32m'~shared/api/auth-storage'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m { getGetCurrentUserQueryKey } [36mfrom[39m [32m'~shared/api/generated/fetch/user-and-authentication/user-and-authentication'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m                                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 4 |[39m [36mimport[39m { queryClient } [36mfrom[39m [32m'~shared/api/queryClient'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 5 |[39m
+[2m[WebServer] [22m   [90m 6 |[39m [36mexport[39m [36masync[39m [36mfunction[39m userLogoutAction() {[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/settings/actions/user-update.action.ts[22m:[32m[1m7:8[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/fetch/user-and-authentication/user-and-authentication' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m  5 |[39m   getGetCurrentUserQueryKey[33m,[39m
+[2m[WebServer] [22m   [90m  6 |[39m   updateCurrentUser[33m,[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m  7 |[39m } [36mfrom[39m [32m'~shared/api/generated/fetch/user-and-authentication/user-and-authentication'[39m[33m;[39m
+[2m[WebServer] [22m   [90m    |[39m        [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m  8 |[39m [36mimport[39m { [33mUpdateCurrentUserBody[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/updateCurrentUserBody.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m  9 |[39m [36mimport[39m { handleApiError } [36mfrom[39m [32m'~shared/api/handleApiError'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 10 |[39m [36mimport[39m { queryClient } [36mfrom[39m [32m'~shared/api/queryClient'[39m[33m;[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/pages/settings/actions/user-update.action.ts[22m:[32m[1m8:39[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/schemas/updateCurrentUserBody.zod' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m  6 |[39m   updateCurrentUser[33m,[39m
+[2m[WebServer] [22m   [90m  7 |[39m } [36mfrom[39m [32m'~shared/api/generated/fetch/user-and-authentication/user-and-authentication'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m { [33mUpdateCurrentUserBody[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/updateCurrentUserBody.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m    |[39m                                       [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m  9 |[39m [36mimport[39m { handleApiError } [36mfrom[39m [32m'~shared/api/handleApiError'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 10 |[39m [36mimport[39m { queryClient } [36mfrom[39m [32m'~shared/api/queryClient'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 11 |[39m [36mimport[39m { validateSchema } [36mfrom[39m [32m'~shared/api/validateSchema'[39m[33m;[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/shared/api/handleApiError.ts[22m:[32m[1m4:43[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/fetch/user-and-authentication/user-and-authentication' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 2 |[39m [36mimport[39m type { [33mApiTransportError[39m } [36mfrom[39m [32m'~shared/api/auth-fetch'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 3 |[39m [36mimport[39m { clearToken } [36mfrom[39m [32m'~shared/api/auth-storage'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { getGetCurrentUserQueryKey } [36mfrom[39m [32m'~shared/api/generated/fetch/user-and-authentication/user-and-authentication'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m                                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 5 |[39m [36mimport[39m type { [33mGenericErrorModel[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/genericErrorModel.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 6 |[39m [36mimport[39m { queryClient } [36mfrom[39m [32m'~shared/api/queryClient'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 7 |[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/shared/api/handleApiError.ts[22m:[32m[1m5:40[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/schemas/genericErrorModel.zod' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 3 |[39m [36mimport[39m { clearToken } [36mfrom[39m [32m'~shared/api/auth-storage'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 4 |[39m [36mimport[39m { getGetCurrentUserQueryKey } [36mfrom[39m [32m'~shared/api/generated/fetch/user-and-authentication/user-and-authentication'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m type { [33mGenericErrorModel[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/genericErrorModel.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m                                        [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 6 |[39m [36mimport[39m { queryClient } [36mfrom[39m [32m'~shared/api/queryClient'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 7 |[39m
+[2m[WebServer] [22m   [90m 8 |[39m [36mexport[39m [36mfunction[39m isApiTransportError(error[33m:[39m unknown)[33m:[39m error is [33mApiTransportError[39m[33m<[39m[33mGenericErrorModel[39m[33m>[39m {[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/shared/lib/react-router/loadUserMiddleware.ts[22m:[32m[1m6:8[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/fetch/user-and-authentication/user-and-authentication' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 4 |[39m   getGetCurrentUserQueryOptions[33m,[39m
+[2m[WebServer] [22m   [90m 5 |[39m   getGetCurrentUserQueryKey[33m,[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 6 |[39m } [36mfrom[39m [32m'~shared/api/generated/fetch/user-and-authentication/user-and-authentication'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m        [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 7 |[39m [36mimport[39m { isApiTransportError } [36mfrom[39m [32m'~shared/api/handleApiError'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 8 |[39m [36mimport[39m { queryClient } [36mfrom[39m [32m'~shared/api/queryClient'[39m[33m;[39m
+[2m[WebServer] [22m   [90m 9 |[39m [36mimport[39m { userContext } [36mfrom[39m [32m'./userContext'[39m[33m;[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/shared/lib/react-router/loadUserMiddleware.ts[22m:[32m[1m31:27[22m[39m
+[2m[WebServer] [22m[90mTS18046: [39m'response' is of type 'unknown'.
+[2m[WebServer] [22m  [0m [90m 29 |[39m         })[33m,[39m
+[2m[WebServer] [22m   [90m 30 |[39m       )
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 31 |[39m       [33m.[39mthen((response) [33m=>[39m response[33m.[39mdata)[33m;[39m
+[2m[WebServer] [22m   [90m    |[39m                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 32 |[39m
+[2m[WebServer] [22m   [90m 33 |[39m     setToken(data[33m.[39muser[33m.[39mtoken)[33m;[39m
+[2m[WebServer] [22m   [90m 34 |[39m     context[33m.[39m[36mset[39m(userContext[33m,[39m data)[33m;[39m[0m
+[2m[WebServer] [22m
+[2m[WebServer] [22m[31m[1mERROR[22m[39m in [1m./src/shared/lib/react-router/userContext.ts[22m:[32m[1m2:35[22m[39m
+[2m[WebServer] [22m[90mTS2307: [39mCannot find module '~shared/api/generated/schemas/userResponse.zod' or its corresponding type declarations.
+[2m[WebServer] [22m  [0m [90m 1 |[39m [36mimport[39m { createContext } [36mfrom[39m [32m'react-router'[39m[33m;[39m
+[2m[WebServer] [22m  [31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m type { [33mUserResponse[39m } [36mfrom[39m [32m'~shared/api/generated/schemas/userResponse.zod'[39m[33m;[39m
+[2m[WebServer] [22m   [90m   |[39m                                   [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[2m[WebServer] [22m   [90m 3 |[39m
+[2m[WebServer] [22m   [90m 4 |[39m [36mexport[39m [36mconst[39m userContext [33m=[39m createContext[33m<[39m[33mUserResponse[39m [33m|[39m [36mnull[39m[33m>[39m([36mnull[39m)[33m;[39m
+[2m[WebServer] [22m   [90m 5 |[39m[0m
+[2m[WebServer] [22m
+
+Running 139 tests using 1 worker
+
+(node:12321) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘    1 [chromium] › ../nitro/realworld/specs/e2e/articles.spec.ts:32:7 › Articles › should create a new article (7.7s)
+(node:12447) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘    2 [chromium] › ../nitro/realworld/specs/e2e/articles.spec.ts:32:7 › Articles › should create a new article (retry #1) (6.2s)
+(node:12552) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)

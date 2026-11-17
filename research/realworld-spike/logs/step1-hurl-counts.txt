@@ -1,0 +1,15 @@
+file | requests | asserts | asserts_ok
+articles.hurl | 17 | 160 | 160
+auth.hurl | 20 | 100 | 100
+comments.hurl | 13 | 49 | 49
+errors_articles.hurl | 20 | 56 | 56
+errors_auth.hurl | 20 | 50 | 50
+errors_authorization.hurl | 9 | 23 | 23
+errors_comments.hurl | 10 | 27 | 27
+errors_profiles.hurl | 6 | 17 | 17
+favorites.hurl | 9 | 84 | 84
+feed.hurl | 12 | 56 | 56
+pagination.hurl | 7 | 22 | 22
+profiles.hurl | 7 | 34 | 34
+tags.hurl | 4 | 14 | 14
+TOTAL | 154 | 692 | 692

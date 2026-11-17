@@ -1,0 +1,42 @@
+
+[nitro]  WARN  Please add compatibilityDate: '2026-10-23' to the config file. Using 2024-04-03 as fallback.
+       More info: https://nitro.build/deploy#compatibility-date
+
+
+  ➜ Local:    http://localhost:3000/
+  ➜ Network:  use --host to expose
+
+[nitro] ✔ Nitro Server built in 1022ms
+HOST=http://localhost:3000 realworld/specs/api/run-api-tests-hurl.sh
+Running Hurl tests against http://localhost:3000 with uid=179276098277413
+Success /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/api/hurl/articles.hurl (17 request(s) in 877 ms)
+Success /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/api/hurl/auth.hurl (20 request(s) in 167 ms)
+Success /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/api/hurl/comments.hurl (13 request(s) in 99 ms)
+Success /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/api/hurl/errors_articles.hurl (20 request(s) in 109 ms)
+Success /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/api/hurl/errors_auth.hurl (20 request(s) in 362 ms)
+Success /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/api/hurl/errors_authorization.hurl (9 request(s) in 147 ms)
+Success /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/api/hurl/errors_comments.hurl (10 request(s) in 85 ms)
+Success /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/api/hurl/errors_profiles.hurl (6 request(s) in 68 ms)
+Success /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/api/hurl/favorites.hurl (9 request(s) in 99 ms)
+Success /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/api/hurl/feed.hurl (12 request(s) in 155 ms)
+Success /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/api/hurl/pagination.hurl (7 request(s) in 76 ms)
+Success /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/api/hurl/profiles.hurl (7 request(s) in 132 ms)
+Success /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/api/hurl/tags.hurl (4 request(s) in 71 ms)
+--------------------------------------------------------------------------------
+Executed files:    13
+Executed requests: 154 (58.8/s)
+Succeeded files:   13 (100.0%)
+Failed files:      0 (0.0%)
+Duration:          2618 ms (0h:0m:2s:618ms)
+
+ps a -A -o pid,cmd \
+	| grep "$(pwd)" \
+	| grep "nitro dev" \
+	| grep -v grep \
+	| awk '{print $1}' \
+	| xargs -I {} kill {} \
+	|| true
+ps: cmd: keyword not found
+-e 
+[0;32m    TESTS OK[0m
+

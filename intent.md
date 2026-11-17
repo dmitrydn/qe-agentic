@@ -1,6 +1,7 @@
 # QE checks for agent-built software — Intent
 
-**Version:** 2 (2026-10-21) · replaces v1 (2026-10-20) · review of v1: `docs/intent/intent-review-2026-10-21.md`
+**Version:** 2.1 (2026-11-17) · replaces v2 (2026-10-21) and v1 (2026-10-20) · review of v1: `docs/intent/intent-review-2026-10-21.md`
+**Changed in 2.1:** TypeScript demo app is now RealWorld (Conduit), replacing Cypress Real World App; Java demo app is open again (§7, §11, §12). Details: `docs/handover/2026-11-17-realworld-sandbox/`
 **Owner:** Dmitry (QE Manager) · **Status:** intent agreed, not yet built
 **Written for:** the BATC accelerator team, QE leadership, guild leads and QE technology architects. Terms are explained in the glossary at the end.
 
@@ -76,7 +77,7 @@ BATC sets the delivery flow and governs the AI. These capabilities plug in at th
 
 | Item | Phase 1 |
 |---|---|
-| Demo applications | Cypress Real World App (TypeScript; tests in Playwright) and a Java web app with a REST API (tests in JUnit with RestAssured and Selenium) |
+| Demo applications | **RealWorld (Conduit)** (TypeScript: Nitro API, Angular UI; tests in Playwright; sandbox in `sandboxes/realworld/`) and a Java web app with a REST API (**not yet selected**; tests in JUnit with RestAssured and Selenium) |
 | Requirement source | Files: user stories with Given-When-Then acceptance criteria (Markdown), and Gherkin feature files |
 | AI provider | One connector for development use in the sandbox; the design must allow other providers without core changes |
 | Pipelines | Azure DevOps templates first |
@@ -139,7 +140,7 @@ BATC sets the delivery flow and governs the AI. These capabilities plug in at th
 ## 11. Assumptions, open questions and risks
 
 **Assumptions (correct me if wrong):**
-1. Java demo app: Spring PetClinic (REST variant) or a similar open-source app with a REST API and web UI.
+1. TypeScript demo app: RealWorld (Conduit), MIT. Its specification is written independently of the 100+ implementations, so it meets P2. Cypress Real World App is declined: its only "requirements" are its own tests. Conduit's specification is an API/UI contract, not business requirements; the BA layer (user stories, acceptance criteria) is derived from it and must be reviewed by a person before use.
 2. A development AI connector is acceptable inside the sandbox only. Client providers come in Phase 2.
 3. Proven sandbox parts are copied into the new code and tested again; the research copy stays untouched.
 4. The BATC source in `reference/batc-accelerator-development/` is refreshed from Azure DevOps before the BATC connection is designed. The current copy is the 7 October release (3.2.5).
@@ -147,6 +148,8 @@ BATC sets the delivery flow and governs the AI. These capabilities plug in at th
 **Open questions:**
 - Which AI providers can client projects approve? This decides whether Phase 2 can run at all.
 - Who in the BATC team owns the plug-in point design on their side?
+- Which Java demo app? It needs an MIT-like licence and requirements written independently of the code. The candidates checked so far failed (iTrust2: EPL-2.0; Restful Booker Platform: GPL-3.0; Spring PetClinic: no written requirements). If none is found, Phase 1 runs on Conduit only.
+- Who acts as Product Owner / BA reviewer for Conduit's derived backlog and its open questions?
 
 **Risks:**
 
@@ -156,6 +159,8 @@ BATC sets the delivery flow and governs the AI. These capabilities plug in at th
 | One builder, 6–8 weeks | Delay; no independent review | Guild leads review formats and the demo; evals use planted ground truth |
 | Second AI model shares the first model's blind spots | Overstated results | Planted problems first; a person checks ≥ 20% of AI labels |
 | BATC Bug 2347 unresolved | Phase 2 connection blocked | Raised 2026-10-20; check before Phase 2 |
+| Agents can read Conduit's held-out test suites (they ship inside the specification repository) | C1/C2 eval scores contaminated | Agents get the specification without the test folders; isolation decided before the first measured run |
+| No Java app with independent requirements | Demo covers one stack only | Keep searching; decide before C2's Java spike |
 
 ## 12. Folder structure
 
@@ -179,7 +184,7 @@ qe-agentic/
 │   └── cli/                     ← one command per capability
 ├── pipelines/                   ← Azure DevOps templates
 ├── evals/                       ← per capability: plan, test sets, planted problems, results
-├── sandboxes/                   ← demo applications (Cypress RWA, Java app)
+├── sandboxes/                   ← demo applications (realworld = Conduit; Java app to be selected)
 ├── docs/
 │   ├── intent/                  ← intent reviews and history
 │   ├── architecture/            ← design, formats, decisions

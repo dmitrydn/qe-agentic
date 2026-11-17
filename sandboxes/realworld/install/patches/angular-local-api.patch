@@ -1,0 +1,99 @@
+diff --git a/angular.json b/angular.json
+index f67bfcd..3334f8f 100644
+--- a/angular.json
++++ b/angular.json
+@@ -34,7 +34,10 @@
+             ],
+             "styles": ["realworld/assets/theme/styles.css"],
+             "scripts": [],
+-            "browser": "src/main.ts"
++            "browser": "src/main.ts",
++            "define": {
++              "CONDUIT_API_URL": "'https://api.realworld.show/api'"
++            }
+           },
+           "configurations": {
+             "production": {
+@@ -57,6 +60,15 @@
+               "extractLicenses": false,
+               "sourceMap": true,
+               "namedChunks": true
++            },
++            "local": {
++              "optimization": false,
++              "extractLicenses": false,
++              "sourceMap": true,
++              "namedChunks": true,
++              "define": {
++                "CONDUIT_API_URL": "'http://localhost:3000/api'"
++              }
+             }
+           },
+           "defaultConfiguration": "production"
+@@ -69,6 +81,9 @@
+             },
+             "development": {
+               "buildTarget": "angular-conduit:build:development"
++            },
++            "local": {
++              "buildTarget": "angular-conduit:build:local"
+             }
+           },
+           "defaultConfiguration": "development"
+diff --git a/package.json b/package.json
+index fbc1302..534021c 100644
+--- a/package.json
++++ b/package.json
+@@ -6,6 +6,7 @@
+     "ng": "ng",
+     "setup": "git submodule init && git submodule update && bun install",
+     "start": "ng serve",
++    "start:local": "ng serve --configuration local",
+     "build": "ng build",
+     "test": "vitest",
+     "test:ui": "vitest --ui",
+diff --git a/playwright.config.ts b/playwright.config.ts
+index a85e06b..589313c 100644
+--- a/playwright.config.ts
++++ b/playwright.config.ts
+@@ -12,10 +12,12 @@ export default defineConfig({
+   use: {
+     ...baseConfig.use,
+     baseURL: 'http://localhost:4200',
++    // Set PW_CHANNEL=chrome to use the installed Google Chrome when the bundled Chromium cannot be installed.
++    channel: process.env.PW_CHANNEL || undefined,
+   },
+ 
+   webServer: {
+-    command: 'npm run start',
++    command: 'npm run start:local',
+     url: 'http://localhost:4200',
+     reuseExistingServer: !process.env.CI,
+     timeout: 120_000,
+diff --git a/src/app/core/interceptors/api.interceptor.ts b/src/app/core/interceptors/api.interceptor.ts
+index 32160a1..ad4daad 100644
+--- a/src/app/core/interceptors/api.interceptor.ts
++++ b/src/app/core/interceptors/api.interceptor.ts
+@@ -1,6 +1,9 @@
+ import { HttpInterceptorFn } from '@angular/common/http';
+ 
++// Injected at build time via the "define" option in angular.json (one value per build configuration).
++declare const CONDUIT_API_URL: string;
++
+ export const apiInterceptor: HttpInterceptorFn = (req, next) => {
+-  const apiReq = req.clone({ url: `https://api.realworld.show/api${req.url}` });
++  const apiReq = req.clone({ url: `${CONDUIT_API_URL}${req.url}` });
+   return next(apiReq);
+ };
+diff --git a/vitest.config.ts b/vitest.config.ts
+index 7b8bd9e..2707cf7 100644
+--- a/vitest.config.ts
++++ b/vitest.config.ts
+@@ -17,6 +17,7 @@ export default defineConfig({
+   },
+   define: {
+     ngDevMode: true,
++    CONDUIT_API_URL: JSON.stringify('http://localhost:3000/api'),
+   },
+   resolve: {
+     alias: {

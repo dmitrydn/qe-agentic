@@ -1,0 +1,1403 @@
+(node:99103) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2m[WebServer] [22m[0m[2m[35m$[0m [2m[1mvite[0m
+
+Running 139 tests using 1 worker
+
+(node:99561) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✓    1 [chromium] › ../nitro/realworld/specs/e2e/articles.spec.ts:32:7 › Articles › should create a new article (3.0s)
+  ✓    2 [chromium] › ../nitro/realworld/specs/e2e/articles.spec.ts:50:7 › Articles › should edit an existing article (1.8s)
+  ✓    3 [chromium] › ../nitro/realworld/specs/e2e/articles.spec.ts:71:7 › Articles › should delete an article (1.6s)
+  ✓    4 [chromium] › ../nitro/realworld/specs/e2e/articles.spec.ts:97:7 › Articles › should delete an article when server returns 200 instead of 204 (1.5s)
+  ✓    5 [chromium] › ../nitro/realworld/specs/e2e/articles.spec.ts:123:7 › Articles › should favorite an article (1.6s)
+  ✓    6 [chromium] › ../nitro/realworld/specs/e2e/articles.spec.ts:139:7 › Articles › should unfavorite an article (1.5s)
+  ✓    7 [chromium] › ../nitro/realworld/specs/e2e/articles.spec.ts:182:7 › Articles › should view article from home feed (1.6s)
+  ✓    8 [chromium] › ../nitro/realworld/specs/e2e/articles.spec.ts:207:7 › Articles › should display article preview correctly (1.9s)
+  ✓    9 [chromium] › ../nitro/realworld/specs/e2e/articles.spec.ts:229:7 › Articles › should remove all tags when editing an article (3.0s)
+  ✓   10 [chromium] › ../nitro/realworld/specs/e2e/articles.spec.ts:282:7 › Articles › should only allow author to edit/delete article (2.3s)
+  ✓   11 [chromium] › ../nitro/realworld/specs/e2e/auth.spec.ts:7:7 › Authentication › should register a new user (902ms)
+  ✓   12 [chromium] › ../nitro/realworld/specs/e2e/auth.spec.ts:19:7 › Authentication › should login with existing user (1.0s)
+  ✓   13 [chromium] › ../nitro/realworld/specs/e2e/auth.spec.ts:33:7 › Authentication › should show error for invalid login (807ms)
+  ✓   14 [chromium] › ../nitro/realworld/specs/e2e/auth.spec.ts:42:7 › Authentication › should fail login with wrong password (1.1s)
+  ✓   15 [chromium] › ../nitro/realworld/specs/e2e/auth.spec.ts:59:7 › Authentication › should logout successfully (888ms)
+  ✓   16 [chromium] › ../nitro/realworld/specs/e2e/auth.spec.ts:72:7 › Authentication › should prevent accessing editor when not logged in (685ms)
+  ✓   17 [chromium] › ../nitro/realworld/specs/e2e/auth.spec.ts:78:7 › Authentication › should maintain session after page reload (944ms)
+  ✓   18 [chromium] › ../nitro/realworld/specs/e2e/auth.spec.ts:87:7 › Authentication › should handle invalid token on page reload gracefully (739ms)
+  ✓   19 [chromium] › ../nitro/realworld/specs/e2e/comments.spec.ts:31:7 › Comments › should add a comment to an article (1.5s)
+  ✓   20 [chromium] › ../nitro/realworld/specs/e2e/comments.spec.ts:38:7 › Comments › should delete own comment (1.6s)
+  ✓   21 [chromium] › ../nitro/realworld/specs/e2e/comments.spec.ts:60:7 › Comments › should delete comment when server returns 200 instead of 204 (1.6s)
+  ✓   22 [chromium] › ../nitro/realworld/specs/e2e/comments.spec.ts:86:7 › Comments › should display multiple comments (1.7s)
+  ✓   23 [chromium] › ../nitro/realworld/specs/e2e/comments.spec.ts:102:7 › Comments › should require login to post comment (2.1s)
+  ✓   24 [chromium] › ../nitro/realworld/specs/e2e/comments.spec.ts:116:7 › Comments › should only allow comment author to delete (1.7s)
+  ✓   25 [chromium] › ../nitro/realworld/specs/e2e/comments.spec.ts:141:7 › Comments › should handle long comments (1.6s)
+  ✓   26 [chromium] › ../nitro/realworld/specs/e2e/comments.spec.ts:148:7 › Comments › should preserve comments after page reload (1.6s)
+  ✓   27 [chromium] › ../nitro/realworld/specs/e2e/comments.spec.ts:157:7 › Comments › should clear comment form after posting (1.5s)
+  ✓   28 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:36:7 › Error Handling - 400 Bad Request › should handle 400 on login with validation errors (786ms)
+  ✘   29 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:50:7 › Error Handling - 400 Bad Request › should handle 400 on registration with validation errors (5.7s)
+(node:1070) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘   30 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:50:7 › Error Handling - 400 Bad Request › should handle 400 on registration with validation errors (retry #1) (1.1s)
+  ✘   31 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:68:7 › Error Handling - 400 Bad Request › should handle 400 on article creation (5.8s)
+(node:1491) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘   32 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:68:7 › Error Handling - 400 Bad Request › should handle 400 on article creation (retry #1) (6.2s)
+(node:1973) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✓   33 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:104:7 › Error Handling - 401 Unauthorized › should handle 401 when submitting settings form (1.2s)
+  ✓   34 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:136:7 › Error Handling - 401 Unauthorized › should handle 401 when posting a comment (912ms)
+  ✘   35 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:199:7 › Error Handling - 403 Forbidden › should handle 403 when updating article (5.8s)
+(node:2049) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘   36 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:199:7 › Error Handling - 403 Forbidden › should handle 403 when updating article (retry #1) (6.2s)
+(node:2238) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘   37 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:252:7 › Error Handling - 403 Forbidden › should handle 403 when deleting another users comment (6.1s)
+(node:2306) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘   38 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:252:7 › Error Handling - 403 Forbidden › should handle 403 when deleting another users comment (retry #1) (6.1s)
+(node:2519) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘   39 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:324:7 › Error Handling - 403 Forbidden › should handle 403 when following user you are blocked by (6.0s)
+(node:2557) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘   40 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:324:7 › Error Handling - 403 Forbidden › should handle 403 when following user you are blocked by (retry #1) (6.1s)
+(node:2768) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✓   41 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:379:7 › Error Handling - 500 Internal Server Error › should handle 500 on articles feed load (777ms)
+  ✓   42 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:390:7 › Error Handling - 500 Internal Server Error › should handle 500 on tags load (695ms)
+  ✓   43 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:410:7 › Error Handling - 500 Internal Server Error › should handle network error on tags load (667ms)
+  ✓   44 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:429:7 › Error Handling - 500 Internal Server Error › should handle 500 on user profile load (610ms)
+  ✓   45 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:440:7 › Error Handling - 500 Internal Server Error › should handle network error on user profile load (630ms)
+  ✓   46 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:451:7 › Error Handling - 500 Internal Server Error › should handle 500 on article detail load (659ms)
+  ✓   47 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:462:7 › Error Handling - 500 Internal Server Error › should handle network error on article detail load (637ms)
+  ✓   48 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:473:7 › Error Handling - 500 Internal Server Error › should handle 500 when submitting settings (803ms)
+  ✓   49 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:505:7 › Error Handling - 500 Internal Server Error › should handle intermittent 500 errors gracefully (607ms)
+  ✓   50 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:532:7 › Error Handling - Network Errors › should handle network timeout (610ms)
+  ✓   51 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:543:7 › Error Handling - Network Errors › should handle connection refused (610ms)
+  ✘   52 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:553:7 › Error Handling - Network Errors › should show error message on settings form when network fails (5.8s)
+(node:2890) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘   53 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:553:7 › Error Handling - Network Errors › should show error message on settings form when network fails (retry #1) (6.1s)
+(node:3093) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘   54 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:593:7 › Error Handling - Network Errors › should show error message on login form when network fails (7.3s)
+(node:3221) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘   55 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:593:7 › Error Handling - Network Errors › should show error message on login form when network fails (retry #1) (6.2s)
+(node:3410) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘   56 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:607:7 › Error Handling - Network Errors › should show error message on register form when network fails (5.9s)
+(node:3491) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘   57 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:607:7 › Error Handling - Network Errors › should show error message on register form when network fails (retry #1) (6.2s)
+(node:3751) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘   58 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:622:7 › Error Handling - Network Errors › should show error message on create article form when network fails (6.0s)
+(node:3793) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘   59 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:622:7 › Error Handling - Network Errors › should show error message on create article form when network fails (retry #1) (6.1s)
+(node:4008) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘   60 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:650:7 › Error Handling - Network Errors › should show error message on update article form when network fails (6.1s)
+(node:4062) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘   61 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:650:7 › Error Handling - Network Errors › should show error message on update article form when network fails (retry #1) (6.2s)
+(node:4207) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘   62 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:698:7 › Error Handling - Network Errors › should show error message when adding comment fails due to network (6.0s)
+(node:4304) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘   63 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:698:7 › Error Handling - Network Errors › should show error message when adding comment fails due to network (retry #1) (6.0s)
+(node:4473) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘   64 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:754:7 › Error Handling - Network Errors › should handle network error when favoriting article (6.1s)
+(node:4573) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘   65 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:754:7 › Error Handling - Network Errors › should handle network error when favoriting article (retry #1) (1.0s)
+  ✘   66 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:812:7 › Error Handling - Network Errors › should handle network error when following user (5.9s)
+(node:4902) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘   67 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:812:7 › Error Handling - Network Errors › should handle network error when following user (retry #1) (6.1s)
+(node:5121) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✓   68 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:862:7 › Error Handling - Edge Cases › should handle malformed JSON response (902ms)
+  ✓   69 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:876:7 › Error Handling - Edge Cases › should handle empty response body (714ms)
+  ✓   70 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:890:7 › Error Handling - Edge Cases › should handle 404 for non-existent article (608ms)
+  ✓   71 [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:901:7 › Error Handling - Edge Cases › should handle 404 for non-existent profile (625ms)
+  ✓   72 [chromium] › ../nitro/realworld/specs/e2e/health.spec.ts:5:7 › Health Checks › app should load successfully (625ms)
+  ✓   73 [chromium] › ../nitro/realworld/specs/e2e/health.spec.ts:15:7 › Health Checks › API should be accessible (306ms)
+  ✓   74 [chromium] › ../nitro/realworld/specs/e2e/health.spec.ts:21:7 › Health Checks › can navigate to login page (705ms)
+  ✓   75 [chromium] › ../nitro/realworld/specs/e2e/health.spec.ts:29:7 › Health Checks › can navigate to register page (616ms)
+  ✓   76 [chromium] › ../nitro/realworld/specs/e2e/navigation.spec.ts:21:7 › Navigation and Filtering › should navigate through main pages when logged out (1.9s)
+  ✓   77 [chromium] › ../nitro/realworld/specs/e2e/navigation.spec.ts:40:7 › Navigation and Filtering › should navigate through main pages when logged in (2.2s)
+  ✓   78 [chromium] › ../nitro/realworld/specs/e2e/navigation.spec.ts:63:7 › Navigation and Filtering › should filter articles by tag (2.3s)
+  ✓   79 [chromium] › ../nitro/realworld/specs/e2e/navigation.spec.ts:109:7 › Navigation and Filtering › should switch between Global Feed and Your Feed (2.1s)
+  ✓   80 [chromium] › ../nitro/realworld/specs/e2e/navigation.spec.ts:139:7 › Navigation and Filtering › should display popular tags (2.1s)
+  ✓   81 [chromium] › ../nitro/realworld/specs/e2e/navigation.spec.ts:160:7 › Navigation and Filtering › should paginate articles (3.5s)
+  ✓   82 [chromium] › ../nitro/realworld/specs/e2e/navigation.spec.ts:183:7 › Navigation and Filtering › should navigate to article from author name (2.2s)
+  ✓   83 [chromium] › ../nitro/realworld/specs/e2e/navigation.spec.ts:200:7 › Navigation and Filtering › should show article count on profile tabs (2.6s)
+  ✓   84 [chromium] › ../nitro/realworld/specs/e2e/navigation.spec.ts:227:7 › Navigation and Filtering › should handle empty states gracefully (1.9s)
+  ✓   85 [chromium] › ../nitro/realworld/specs/e2e/null-fields.spec.ts:22:7 › Null/Empty Image and Bio Handling › newly registered user should show default avatar on profile page (1.0s)
+  ✓   86 [chromium] › ../nitro/realworld/specs/e2e/null-fields.spec.ts:33:7 › Null/Empty Image and Bio Handling › newly registered user should show default avatar in navbar (949ms)
+  ✓   87 [chromium] › ../nitro/realworld/specs/e2e/null-fields.spec.ts:42:7 › Null/Empty Image and Bio Handling › newly registered user should show default avatar on article meta (1.0s)
+  ✓   88 [chromium] › ../nitro/realworld/specs/e2e/null-fields.spec.ts:53:7 › Null/Empty Image and Bio Handling › newly registered user should show default avatar in comment section (1.1s)
+  ✓   89 [chromium] › ../nitro/realworld/specs/e2e/null-fields.spec.ts:71:7 › Null/Empty Image and Bio Handling › setting image should display custom avatar on profile page (1.1s)
+  ✓   90 [chromium] › ../nitro/realworld/specs/e2e/null-fields.spec.ts:88:7 › Null/Empty Image and Bio Handling › clearing image to empty string should restore default avatar (1.0s)
+  ✓   91 [chromium] › ../nitro/realworld/specs/e2e/null-fields.spec.ts:107:7 › Null/Empty Image and Bio Handling › null bio should not render as literal "null" on profile page (954ms)
+  ✓   92 [chromium] › ../nitro/realworld/specs/e2e/null-fields.spec.ts:117:7 › Null/Empty Image and Bio Handling › setting then clearing bio should not show stale data (2.0s)
+  ✓   93 [chromium] › ../nitro/realworld/specs/e2e/null-fields.spec.ts:139:7 › Null/Empty Image and Bio Handling › settings form should show empty string for null image (1.0s)
+  ✓   94 [chromium] › ../nitro/realworld/specs/e2e/null-fields.spec.ts:146:7 › Null/Empty Image and Bio Handling › settings form should show empty string for null bio (1.0s)
+  ✓   95 [chromium] › ../nitro/realworld/specs/e2e/null-fields.spec.ts:153:7 › Null/Empty Image and Bio Handling › author avatars should render on other user articles in feed (1.8s)
+  ✓   96 [chromium] › ../nitro/realworld/specs/e2e/settings.spec.ts:20:7 › Settings - Profile Updates › should update bio only (1.6s)
+  ✓   97 [chromium] › ../nitro/realworld/specs/e2e/settings.spec.ts:68:7 › Settings - Profile Updates › should update image only (1.6s)
+  ✓   98 [chromium] › ../nitro/realworld/specs/e2e/settings.spec.ts:107:7 › Settings - Profile Updates › should update bio and image together (2.2s)
+  ✓   99 [chromium] › ../nitro/realworld/specs/e2e/settings.spec.ts:150:7 › Settings - Profile Updates › should display updated bio on profile page (1.5s)
+  ✓  100 [chromium] › ../nitro/realworld/specs/e2e/settings.spec.ts:175:7 › Settings - Profile Updates › should display updated image on profile page (1.5s)
+  ✓  101 [chromium] › ../nitro/realworld/specs/e2e/settings.spec.ts:200:7 › Settings - Profile Updates › should preserve username in navbar after update (1.4s)
+  ✓  102 [chromium] › ../nitro/realworld/specs/e2e/settings.spec.ts:225:7 › Settings - Profile Updates › should allow navigation to settings again after update (1.7s)
+  ✘  103 [chromium] › ../nitro/realworld/specs/e2e/social.spec.ts:22:7 › Social Features › should follow and unfollow a user (11.5s)
+(node:5748) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘  104 [chromium] › ../nitro/realworld/specs/e2e/social.spec.ts:22:7 › Social Features › should follow and unfollow a user (retry #1) (11.8s)
+(node:6055) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✓  105 [chromium] › ../nitro/realworld/specs/e2e/social.spec.ts:45:7 › Social Features › should view own profile (1.7s)
+  ✘  106 [chromium] › ../nitro/realworld/specs/e2e/social.spec.ts:62:7 › Social Features › should view other user profile (11.4s)
+(node:6178) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘  107 [chromium] › ../nitro/realworld/specs/e2e/social.spec.ts:62:7 › Social Features › should view other user profile (retry #1) (11.7s)
+(node:6583) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✓  108 [chromium] › ../nitro/realworld/specs/e2e/social.spec.ts:97:7 › Social Features › should display user articles on profile (2.1s)
+  ✓  109 [chromium] › ../nitro/realworld/specs/e2e/social.spec.ts:115:7 › Social Features › should display favorited articles on profile (1.8s)
+  ✘  110 [chromium] › ../nitro/realworld/specs/e2e/social.spec.ts:153:7 › Social Features › should display followed users articles in feed (11.4s)
+(node:7086) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘  111 [chromium] › ../nitro/realworld/specs/e2e/social.spec.ts:153:7 › Social Features › should display followed users articles in feed (retry #1) (11.6s)
+(node:7667) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✓  112 [chromium] › ../nitro/realworld/specs/e2e/url-navigation.spec.ts:13:7 › URL-based Navigation (Realworld Issue #691) › / should show Global Feed for everyone (1.9s)
+  ✓  113 [chromium] › ../nitro/realworld/specs/e2e/url-navigation.spec.ts:23:7 › URL-based Navigation (Realworld Issue #691) › /?feed=following should show Your Feed (authenticated) (2.0s)
+  ✓  114 [chromium] › ../nitro/realworld/specs/e2e/url-navigation.spec.ts:33:7 › URL-based Navigation (Realworld Issue #691) › /?feed=following should redirect to /login when not authenticated (1.7s)
+  ✓  115 [chromium] › ../nitro/realworld/specs/e2e/url-navigation.spec.ts:39:7 › URL-based Navigation (Realworld Issue #691) › /tag/:tag should filter by tag (1.8s)
+  ✓  116 [chromium] › ../nitro/realworld/specs/e2e/url-navigation.spec.ts:52:7 › URL-based Navigation (Realworld Issue #691) › tabs should have correct href attributes (1.9s)
+  ✓  117 [chromium] › ../nitro/realworld/specs/e2e/url-navigation.spec.ts:65:7 › URL-based Navigation (Realworld Issue #691) › clicking Your Feed should navigate to /?feed=following (2.0s)
+  ✓  118 [chromium] › ../nitro/realworld/specs/e2e/url-navigation.spec.ts:77:7 › URL-based Navigation (Realworld Issue #691) › clicking Global Feed should navigate to / (2.1s)
+  ✓  119 [chromium] › ../nitro/realworld/specs/e2e/url-navigation.spec.ts:90:7 › URL-based Navigation (Realworld Issue #691) › empty Your Feed shows helpful message with link to Global Feed (1.9s)
+  ✓  120 [chromium] › ../nitro/realworld/specs/e2e/url-navigation.spec.ts:111:7 › Pagination › pagination should update URL with ?page=N (3.9s)
+  ✓  121 [chromium] › ../nitro/realworld/specs/e2e/url-navigation.spec.ts:137:7 › Pagination › should load correct page when navigating directly to ?page=N (3.9s)
+  ✓  122 [chromium] › ../nitro/realworld/specs/e2e/url-navigation.spec.ts:160:7 › Pagination › pagination URL preserves feed=following parameter (1.9s)
+  ✓  123 [chromium] › ../nitro/realworld/specs/e2e/url-navigation.spec.ts:182:7 › Pagination › pagination should work with /tag/:tag (4.0s)
+  ✓  124 [chromium] › ../nitro/realworld/specs/e2e/url-navigation.spec.ts:206:7 › Pagination › page should reset when switching feeds (4.1s)
+  ✓  125 [chromium] › ../nitro/realworld/specs/e2e/url-navigation.spec.ts:234:7 › Pagination › tag pagination shows correct articles per page (4.5s)
+  ✓  126 [chromium] › ../nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:21:7 › User Fetch Errors on App Initialization - 4XX (should logout) › should handle 400 Bad Request on /api/user (833ms)
+  ✓  127 [chromium] › ../nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:45:7 › User Fetch Errors on App Initialization - 4XX (should logout) › should handle 401 Unauthorized on /api/user (786ms)
+  ✓  128 [chromium] › ../nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:71:7 › User Fetch Errors on App Initialization - 4XX (should logout) › should handle 403 Forbidden on /api/user (790ms)
+  ✓  129 [chromium] › ../nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:93:7 › User Fetch Errors on App Initialization - 4XX (should logout) › should handle 404 Not Found on /api/user (754ms)
+  ✘  130 [chromium] › ../nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:117:7 › User Fetch Errors on App Initialization - 5XX (should enter unavailable mode) › should handle 500 Internal Server Error on /api/user (5.8s)
+(node:8359) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘  131 [chromium] › ../nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:117:7 › User Fetch Errors on App Initialization - 5XX (should enter unavailable mode) › should handle 500 Internal Server Error on /api/user (retry #1) (6.4s)
+(node:8877) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘  132 [chromium] › ../nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:138:7 › User Fetch Errors on App Initialization - 5XX (should enter unavailable mode) › should allow browsing app in unavailable mode and persist token across reloads (6.1s)
+(node:8919) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘  133 [chromium] › ../nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:138:7 › User Fetch Errors on App Initialization - 5XX (should enter unavailable mode) › should allow browsing app in unavailable mode and persist token across reloads (retry #1) (6.1s)
+(node:9103) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘  134 [chromium] › ../nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:179:7 › User Fetch Errors on App Initialization - 5XX (should enter unavailable mode) › should handle network timeout on /api/user (6.1s)
+(node:9166) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘  135 [chromium] › ../nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:179:7 › User Fetch Errors on App Initialization - 5XX (should enter unavailable mode) › should handle network timeout on /api/user (retry #1) (6.2s)
+(node:9405) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘  136 [chromium] › ../nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:196:7 › User Fetch Errors on App Initialization - 5XX (should enter unavailable mode) › should handle network failure on /api/user (6.1s)
+(node:9444) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘  137 [chromium] › ../nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:196:7 › User Fetch Errors on App Initialization - 5XX (should enter unavailable mode) › should handle network failure on /api/user (retry #1) (6.2s)
+(node:9624) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✓  138 [chromium] › ../nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:213:7 › User Fetch Errors on App Initialization - 5XX (should enter unavailable mode) › should handle empty response on /api/user (1.2s)
+  ✘  139 [chromium] › ../nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:230:7 › User Fetch Errors on App Initialization - 5XX (should enter unavailable mode) › should handle malformed JSON on /api/user (5.9s)
+(node:9764) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘  140 [chromium] › ../nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:230:7 › User Fetch Errors on App Initialization - 5XX (should enter unavailable mode) › should handle malformed JSON on /api/user (retry #1) (6.3s)
+(node:9952) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✓  141 [chromium] › ../nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:260:7 › User Fetch Errors - Protected Routes › should redirect from /settings on 401 (987ms)
+  ✓  142 [chromium] › ../nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:274:7 › User Fetch Errors - Protected Routes › should redirect from /editor on 401 (762ms)
+  ✓  143 [chromium] › ../nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:288:7 › User Fetch Errors - Protected Routes › should handle 500 on loading /settings gracefully (737ms)
+  ✓  144 [chromium] › ../nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:301:7 › User Fetch Errors - Protected Routes › should handle network error on /settings gracefully (733ms)
+  ✓  145 [chromium] › ../nitro/realworld/specs/e2e/xss-security.spec.ts:119:9 › @security XSS Security - Image URL Injection (Direct API) › should prevent XSS via onerror attribute injection (2.3s)
+  ✓  146 [chromium] › ../nitro/realworld/specs/e2e/xss-security.spec.ts:119:9 › @security XSS Security - Image URL Injection (Direct API) › should prevent XSS via onerror with javascript protocol (2.3s)
+  ✓  147 [chromium] › ../nitro/realworld/specs/e2e/xss-security.spec.ts:119:9 › @security XSS Security - Image URL Injection (Direct API) › should prevent XSS via onload attribute injection (2.3s)
+  ✓  148 [chromium] › ../nitro/realworld/specs/e2e/xss-security.spec.ts:119:9 › @security XSS Security - Image URL Injection (Direct API) › should prevent XSS via javascript protocol in src (2.6s)
+  ✓  149 [chromium] › ../nitro/realworld/specs/e2e/xss-security.spec.ts:119:9 › @security XSS Security - Image URL Injection (Direct API) › should prevent XSS via data URI with script (2.5s)
+  ✓  150 [chromium] › ../nitro/realworld/specs/e2e/xss-security.spec.ts:147:7 › @security XSS Security - Image URL Injection (Direct API) › should safely render malicious payload in navbar image (3.1s)
+  ✓  151 [chromium] › ../nitro/realworld/specs/e2e/xss-security.spec.ts:169:7 › @security XSS Security - Image URL Injection (Direct API) › should safely render malicious payload in article comments (830ms)
+  ✓  152 [chromium] › ../nitro/realworld/specs/e2e/xss-security.spec.ts:205:9 › @security XSS Security - Article Description in Feed (Direct API) › should sanitize script tag in article description (2.5s)
+  ✓  153 [chromium] › ../nitro/realworld/specs/e2e/xss-security.spec.ts:205:9 › @security XSS Security - Article Description in Feed (Direct API) › should sanitize img onerror in article description (2.5s)
+  ✓  154 [chromium] › ../nitro/realworld/specs/e2e/xss-security.spec.ts:205:9 › @security XSS Security - Article Description in Feed (Direct API) › should sanitize svg onload in article description (2.3s)
+  ✓  155 [chromium] › ../nitro/realworld/specs/e2e/xss-security.spec.ts:241:9 › @security XSS Security - Article Body Markdown (Direct API) › should sanitize script tag in article body (2.3s)
+  ✓  156 [chromium] › ../nitro/realworld/specs/e2e/xss-security.spec.ts:241:9 › @security XSS Security - Article Body Markdown (Direct API) › should sanitize img onerror in article body (2.3s)
+  ✓  157 [chromium] › ../nitro/realworld/specs/e2e/xss-security.spec.ts:241:9 › @security XSS Security - Article Body Markdown (Direct API) › should sanitize svg onload in article body (2.3s)
+  ✓  158 [chromium] › ../nitro/realworld/specs/e2e/xss-security.spec.ts:241:9 › @security XSS Security - Article Body Markdown (Direct API) › should sanitize iframe srcdoc in article body (2.3s)
+  ✓  159 [chromium] › ../nitro/realworld/specs/e2e/xss-security.spec.ts:241:9 › @security XSS Security - Article Body Markdown (Direct API) › should sanitize anchor javascript href in article body (2.3s)
+  ✓  160 [chromium] › ../nitro/realworld/specs/e2e/xss-security.spec.ts:241:9 › @security XSS Security - Article Body Markdown (Direct API) › should sanitize event handler in div in article body (2.3s)
+
+
+  1) [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:50:7 › Error Handling - 400 Bad Request › should handle 400 on registration with validation errors 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('.error-messages')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('.error-messages')[22m
+    [2m    2 × locator resolved to <ul class="error-messages"></ul>[22m
+    [2m      - unexpected value "hidden"[22m
+
+
+      61 |     await page.click('button[type="submit"]');
+      62 |     // Should show error messages
+    > 63 |     await expect(page.locator('.error-messages')).toBeVisible();
+         |                                                   ^
+      64 |     await expect(page).toHaveURL('/register');
+      65 |     await expect(page.locator('input[name="email"]')).toBeVisible();
+      66 |   });
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/error-handling.spec.ts:63:51
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/error-handling-Error-Handl-cf1ee-tion-with-validation-errors-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/error-handling-Error-Handl-cf1ee-tion-with-validation-errors-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    [31mTest timeout of 15000ms exceeded.[39m
+
+  2) [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:68:7 › Error Handling - 400 Bad Request › should handle 400 on article creation 
+
+    TimeoutError: page.fill: Timeout 5000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('input[name="title"]')[22m
+
+
+      89 |     );
+      90 |     await page.goto('/editor');
+    > 91 |     await page.fill('input[name="title"]', '');
+         |                ^
+      92 |     await page.fill('input[name="description"]', 'desc');
+      93 |     await page.fill('textarea[name="body"]', '');
+      94 |     await page.click('button:has-text("Publish")');
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/error-handling.spec.ts:91:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/error-handling-Error-Handl-f85b4-dle-400-on-article-creation-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/error-handling-Error-Handl-f85b4-dle-400-on-article-creation-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.fill: Timeout 5000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('input[name="title"]')[22m
+
+
+      89 |     );
+      90 |     await page.goto('/editor');
+    > 91 |     await page.fill('input[name="title"]', '');
+         |                ^
+      92 |     await page.fill('input[name="description"]', 'desc');
+      93 |     await page.fill('textarea[name="body"]', '');
+      94 |     await page.click('button:has-text("Publish")');
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/error-handling.spec.ts:91:16
+
+    [31mTest timeout of 15000ms exceeded.[39m
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/error-handling-Error-Handl-f85b4-dle-400-on-article-creation-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/error-handling-Error-Handl-f85b4-dle-400-on-article-creation-chromium-retry1/error-context.md
+
+  3) [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:199:7 › Error Handling - 403 Forbidden › should handle 403 when updating article 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoHaveValue[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator: locator('input[name="title"]')
+    Expected: [32m"Test Article"[39m
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toHaveValue" with timeout 5000ms[22m
+    [2m  - waiting for locator('input[name="title"]')[22m
+
+
+      242 |     await page.goto('/editor/test-article');
+      243 |     // Wait for form to load
+    > 244 |     await expect(page.locator('input[name="title"]')).toHaveValue('Test Article');
+          |                                                       ^
+      245 |     // Try to update
+      246 |     await page.click('button:has-text("Publish")');
+      247 |     // Should show error message
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/error-handling.spec.ts:244:55
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/error-handling-Error-Handl-68db9-e-403-when-updating-article-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/error-handling-Error-Handl-68db9-e-403-when-updating-article-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoHaveValue[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator: locator('input[name="title"]')
+    Expected: [32m"Test Article"[39m
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toHaveValue" with timeout 5000ms[22m
+    [2m  - waiting for locator('input[name="title"]')[22m
+
+
+      242 |     await page.goto('/editor/test-article');
+      243 |     // Wait for form to load
+    > 244 |     await expect(page.locator('input[name="title"]')).toHaveValue('Test Article');
+          |                                                       ^
+      245 |     // Try to update
+      246 |     await page.click('button:has-text("Publish")');
+      247 |     // Should show error message
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/error-handling.spec.ts:244:55
+
+    [31mTest timeout of 15000ms exceeded.[39m
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/error-handling-Error-Handl-68db9-e-403-when-updating-article-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/error-handling-Error-Handl-68db9-e-403-when-updating-article-chromium-retry1/error-context.md
+
+  4) [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:252:7 › Error Handling - 403 Forbidden › should handle 403 when deleting another users comment 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('.card-block:has-text("This is a comment")')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('.card-block:has-text("This is a comment")')[22m
+
+
+      311 |     await page.goto('/article/test-article');
+      312 |     // Wait for comment to be visible
+    > 313 |     await expect(page.locator('.card-block:has-text("This is a comment")')).toBeVisible();
+          |                                                                             ^
+      314 |     // Click delete button on the comment (delete button is in card-footer, sibling of card-block)
+      315 |     await page.locator('.card:has-text("This is a comment")').locator('i.ion-trash-a').click();
+      316 |     // Comment should still be visible (delete failed)
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/error-handling.spec.ts:313:77
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/error-handling-Error-Handl-287ed-eting-another-users-comment-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/error-handling-Error-Handl-287ed-eting-another-users-comment-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('.card-block:has-text("This is a comment")')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('.card-block:has-text("This is a comment")')[22m
+
+
+      311 |     await page.goto('/article/test-article');
+      312 |     // Wait for comment to be visible
+    > 313 |     await expect(page.locator('.card-block:has-text("This is a comment")')).toBeVisible();
+          |                                                                             ^
+      314 |     // Click delete button on the comment (delete button is in card-footer, sibling of card-block)
+      315 |     await page.locator('.card:has-text("This is a comment")').locator('i.ion-trash-a').click();
+      316 |     // Comment should still be visible (delete failed)
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/error-handling.spec.ts:313:77
+
+    [31mTest timeout of 15000ms exceeded.[39m
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/error-handling-Error-Handl-287ed-eting-another-users-comment-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/error-handling-Error-Handl-287ed-eting-another-users-comment-chromium-retry1/error-context.md
+
+  5) [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:324:7 › Error Handling - 403 Forbidden › should handle 403 when following user you are blocked by 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('button:has-text("Follow")')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('button:has-text("Follow")')[22m
+
+
+      367 |     await page.goto('/profile/blockeduser');
+      368 |     // Wait for profile to load
+    > 369 |     await expect(page.locator('button:has-text("Follow")')).toBeVisible();
+          |                                                             ^
+      370 |     // Try to follow
+      371 |     await page.click('button:has-text("Follow")');
+      372 |     // App should not crash, button should still show Follow (not Unfollow)
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/error-handling.spec.ts:369:61
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/error-handling-Error-Handl-b7cb9-ing-user-you-are-blocked-by-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/error-handling-Error-Handl-b7cb9-ing-user-you-are-blocked-by-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('button:has-text("Follow")')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('button:has-text("Follow")')[22m
+
+
+      367 |     await page.goto('/profile/blockeduser');
+      368 |     // Wait for profile to load
+    > 369 |     await expect(page.locator('button:has-text("Follow")')).toBeVisible();
+          |                                                             ^
+      370 |     // Try to follow
+      371 |     await page.click('button:has-text("Follow")');
+      372 |     // App should not crash, button should still show Follow (not Unfollow)
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/error-handling.spec.ts:369:61
+
+    [31mTest timeout of 15000ms exceeded.[39m
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/error-handling-Error-Handl-b7cb9-ing-user-you-are-blocked-by-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/error-handling-Error-Handl-b7cb9-ing-user-you-are-blocked-by-chromium-retry1/error-context.md
+
+  6) [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:553:7 › Error Handling - Network Errors › should show error message on settings form when network fails 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('button:has-text("Update Settings")')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('button:has-text("Update Settings")')[22m
+
+
+      581 |     });
+      582 |     await page.goto('/settings');
+    > 583 |     await expect(page.locator('button:has-text("Update Settings")')).toBeVisible();
+          |                                                                      ^
+      584 |     // Submit the form
+      585 |     await page.click('button:has-text("Update Settings")');
+      586 |     // Should show network error message
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/error-handling.spec.ts:583:70
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/error-handling-Error-Handl-98689-ngs-form-when-network-fails-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/error-handling-Error-Handl-98689-ngs-form-when-network-fails-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('button:has-text("Update Settings")')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('button:has-text("Update Settings")')[22m
+
+
+      581 |     });
+      582 |     await page.goto('/settings');
+    > 583 |     await expect(page.locator('button:has-text("Update Settings")')).toBeVisible();
+          |                                                                      ^
+      584 |     // Submit the form
+      585 |     await page.click('button:has-text("Update Settings")');
+      586 |     // Should show network error message
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/error-handling.spec.ts:583:70
+
+    [31mTest timeout of 15000ms exceeded.[39m
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/error-handling-Error-Handl-98689-ngs-form-when-network-fails-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/error-handling-Error-Handl-98689-ngs-form-when-network-fails-chromium-retry1/error-context.md
+
+  7) [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:593:7 › Error Handling - Network Errors › should show error message on login form when network fails 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoContainText[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator: locator('.error-messages')
+    Expected substring: [32m"Unable to connect"[39m
+    Received string:    [31m"credentials invalid"[39m
+    Timeout: 5000ms
+
+    Call log:
+    [2m  - Expect "toContainText" with timeout 5000ms[22m
+    [2m  - waiting for locator('.error-messages')[22m
+    [2m    9 × locator resolved to <ul class="error-messages">…</ul>[22m
+    [2m      - unexpected value "credentials invalid"[22m
+
+
+      600 |     await page.click('button[type="submit"]');
+      601 |     await expect(page.locator('.error-messages')).toBeVisible();
+    > 602 |     await expect(page.locator('.error-messages')).toContainText('Unable to connect');
+          |                                                   ^
+      603 |     // Form should still be usable
+      604 |     await expect(page.locator('button[type="submit"]')).toBeVisible();
+      605 |   });
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/error-handling.spec.ts:602:51
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/error-handling-Error-Handl-d85c1-gin-form-when-network-fails-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/error-handling-Error-Handl-d85c1-gin-form-when-network-fails-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoContainText[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator: locator('.error-messages')
+    Expected substring: [32m"Unable to connect"[39m
+    Received string:    [31m"credentials invalid"[39m
+    Timeout: 5000ms
+
+    Call log:
+    [2m  - Expect "toContainText" with timeout 5000ms[22m
+    [2m  - waiting for locator('.error-messages')[22m
+    [2m    9 × locator resolved to <ul class="error-messages">…</ul>[22m
+    [2m      - unexpected value "credentials invalid"[22m
+
+
+      600 |     await page.click('button[type="submit"]');
+      601 |     await expect(page.locator('.error-messages')).toBeVisible();
+    > 602 |     await expect(page.locator('.error-messages')).toContainText('Unable to connect');
+          |                                                   ^
+      603 |     // Form should still be usable
+      604 |     await expect(page.locator('button[type="submit"]')).toBeVisible();
+      605 |   });
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/error-handling.spec.ts:602:51
+
+    [31mTest timeout of 15000ms exceeded.[39m
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/error-handling-Error-Handl-d85c1-gin-form-when-network-fails-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/error-handling-Error-Handl-d85c1-gin-form-when-network-fails-chromium-retry1/error-context.md
+
+  8) [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:607:7 › Error Handling - Network Errors › should show error message on register form when network fails 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('.error-messages')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('.error-messages')[22m
+    [2m    2 × locator resolved to <ul class="error-messages"></ul>[22m
+    [2m      - unexpected value "hidden"[22m
+
+
+      614 |     await page.fill('input[name="password"]', 'password123');
+      615 |     await page.click('button[type="submit"]');
+    > 616 |     await expect(page.locator('.error-messages')).toBeVisible();
+          |                                                   ^
+      617 |     await expect(page.locator('.error-messages')).toContainText('Unable to connect');
+      618 |     // Form should still be usable
+      619 |     await expect(page.locator('button[type="submit"]')).toBeVisible();
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/error-handling.spec.ts:616:51
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/error-handling-Error-Handl-1e68d-ter-form-when-network-fails-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/error-handling-Error-Handl-1e68d-ter-form-when-network-fails-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoContainText[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator: locator('.error-messages')
+    Expected substring: [32m"Unable to connect"[39m
+    Received string:    [31m"email has already been takenusername has already been taken"[39m
+    Timeout: 5000ms
+
+    Call log:
+    [2m  - Expect "toContainText" with timeout 5000ms[22m
+    [2m  - waiting for locator('.error-messages')[22m
+    [2m    9 × locator resolved to <ul class="error-messages">…</ul>[22m
+    [2m      - unexpected value "email has already been takenusername has already been taken"[22m
+
+
+      615 |     await page.click('button[type="submit"]');
+      616 |     await expect(page.locator('.error-messages')).toBeVisible();
+    > 617 |     await expect(page.locator('.error-messages')).toContainText('Unable to connect');
+          |                                                   ^
+      618 |     // Form should still be usable
+      619 |     await expect(page.locator('button[type="submit"]')).toBeVisible();
+      620 |   });
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/error-handling.spec.ts:617:51
+
+    [31mTest timeout of 15000ms exceeded.[39m
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/error-handling-Error-Handl-1e68d-ter-form-when-network-fails-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/error-handling-Error-Handl-1e68d-ter-form-when-network-fails-chromium-retry1/error-context.md
+
+  9) [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:622:7 › Error Handling - Network Errors › should show error message on create article form when network fails 
+
+    TimeoutError: page.fill: Timeout 5000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('input[name="title"]')[22m
+
+
+      638 |     await page.evaluate(() => localStorage.setItem('jwtToken', 'fake-token'));
+      639 |     await page.goto('/editor');
+    > 640 |     await page.fill('input[name="title"]', 'Test Article');
+          |                ^
+      641 |     await page.fill('input[name="description"]', 'Test description');
+      642 |     await page.fill('textarea[name="body"]', 'Test body content');
+      643 |     await page.click('button:has-text("Publish Article")');
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/error-handling.spec.ts:640:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/error-handling-Error-Handl-25bb4-cle-form-when-network-fails-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/error-handling-Error-Handl-25bb4-cle-form-when-network-fails-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.fill: Timeout 5000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('input[name="title"]')[22m
+
+
+      638 |     await page.evaluate(() => localStorage.setItem('jwtToken', 'fake-token'));
+      639 |     await page.goto('/editor');
+    > 640 |     await page.fill('input[name="title"]', 'Test Article');
+          |                ^
+      641 |     await page.fill('input[name="description"]', 'Test description');
+      642 |     await page.fill('textarea[name="body"]', 'Test body content');
+      643 |     await page.click('button:has-text("Publish Article")');
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/error-handling.spec.ts:640:16
+
+    [31mTest timeout of 15000ms exceeded.[39m
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/error-handling-Error-Handl-25bb4-cle-form-when-network-fails-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/error-handling-Error-Handl-25bb4-cle-form-when-network-fails-chromium-retry1/error-context.md
+
+  10) [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:650:7 › Error Handling - Network Errors › should show error message on update article form when network fails 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoHaveValue[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator: locator('input[name="title"]')
+    Expected: [32m"Test Article"[39m
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toHaveValue" with timeout 5000ms[22m
+    [2m  - waiting for locator('input[name="title"]')[22m
+
+
+      688 |     await page.evaluate(() => localStorage.setItem('jwtToken', 'fake-token'));
+      689 |     await page.goto('/editor/test-article');
+    > 690 |     await expect(page.locator('input[name="title"]')).toHaveValue('Test Article');
+          |                                                       ^
+      691 |     await page.click('button:has-text("Publish Article")');
+      692 |     await expect(page.locator('.error-messages')).toBeVisible();
+      693 |     await expect(page.locator('.error-messages')).toContainText('Unable to connect');
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/error-handling.spec.ts:690:55
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/error-handling-Error-Handl-a44b9-cle-form-when-network-fails-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/error-handling-Error-Handl-a44b9-cle-form-when-network-fails-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoHaveValue[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator: locator('input[name="title"]')
+    Expected: [32m"Test Article"[39m
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toHaveValue" with timeout 5000ms[22m
+    [2m  - waiting for locator('input[name="title"]')[22m
+
+
+      688 |     await page.evaluate(() => localStorage.setItem('jwtToken', 'fake-token'));
+      689 |     await page.goto('/editor/test-article');
+    > 690 |     await expect(page.locator('input[name="title"]')).toHaveValue('Test Article');
+          |                                                       ^
+      691 |     await page.click('button:has-text("Publish Article")');
+      692 |     await expect(page.locator('.error-messages')).toBeVisible();
+      693 |     await expect(page.locator('.error-messages')).toContainText('Unable to connect');
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/error-handling.spec.ts:690:55
+
+    [31mTest timeout of 15000ms exceeded.[39m
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/error-handling-Error-Handl-a44b9-cle-form-when-network-fails-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/error-handling-Error-Handl-a44b9-cle-form-when-network-fails-chromium-retry1/error-context.md
+
+  11) [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:698:7 › Error Handling - Network Errors › should show error message when adding comment fails due to network 
+
+    TimeoutError: page.fill: Timeout 5000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('textarea[placeholder="Write a comment..."]')[22m
+
+
+      744 |     await page.evaluate(() => localStorage.setItem('jwtToken', 'fake-token'));
+      745 |     await page.goto('/article/test-article');
+    > 746 |     await page.fill('textarea[placeholder="Write a comment..."]', 'Test comment');
+          |                ^
+      747 |     await page.click('button:has-text("Post Comment")');
+      748 |     await expect(page.locator('.error-messages').first()).toBeVisible();
+      749 |     await expect(page.locator('.error-messages').first()).toContainText('Unable to connect');
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/error-handling.spec.ts:746:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/error-handling-Error-Handl-57ac0-omment-fails-due-to-network-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/error-handling-Error-Handl-57ac0-omment-fails-due-to-network-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.fill: Timeout 5000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('textarea[placeholder="Write a comment..."]')[22m
+
+
+      744 |     await page.evaluate(() => localStorage.setItem('jwtToken', 'fake-token'));
+      745 |     await page.goto('/article/test-article');
+    > 746 |     await page.fill('textarea[placeholder="Write a comment..."]', 'Test comment');
+          |                ^
+      747 |     await page.click('button:has-text("Post Comment")');
+      748 |     await expect(page.locator('.error-messages').first()).toBeVisible();
+      749 |     await expect(page.locator('.error-messages').first()).toContainText('Unable to connect');
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/error-handling.spec.ts:746:16
+
+    [31mTest timeout of 15000ms exceeded.[39m
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/error-handling-Error-Handl-57ac0-omment-fails-due-to-network-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/error-handling-Error-Handl-57ac0-omment-fails-due-to-network-chromium-retry1/error-context.md
+
+  12) [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:754:7 › Error Handling - Network Errors › should handle network error when favoriting article 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('button:has-text("Favorite Article")').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('button:has-text("Favorite Article")').first()[22m
+
+
+      805 |     await page.locator('button:has-text("Favorite Article")').first().click();
+      806 |     // App should not crash - button should still be visible
+    > 807 |     await expect(page.locator('button:has-text("Favorite Article")').first()).toBeVisible();
+          |                                                                               ^
+      808 |     // Article content should still be visible
+      809 |     await expect(page.locator('.article-content')).toBeVisible();
+      810 |   });
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/error-handling.spec.ts:807:79
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/error-handling-Error-Handl-27c12-ror-when-favoriting-article-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/error-handling-Error-Handl-27c12-ror-when-favoriting-article-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    [31mTest timeout of 15000ms exceeded.[39m
+
+  13) [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:812:7 › Error Handling - Network Errors › should handle network error when following user 
+
+    TimeoutError: page.click: Timeout 5000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('button:has-text("Follow")')[22m
+
+
+      851 |     await page.goto('/profile/otheruser');
+      852 |     // Click follow button
+    > 853 |     await page.click('button:has-text("Follow")');
+          |                ^
+      854 |     // App should not crash - button should still be visible
+      855 |     await expect(page.locator('button:has-text("Follow")')).toBeVisible();
+      856 |     // Profile info should still be visible
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/error-handling.spec.ts:853:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/error-handling-Error-Handl-502ba-k-error-when-following-user-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/error-handling-Error-Handl-502ba-k-error-when-following-user-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.click: Timeout 5000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('button:has-text("Follow")')[22m
+
+
+      851 |     await page.goto('/profile/otheruser');
+      852 |     // Click follow button
+    > 853 |     await page.click('button:has-text("Follow")');
+          |                ^
+      854 |     // App should not crash - button should still be visible
+      855 |     await expect(page.locator('button:has-text("Follow")')).toBeVisible();
+      856 |     // Profile info should still be visible
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/error-handling.spec.ts:853:16
+
+    [31mTest timeout of 15000ms exceeded.[39m
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/error-handling-Error-Handl-502ba-k-error-when-following-user-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/error-handling-Error-Handl-502ba-k-error-when-following-user-chromium-retry1/error-context.md
+
+  14) [chromium] › ../nitro/realworld/specs/e2e/social.spec.ts:22:7 › Social Features › should follow and unfollow a user 
+
+    TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('button:has-text("Follow")') to be visible[22m
+
+
+       at helpers/profile.ts:7
+
+       5 |   await page.goto(`/profile/${username}`, { waitUntil: 'load' });
+       6 |   // Wait for profile page to load and Follow button to appear
+    >  7 |   await page.waitForSelector('button:has-text("Follow")', { timeout: 10000 });
+         |              ^
+       8 |   await page.click('button:has-text("Follow")');
+       9 |   // Wait for button to update
+      10 |   await page.waitForSelector('button:has-text("Unfollow")', { timeout: 5000 });
+        at followUser (/Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/helpers/profile.ts:7:14)
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/social.spec.ts:38:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/social-Social-Features-should-follow-and-unfollow-a-user-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/social-Social-Features-should-follow-and-unfollow-a-user-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('button:has-text("Follow")') to be visible[22m
+
+
+       at helpers/profile.ts:7
+
+       5 |   await page.goto(`/profile/${username}`, { waitUntil: 'load' });
+       6 |   // Wait for profile page to load and Follow button to appear
+    >  7 |   await page.waitForSelector('button:has-text("Follow")', { timeout: 10000 });
+         |              ^
+       8 |   await page.click('button:has-text("Follow")');
+       9 |   // Wait for button to update
+      10 |   await page.waitForSelector('button:has-text("Unfollow")', { timeout: 5000 });
+        at followUser (/Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/helpers/profile.ts:7:14)
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/social.spec.ts:38:5
+
+    [31mTest timeout of 15000ms exceeded.[39m
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/social-Social-Features-should-follow-and-unfollow-a-user-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/social-Social-Features-should-follow-and-unfollow-a-user-chromium-retry1/error-context.md
+
+  15) [chromium] › ../nitro/realworld/specs/e2e/social.spec.ts:62:7 › Social Features › should view other user profile 
+
+    TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('h4') to be visible[22m
+
+
+      85 |
+      86 |     await page.goto(`/profile/${targetUsername}`, { waitUntil: 'load' });
+    > 87 |     await page.waitForSelector('h4', { timeout: 10000 });
+         |                ^
+      88 |
+      89 |     await expect(page.locator('h4')).toHaveText(targetUsername);
+      90 |     await expect(page.locator('button:has-text("Follow")')).toBeVisible();
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/social.spec.ts:87:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/social-Social-Features-should-view-other-user-profile-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/social-Social-Features-should-view-other-user-profile-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('h4') to be visible[22m
+
+
+      85 |
+      86 |     await page.goto(`/profile/${targetUsername}`, { waitUntil: 'load' });
+    > 87 |     await page.waitForSelector('h4', { timeout: 10000 });
+         |                ^
+      88 |
+      89 |     await expect(page.locator('h4')).toHaveText(targetUsername);
+      90 |     await expect(page.locator('button:has-text("Follow")')).toBeVisible();
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/social.spec.ts:87:16
+
+    [31mTest timeout of 15000ms exceeded.[39m
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/social-Social-Features-should-view-other-user-profile-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/social-Social-Features-should-view-other-user-profile-chromium-retry1/error-context.md
+
+  16) [chromium] › ../nitro/realworld/specs/e2e/social.spec.ts:153:7 › Social Features › should display followed users articles in feed 
+
+    TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('button:has-text("Follow")') to be visible[22m
+
+
+       at helpers/profile.ts:7
+
+       5 |   await page.goto(`/profile/${username}`, { waitUntil: 'load' });
+       6 |   // Wait for profile page to load and Follow button to appear
+    >  7 |   await page.waitForSelector('button:has-text("Follow")', { timeout: 10000 });
+         |              ^
+       8 |   await page.click('button:has-text("Follow")');
+       9 |   // Wait for button to update
+      10 |   await page.waitForSelector('button:has-text("Unfollow")', { timeout: 5000 });
+        at followUser (/Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/helpers/profile.ts:7:14)
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/social.spec.ts:176:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/social-Social-Features-sho-cbf0f-owed-users-articles-in-feed-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/social-Social-Features-sho-cbf0f-owed-users-articles-in-feed-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('button:has-text("Follow")') to be visible[22m
+
+
+       at helpers/profile.ts:7
+
+       5 |   await page.goto(`/profile/${username}`, { waitUntil: 'load' });
+       6 |   // Wait for profile page to load and Follow button to appear
+    >  7 |   await page.waitForSelector('button:has-text("Follow")', { timeout: 10000 });
+         |              ^
+       8 |   await page.click('button:has-text("Follow")');
+       9 |   // Wait for button to update
+      10 |   await page.waitForSelector('button:has-text("Unfollow")', { timeout: 5000 });
+        at followUser (/Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/helpers/profile.ts:7:14)
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/social.spec.ts:176:5
+
+    [31mTest timeout of 15000ms exceeded.[39m
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/social-Social-Features-sho-cbf0f-owed-users-articles-in-feed-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/social-Social-Features-sho-cbf0f-owed-users-articles-in-feed-chromium-retry1/error-context.md
+
+  17) [chromium] › ../nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:117:7 › User Fetch Errors on App Initialization - 5XX (should enter unavailable mode) › should handle 500 Internal Server Error on /api/user 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('text=Connecting')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('text=Connecting')[22m
+
+
+      130 |     // App should not crash - should show "unavailable" mode with reconnect option
+      131 |     await expect(page.locator('nav.navbar')).toBeVisible();
+    > 132 |     await expect(page.locator('text=Connecting')).toBeVisible();
+          |                                                   ^
+      133 |     // Token should be KEPT (server error, not auth error)
+      134 |     const token = await getToken(page);
+      135 |     expect(token).not.toBeNull();
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:132:51
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/user-fetch-errors-User-Fet-032b2-al-Server-Error-on-api-user-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/user-fetch-errors-User-Fet-032b2-al-Server-Error-on-api-user-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('text=Connecting')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('text=Connecting')[22m
+
+
+      130 |     // App should not crash - should show "unavailable" mode with reconnect option
+      131 |     await expect(page.locator('nav.navbar')).toBeVisible();
+    > 132 |     await expect(page.locator('text=Connecting')).toBeVisible();
+          |                                                   ^
+      133 |     // Token should be KEPT (server error, not auth error)
+      134 |     const token = await getToken(page);
+      135 |     expect(token).not.toBeNull();
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:132:51
+
+    [31mTest timeout of 15000ms exceeded.[39m
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/user-fetch-errors-User-Fet-032b2-al-Server-Error-on-api-user-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/user-fetch-errors-User-Fet-032b2-al-Server-Error-on-api-user-chromium-retry1/error-context.md
+
+  18) [chromium] › ../nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:138:7 › User Fetch Errors on App Initialization - 5XX (should enter unavailable mode) › should allow browsing app in unavailable mode and persist token across reloads 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('text=Connecting')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('text=Connecting')[22m
+
+
+      152 |     await page.reload();
+      153 |     // Verify we're in unavailable mode
+    > 154 |     await expect(page.locator('text=Connecting')).toBeVisible();
+          |                                                   ^
+      155 |     const tokenBefore = await getToken(page);
+      156 |     expect(tokenBefore).toBe('my-precious-token');
+      157 |     // Browse the app - click on an article (Global Feed should be visible)
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:154:51
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/user-fetch-errors-User-Fet-0afdf-ersist-token-across-reloads-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/user-fetch-errors-User-Fet-0afdf-ersist-token-across-reloads-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('text=Connecting')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('text=Connecting')[22m
+
+
+      152 |     await page.reload();
+      153 |     // Verify we're in unavailable mode
+    > 154 |     await expect(page.locator('text=Connecting')).toBeVisible();
+          |                                                   ^
+      155 |     const tokenBefore = await getToken(page);
+      156 |     expect(tokenBefore).toBe('my-precious-token');
+      157 |     // Browse the app - click on an article (Global Feed should be visible)
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:154:51
+
+    [31mTest timeout of 15000ms exceeded.[39m
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/user-fetch-errors-User-Fet-0afdf-ersist-token-across-reloads-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/user-fetch-errors-User-Fet-0afdf-ersist-token-across-reloads-chromium-retry1/error-context.md
+
+  19) [chromium] › ../nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:179:7 › User Fetch Errors on App Initialization - 5XX (should enter unavailable mode) › should handle network timeout on /api/user 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('text=Connecting')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('text=Connecting')[22m
+
+
+      188 |     // App should not crash - should show "unavailable" mode
+      189 |     await expect(page.locator('nav.navbar')).toBeVisible();
+    > 190 |     await expect(page.locator('text=Connecting')).toBeVisible();
+          |                                                   ^
+      191 |     // Token should be KEPT (network error, not auth error)
+      192 |     const token = await getToken(page);
+      193 |     expect(token).not.toBeNull();
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:190:51
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/user-fetch-errors-User-Fet-f9379-network-timeout-on-api-user-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/user-fetch-errors-User-Fet-f9379-network-timeout-on-api-user-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('text=Connecting')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('text=Connecting')[22m
+
+
+      188 |     // App should not crash - should show "unavailable" mode
+      189 |     await expect(page.locator('nav.navbar')).toBeVisible();
+    > 190 |     await expect(page.locator('text=Connecting')).toBeVisible();
+          |                                                   ^
+      191 |     // Token should be KEPT (network error, not auth error)
+      192 |     const token = await getToken(page);
+      193 |     expect(token).not.toBeNull();
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:190:51
+
+    [31mTest timeout of 15000ms exceeded.[39m
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/user-fetch-errors-User-Fet-f9379-network-timeout-on-api-user-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/user-fetch-errors-User-Fet-f9379-network-timeout-on-api-user-chromium-retry1/error-context.md
+
+  20) [chromium] › ../nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:196:7 › User Fetch Errors on App Initialization - 5XX (should enter unavailable mode) › should handle network failure on /api/user 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('text=Connecting')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('text=Connecting')[22m
+
+
+      205 |     // App should not crash - should show "unavailable" mode
+      206 |     await expect(page.locator('nav.navbar')).toBeVisible();
+    > 207 |     await expect(page.locator('text=Connecting')).toBeVisible();
+          |                                                   ^
+      208 |     // Token should be KEPT (network error, not auth error)
+      209 |     const token = await getToken(page);
+      210 |     expect(token).not.toBeNull();
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:207:51
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/user-fetch-errors-User-Fet-f368e-network-failure-on-api-user-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/user-fetch-errors-User-Fet-f368e-network-failure-on-api-user-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('text=Connecting')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('text=Connecting')[22m
+
+
+      205 |     // App should not crash - should show "unavailable" mode
+      206 |     await expect(page.locator('nav.navbar')).toBeVisible();
+    > 207 |     await expect(page.locator('text=Connecting')).toBeVisible();
+          |                                                   ^
+      208 |     // Token should be KEPT (network error, not auth error)
+      209 |     const token = await getToken(page);
+      210 |     expect(token).not.toBeNull();
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:207:51
+
+    [31mTest timeout of 15000ms exceeded.[39m
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/user-fetch-errors-User-Fet-f368e-network-failure-on-api-user-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/user-fetch-errors-User-Fet-f368e-network-failure-on-api-user-chromium-retry1/error-context.md
+
+  21) [chromium] › ../nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:230:7 › User Fetch Errors on App Initialization - 5XX (should enter unavailable mode) › should handle malformed JSON on /api/user 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('text=Connecting')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('text=Connecting')[22m
+
+
+      243 |     // App should not crash - should show "unavailable" mode (parsing error)
+      244 |     await expect(page.locator('nav.navbar')).toBeVisible();
+    > 245 |     await expect(page.locator('text=Connecting')).toBeVisible();
+          |                                                   ^
+      246 |     // Token should be KEPT (parsing error, not auth error)
+      247 |     const token = await getToken(page);
+      248 |     expect(token).not.toBeNull();
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:245:51
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/user-fetch-errors-User-Fet-aa581--malformed-JSON-on-api-user-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/user-fetch-errors-User-Fet-aa581--malformed-JSON-on-api-user-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('text=Connecting')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('text=Connecting')[22m
+
+
+      243 |     // App should not crash - should show "unavailable" mode (parsing error)
+      244 |     await expect(page.locator('nav.navbar')).toBeVisible();
+    > 245 |     await expect(page.locator('text=Connecting')).toBeVisible();
+          |                                                   ^
+      246 |     // Token should be KEPT (parsing error, not auth error)
+      247 |     const token = await getToken(page);
+      248 |     expect(token).not.toBeNull();
+        at /Users/dmitry.dayneko/Projects/realworld-spike/nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:245:51
+
+    [31mTest timeout of 15000ms exceeded.[39m
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/user-fetch-errors-User-Fet-aa581--malformed-JSON-on-api-user-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/user-fetch-errors-User-Fet-aa581--malformed-JSON-on-api-user-chromium-retry1/error-context.md
+
+  21 failed
+    [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:50:7 › Error Handling - 400 Bad Request › should handle 400 on registration with validation errors 
+    [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:68:7 › Error Handling - 400 Bad Request › should handle 400 on article creation 
+    [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:199:7 › Error Handling - 403 Forbidden › should handle 403 when updating article 
+    [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:252:7 › Error Handling - 403 Forbidden › should handle 403 when deleting another users comment 
+    [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:324:7 › Error Handling - 403 Forbidden › should handle 403 when following user you are blocked by 
+    [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:553:7 › Error Handling - Network Errors › should show error message on settings form when network fails 
+    [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:593:7 › Error Handling - Network Errors › should show error message on login form when network fails 
+    [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:607:7 › Error Handling - Network Errors › should show error message on register form when network fails 
+    [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:622:7 › Error Handling - Network Errors › should show error message on create article form when network fails 
+    [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:650:7 › Error Handling - Network Errors › should show error message on update article form when network fails 
+    [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:698:7 › Error Handling - Network Errors › should show error message when adding comment fails due to network 
+    [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:754:7 › Error Handling - Network Errors › should handle network error when favoriting article 
+    [chromium] › ../nitro/realworld/specs/e2e/error-handling.spec.ts:812:7 › Error Handling - Network Errors › should handle network error when following user 
+    [chromium] › ../nitro/realworld/specs/e2e/social.spec.ts:22:7 › Social Features › should follow and unfollow a user 
+    [chromium] › ../nitro/realworld/specs/e2e/social.spec.ts:62:7 › Social Features › should view other user profile 
+    [chromium] › ../nitro/realworld/specs/e2e/social.spec.ts:153:7 › Social Features › should display followed users articles in feed 
+    [chromium] › ../nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:117:7 › User Fetch Errors on App Initialization - 5XX (should enter unavailable mode) › should handle 500 Internal Server Error on /api/user 
+    [chromium] › ../nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:138:7 › User Fetch Errors on App Initialization - 5XX (should enter unavailable mode) › should allow browsing app in unavailable mode and persist token across reloads 
+    [chromium] › ../nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:179:7 › User Fetch Errors on App Initialization - 5XX (should enter unavailable mode) › should handle network timeout on /api/user 
+    [chromium] › ../nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:196:7 › User Fetch Errors on App Initialization - 5XX (should enter unavailable mode) › should handle network failure on /api/user 
+    [chromium] › ../nitro/realworld/specs/e2e/user-fetch-errors.spec.ts:230:7 › User Fetch Errors on App Initialization - 5XX (should enter unavailable mode) › should handle malformed JSON on /api/user 
+  118 passed (15.1m)

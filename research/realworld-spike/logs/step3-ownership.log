@@ -1,0 +1,164 @@
+### register A
+POST /users  (auth: none)
+status: 201
+body: {
+  "user": {
+    "id": 1,
+    "email": "a1792762533@x.io",
+    "username": "probeA1792762533",
+    "bio": null,
+    "image": null,
+    "token": "<redacted>"
+  }
+}
+
+### register B
+POST /users  (auth: none)
+status: 201
+body: {
+  "user": {
+    "id": 2,
+    "email": "b1792762533@x.io",
+    "username": "probeB1792762533",
+    "bio": null,
+    "image": null,
+    "token": "<redacted>"
+  }
+}
+
+### A creates article
+POST /articles  (auth: yes<redacted>)
+status: 201
+body: {
+  "article": {
+    "slug": "Owned-by-A-1792762533-ecd87236",
+    "title": "Owned by A 1792762533",
+    "description": "d",
+    "body": "original body",
+    "tagList": [
+      "t"
+    ],
+    "createdAt": "2026-10-23T13:35:34.902Z",
+    "updatedAt": "2026-10-23T13:35:34.902Z",
+    "favorited": false,
+    "favoritesCount": 0,
+    "author": {
+      "username": "probeA1792762533",
+      "bio": null,
+      "image": null,
+      "following": false
+    }
+  }
+}
+
+### A creates comment
+POST /articles/Owned-by-A-1792762533-ecd87236/comments  (auth: yes<redacted>)
+status: 201
+body: {
+  "comment": {
+    "id": 1,
+    "createdAt": "2026-10-23T13:35:35.230Z",
+    "updatedAt": "2026-10-23T13:35:35.230Z",
+    "body": "A comment",
+    "author": {
+      "username": "probeA1792762533",
+      "bio": null,
+      "image": null,
+      "following": false
+    }
+  }
+}
+
+slug=Owned-by-A-1792762533-ecd87236 commentId=1
+
+### B PUT A's article
+PUT /articles/Owned-by-A-1792762533-ecd87236  (auth: yes<redacted>)
+status: 403
+body: {"errors":{"article":["forbidden"]}}
+
+### A GET article after B's PUT (state check)
+GET /articles/Owned-by-A-1792762533-ecd87236  (auth: yes<redacted>)
+status: 200
+body: {
+  "article": {
+    "slug": "Owned-by-A-1792762533-ecd87236",
+    "title": "Owned by A 1792762533",
+    "description": "d",
+    "body": "original body",
+    "tagList": [
+      "t"
+    ],
+    "createdAt": "2026-10-23T13:35:34.902Z",
+    "updatedAt": "2026-10-23T13:35:34.902Z",
+    "favorited": false,
+    "favoritesCount": 0,
+    "author": {
+      "username": "probeA1792762533",
+      "bio": null,
+      "image": null,
+      "following": false
+    }
+  }
+}
+
+### B DELETE A's comment
+DELETE /articles/Owned-by-A-1792762533-ecd87236/comments/1  (auth: yes<redacted>)
+status: 403
+body: {"errors":{"comment":["forbidden"]}}
+
+### A GET comments after B's DELETE (state check)
+GET /articles/Owned-by-A-1792762533-ecd87236/comments  (auth: yes<redacted>)
+status: 200
+body: {
+  "comments": [
+    {
+      "id": 1,
+      "createdAt": "2026-10-23T13:35:35.230Z",
+      "updatedAt": "2026-10-23T13:35:35.230Z",
+      "body": "A comment",
+      "author": {
+        "username": "probeA1792762533",
+        "bio": null,
+        "image": null,
+        "following": false
+      }
+    }
+  ]
+}
+
+### B DELETE A's article
+DELETE /articles/Owned-by-A-1792762533-ecd87236  (auth: yes<redacted>)
+status: 403
+body: {"errors":{"article":["forbidden"]}}
+
+### A GET article after B's DELETE (state check)
+GET /articles/Owned-by-A-1792762533-ecd87236  (auth: yes<redacted>)
+status: 200
+body: {
+  "article": {
+    "slug": "Owned-by-A-1792762533-ecd87236",
+    "title": "Owned by A 1792762533",
+    "description": "d",
+    "body": "original body",
+    "tagList": [
+      "t"
+    ],
+    "createdAt": "2026-10-23T13:35:34.902Z",
+    "updatedAt": "2026-10-23T13:35:34.902Z",
+    "favorited": false,
+    "favoritesCount": 0,
+    "author": {
+      "username": "probeA1792762533",
+      "bio": null,
+      "image": null,
+      "following": false
+    }
+  }
+}
+
+### controls
+### no token PUT article
+PUT /articles/Owned-by-A-1792762533-ecd87236  (auth: none)
+status: 401
+body: {"errors":{"token":["is missing"]}}
+
