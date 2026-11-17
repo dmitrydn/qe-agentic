@@ -1,7 +1,7 @@
 # QE checks for agent-built software — Intent
 
-**Version:** 2.1 (2026-11-17) · replaces v2 (2026-10-21) and v1 (2026-10-20) · review of v1: `docs/intent/intent-review-2026-10-21.md`
-**Changed in 2.1:** TypeScript demo app is now RealWorld (Conduit), replacing Cypress Real World App; Java demo app is open again (§7, §11, §12). Details: `docs/handover/2026-11-17-realworld-sandbox/`
+**Version:** 2.2 (2026-11-17) · replaces v2.1, v2 (2026-10-21) and v1 (2026-10-20) · review of v1: `docs/intent/intent-review-2026-10-21.md`
+**Changed in 2.1–2.2:** the Phase 1 demo runs on one app, RealWorld (Conduit), replacing Cypress Real World App; no Java app in Phase 1; oracle isolation and BA reviewer decided (§1, §7, §8, §9, §10, §11, §12). Decisions: `DECISIONS.md` (D-01 to D-04). Handover: `docs/handover/2026-11-17-realworld-sandbox/`
 **Owner:** Dmitry (QE Manager) · **Status:** intent agreed, not yet built
 **Written for:** the BATC accelerator team, QE leadership, guild leads and QE technology architects. Terms are explained in the glossary at the end.
 
@@ -9,7 +9,7 @@
 
 ## 1. In one paragraph
 
-When AI agents write software, writing code and tests becomes cheap, but checking that the result does what the business asked for does not. We will build **five QE capabilities** that check agent-built work against the requirement. Each one is derived from first principles and from what we found in the BATC accelerator and in our own experiments. Each capability works **on its own**, or as **one step in a build pipeline**. Each works on **any technology stack, any requirement source and any approved AI provider**, through replaceable connectors. They produce **evidence and advice; a person decides**. Phase 1 ends with an **internal demo on two open-source applications**, one Java and one TypeScript. Every capability is measured with **evals planned before the first run**. After the demo, Dmitry and the BATC team decide together whether to continue to Phase 2: connecting to BATC and piloting on a client project.
+When AI agents write software, writing code and tests becomes cheap, but checking that the result does what the business asked for does not. We will build **five QE capabilities** that check agent-built work against the requirement. Each one is derived from first principles and from what we found in the BATC accelerator and in our own experiments. Each capability works **on its own**, or as **one step in a build pipeline**. Each works on **any technology stack, any requirement source and any approved AI provider**, through replaceable connectors. They produce **evidence and advice; a person decides**. Phase 1 ends with an **internal demo on one open-source application**, RealWorld (Conduit), in TypeScript; a second stack follows in Phase 2 (`DECISIONS.md` D-01). Every capability is measured with **evals planned before the first run**. After the demo, Dmitry and the BATC team decide together whether to continue to Phase 2: connecting to BATC and piloting on a client project.
 
 ## 2. The problem in plain words
 
@@ -73,11 +73,11 @@ BATC sets the delivery flow and governs the AI. These capabilities plug in at th
 
 ## 7. Phase 1 — scope and build order
 
-**Goal:** an internal demo proving each capability on two open-source applications.
+**Goal:** an internal demo proving each capability on one open-source application (D-01).
 
 | Item | Phase 1 |
 |---|---|
-| Demo applications | **RealWorld (Conduit)** (TypeScript: Nitro API, Angular UI; tests in Playwright; sandbox in `sandboxes/realworld/`) and a Java web app with a REST API (**not yet selected**; tests in JUnit with RestAssured and Selenium) |
+| Demo application | **RealWorld (Conduit)** (TypeScript: Nitro API, Angular UI; tests in Playwright; sandbox in `sandboxes/realworld/`). No Java app in Phase 1 (D-01) |
 | Requirement source | Files: user stories with Given-When-Then acceptance criteria (Markdown), and Gherkin feature files |
 | AI provider | One connector for development use in the sandbox; the design must allow other providers without core changes |
 | Pipelines | Azure DevOps templates first |
@@ -89,14 +89,14 @@ BATC sets the delivery flow and governs the AI. These capabilities plug in at th
 1. **C3 Execution evidence and change tracking.** Rule-based, no AI, so the most certain to work, and everything else depends on its records.
 2. **C1 Requirement check.** Partly designed and tested in the sandbox already.
 3. **C4 Claim check.** Needs C3's records.
-4. **C2 Independent test design**, including Java test code: the highest-risk item, so start a Java spike in week 1.
+4. **C2 Independent test design**, TypeScript/Playwright test code: the highest-risk item. Java test code moves to Phase 2 (D-01).
 5. **C5 Readiness report.** Aggregates C1 to C4.
 
 ## 8. How we prove each capability works
 
 **Method, in plain words:**
 - **Plan the measurement before running it.** For each capability, write down the test set, the expected answers and the pass mark, and freeze them before the first measured run. No adjusting the test set after seeing results.
-- **Expected answers come first from planted problems.** We deliberately insert known defects into requirements, test results or the application, so the right answer is known for certain. Where planting is impossible, a second AI model labels the cases, and a person checks at least 20% of those labels.
+- **Expected answers come first from planted problems.** We deliberately insert known defects into requirements, test results or the application, so the right answer is known for certain. Where planting is impossible, a second AI model labels the cases, and a person checks at least 20% of those labels. Results against Conduit's official test suites are secondary and labelled "possibly memorised": the suites are public and may be in model training data (D-03).
 - **Beat a simple baseline.** Every AI-based capability must do better than asking the same AI model a plain question on the same test set. Otherwise the capability adds nothing beyond the model.
 - **Show the uncertainty.** Every result is reported with its sample size and a 95% range. With 40 cases, an 80% score means "somewhere between about 65% and 90%". Pass marks are judged on that range.
 
@@ -105,11 +105,11 @@ BATC sets the delivery flow and governs the AI. These capabilities plug in at th
 | Capability | Test set (minimum) | Proposed pass mark |
 |---|---|---|
 | C1 | 40 requirements per app: sound ones plus planted problems (no expected result, ambiguous criterion, endpoint that doesn't exist, rule the system doesn't enforce, too big to test) | Finds ≥ 80% of planted problems; wrongly flags ≤ 15% of sound requirements; beats the plain-prompt baseline |
-| C2 | Same requirements after C1; both apps; known planted application defects including cases that should *not* be caught | Every criterion has ≥ 1 test (rule check, 100%); generated tests run green on the unbroken app ≥ 85%; planted-defect catch rate reported with range and better than baseline; does not read implementation code (verified by access log) |
+| C2 | Same requirements after C1; Conduit; known planted application defects including cases that should *not* be caught | Every criterion has ≥ 1 test (rule check, 100%); generated tests run green on the unbroken app ≥ 85%; planted-defect catch rate reported with range and better than baseline; does not read implementation code (verified by access log) |
 | C3 | Result files and requirement-change scenarios with known answers | 100% correct (rule-based) |
 | C4 | Scenarios with planted over-claims: "Tested" without a run, criterion without a test, criterion only partly checked | Finds ≥ 90%; false alarms ≤ 10%; beats baseline |
 | C5 | End-to-end release scenarios with known answers | Same inputs → same report, every time; matches the known answer ≥ 90% |
-| All | Both apps | Works on both apps with connector and configuration changes only; AI provider switchable by configuration |
+| All | Conduit | AI provider switchable by configuration. Stack independence (a second app with connector and configuration changes only) is shown in Phase 2 (D-01) |
 
 ## 9. Not in Phase 1
 
@@ -119,6 +119,7 @@ BATC sets the delivery flow and governs the AI. These capabilities plug in at th
 - IDE front end (Copilot / Claude Code skills)
 - Failure triage, regression maintenance, testing of AI systems, commercial assets
 - Performance, mobile, codeless and security testing capabilities
+- A Java demo application and Java test code (D-01)
 - Any measure based on usage, perceived speed or volume of output
 
 ## 10. Decisions (agreed 2026-10-20, re-confirmed in v2)
@@ -134,13 +135,13 @@ BATC sets the delivery flow and governs the AI. These capabilities plug in at th
 | Authority | Advice; only repeatable rule checks may block; people sign |
 | Language | Node.js / TypeScript, reusing proven parts of the sandbox |
 | Proof | Pre-planned evals, planted-problem ground truth, baseline comparison, 95% ranges |
-| Phase 1 done | Internal demo on two open-source apps |
+| Phase 1 done | Internal demo on one open-source app, Conduit (changed 2026-11-17, D-01) |
 | Go/no-go | Dmitry and the BATC team, jointly |
 
 ## 11. Assumptions, open questions and risks
 
 **Assumptions (correct me if wrong):**
-1. TypeScript demo app: RealWorld (Conduit), MIT. Its specification is written independently of the 100+ implementations, so it meets P2. Cypress Real World App is declined: its only "requirements" are its own tests. Conduit's specification is an API/UI contract, not business requirements; the BA layer (user stories, acceptance criteria) is derived from it and must be reviewed by a person before use.
+1. Demo app: RealWorld (Conduit), MIT. Its specification is written independently of the 100+ implementations, so it meets P2. Cypress Real World App is declined: its only "requirements" are its own tests. Conduit's specification is an API/UI contract, not business requirements; the BA layer (user stories, acceptance criteria) is derived from it and must be reviewed by a person before use: a QES tester from the bench acts as BA (D-04).
 2. A development AI connector is acceptable inside the sandbox only. Client providers come in Phase 2.
 3. Proven sandbox parts are copied into the new code and tested again; the research copy stays untouched.
 4. The BATC source in `reference/batc-accelerator-development/` is refreshed from Azure DevOps before the BATC connection is designed. The current copy is the 7 October release (3.2.5).
@@ -148,19 +149,16 @@ BATC sets the delivery flow and governs the AI. These capabilities plug in at th
 **Open questions:**
 - Which AI providers can client projects approve? This decides whether Phase 2 can run at all.
 - Who in the BATC team owns the plug-in point design on their side?
-- Which Java demo app? It needs an MIT-like licence and requirements written independently of the code. The candidates checked so far failed (iTrust2: EPL-2.0; Restful Booker Platform: GPL-3.0; Spring PetClinic: no written requirements). If none is found, Phase 1 runs on Conduit only.
-- Who acts as Product Owner / BA reviewer for Conduit's derived backlog and its open questions?
 
 **Risks:**
 
 | Risk | Effect | Mitigation |
 |---|---|---|
-| Java test generation is new; the sandbox was API-only, Node.js, one app | Largest build risk | Java spike in week 1 |
+| Stack independence not demonstrated in Phase 1 (one app, D-01) | The go/no-go judges a multi-stack claim on one stack | Say so in the demo; optional check of a Java RealWorld backend against the same API suite |
 | One builder, 6–8 weeks | Delay; no independent review | Guild leads review formats and the demo; evals use planted ground truth |
 | Second AI model shares the first model's blind spots | Overstated results | Planted problems first; a person checks ≥ 20% of AI labels |
 | BATC Bug 2347 unresolved | Phase 2 connection blocked | Raised 2026-10-20; check before Phase 2 |
-| Agents can read Conduit's held-out test suites (they ship inside the specification repository) | C1/C2 eval scores contaminated | Agents get the specification without the test folders; isolation decided before the first measured run |
-| No Java app with independent requirements | Demo covers one stack only | Keep searching; decide before C2's Java spike |
+| Agents can read Conduit's held-out test suites, or have memorised them from training data | C1/C2 eval scores contaminated | Four measures in D-03; planted problems carry the score |
 
 ## 12. Folder structure
 
@@ -184,7 +182,7 @@ qe-agentic/
 │   └── cli/                     ← one command per capability
 ├── pipelines/                   ← Azure DevOps templates
 ├── evals/                       ← per capability: plan, test sets, planted problems, results
-├── sandboxes/                   ← demo applications (realworld = Conduit; Java app to be selected)
+├── sandboxes/                   ← demo application (realworld = Conduit)
 ├── docs/
 │   ├── intent/                  ← intent reviews and history
 │   ├── architecture/            ← design, formats, decisions

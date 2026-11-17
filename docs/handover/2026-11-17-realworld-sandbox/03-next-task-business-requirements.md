@@ -6,7 +6,9 @@ Produce the **initial set of business requirements for Conduit**, ready for a **
 
 The output becomes the BA-style requirement source for the demo story "agents start from user stories and acceptance criteria" (`01-app-selection.md` §4), and the input format `intent.md` §7 names: Markdown user stories with Given-When-Then acceptance criteria, plus Gherkin feature files.
 
-**You prepare; a human decides.** You never answer open questions, approve stories or change their status beyond `Draft`.
+**You prepare; a human decides.** You never answer open questions, approve stories or change their status beyond `Draft`. The reviewer is a QES tester from the bench acting as BA (`DECISIONS.md` D-04), so write `REVIEW-GUIDE.md` for a tester, not a seasoned BA: say what to decide, the options, and what each choice means for the app.
+
+**Executor:** GitHub Copilot in agent mode in VS Code on Dmitry's Mac, with the repository root open. `.github/copilot-instructions.md` repeats the hard rules below. Terminal auto-approve stays **off**: Dmitry approves each command (D-03).
 
 ## 2. Starting material
 
@@ -21,7 +23,7 @@ Items in the backlog that are **BA judgement, not specification** (its README sa
 
 ## 3. Hard rules
 
-1. **Never read the held-out oracle:** `specs/api/hurl/`, `specs/api/bruno/`, `specs/e2e/*.spec.ts`, the Postman collection. Not even to "check" something. Get the specification with a sparse checkout that leaves them out (step 1).
+1. **Never read the held-out oracle:** `specs/api/hurl/`, `specs/api/bruno/`, `specs/e2e/`, the Postman collection, whether local (e.g. `~/realworld-sandbox/`) or on GitHub. Not even to "check" something. Get the specification with a sparse checkout that leaves them out (step 1). Keep a log of every file path and URL you read (D-03).
 2. **Never read implementation code** (backend or frontend sources).
 3. **Invent nothing.** Every business rule and acceptance criterion cites a specification file and line range at `ebbcdeb8`, or is tagged `BA-ASSUMPTION` with a reason. Where the specification is silent or contradicts itself, write an open question, not a rule.
 4. **Keep IDs stable.** Existing US/BR/AC/OQ IDs keep their numbers. New items get the next free number. Removed items stay listed in the change log with the reason.
@@ -31,6 +33,8 @@ Items in the backlog that are **BA judgement, not specification** (its README sa
 ## 4. Steps
 
 Each step ends with a check. Don't continue until it passes.
+
+**Two runs.** Run 1 is steps 1–3, then stop and write `HANDBACK.md` for run 1. Dmitry reviews the Markdown conversion and the citation report before run 2 (steps 4–8) starts. Start each run with a fresh chat, pointing it at this file and naming the run.
 
 **Step 1: get the specification without the oracle**
 ```bash
@@ -116,7 +120,7 @@ As a visitor, I want to …, so that … (so-that: BA-ASSUMPTION)
 
 ## 7. Hand back to Dmitry
 
-A short report (`sandboxes/realworld/requirements/HANDBACK.md`): counts before/after, citation-check result, how many rules became open questions and why, new open questions, anything you could not verify, and deviations from this brief.
+A short report (`sandboxes/realworld/requirements/HANDBACK.md`, one section per run): the **read log** (every file path and URL read, D-03), counts before/after, citation-check result, how many rules became open questions and why, new open questions, anything you could not verify, and deviations from this brief.
 
 ## 8. Stop and ask Dmitry if
 

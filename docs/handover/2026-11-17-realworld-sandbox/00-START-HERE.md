@@ -9,6 +9,7 @@
 | 1 | `01-app-selection.md` | Which app was chosen, why, what was rejected, and what the choice does **not** prove |
 | 2 | `02-sandbox-architecture.md` | How the sandbox is built: repos, pinned versions, what agents may and may not read, known risks |
 | 3 | `03-next-task-business-requirements.md` | **Your task**: turn the existing draft backlog into business requirements ready for human BA review |
+| — | `/DECISIONS.md` (repo root) | Decisions D-01 to D-04 that this handover relies on |
 
 ## These documents override older text in this repo
 
@@ -18,7 +19,7 @@ The repo still contains statements written before the app was selected. Where th
 |---|---|---|
 | `research/agentic-qe-sandbox/requirements/unified-requirements.md` | 191 requirements | Derived from RWA's test files, so it breaks principle P2 (`intent.md` §3). Do not use |
 
-`intent.md` (v2.1), `README.md` and `sandboxes/README.md` were updated on 2026-11-17 to match this handover. Everything in it (principles P1–P8, capabilities C1–C5, rules in §5, eval method in §8) applies.
+`intent.md` (v2.2), `README.md` and `sandboxes/README.md` were updated on 2026-11-17 to match this handover and `DECISIONS.md`. Everything in it (principles P1–P8, capabilities C1–C5, rules in §5, eval method in §8) applies.
 
 ## Files in this handover
 

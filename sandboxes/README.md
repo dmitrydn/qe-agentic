@@ -1,11 +1,11 @@
 # sandboxes
 
-Demo applications for Phase 1. Each app gets its own planted-defect catalog.
+Demo applications. Phase 1 uses one app, Conduit (`../DECISIONS.md` D-01). Each app gets its own planted-defect catalog.
 
 | App | Stack | Status | Folder |
 |---|---|---|---|
 | RealWorld (Conduit) | TypeScript: Nitro API, Angular UI; tests in Playwright and Hurl | Selected. Install spec written, not yet run end to end. Draft BA backlog awaiting human review | `realworld/` |
-| Java web app with REST API | Java; tests in JUnit with RestAssured and Selenium | **Not yet selected.** Candidates checked so far failed on licence or lacked independent requirements | — |
+| Java web app with REST API | Java; tests in JUnit with RestAssured and Selenium | **Not in Phase 1** (D-01). Candidates checked so far failed on licence or lacked independent requirements | — |
 
 Cypress Real World App was declined: its only "requirements" are its own tests (breaks P2 in `../intent.md`). Its earlier working copy stays in `research/` for reference.
 

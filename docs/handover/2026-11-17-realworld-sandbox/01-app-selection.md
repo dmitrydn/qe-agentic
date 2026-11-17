@@ -2,7 +2,7 @@
 
 **Decision:** RealWorld "Conduit" is the TypeScript sandbox application for building and demoing the agentic QES SDLC (capabilities C1–C5 in `intent.md`).
 **Decided:** confirmed by Dmitry (chat of 3 Nov 2026), based on the candidate analysis and the measurement spike of 23 Oct 2026.
-**Scope of the decision:** the TypeScript app only. The Java app is still open (§5).
+**Scope of the decision:** the only Phase 1 demo app (`DECISIONS.md` D-01).
 
 ## 1. What the app is
 
@@ -41,11 +41,11 @@
 3. **Few natural defects.** The spike found only three candidate defects in the Angular frontend (D-01..D-03 in `RESULTS.md`). Detection evals will need **planted defects** (as `intent.md` §8 already plans).
 4. **Requirement counts are not stable.** Two Claude extractions of the same specification produced 73 vs 210 requirements and different gap lists. The count depends on the source scope and the splitting rule. Neither is ground truth until a human rules on the disputed items.
 
-## 5. Open decisions (not for the next agent to make)
+## 5. Decisions taken after the selection
 
-| # | Decision | Owner |
-|---|---|---|
-| O-1 | Java demo app. `intent.md` requires one; the only Java candidate with written requirements (iTrust2) failed on licence. Phase 1 may need to run API-first on Conduit only, or find another app | Dmitry |
-| O-2 | Whether to strip the examples from `openapi.yml` before agents see it. They partly leak expected results | Dmitry |
-| O-3 | How to isolate the held-out test suites from agents that have a shell (see `02-sandbox-architecture.md` §4, risk K-2) | Dmitry |
-| O-4 | Who acts as Product Owner / BA reviewer for the 54 open questions | Dmitry |
+Recorded in `DECISIONS.md` (repo root), the single source for decisions:
+
+- **D-01** Phase 1 runs on Conduit only; no Java app until Phase 2.
+- **D-02** `openapi.yml` keeps its examples; they are requirements, not leaked answers.
+- **D-03** Four measures keep the held-out test suites away from agents; planted problems carry the eval scores.
+- **D-04** A QES tester from the bench reviews the derived backlog as BA.

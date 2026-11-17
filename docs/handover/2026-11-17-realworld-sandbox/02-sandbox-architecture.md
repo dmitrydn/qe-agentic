@@ -58,8 +58,8 @@ The test suites that ship with the specification are the **held-out oracle**. Th
 
 | ID | Risk | Status |
 |---|---|---|
-| K-2 / L-3 | The oracle sits in three places inside `$SB` (`spec/`, `backend/realworld/`, `frontend/realworld/`). Moving `$SB` outside qe-agentic helps, but an agent with a shell on the same machine can still read it. Blocking reads alone does not isolate it | **Open, decision O-3.** Until decided, any C1/C2 eval score is at risk of contamination |
-| O-2 | `openapi.yml` contains examples that partly reveal expected results | Open |
+| K-2 / L-3 | The oracle sits in three places inside `$SB` (`spec/`, `backend/realworld/`, `frontend/realworld/`). An agent with a shell on the same machine can still read it, and the model may have memorised the public suites | **Decided, `DECISIONS.md` D-03:** sparse checkout without test folders for agents, person approves commands, read log checked after each run, planted problems carry the scores |
+| — | `openapi.yml` contains 5 examples (error-response bodies) | **Closed, D-02:** they are requirements; keep them |
 | L-1 | Frontend unit tests fail at the pinned commit (`zone.js` import) | Accepted; does not affect the suites |
 | — | Fonts and icons load from public CDNs; offline the app works but looks plainer | Accepted |
 
