@@ -2,7 +2,7 @@
 
 **For:** the BA of the Conduit app (`DECISIONS.md` D-04). No prior BA experience is assumed.
 **Time:** about half a day to a day. Work one epic per sitting.
-**You need:** `review/BA-review.xlsx` (your working file), `epics/*.md` (the stories), and for step 4 only, a running local Conduit sandbox (`../install/INSTALL.md` §7).
+**You need:** `review/BA-review.xlsx` (your working file), `epics/*.md` (the stories), and for step 4 only, the team's Conduit instance in a browser (no installation needed; see step 4).
 
 ## 1. What you are doing and why
 
@@ -78,7 +78,12 @@ Fill in *Rationale*: one sentence on the business reason ("matches common practi
 
 ### Step 4: only now, check the app
 
-With the local sandbox running (`INSTALL.md` §7: start the backend, seed, start the web app, open `http://localhost:4200`; sign in as `johndoe` / `password123`), try your rule by hand, in the browser or with simple API calls. Record what you saw in *Observed in app*.
+Use the team's Conduit instance: **https://web-vs-pro-batc-qe-realworld-sandbox-f4crcjf2bcg9c5b6.swedencentral-01.azurewebsites.net/** (its API is the same address followed by `/api`).
+
+- **Sign up two test accounts of your own**, for example `ba-member-1` and `ba-member-2`. Use made-up emails ending in `@example.invalid` and a password you use nowhere else. Many questions are about "another member", so you need two.
+- **The data is shared and temporary.** Anyone on the project sees what you create, and everything is lost when the app is redeployed. Never rely on data from an earlier session; recreate what you need. Ignore other test accounts you may see (for example `claude-check-a`).
+
+Try your rule by hand in the browser. Record what you saw in *Observed in app*.
 
 | What you see | *App matches?* | What to do |
 |---|---|---|

@@ -63,6 +63,17 @@ The test suites that ship with the specification are the **held-out oracle**. Th
 | L-1 | Frontend unit tests fail at the pinned commit (`zone.js` import) | Accepted; does not affect the suites |
 | — | Fonts and icons load from public CDNs; offline the app works but looks plainer | Accepted |
 
+## 4a. Shared hosted instance (Azure)
+
+| Item | Value |
+|---|---|
+| URL | https://web-vs-pro-batc-qe-realworld-sandbox-f4crcjf2bcg9c5b6.swedencentral-01.azurewebsites.net/ (API at `/api` on the same host) |
+| Deployment | Azure App Service, local git deployment |
+| Database | SQLite file inside the web app: **lost on every redeploy**. Option, not yet done: seed default data on database creation, e.g. `johndoe` / `password123` with one article as in `install/scripts/seed.sh` |
+| Use | This project only. No test runs while the BA reviews (D-05) |
+| Checked 2026-11-17 | Frontend calls its own `/api`, not the public demo. **No session isolation**: anonymous visitors and other members see the same articles and tags. Ownership enforced: another member's edit and delete of an article return 403 `{"errors":{"article":["forbidden"]}}` and the article is unchanged, matching the reference backend in the spike. Test users `claude-check-a` and `claude-check-b` remain (the API has no user deletion); their article was deleted |
+| **Not known** | Which commits are deployed. Record the spec, backend and frontend SHAs for every deployment (e.g. a `version.json` served by the app); until then, results on this instance can't be tied to `SPEC_PIN` |
+
 ## 5. Expected baseline (Definition of done in `INSTALL.md` §11)
 
 | Check | Pass condition | Evidence so far |
