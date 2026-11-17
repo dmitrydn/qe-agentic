@@ -1,8 +1,19 @@
 # sandboxes
 
-Demo applications for Phase 1:
+Demo applications for Phase 1. Each app gets its own planted-defect catalog.
 
-- Cypress Real World App (TypeScript) — the current working copy lives in `research/sandbox-eval/cypress-realworld-app/`; set up here when Phase 1 build starts
-- Java web app with REST API (candidate: Spring PetClinic, REST variant) — to be added
+| App | Stack | Status | Folder |
+|---|---|---|---|
+| RealWorld (Conduit) | TypeScript: Nitro API, Angular UI; tests in Playwright and Hurl | Selected. Install spec written, not yet run end to end. Draft BA backlog awaiting human review | `realworld/` |
+| Java web app with REST API | Java; tests in JUnit with RestAssured and Selenium | **Not yet selected.** Candidates checked so far failed on licence or lacked independent requirements | — |
 
-Each app gets its own planted-defect catalog.
+Cypress Real World App was declined: its only "requirements" are its own tests (breaks P2 in `../intent.md`). Its earlier working copy stays in `research/` for reference.
+
+## realworld/
+
+| Path | Content |
+|---|---|
+| `install/` | Standalone installation and verification spec (`INSTALL.md`), scripts and frontend patch. Installs to `~/realworld-sandbox`, outside this repo |
+| `requirements/source/Conduit-backlog.xlsx` | Draft BA backlog derived from the specification (not stakeholder-authored) |
+
+Background, architecture and the next task: [`../docs/handover/2026-11-17-realworld-sandbox/`](../docs/handover/2026-11-17-realworld-sandbox/00-START-HERE.md).

@@ -16,10 +16,9 @@ The repo still contains statements written before the app was selected. Where th
 
 | Location | Outdated statement | Current position |
 |---|---|---|
-| `sandboxes/README.md` | Cypress RWA working copy is the sandbox | Conduit lives in `sandboxes/realworld/` |
 | `research/agentic-qe-sandbox/requirements/unified-requirements.md` | 191 requirements | Derived from RWA's test files, so it breaks principle P2 (`intent.md` §3). Do not use |
 
-`intent.md` was updated to v2.1 on 2026-11-17 to match this handover. Everything in it (principles P1–P8, capabilities C1–C5, rules in §5, eval method in §8) applies.
+`intent.md` (v2.1), `README.md` and `sandboxes/README.md` were updated on 2026-11-17 to match this handover. Everything in it (principles P1–P8, capabilities C1–C5, rules in §5, eval method in §8) applies.
 
 ## Files in this handover
 
@@ -30,4 +29,4 @@ The repo still contains statements written before the app was selected. Where th
 | `sandboxes/realworld/requirements/source/Conduit-backlog.xlsx` | Draft BA backlog: 7 epics, 23 user stories, 89 business rules, 72 Gherkin acceptance criteria, 54 open questions | Claude-authored, 2026-10-30, Status "Draft" on every story, 0 of 54 questions answered |
 | `research/realworld-spike/` | Measurement spike results, 73-requirement baseline v0.1, 210-requirement independent recount, run logs | 2026-10-23, **on the older spec pin `450bbc5`** (see `02-sandbox-architecture.md` §3) |
 
-Committed 2026-11-17 on branch `realworld-sandbox-handover` (not pushed).
+Committed 2026-11-17 and merged to `main`.
