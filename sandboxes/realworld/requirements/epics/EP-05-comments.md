@@ -1,0 +1,167 @@
+# EP-05 Comments
+
+Let members discuss articles.
+
+## US-16 Comment on an article
+
+**Persona:** Member · **Type:** Feature · **Priority (proposed):** Must · **Status:** Draft · **Baseline:** R-033, R-034, R-052, R-065
+
+As a member, I want to comment on an article, so that I can respond to the author and other readers.
+
+### Business rules
+
+- **BR-16.1** The comment form ("Write a comment...", "Post Comment") is in the comments section at the bottom of the article page. — `templates.md` L562-566; `routing.md` L17
+- **BR-16.2** Posting requires authentication; body is required; the created comment (id, createdAt, updatedAt, body, author) is returned with status 201. — `endpoints.md` L207-209; `api-response-format.md` L108-122; `openapi.yml` L338-365
+- **BR-16.3** Comments cannot be edited after posting. — `features.md` L10
+
+### Acceptance criteria
+
+#### AC-16.1 Member posts a comment (UI)
+
+Spec: `templates.md` L562-566
+
+```gherkin
+Scenario: Member posts a comment
+  Given I am signed in
+    And I am on an article page
+  When I write "Great post" in the comment box
+    And I click "Post Comment"
+  Then my comment appears in the comments section with my name
+```
+
+#### AC-16.2 Comment via API (API)
+
+Spec: `openapi.yml` L338-365; `api-response-format.md` L108-122
+
+```gherkin
+Scenario: Comment via API
+  Given I am signed in
+    And an article exists
+  When I POST /api/articles/<slug>/comments with body "Great post"
+  Then the response status is 201
+    And the response contains comment.id, comment.body and comment.author
+```
+
+#### AC-16.3 Empty comment (API)
+
+Spec: `endpoints.md` L209; `error-handling.md` L7
+
+```gherkin
+Scenario: Empty comment
+  Given I am signed in
+  When I POST a comment without a body
+  Then the response status is 422
+```
+
+#### AC-16.4 Comment without a token (API)
+
+Spec: `endpoints.md` L207; `error-handling.md` L21
+
+```gherkin
+Scenario: Comment without a token
+  Given I have no token
+  When I POST /api/articles/<slug>/comments
+  Then the response status is 401
+```
+
+### Open questions
+
+- **OQ-16.1** What do visitors see where the comment form would be (a sign-in prompt, nothing)? → [open-questions.md](../open-questions.md)
+- **OQ-16.2** Is there a maximum comment length? → [open-questions.md](../open-questions.md)
+
+## US-17 Read comments
+
+**Persona:** Visitor · **Type:** Feature · **Priority (proposed):** Must · **Status:** Draft · **Baseline:** R-035, R-037
+
+As a reader, I want to read the discussion under an article, so that I can see what others think.
+
+### Business rules
+
+- **BR-17.1** GET /api/articles/:slug/comments works with or without authentication and returns a list of comments. — `endpoints.md` L211-215; `api-response-format.md` L127-141
+- **BR-17.2** Each comment shows the author's picture and name, the date and the text. — `templates.md` L577-582
+- **BR-17.3** Comments cannot be edited. — `features.md` L10
+
+### Acceptance criteria
+
+#### AC-17.1 Reader sees comments (UI)
+
+Spec: `templates.md` L577-582
+
+```gherkin
+Scenario: Reader sees comments
+  Given an article has 2 comments
+  When I open the article
+  Then both comments are shown with author, date and text
+```
+
+#### AC-17.2 Comments via API (API)
+
+Spec: `endpoints.md` L211-215
+
+```gherkin
+Scenario: Comments via API
+  Given an article has 2 comments
+  When I GET /api/articles/<slug>/comments without a token
+  Then the response status is 200
+    And the comments array has 2 items
+```
+
+### Open questions
+
+- **OQ-17.1** In which order are comments shown (oldest or newest first)? → [open-questions.md](../open-questions.md)
+- **OQ-17.2** Are comments paginated? → [open-questions.md](../open-questions.md)
+
+## US-18 Delete my comment
+
+**Persona:** Author · **Type:** Feature · **Priority (proposed):** Must · **Status:** Draft · **Baseline:** R-036, R-066
+
+As a comment author, I want to delete my comment, so that I can remove something I no longer want to say.
+
+### Business rules
+
+- **BR-18.1** Deleting requires authentication and returns status 204. — `endpoints.md` L217-221; `openapi.yml` L366-398
+- **BR-18.2** The delete icon is shown only to the comment's author. — `routing.md` L18; `templates.md` L599-600
+- **BR-18.3** Other members get 403 with a "comment" error key. — `openapi.yml` L366-398; `openapi.yml` L791-792
+
+### Acceptance criteria
+
+#### AC-18.1 Comment author deletes their comment (UI)
+
+Spec: `templates.md` L599-600; `routing.md` L18
+
+```gherkin
+Scenario: Comment author deletes their comment
+  Given I am signed in
+    And I commented on an article
+  When I click the delete icon on my comment
+  Then my comment is removed from the list
+```
+
+#### AC-18.2 Others do not see the delete icon (UI)
+
+Spec: `routing.md` L18
+
+```gherkin
+Scenario: Others do not see the delete icon
+  Given "anna" commented on an article
+    And I am signed in as "jake"
+  When I open the article
+  Then anna's comment has no delete icon
+```
+
+#### AC-18.3 Another member tries to delete via API (API)
+
+Spec: `openapi.yml` L366-398
+
+```gherkin
+Scenario: Another member tries to delete via API
+  Given "anna" commented on an article
+    And I am signed in as "jake"
+  When I DELETE /api/articles/<slug>/comments/<anna's comment id>
+  Then the response status is 403
+    And the response body contains errors.comment
+```
+
+### Open questions
+
+- **OQ-18.1** May an article's author delete other people's comments on their own article? → [open-questions.md](../open-questions.md)

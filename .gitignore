@@ -19,3 +19,6 @@ node_modules/
 
 # BATC accelerator source — separate git repo kept for reference only
 reference/batc-accelerator-development/
+
+# Python bytecode
+__pycache__/
