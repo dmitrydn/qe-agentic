@@ -51,6 +51,8 @@ Check: the script reports 7 epics, 23 stories, 89 rules, 72 scenarios, 54 open q
 
 **Step 3: re-verify every citation at `ebbcdeb8`**
 For each of the 284 citations on the Business Rules, Acceptance Criteria and Open Questions sheets, confirm the cited file and line range exist and contain the cited wording (keyword match). The Backlog sheet's *Spec traces (rules)* column is a roll-up: only confirm each entry appears among that story's business-rule citations. Record failures; don't fix them yet. Write the report to `sandboxes/realworld/requirements/citation-report.md`.
+Open-question citations point to where the specification is **silent**, so they are checked for range existence only, not for keywords.
+Keyword failures that a person has reviewed and found correct (paraphrase) go in `tools/citation-exceptions.md` (ID, citation, reason, reviewer, date); the checker treats them as passed and reports them separately.
 Check: a citation report with the number checked, passed and failed.
 
 **Step 4: reconcile with the gap analyses**
@@ -119,7 +121,7 @@ As a visitor, I want to …, so that … (so-that: BA-ASSUMPTION)
 ## 6. Done when
 
 - [ ] All files in §5 exist; counts in `README.md` match the files
-- [ ] Citation report: 100% of citations pass at `ebbcdeb8`, or each failure is fixed and logged in `CHANGELOG.md`
+- [ ] Citation report: every citation passes at `ebbcdeb8`, is a reviewed exception in `tools/citation-exceptions.md`, or was fixed and logged in `CHANGELOG.md`
 - [ ] Every rule and scenario has a citation or a `BA-ASSUMPTION` tag
 - [ ] Every gap from the two analyses has a disposition in `traceability.md`
 - [ ] No open question has an answer filled in; every story is `Draft`
