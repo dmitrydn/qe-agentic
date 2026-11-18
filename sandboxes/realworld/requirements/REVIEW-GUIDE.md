@@ -1,6 +1,7 @@
 # Conduit requirements: review guide for the BA
 
 **For:** the BA of the Conduit app (`DECISIONS.md` D-04). No prior BA experience is assumed.
+**Read first:** `PRODUCT-INTRO.md`: what Conduit is, who uses it, similar products, and what is out of scope.
 **Time:** about half a day to a day. Work one epic per sitting.
 **You need:** `review/BA-review.xlsx` (your working file), `epics/*.md` (the stories), and for step 4 only, the team's Conduit instance in a browser (no installation needed; see step 4).
 
@@ -30,7 +31,7 @@ Sheet **Stories** in `review/BA-review.xlsx`, one row per user story. For each s
 - Does the "As a … I want … so that …" make sense for a blogging site? (The "so that" part and the personas were written by the agent; they are tagged `BA-ASSUMPTION`.)
 - Do the business rules say what a user of this site should be able to do, in plain language?
 - Skip the section **Interface contract (not for BA review)** under each story. It lists technical detail (status codes, data fields, page markup) taken from the specification for the test agents; it needs no business decision (`DECISIONS.md` D-06).
-- Is anything obviously missing that a user would expect? (Note it; don't invent the rule. It becomes a new open question.)
+- Is anything missing that one of Conduit's core capabilities can't work without? (Note it; don't invent the rule. It becomes a new open question.) Features that similar products have but Conduit lacks on purpose (search, notifications, paid plans and so on) are out of scope: see the product introduction, section 6.
 
 Record in the sheet:
 

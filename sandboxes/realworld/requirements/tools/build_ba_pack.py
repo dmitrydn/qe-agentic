@@ -11,7 +11,7 @@ import openpyxl
 from openpyxl.styles import Font
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-GUIDE, STORIES, WB = "1-Review-Guide.html", "2-Stories.html", "3-BA-review.xlsx"
+INTRO, GUIDE, STORIES, WB = "0-Product-Introduction.html", "1-Review-Guide.html", "2-Stories.html", "3-BA-review.xlsx"
 CSS = """<style>
 body{font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;max-width:60rem;margin:2rem auto;padding:0 1rem;line-height:1.5;color:#1f2328}
 table{border-collapse:collapse;margin:1rem 0;font-size:.92rem}th,td{border:1px solid #d0d7de;padding:.35rem .6rem;vertical-align:top}th{background:#f6f8fa}
@@ -27,6 +27,8 @@ def sub1(s, a, b):
 def guide_md():
     s = open(os.path.join(HERE, "REVIEW-GUIDE.md")).read()
     s = sub1(s, " (`DECISIONS.md` D-04)", "")
+    s = sub1(s, "`PRODUCT-INTRO.md`", f"**{INTRO}**")
+    s = s.replace("\n**Read first:**", "\n\n**Read first:**")
     s = sub1(s, "`review/BA-review.xlsx` (your working file), `epics/*.md` (the stories)",
              f"**{WB}** (your working file), **{STORIES}** (the stories)")
     s = sub1(s, " (`intent.md` P2)", "")
@@ -65,9 +67,15 @@ def link_citations(s):
         return f"[{f} L{a}{'-' + m.group(3) if m.group(3) else ''}]({url})"
     return CITE.sub(rep, s)
 
+def intro_md():
+    s = open(os.path.join(HERE, "PRODUCT-INTRO.md")).read()
+    s = re.sub(r"\A# [^\n]*\n+", "", s)
+    s = s.replace("\n**Read time:**", "\n\n**Read time:**").replace("\n**Facts about Conduit**", "\n\n**Facts about Conduit**")
+    return s
+
 def stories_md():
     parts = [f"Stories for review. Rule numbers have gaps on purpose: technical interface details were moved out of this copy because they need no business decision. Decide open questions in **{WB}**, sheet *Decisions*; review each story on sheet *Stories*. "
-             f"How to review: **{GUIDE}**.\n"]
+             f"About the product: **{INTRO}**. How to review: **{GUIDE}**.\n"]
     for f in sorted(glob.glob(os.path.join(HERE, "epics", "EP-*.md"))):
         s = open(f).read()
         # drop Interface contract sections (until next ## or ### heading)
@@ -105,11 +113,12 @@ def workbook(out):
 
 def main(zip_out):
     with tempfile.TemporaryDirectory() as t:
+        html(intro_md(), os.path.join(t, INTRO), "Conduit: product introduction")
         html(guide_md(), os.path.join(t, GUIDE), "Conduit requirements: review guide for the BA")
         html(stories_md(), os.path.join(t, STORIES), "Conduit user stories")
         workbook(os.path.join(t, WB))
         with zipfile.ZipFile(zip_out, "w", zipfile.ZIP_DEFLATED) as z:
-            for n in (GUIDE, STORIES, WB):
+            for n in (INTRO, GUIDE, STORIES, WB):
                 z.write(os.path.join(t, n), f"Conduit-BA-review-pack/{n}")
     print("wrote", zip_out)
 

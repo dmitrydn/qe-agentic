@@ -1,7 +1,7 @@
 # QE checks for agent-built software — Intent
 
-**Version:** 2.2 (2026-11-17) · replaces v2.1, v2 (2026-10-21) and v1 (2026-10-20) · review of v1: `docs/intent/intent-review-2026-10-21.md`
-**Changed in 2.1–2.2:** the Phase 1 demo runs on one app, RealWorld (Conduit), replacing Cypress Real World App; no Java app in Phase 1; oracle isolation and BA reviewer decided (§1, §7, §8, §9, §10, §11, §12). Decisions: `DECISIONS.md` (D-01 to D-04). Handover: `docs/handover/2026-11-17-realworld-sandbox/`
+**Version:** 2.3 (2026-11-18) · replaces v2.2, v2.1, v2 (2026-10-21) and v1 (2026-10-20) · review of v1: `docs/intent/intent-review-2026-10-21.md`
+**Changed in 2.1–2.2:** the Phase 1 demo runs on one app, RealWorld (Conduit), replacing Cypress Real World App; no Java app in Phase 1; oracle isolation and BA reviewer decided (§1, §7, §8, §9, §10, §11, §12); 2.3 adds failure adjudication to the eval method (§8). Decisions: `DECISIONS.md` (D-01 to D-07). Handover: `docs/handover/2026-11-17-realworld-sandbox/`
 **Owner:** Dmitry (QE Manager) · **Status:** intent agreed, not yet built
 **Written for:** the BATC accelerator team, QE leadership, guild leads and QE technology architects. Terms are explained in the glossary at the end.
 
@@ -98,6 +98,7 @@ BATC sets the delivery flow and governs the AI. These capabilities plug in at th
 - **Plan the measurement before running it.** For each capability, write down the test set, the expected answers and the pass mark, and freeze them before the first measured run. No adjusting the test set after seeing results.
 - **Expected answers come first from planted problems.** We deliberately insert known defects into requirements, test results or the application, so the right answer is known for certain. Where planting is impossible, a second AI model labels the cases, and a person checks at least 20% of those labels. Results against Conduit's official test suites are secondary and labelled "possibly memorised": the suites are public and may be in model training data (D-03).
 - **Beat a simple baseline.** Every AI-based capability must do better than asking the same AI model a plain question on the same test set. Otherwise the capability adds nothing beyond the model.
+- **Classify every failure before scoring.** After each measured run, an adjudicator who is neither the BA nor the agents' builder classifies each failure: agent error, application defect, known requirement-vs-application gap, or disagreement between the requirements and Conduit's official test suites. Only agent errors count against the capability; the other classes are reported separately. Requirements are never changed to match the official suites (D-07).
 - **Show the uncertainty.** Every result is reported with its sample size and a 95% range. With 40 cases, an 80% score means "somewhere between about 65% and 90%". Pass marks are judged on that range.
 
 **Proposed pass marks**, to be frozen per capability in `evals/<capability>/plan.md`:

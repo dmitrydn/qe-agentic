@@ -6,7 +6,7 @@ QE checks for agent-built software: five standalone capabilities that check deli
 
 | Folder | What's in it |
 |---|---|
-| `intent.md` | Current intent (v2.2, 2026-11-17) |
+| `intent.md` | Current intent (v2.3, 2026-11-18) |
 | `DECISIONS.md` | Decisions made after intent v2 (D-01…) |
 | `packages/` | Product code: `core/`, `connectors/`, `capabilities/` (C1–C5), `cli/` |
 | `pipelines/` | Azure DevOps templates |
