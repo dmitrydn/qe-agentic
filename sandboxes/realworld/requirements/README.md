@@ -8,7 +8,8 @@ Specification pin: ebbcdeb8d55b42a3a613c787560498b8ef10003f
 
 - epics: 7
 - stories: 23
-- rules: 117
+- rules: 77
+- interface contracts: 40
 - scenarios: 72
 - open questions: 70
 - traceability rows: 73
@@ -366,4 +367,12 @@ Workbook verification statements above are historical claims, not the current ch
 
 Run 2a: counts above describe current Markdown. The verbatim workbook sections are historical source material, not updated source totals. See [traceability.md](traceability.md) for the 37 gap/correction dispositions and 210-row coverage inventory. All stories remain Draft; all questions remain Open and unanswered.
 
-Current validation: use tools/run2a.py --check and tools/check_citations.py. The older conversion checks intentionally expect the original item set; do not rerun the workbook generator over this refinement.
+Current validation: tools/run2b.py check and tools/check_citations.py. Do not rerun historical migrations or the original workbook converter over this refinement.
+
+## Run 2b review pack
+
+Rules above count BR only; interface contracts count IC separately. D-06 classification covers every prior rule. IC wording and citations remain unchanged; IC is for C1/C2, not BA review. Mixed rules remain BR. Personas, priorities, epic grouping, story framing/so-that and example data are BA-ASSUMPTION, not stakeholder decisions.
+
+Read [REVIEW-GUIDE.md](REVIEW-GUIDE.md) and work in [review/BA-review.xlsx](review/BA-review.xlsx). Stories contains BR-only review notes; IC is excluded. Features are generated from the same 72 Markdown scenarios (Scenario Outlines count once, not once per example). All stories remain Draft; all 70 questions remain Open and unanswered. The original workbook summaries above are historical, not current totals.
+
+Regenerate features and workbook using tools/run2b.py pack; validate with tools/run2b.py check. Decision ranking and estimated AC dependencies are explicit in tools/run2b.py. Citation verification is lexical/structural, not semantic approval. See [traceability.md](traceability.md) for all 117 classifications and current BR/IC/AC coverage.

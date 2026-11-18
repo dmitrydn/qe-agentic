@@ -652,3 +652,208 @@ This log covers only this authorised continuation; the initial Run 2a log above 
 **URLs accessed/fetched: none.** URLs encountered in local workbook, README, prior handback and specification prose were text only; the same eight source-index URLs are enumerated in the preceding Run 1c log. The citation-report summary read also contained the first pinned endpoints source URL ending in #L48-L48; it was not followed. Checker-generated report URLs were constructed locally, not requested. No oracle directory, official suite, Postman collection, backend/frontend implementation, protected document or source file was edited or accessed beyond the explicitly permitted read-only inputs.
 
 **Final stop point:** steps 4–5 complete under the authorised continuation; zero unexplained citation failures. No step 6 work, commit, push or merge. No further work performed.
+
+## Run 2b
+
+**Date:** 2026-11-18. **Status:** steps 6–8 complete. Final step 3 citation audit and step 7 feature checks passed. No business decisions, approvals, new questions or new scenarios. No commit, push or merge.
+
+### Counts and D-06 classification summary
+
+| Item | Before Run 2b | Final |
+| --- | ---: | ---: |
+| Epics | 7 | 7 |
+| Stories (all Draft) | 23 | 23 |
+| Business rules (BR) | 117 | 77 |
+| Interface contracts (IC) | 0 | 40 |
+| Acceptance scenarios/outlines | 72 | 72 |
+| Open questions (Open, unanswered) | 70 | 70 |
+| Generated feature files | 0 | 7 |
+
+- Classified **all 117** current rules before the labelling/tidy pass. [traceability.md](traceability.md) has the 117-row old ID / new ID / class / reason table. **40 moved to IC, 77 retained as BR.** All moved text and citations are unchanged. Old BR IDs are retired and individually logged in [CHANGELOG.md](CHANGELOG.md), never reused. Active coverage and traceability references now use current IC IDs; historical change-log/handback references and the classification table's Old ID column intentionally retain old IDs.
+- IC covers only response declarations/shapes, schema fields/types, request envelopes, wire token/header/storage format, markup/classes and fixed template text. The conservative borderline list below makes the actor/condition/permission-adjacent moves visible for Dmitry's check. IC has **not** been human-reviewed.
+- Mixed or uncertain items stay BR: authentication requirements, required business inputs, unknown-resource outcomes, ownership-dependent UI controls, visible navigation, article identity changes, paging limits, and the missing-image/default-avatar condition. In particular **BR-05.5**, **BR-15.5**, **BR-21.5**, **BR-10.2**, **BR-18.2** and **BR-08.6** remain BR.
+- Kept existing BR IDs and simplified wire-level spelling/status codes in the human-facing rule text; precise changes and original wording are logged. Required numeric limits and observable outcomes remain; API scenarios are unchanged and IC retains detailed contract declarations. No inferred ownership or error trigger was decided.
+- Each story now explicitly labels persona, proposed priority, story/so-that framing and example data **BA-ASSUMPTION**. Epic grouping/goal framing is labelled too. All original metadata values and Gherkin remain unchanged. Existing scenario-specific assumption caveats remain. Rules converted into questions in **Run 2b: 0**; new questions: **0**; the eight prior Run 2a retirements and their questions remain historical and unresolved.
+- Existing traceability remains: **73 original baseline mappings**, **37 gap/correction dispositions**, **210 checklist rows (201 Covered / 9 excluded)**. Covered may now target BR, IC or AC; IC is test-design input, not BA review material. No research file was read to update these existing tables.
+
+### Borderline — moved IC items mentioning an actor, permission, limit or condition
+
+This is deliberately over-inclusive: it includes schema names such as User/Profile/author and response declarations naming Unauthorized/Forbidden, even when they assert no actor permission. Each line explains why the moved item is not itself a business rule. The complete classification table includes the five other, plainly static/media-type moves.
+
+| Retired BR → current IC | Why not a business rule |
+| --- | --- |
+| BR-01.3 → IC-01.1 | “Successful registration” qualifies only the returned field list and status; no separate entitlement or validation predicate is stated. |
+| BR-01.7 → IC-01.2 | Stores the token using localStorage only; it does not decide reload persistence, token lifetime or validity (OQ-03.3 remains Open). |
+| BR-01.8 → IC-01.3 | “User” names a schema; required fields/types/nullability are response shape, not an actor permission. |
+| BR-01.9 → IC-01.4 | Required user envelope/fields describe request shape; business registration inputs remain BR-01.1. |
+| BR-02.6 → IC-02.1 | Token storage mechanism only; no session-lifetime or authentication-permission condition. |
+| BR-02.7 → IC-02.2 | Required login envelope/fields describe request shape; business sign-in inputs remain BR-02.1. |
+| BR-02.8 → IC-02.3 | Lists declared responses, including Unauthorized; explicitly leaves the wrong-credential trigger unanswered. |
+| BR-03.1 → IC-03.1 | “Authenticated requests” introduces credential header syntax only; required authentication remains BR-03.2/03.3. |
+| BR-03.5 → IC-03.2 | Declares current-user response names/statuses only, with no new access predicate. |
+| BR-05.6 → IC-05.1 | Declares user-update response names/statuses only, not when updating is permitted. |
+| BR-06.5 → IC-06.1 | Profile/following nullability and boolean type are schema, not viewer-relative following semantics. |
+| BR-06.6 → IC-06.2 | Profile response declarations do not decide optional-auth invalid-token behaviour; OQ-03.4 stays Open. |
+| BR-08.5 → IC-08.1 | “Published article” introduces a returned field list/status only; permission to publish remains BR-08.3. |
+| BR-08.7 → IC-08.2 | Request envelope, array type and schema optionality only; required/optional business inputs remain BR-08.4. |
+| BR-08.8 → IC-08.3 | Article/author/date-time/count fields are schema and types, not author permissions or count transitions. |
+| BR-08.9 → IC-08.4 | Conflict and Unauthorized are declarations only; the conflict trigger remains OQ-08.1. |
+| BR-09.5 → IC-09.1 | Declared Forbidden response is not an edit-ownership predicate; OQ-09.4 remains unanswered. |
+| BR-10.4 → IC-10.1 | Declared delete responses/empty shape only; API deletion ownership remains OQ-10.4. |
+| BR-11.6 → IC-11.1 | Declared article responses only; unknown-article behaviour remains BR-11.5. |
+| BR-12.3 → IC-12.1 | Lists omitted/present response fields only; articlesCount meaning remains OQ-15.3. |
+| BR-12.5 → IC-12.2 | Required list/feed fields/types and author reference only; no filtered-total or author-access semantics. |
+| BR-12.6 → IC-12.3 | Declared Unauthorized does not decide optional-auth handling; OQ-03.4 stays Open. |
+| BR-13.4 → IC-13.1 | Declared feed statuses only; followed-author/authentication behaviour remains BR-13.2. |
+| BR-14.4 → IC-14.1 | Required tags array and declared statuses only; tag visibility remains BR-14.3. |
+| BR-15.6 → IC-15.1 | “Active page” only selects a CSS class; no page size, allowed limit or navigation result is decided. |
+| BR-16.4 → IC-16.1 | Required comment/body envelope describes request shape; posting/body conditions remain BR-16.2. |
+| BR-16.5 → IC-16.2 | Comment/author fields and types only; no author permission or editing condition. |
+| BR-16.6 → IC-16.3 | Declared create-comment statuses only; authentication/body requirements remain BR-16.2. |
+| BR-17.4 → IC-17.1 | Comments array and declared statuses only; optional-auth token behaviour remains unanswered. |
+| BR-18.4 → IC-18.1 | Integer path ID and response declarations only; the ownership condition is explicitly undecided in OQ-18.2. |
+| BR-19.6 → IC-19.1 | “No additional parameters” is request shape; response declarations do not replace BR-19.1 authentication requirements. |
+| BR-20.5 → IC-20.1 | “No additional parameters” is request shape; response declarations do not replace BR-20.1 authentication requirements. |
+| BR-22.5 → IC-22.1 | “For 403/404” selects the error-key response shape, not an access/refusal condition. |
+| BR-22.7 → IC-22.3 | Unauthorized/missing-token example describes schema/example wording only; missing-authentication rejection remains BR-22.2. |
+| BR-22.8 → IC-22.4 | Resource-type error keys and forbidden/not-found examples are schema/examples, not permission predicates. |
+
+### Files produced and updated
+
+- Generated by [tools/run2b.py](tools/run2b.py), never by hand:
+  - [features/EP-01-account-authentication.feature](features/EP-01-account-authentication.feature)
+  - [features/EP-02-profiles-settings.feature](features/EP-02-profiles-settings.feature)
+  - [features/EP-03-articles.feature](features/EP-03-articles.feature)
+  - [features/EP-04-discovery-feeds.feature](features/EP-04-discovery-feeds.feature)
+  - [features/EP-05-comments.feature](features/EP-05-comments.feature)
+  - [features/EP-06-social.feature](features/EP-06-social.feature)
+  - [features/EP-07-navigation-platform.feature](features/EP-07-navigation-platform.feature)
+  - [review/BA-review.xlsx](review/BA-review.xlsx)
+- Updated all seven epic files with BR/IC sections and BA judgement labels; preserved story metadata and all scenario wording.
+- Updated [traceability.md](traceability.md), [CHANGELOG.md](CHANGELOG.md), [README.md](README.md), [citation-report.md](citation-report.md), and **only §6** of [REVIEW-GUIDE.md](REVIEW-GUIDE.md).
+- Added [tools/run2b.py](tools/run2b.py) and [tools/run2b-guide-prefix.sha256](tools/run2b-guide-prefix.sha256); extended [tools/markdown_io.py](tools/markdown_io.py) for IC parsing and [tools/check_citations.py](tools/check_citations.py) for logged unchanged BR→IC moves. No keyword-screen change or new exception.
+- Open-question content, answers, owners/statuses and source XLSX were preserved. No source, research, decision or intent document was edited.
+
+### Review pack and ranking
+
+- The workbook has exactly **Stories**, **Decisions**, **Sign-off** sheets. Stories has **23** rows and the specified columns; proposed priorities are pre-filled. BR-only story review notes are in the Title-cell comments, so no additional BR sheet or IC material was introduced. File cells link to the epic documents; the guide instructs the BA to skip IC.
+- Decisions has **70** rows in the exact §6 order; all kinds are proposals, Decision/Rationale/app observations remain blank, Status is Open, and Owner is copied from the question. Sign-off remains blank. Editable cells are pale yellow; other cells are locked without a password; all sheets freeze the header row. The required dropdowns are present.
+- **Approved layout extension:** Dmitry approved extra locked “Spec evidence 2/3/…” columns, since an ordinary Excel cell supports one hyperlink. Each citation therefore has its own independently clickable cell while retaining one question per row and all specified columns.
+- Ranking puts spec conflicts/security first, then descending **estimated affected-current-AC counts**. Explicit AC ID sets and their sizes are shown in §6 and in rank-cell comments; these are design estimates, not measured execution coverage. Response-field meaning questions are last: OQ-20.3, OQ-19.4, OQ-11.1, OQ-15.3 (ranks 67–70). Numeric ID breaks ties. No question has been answered by the ranking or proposed kind.
+- To regenerate derived outputs: use `tools/run2b.py pack`. To validate: `tools/run2b.py check` plus `tools/check_citations.py`. Do not rerun the one-shot split, Run 2a migration or original workbook generator over current Markdown.
+
+### Check results
+
+1. **D-06/preservation PASS:** all 117 classifications present, 77 current BR and 40 current IC, all moved text/citations unchanged, all active moved-ID references updated. Retained mixed rules remain BR. Original story metadata and original scenarios (plus previously authorised caveats) match the source workbook; the 36 Run 2a rule additions match their logged content, subject only to logged Run 2b wording changes. Original 73 mappings match the workbook. All 23 stories Draft, all 70 questions Open/unanswered. BR-08.6 retained. No retired BR ID reused.
+2. **Step 7 PASS, including final rerun:** seven feature files contain **72** Scenario/Scenario Outline declarations, exactly one per AC ID. Every generated Gherkin block equals its Markdown block, including Examples. Outlines count once, not once per example row. Tags carry AC ID and API/UI level; comments carry source citations and scenario-specific assumption caveats. This is artifact generation/validation, not app test execution.
+3. **Step 8 workbook PASS:** 23 Stories rows / 70 Decisions rows; all **94** evidence hyperlinks exactly match their source aliases, pin and inclusive line ranges; row order equals §6; BR-only story comments exclude IC; blank review/decision fields, Open statuses, dropdowns, locks, editable colours and frozen headers checked by reopening the generated XLSX.
+4. **Ten random hyperlink opens PASS:** deterministic sample, seed **20261118**, fetched the ten pinned GitHub URLs listed below. The destination pages resolved to the expected source files/pin and showed the relevant source content; range fragments were checked against the local specification. No embedded link was followed. This was an automated URL/content check, not a manual Excel UI session or a claim that the BA has reviewed the sources.
+5. **Final step 3 citation audit PASS, exit 0:** **362 current citations checked / 362 passed / 0 unexplained failures**, including BR and IC. Breakdown: 246 direct keyword matches; 3 same-item citation-set contexts; 94 OQ existence-only; 14 BA-ASSUMPTION range-only; 5 existing Dmitry-reviewed exceptions unchanged. A plain-language tidy moved one occurrence from direct keywords to the already-existing companion-context policy; no policy was weakened. Original denominator: 274 retained (including mapped IC) + 10 previously retired = 284; 88 added current occurrences. **828 metadata ranges** and **10 retired citation ranges** checked without failure. Historical roll-ups: 114 current BR/IC matches + 6 logged retired matches = 120, zero unexplained omissions. Lexical/range checks are not semantic proof or BA approval.
+6. **Guide protection PASS:** byte hash of everything before §6 is unchanged: **170d114651538228ca6a4c5f4a94488c9fcaed9eba640ac2e64203eff47c71da**. Scoped `git diff` independently shows changes only below the §6 heading; §1–§5 were not edited.
+7. **Source protection PASS:** SHA-256 remains **eb1a9ef70058438926454d9f0f8bcf316aa014162d4db8633b657073eafe9b58**. Specification HEAD verified by the citation checker at **ebbcdeb8d55b42a3a613c787560498b8ef10003f**. README counts match current files. Editor diagnostics reported no errors in edited scripts, README and guide.
+
+### Execution notes and deviations
+
+- Dmitry explicitly approved `python3 -m pip install --user openpyxl`. Installed openpyxl **3.1.5** and dependency et-xmlfile **2.0.0**; no other package or toolchain upgrade.
+- The approved additional evidence columns are the only review-workbook schema extension. BR-only notes are cell comments rather than a fourth sheet or extra rule columns, preserving the three-sheet layout and story row count.
+- Initial step 6 preservation assertion stopped because the compact parser interpreted the new `BA-ASSUMPTION` reader note as an extra metadata column. No step 7/8 work ran before resolving it. Fixed the parser to exclude that note from metadata; resumed **validation only**, not the migration write. Workbook and existing changelog comparisons verified the already-saved split, then the citation check passed before step 7. The final preservation/citation/feature checks all passed. No failed check was ignored or waived.
+- Final plain-language wording for four retained BRs was logged separately and reflected in the regenerated workbook. No IC text was rewritten. The untouched exception-register intro has historical stale prose; its five authoritative reviewer rows remain Dmitry, 2026-11-18.
+- No oracle, Postman collection or implementation code was read, listed or fetched. Prose specification documents named backend/tests.md and frontend/tests.md were read by the allowlisted range checker; they are not suites, and their links were not followed.
+- **No file under research/ was read, listed, searched or modified in Run 2b.** Historical research names/claims encountered inside the brief or existing requirements/handback were text only; no target was opened. Existing requirements tables supplied all coverage input.
+- Existing sparse-checkout configuration was inspected, not changed:
+
+  ```text
+  docs/src/content/docs/specifications/
+  docs/src/content/docs/implementation-creation/features.md
+  specs/api/openapi.yml
+  ```
+
+### Complete Run 2b read log
+
+Repeated reads are consolidated. Includes direct reads, script/import inputs, generated artifacts reopened for checks and editor diagnostics. Repository paths are relative to /Users/dmitry.dayneko/Projects/qe-agentic. Standard-library/imported package internals are execution dependencies, not additional requirements sources. No subagent was used.
+
+**Opening inputs:**
+
+- .github/copilot-instructions.md — provided in conversation context, not separately opened.
+- DECISIONS.md — reread, including D-06; unchanged.
+- docs/handover/2026-11-17-realworld-sandbox/03-next-task-business-requirements.md — reread in full, including §3, §5, steps 6–8 and §6; unchanged.
+- sandboxes/realworld/requirements/REVIEW-GUIDE.md — read before work; prefix read/hashed repeatedly; generated §6 read back.
+
+**Current requirements and tools:**
+
+- sandboxes/realworld/requirements/README.md
+- sandboxes/realworld/requirements/epics/EP-01-account-authentication.md
+- sandboxes/realworld/requirements/epics/EP-02-profiles-settings.md
+- sandboxes/realworld/requirements/epics/EP-03-articles.md
+- sandboxes/realworld/requirements/epics/EP-04-discovery-feeds.md
+- sandboxes/realworld/requirements/epics/EP-05-comments.md
+- sandboxes/realworld/requirements/epics/EP-06-social.md
+- sandboxes/realworld/requirements/epics/EP-07-navigation-platform.md
+- sandboxes/realworld/requirements/open-questions.md
+- sandboxes/realworld/requirements/traceability.md
+- sandboxes/realworld/requirements/CHANGELOG.md
+- sandboxes/realworld/requirements/HANDBACK.md — prior final paragraphs read to append; new section checked by diagnostics.
+- sandboxes/realworld/requirements/citation-report.md — regenerated; final summary, methods, exception rows and start of first audit entry read directly.
+- sandboxes/realworld/requirements/tools/markdown_io.py — imported/executed, narrowly edited and diagnostics checked.
+- sandboxes/realworld/requirements/tools/check_citations.py — read directly, narrowly extended, executed and diagnostics checked.
+- sandboxes/realworld/requirements/tools/citation-exceptions.md — read directly/by checker; unchanged.
+- sandboxes/realworld/requirements/tools/convert.py — imported for existing PIN/records and read-only expected-item comparisons; original generator not invoked.
+- sandboxes/realworld/requirements/tools/workbook.py — imported/executed by checks; source ZIP/XML reader only.
+- sandboxes/realworld/requirements/tools/run2b.py — created, read/executed/imported and diagnostics checked; no research input.
+- sandboxes/realworld/requirements/tools/run2b-guide-prefix.sha256 — written once from pre-edit guide prefix; read directly and by checks.
+- sandboxes/realworld/requirements/source/Conduit-backlog.xlsx — hash and read-only ZIP/XML parsing of all original sheets (workbook XML/relationships, resolved worksheet XML and shared strings if present); never written.
+
+**Generated artifacts read back:**
+
+- sandboxes/realworld/requirements/features/EP-01-account-authentication.feature
+- sandboxes/realworld/requirements/features/EP-02-profiles-settings.feature
+- sandboxes/realworld/requirements/features/EP-03-articles.feature
+- sandboxes/realworld/requirements/features/EP-04-discovery-feeds.feature
+- sandboxes/realworld/requirements/features/EP-05-comments.feature
+- sandboxes/realworld/requirements/features/EP-06-social.feature
+- sandboxes/realworld/requirements/features/EP-07-navigation-platform.feature
+- sandboxes/realworld/requirements/review/BA-review.xlsx — reopened through openpyxl to validate all three sheets, cell values/comments/styles/protection, validations and hyperlink relationships. Generated workbook only, not source workbook writes.
+
+**Local specification files read by the allowlisted checker at the verified pin:**
+
+- /tmp/rw-spec/specs/api/openapi.yml
+- /tmp/rw-spec/docs/src/content/docs/specifications/backend/endpoints.md
+- /tmp/rw-spec/docs/src/content/docs/specifications/backend/api-response-format.md
+- /tmp/rw-spec/docs/src/content/docs/specifications/backend/error-handling.md
+- /tmp/rw-spec/docs/src/content/docs/specifications/backend/cors.md
+- /tmp/rw-spec/docs/src/content/docs/specifications/backend/introduction.md
+- /tmp/rw-spec/docs/src/content/docs/specifications/backend/tests.md — prose requirements only.
+- /tmp/rw-spec/docs/src/content/docs/specifications/frontend/templates.md
+- /tmp/rw-spec/docs/src/content/docs/specifications/frontend/routing.md
+- /tmp/rw-spec/docs/src/content/docs/specifications/frontend/styles.md
+- /tmp/rw-spec/docs/src/content/docs/specifications/frontend/api.md
+- /tmp/rw-spec/docs/src/content/docs/specifications/frontend/tests.md — prose requirements only.
+- /tmp/rw-spec/docs/src/content/docs/implementation-creation/features.md
+
+**Directories/metadata:** requirements/epics/ and requirements/features/ filename globs; /tmp/rw-spec/.git/ HEAD and sparse-checkout metadata; repository Git status scoped to requirements/ and diff scoped to REVIEW-GUIDE.md; /memories/ empty listing (no memory file read/written). No broad workspace/research/specification-directory inventory.
+
+**Tool-output files opened** (prefix /Users/dmitry.dayneko/Library/Application Support/Code/User/workspaceStorage/1aef6cdeac1a60baed6f2809b359fc19/GitHub.copilot-chat/chat-session-resources/655d700b-b0b0-4cff-89c2-ed2d06ee862a/):
+
+- call_tdE1bRH54WACPujWqoeBxOuK__vscode-1794927803151/content.txt — installation result, current rule/question inventory and story metadata; requested ranges 1–510.
+- call_BYz290jd99F3ApFhqeRqlnw2__vscode-1794927803180/content.txt — complete final validation, citation audit, sparse configuration, guide diff and scoped status output; requested ranges 1–410.
+
+**URLs accessed for the ten sampled workbook links** (no embedded target followed):
+
+1. https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L90-L96
+2. https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L12-L13
+3. https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L567-L572
+4. https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L21-L21
+5. https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L19-L19
+6. https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L811-L820
+7. https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L7-L7
+8. https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L163-L163
+9. https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L498-L498
+10. https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L134-L134
+
+**Package-manager network:** the explicitly approved pip install downloaded the openpyxl 3.1.5 and et-xmlfile 2.0.0 wheels and their index/metadata. Pip did not print the exact index/download URLs; those transport URLs were not separately inspected or fetched by the agent. This network access is disclosed, not misreported as an offline run.
+
+**Other URLs read as text, not followed:** repository/source-index URLs in the brief, original XLSX/README and existing handback; source links generated in the citation report; URLs and GitHub navigation/raw/history links embedded in the ten fetched pages; demo/server, assets/fonts/icons, suite and implementation links in local specification prose. Only the ten explicitly listed GitHub source-page targets were opened by the agent; no GitHub directory, raw-source link, commit-history link, hosted app/API or embedded suite link was followed.
+
+**Stop point:** Run 2b complete through step 8 and final checks. BA review/sign-off remains entirely human work. No subsequent step, app exercise, commit, push or merge performed.
+
+- **2026-11-18 ranking-only correction:** regenerated §6 and workbook Decisions from tools/run2b.py rank-only with OQ-09.4, OQ-10.4, OQ-18.2, OQ-02.1, OQ-11.2, OQ-01.1 first, preserving the previous order for all others; §6/workbook consistency and §1–§5 byte-hash checks PASS, wording/kinds/other row content and other sheets unchanged; read log (all under sandboxes/realworld/requirements/): tools/run2b.py, tools/markdown_io.py, tools/workbook.py, tools/check_citations.py, tools/convert.py (imports only), tools/run2b-guide-prefix.sha256, source/Conduit-backlog.xlsx (hash only), all seven epics/EP-01-account-authentication.md through EP-07-navigation-platform.md and all seven corresponding features/ files enumerated above, open-questions.md, traceability.md, README.md, REVIEW-GUIDE.md, review/BA-review.xlsx, HANDBACK.md (edit/diagnostics); no URL fetched, research/oracle/implementation read or commit.

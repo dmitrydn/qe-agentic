@@ -70,12 +70,13 @@ def markdown_records():
         for story in re.finditer(r"^## (US-\d+) ([^\n]+)\n(.*?)(?=^## US-|\Z)", text, re.M | re.S):
             sid, title, block = story.groups()
             metadata = dict(re.findall(r"\*\*([^*]+):\*\* ([^\n]*?)(?= · \*\*|\n|$)", block.split("### ", 1)[0]))
+            metadata.pop("BA-ASSUMPTION", None)  # Reader note, not a story metadata column.
             row = {"Story ID": sid, "Title": title, **metadata}
             row["Baseline req IDs"] = row.pop("Baseline")
             row["User story"] = block.split("\n\n", 2)[1]
             assert sid not in stories, sid
             stories[sid] = row
-            for rule in re.finditer(r"^- \*\*(BR-\d+\.\d+)\*\* (.*?) — ([^\n]+)$", block, re.M):
+            for rule in re.finditer(r"^- \*\*((?:BR|IC)-\d+\.\d+)\*\* (.*?) — ([^\n]+)$", block, re.M):
                 item, wording, traces = rule.groups()
                 assert item not in items, item
                 items[item] = {"Rule ID": item, "Story ID": sid, "Business rule": wording,

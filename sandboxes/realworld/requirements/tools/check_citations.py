@@ -222,8 +222,19 @@ def main():
     changelog = (ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
     change_rows = read_table(changelog.split("## Run 2a — step 4", 1)[1].split("## Run 2a — step 5", 1)[0])
     retirements = {r["ID"]: r for r in change_rows if r["Change"].startswith("Rule turned into ")}
-    assert set(originals) - set(items) == set(retirements), "Every retired source ID must have a logged conversion"
-    for item in set(originals) - set(items):
+    moves = {}
+    for section in re.split(r"\n## ", changelog)[1:]:
+        if "| ID | Change | Reason | Citation |" in section:
+            for change in read_table(section):
+                match = re.match(r"Moved unchanged to (IC-\d+\.\d+);", change["Change"])
+                if match:
+                    assert change["ID"] not in moves and change["ID"] not in items
+                    moves[change["ID"]] = match.group(1)
+                    assert match.group(1) in items and change["Reason"]
+    inverse_moves = {new: old for old, new in moves.items()}
+    assert len(inverse_moves) == len(moves)
+    assert set(originals) - set(items) == set(retirements) | (set(moves) & set(originals)), "Every retired source ID must have a logged conversion or IC move"
+    for item in set(retirements):
         sheet, trace_key, source = originals[item]
         target = re.search(r"Rule turned into (OQ-\d+\.\d+)", retirements[item]["Change"]).group(1)
         assert target in items and retirements[item]["Reason"], (item, target)
@@ -232,18 +243,19 @@ def main():
             raw.update(id=item, method="Retired assertion — range only", detail="Converted to " + target + "; see CHANGELOG. Not counted as current supported behaviour.")
             retired.append(raw)
     for item, row in items.items():
-        sheet, trace_key = ("Business Rules", "Spec traces") if item.startswith("BR-") else (("Acceptance Criteria", "Spec traces") if item.startswith("AC-") else ("Open Questions", "Spec evidence"))
+        sheet, trace_key = ("Interface Contract" if item.startswith("IC-") else "Business Rules", "Spec traces") if item.startswith(("BR-", "IC-")) else (("Acceptance Criteria", "Spec traces") if item.startswith("AC-") else ("Open Questions", "Spec evidence"))
         current = citations(row[trace_key])
         assert current, ("Missing citation", item)
         assert len(current) == len({c[0] for c in current}), ("Duplicate citation", item)
         source_citations = []
-        if item in originals:
-            _, _, source = originals[item]
+        source_id = inverse_moves.get(item, item)
+        if source_id in originals:
+            _, _, source = originals[source_id]
             assert row["Story ID"] == source["Story ID"], item
             source_citations = [c[0] for c in citations(source[trace_key])]
             assert not Counter(source_citations) - Counter(c[0] for c in current), ("Unlogged removed citation", item)
         else:
-            assert "| " + item + " | New " in changelog, ("Unlogged new item", item)
+            assert "| " + source_id + " | New " in changelog, ("Unlogged new item", item)
         companions = [evidence(c, cache) for c in current]
         for citation, raw in zip(current, companions):
             result = classify(dict(raw), item, row, trace_key, companions, exceptions)
@@ -274,7 +286,7 @@ def main():
     # Historical roll-ups may point at a retired source rule, never at an unexplained omission.
     for story in records(book["Backlog"]):
         sid = story["Story ID"]
-        current = {c[0] for i, r in items.items() if i.startswith("BR-") and r["Story ID"] == sid for c in citations(r["Spec traces"])}
+        current = {c[0] for i, r in items.items() if i.startswith(("BR-", "IC-")) and r["Story ID"] == sid for c in citations(r["Spec traces"])}
         removed = {c[0] for i in retirements if originals[i][2]["Story ID"] == sid for c in citations(originals[i][2]["Spec traces"])}
         for c in citations(story["Spec traces (rules)"]):
             status = "Current rule" if c[0] in current else ("Logged retired rule" if c[0] in removed else "FAIL")
@@ -283,14 +295,14 @@ def main():
     bad_rollups = [r for r in rollups if r[2] == "FAIL"]
     methods = Counter(r["method"] for r in results)
     summary = "Current citations: " + str(len(results)) + " checked / " + str(sum(not r["reason"] for r in results)) + " passed / " + str(sum(bool(r["reason"]) for r in results)) + " unexplained failures."
-    report = ["# Run 2a citation report", "Specification pin: " + PIN, "## Result", summary,
+    report = ["# Run 2b citation report", "Specification pin: " + PIN, "## Result", summary,
               "Original 284 occurrence accounting: " + str(sum(r["origin"] == "Retained original" for r in results)) + " retained, " + str(len(retired)) + " retired with logged question conversions. Added current occurrences: " + str(sum(r["origin"] == "Added" for r in results)) + ".",
               "Metadata citations: " + str(len(metadata)) + " range-checked. Retired citations: " + str(len(retired)) + " range-checked, not asserted as supported rules.",
               "Backlog historical roll-ups: " + str(len(rollups)) + " checked; " + str(sum(r[2] == "Current rule" for r in rollups)) + " match current rule citations; " + str(sum(r[2] == "Logged retired rule" for r in rollups)) + " match logged retired rules; " + str(len(bad_rollups)) + " unexplained omissions.",
               "## Current outcome breakdown"]
     report.extend("- " + method + ": " + str(count) for method, count in sorted(methods.items()))
     report += ["## Method and limitations",
-               "All current BR/AC/OQ items are read from canonical Markdown, including every newly added item and citation. Original IDs may disappear only through an explicit logged rule-to-question conversion; retained original citations must remain. Every range must exist at the verified pin in the explicit 13-file requirement-source allowlist. No test suite or implementation is an input.",
+               "All current BR/IC/AC/OQ items are read from canonical Markdown, including every newly added item and citation. Original IDs may disappear only through an explicit logged rule-to-question conversion or unchanged BR-to-IC move. Moved original citations count as retained; retained original citations must remain. Historical roll-ups match current BR or IC citations. Every range must exist at the verified pin in the explicit 13-file requirement-source allowlist. No test suite or implementation is an input.",
                "The prior lexical policy is unchanged: ordinary wording requires direct substantive-token overlap or explicitly reported same-item citation-set context. OQ citations are existence-only because they may locate silence. BA-ASSUMPTION scenarios are range-checked, not promoted to specification-backed predicates. Exact exceptions use their current recorded reviewer; all five currently name Dmitry, 2026-11-18. No new exception has been introduced.",
                "Reconciliation/coverage and change-log evidence is checked for range existence separately; historical checklist wording is only a lead, not a new asserted requirement. Historical roll-ups distinguish current rule membership from a logged retired assertion. These lexical/structural checks are not semantic proof, executed tests or BA approval. Responses declared by OpenAPI do not establish unstated triggers.",
                "## Reviewed exceptions"]

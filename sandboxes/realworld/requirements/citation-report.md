@@ -1,4 +1,4 @@
-# Run 2a citation report
+# Run 2b citation report
 
 Specification pin: ebbcdeb8d55b42a3a613c787560498b8ef10003f
 
@@ -8,7 +8,7 @@ Current citations: 362 checked / 362 passed / 0 unexplained failures.
 
 Original 284 occurrence accounting: 274 retained, 10 retired with logged question conversions. Added current occurrences: 88.
 
-Metadata citations: 477 range-checked. Retired citations: 10 range-checked, not asserted as supported rules.
+Metadata citations: 828 range-checked. Retired citations: 10 range-checked, not asserted as supported rules.
 
 Backlog historical roll-ups: 120 checked; 114 match current rule citations; 6 match logged retired rules; 0 unexplained omissions.
 
@@ -16,9 +16,9 @@ Backlog historical roll-ups: 120 checked; 114 match current rule citations; 6 ma
 
 - BA-ASSUMPTION: 14
 
-- Citation-set context: 2
+- Citation-set context: 3
 
-- Direct keywords: 247
+- Direct keywords: 246
 
 - Open-question existence: 94
 
@@ -26,7 +26,7 @@ Backlog historical roll-ups: 120 checked; 114 match current rule citations; 6 ma
 
 ## Method and limitations
 
-All current BR/AC/OQ items are read from canonical Markdown, including every newly added item and citation. Original IDs may disappear only through an explicit logged rule-to-question conversion; retained original citations must remain. Every range must exist at the verified pin in the explicit 13-file requirement-source allowlist. No test suite or implementation is an input.
+All current BR/IC/AC/OQ items are read from canonical Markdown, including every newly added item and citation. Original IDs may disappear only through an explicit logged rule-to-question conversion or unchanged BR-to-IC move. Moved original citations count as retained; retained original citations must remain. Historical roll-ups match current BR or IC citations. Every range must exist at the verified pin in the explicit 13-file requirement-source allowlist. No test suite or implementation is an input.
 
 The prior lexical policy is unchanged: ordinary wording requires direct substantive-token overlap or explicitly reported same-item citation-set context. OQ citations are existence-only because they may locate silence. BA-ASSUMPTION scenarios are range-checked, not promoted to specification-backed predicates. Exact exceptions use their current recorded reviewer; all five currently name Dmitry, 2026-11-18. No new exception has been introduced.
 
@@ -70,38 +70,9 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 No authentication required, returns a [User](/specifications/backend/api-response-format#users-for-authentication)
 ````
 
-### 3. BR-01.3 — endpoints.md L46
+### 3. BR-01.4 — openapi.yml L44-60
 
-PASS — Direct keywords: user
-
-Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L46-L46
-
-````text
-No authentication required, returns a [User](/specifications/backend/api-response-format#users-for-authentication)
-````
-
-### 4. BR-01.3 — api-response-format.md L11-20
-
-PASS — Direct keywords: bio, email, image, token, user, username
-
-Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L11-L20
-
-````text
-```json
-{
-  "user": {
-    "email": "jake@jake.jake",
-    "token": "jwt.token.here",
-    "username": "jake",
-    "bio": null,
-    "image": null
-  }
-}
-````
-
-### 5. BR-01.3 — openapi.yml L44-60
-
-PASS — Direct keywords: 201, new, user
+PASS — Citation-set context: This range exists but has no direct wording keyword. Supporting citation in the same item: openapi.yml L781-790 (already, taken, username)
 
 Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L44-L60
 
@@ -125,33 +96,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
       description: Gets the currently logged-in user
 ````
 
-### 6. BR-01.4 — openapi.yml L44-60
-
-PASS — Direct keywords: 409
-
-Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L44-L60
-
-````text
-      operationId: CreateUser
-      requestBody:
-        $ref: '#/components/requestBodies/NewUserRequest'
-      responses:
-        '201':
-          $ref: '#/components/responses/UserResponse'
-        '409':
-          $ref: '#/components/responses/ConflictError'
-        '422':
-          $ref: '#/components/responses/GenericError'
-      x-codegen-request-body-name: body
-  /user:
-    get:
-      tags:
-        - User and Authentication
-      summary: Get current user
-      description: Gets the currently logged-in user
-````
-
-### 7. BR-01.4 — openapi.yml L781-790
+### 4. BR-01.4 — openapi.yml L781-790
 
 PASS — Direct keywords: already, taken, username
 
@@ -170,9 +115,9 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
                 - "has already been taken"
 ````
 
-### 8. BR-01.5 — error-handling.md L7-17
+### 5. BR-01.5 — error-handling.md L7-17
 
-PASS — Direct keywords: 422, error
+PASS — Direct keywords: error
 
 Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L7-L17
 
@@ -190,7 +135,7 @@ If a request fails any validations, expect a 422 and errors in the following for
 ```
 ````
 
-### 9. BR-01.6 — routing.md L9
+### 6. BR-01.6 — routing.md L9
 
 PASS — Direct keywords: register, sign
 
@@ -200,7 +145,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 - Sign in/Sign up pages (URL: `/login`, `/register` )
 ````
 
-### 10. BR-01.6 — templates.md L262-281
+### 7. BR-01.6 — templates.md L262-281
 
 PASS — Direct keywords: button, email, error, form, password, sign, username
 
@@ -229,7 +174,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
           <button class="btn btn-lg btn-primary pull-xs-right">Sign up</button>
 ````
 
-### 11. BR-01.6 — templates.md L267
+### 8. BR-01.6 — templates.md L267
 
 PASS — Direct keywords: error
 
@@ -239,7 +184,62 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
         <ul class="error-messages">
 ````
 
-### 12. BR-01.7 — routing.md L10
+### 9. IC-01.1 — endpoints.md L46
+
+PASS — Direct keywords: user
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L46-L46
+
+````text
+No authentication required, returns a [User](/specifications/backend/api-response-format#users-for-authentication)
+````
+
+### 10. IC-01.1 — api-response-format.md L11-20
+
+PASS — Direct keywords: bio, email, image, token, user, username
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L11-L20
+
+````text
+```json
+{
+  "user": {
+    "email": "jake@jake.jake",
+    "token": "jwt.token.here",
+    "username": "jake",
+    "bio": null,
+    "image": null
+  }
+}
+````
+
+### 11. IC-01.1 — openapi.yml L44-60
+
+PASS — Direct keywords: 201, new, user
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L44-L60
+
+````text
+      operationId: CreateUser
+      requestBody:
+        $ref: '#/components/requestBodies/NewUserRequest'
+      responses:
+        '201':
+          $ref: '#/components/responses/UserResponse'
+        '409':
+          $ref: '#/components/responses/ConflictError'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      x-codegen-request-body-name: body
+  /user:
+    get:
+      tags:
+        - User and Authentication
+      summary: Get current user
+      description: Gets the currently logged-in user
+````
+
+### 12. IC-01.2 — routing.md L10
 
 PASS — Direct keywords: local, storage, store, token
 
@@ -249,7 +249,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
   - Uses JWT (store the token in localStorage)
 ````
 
-### 13. BR-01.8 — openapi.yml L481-503
+### 13. IC-01.3 — openapi.yml L481-503
 
 PASS — Direct keywords: bio, email, image, null, string, token, user, username
 
@@ -281,7 +281,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
             - 'null'
 ````
 
-### 14. BR-01.9 — openapi.yml L834-845
+### 14. IC-01.4 — openapi.yml L834-845
 
 PASS — Direct keywords: object, user
 
@@ -302,7 +302,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
                 $ref: '#/components/schemas/NewUser'
 ````
 
-### 15. BR-01.9 — openapi.yml L467-480
+### 15. IC-01.4 — openapi.yml L467-480
 
 PASS — Direct keywords: email, object, password, user, username
 
@@ -325,7 +325,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
           format: password
 ````
 
-### 16. BR-01.10 — templates.md L262-265
+### 16. IC-01.5 — templates.md L262-265
 
 PASS — Direct keywords: account, login, sign
 
@@ -504,7 +504,7 @@ No authentication required, returns a [User](/specifications/backend/api-respons
 
 ### 27. BR-02.3 — openapi.yml L28-42
 
-PASS — Direct keywords: 200, authentication, user
+PASS — Direct keywords: authentication, user
 
 Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L28-L42
 
@@ -572,7 +572,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
         <ul class="error-messages">
 ````
 
-### 31. BR-02.6 — routing.md L10
+### 31. IC-02.1 — routing.md L10
 
 PASS — Direct keywords: local, storage, store, token
 
@@ -582,7 +582,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
   - Uses JWT (store the token in localStorage)
 ````
 
-### 32. BR-02.7 — openapi.yml L822-833
+### 32. IC-02.2 — openapi.yml L822-833
 
 PASS — Direct keywords: login, object, user
 
@@ -603,7 +603,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
                 $ref: '#/components/schemas/LoginUser'
 ````
 
-### 33. BR-02.7 — openapi.yml L456-466
+### 33. IC-02.2 — openapi.yml L456-466
 
 PASS — Direct keywords: email, login, object, password, user
 
@@ -623,7 +623,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
           format: password
 ````
 
-### 34. BR-02.8 — openapi.yml L28-37
+### 34. IC-02.3 — openapi.yml L28-37
 
 PASS — Direct keywords: 200, 401, 422, error, generic, login, unauthorized, user
 
@@ -642,7 +642,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
           $ref: '#/components/responses/GenericError'
 ````
 
-### 35. BR-02.9 — templates.md L231-234
+### 35. IC-02.4 — templates.md L231-234
 
 PASS — Direct keywords: account, register, sign
 
@@ -783,23 +783,9 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 If a request fails any validations, expect a 422 and errors in the following format:
 ````
 
-### 43. BR-03.1 — endpoints.md L5-9
+### 43. BR-03.2 — endpoints.md L50-54
 
-PASS — Direct keywords: authorization, header, jwt, token
-
-Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L5-L9
-
-````text
-### Authentication Header:
-
-You can read the authentication header from the headers of the request
-
-`Authorization: Token jwt.token.here`
-````
-
-### 44. BR-03.2 — endpoints.md L50-54
-
-PASS — Direct keywords: authentication, current, get, user
+PASS — Direct keywords: authentication, current, user
 
 Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L50-L54
 
@@ -811,9 +797,9 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 Authentication required, returns a [User](/specifications/backend/api-response-format#users-for-authentication) that's the current user
 ````
 
-### 45. BR-03.3 — error-handling.md L21
+### 44. BR-03.3 — error-handling.md L21
 
-PASS — Direct keywords: 401, authentication, but
+PASS — Direct keywords: authentication, but, unauthorized
 
 Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L21-L21
 
@@ -821,9 +807,9 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 401 for Unauthorized requests, when a request requires authentication but it isn't provided
 ````
 
-### 46. BR-03.3 — openapi.yml L771-780
+### 45. BR-03.3 — openapi.yml L771-780
 
-PASS — Direct keywords: token
+PASS — Direct keywords: token, unauthorized
 
 Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L771-L780
 
@@ -840,7 +826,21 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
                 - "is missing"
 ````
 
-### 47. BR-03.5 — openapi.yml L61-68
+### 46. IC-03.1 — endpoints.md L5-9
+
+PASS — Direct keywords: authorization, header, jwt, token
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L5-L9
+
+````text
+### Authentication Header:
+
+You can read the authentication header from the headers of the request
+
+`Authorization: Token jwt.token.here`
+````
+
+### 47. IC-03.2 — openapi.yml L61-68
 
 PASS — Direct keywords: 200, 401, 422, error, generic, get, unauthorized, user
 
@@ -993,7 +993,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 
 ### 58. BR-05.3 — endpoints.md L56-74
 
-PASS — Direct keywords: authentication, bio, email, image, password, put, user, username
+PASS — Direct keywords: authentication, bio, email, image, password, user, username
 
 Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L56-L74
 
@@ -1031,7 +1031,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 
 ### 60. BR-05.5 — openapi.yml L846-857
 
-PASS — Direct keywords: field, least, object, one, update, user
+PASS — Direct keywords: field, least, one, update, user
 
 Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L846-L857
 
@@ -1050,7 +1050,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
                 $ref: '#/components/schemas/UpdateUser'
 ````
 
-### 61. BR-05.6 — openapi.yml L76-87
+### 61. IC-05.1 — openapi.yml L76-87
 
 PASS — Direct keywords: 200, 401, 422, error, generic, unauthorized, user
 
@@ -1204,7 +1204,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 
 ### 69. BR-06.2 — endpoints.md L76-80
 
-PASS — Direct keywords: authentication, get, profile, username
+PASS — Direct keywords: authentication, profile, username
 
 Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L76-L80
 
@@ -1236,7 +1236,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 
 ### 71. BR-06.3 — openapi.yml L95-117
 
-PASS — Direct keywords: 404, username
+PASS — Direct keywords: error, found, username
 
 Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L95-L117
 
@@ -1286,7 +1286,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
             &nbsp; Edit Profile Settings
 ````
 
-### 74. BR-06.5 — openapi.yml L521-540
+### 74. IC-06.1 — openapi.yml L521-540
 
 PASS — Direct keywords: bio, boolean, following, image, null, object, profile, username
 
@@ -1315,7 +1315,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
           type: boolean
 ````
 
-### 75. BR-06.5 — openapi.yml L746-756
+### 75. IC-06.1 — openapi.yml L746-756
 
 PASS — Direct keywords: object, profile
 
@@ -1335,7 +1335,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
                 $ref: '#/components/schemas/Profile'
 ````
 
-### 76. BR-06.6 — openapi.yml L93-111
+### 76. IC-06.2 — openapi.yml L93-111
 
 PASS — Direct keywords: 200, 401, 404, 422, auth, error, found, generic, get, optional, profile, unauthorized, username
 
@@ -1465,7 +1465,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 
 ### 83. BR-07.2 — endpoints.md L110-116
 
-PASS — Direct keywords: author, favorited, user
+PASS — Direct keywords: author, user
 
 Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L110-L116
 
@@ -1586,7 +1586,63 @@ Required fields: `title`, `description`, `body`
 Optional fields: `tagList` as an array of Strings
 ````
 
-### 92. BR-08.5 — api-response-format.md L38-57
+### 92. BR-08.6 — endpoints.md L185
+
+PASS — Direct keywords: article, slug, title, unique
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L185-L185
+
+````text
+> The `slug` is the article's URL identifier. The spec only requires it to be a unique string that you can use to fetch, update, and delete the article — duplicate titles must still produce distinct slugs. How you derive it is up to your implementation (commonly a kebab-cased title); no particular format is enforced by the test suite.
+````
+
+### 93. BR-08.10 — templates.md L444-446
+
+PASS — Direct keywords: error
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L444-L446
+
+````text
+        <ul class="error-messages">
+          <li>That title is required</li>
+        </ul>
+````
+
+### 94. BR-08.10 — templates.md L464-466
+
+PASS — Direct keywords: control, list, tag
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L464-L466
+
+````text
+              <input type="text" class="form-control" placeholder="Enter tags" />
+              <div class="tag-list">
+                <span class="tag-default tag-pill"> <i class="ion-close-round"></i> tag </span>
+````
+
+### 95. BR-08.10 — templates.md L482
+
+PASS — Direct keywords: edit, switch
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L482-L482
+
+````text
+// TODO : update to switch between follow/favorite AND edit/delete
+````
+
+### 96. BR-08.10 — templates.md L505-507
+
+PASS — Direct keywords: article, edit
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L505-L507
+
+````text
+        <button class="btn btn-sm btn-outline-secondary">
+          <i class="ion-edit"></i> Edit Article
+        </button>
+````
+
+### 97. IC-08.1 — api-response-format.md L38-57
 
 PASS — Direct keywords: article, author, body, count, created, description, favorite, favorited, list, slug, tag, title, updated
 
@@ -1615,7 +1671,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 }
 ````
 
-### 93. BR-08.5 — openapi.yml L219-239
+### 98. IC-08.1 — openapi.yml L219-239
 
 PASS — Direct keywords: 201, article, body, description, slug, tag
 
@@ -1645,17 +1701,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
       description: Get an article. Auth not required
 ````
 
-### 94. BR-08.6 — endpoints.md L185
-
-PASS — Direct keywords: article, slug, title, unique
-
-Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L185-L185
-
-````text
-> The `slug` is the article's URL identifier. The spec only requires it to be a unique string that you can use to fetch, update, and delete the article — duplicate titles must still produce distinct slugs. How you derive it is up to your implementation (commonly a kebab-cased title); no particular format is enforced by the test suite.
-````
-
-### 95. BR-08.7 — openapi.yml L579-595
+### 99. IC-08.2 — openapi.yml L579-595
 
 PASS — Direct keywords: array, article, body, description, list, object, string, tag, title
 
@@ -1681,7 +1727,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
             type: string
 ````
 
-### 96. BR-08.7 — openapi.yml L858-869
+### 100. IC-08.2 — openapi.yml L858-869
 
 PASS — Direct keywords: article, create, description, object
 
@@ -1702,7 +1748,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
                 $ref: '#/components/schemas/NewArticle'
 ````
 
-### 97. BR-08.8 — openapi.yml L541-578
+### 101. IC-08.3 — openapi.yml L541-578
 
 PASS — Direct keywords: article, author, body, boolean, count, created, date, description, favorite, favorited, integer, list, profile, slug, string, tag, time, title, updated
 
@@ -1749,7 +1795,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
           $ref: '#/components/schemas/Profile'
 ````
 
-### 98. BR-08.9 — openapi.yml L219-230
+### 102. IC-08.4 — openapi.yml L219-230
 
 PASS — Direct keywords: 201, 401, 409, 422, article, conflict, error, generic, unauthorized
 
@@ -1768,52 +1814,6 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
           $ref: '#/components/responses/ConflictError'
         '422':
           $ref: '#/components/responses/GenericError'
-````
-
-### 99. BR-08.10 — templates.md L444-446
-
-PASS — Direct keywords: error, message
-
-Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L444-L446
-
-````text
-        <ul class="error-messages">
-          <li>That title is required</li>
-        </ul>
-````
-
-### 100. BR-08.10 — templates.md L464-466
-
-PASS — Direct keywords: control, list, tag
-
-Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L464-L466
-
-````text
-              <input type="text" class="form-control" placeholder="Enter tags" />
-              <div class="tag-list">
-                <span class="tag-default tag-pill"> <i class="ion-close-round"></i> tag </span>
-````
-
-### 101. BR-08.10 — templates.md L482
-
-PASS — Direct keywords: edit, switch
-
-Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L482-L482
-
-````text
-// TODO : update to switch between follow/favorite AND edit/delete
-````
-
-### 102. BR-08.10 — templates.md L505-507
-
-PASS — Direct keywords: article, edit
-
-Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L505-L507
-
-````text
-        <button class="btn btn-sm btn-outline-secondary">
-          <i class="ion-edit"></i> Edit Article
-        </button>
 ````
 
 ### 103. AC-08.1 — templates.md L451-470
@@ -1996,7 +1996,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 The `slug` also gets updated when the `title` is changed
 ````
 
-### 114. BR-09.5 — openapi.yml L260-288
+### 114. IC-09.1 — openapi.yml L260-288
 
 PASS — Direct keywords: 200, 401, 403, 404, 422, article, error, forbidden, found, generic, slug, unauthorized
 
@@ -2034,7 +2034,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
       description: Delete an article. Auth is required
 ````
 
-### 115. BR-09.5 — error-handling.md L23-25
+### 115. IC-09.1 — error-handling.md L23-25
 
 PASS — Direct keywords: 403, 404, forbidden, found
 
@@ -2119,7 +2119,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 
 ### 120. BR-10.1 — endpoints.md L187-191
 
-PASS — Direct keywords: authentication
+PASS — Direct keywords: article, authentication
 
 Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L187-L191
 
@@ -2133,7 +2133,7 @@ Authentication required
 
 ### 121. BR-10.1 — openapi.yml L289-315
 
-PASS — Direct keywords: 204
+PASS — Direct keywords: article
 
 Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L289-L315
 
@@ -2187,7 +2187,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
           <i class="ion-trash-a"></i> Delete Article
 ````
 
-### 124. BR-10.4 — openapi.yml L289-315
+### 124. IC-10.1 — openapi.yml L289-315
 
 PASS — Direct keywords: 204, 401, 403, 404, 422, article, delete, error, forbidden, found, generic, slug, unauthorized
 
@@ -2223,7 +2223,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
       description: Get the comments for an article. Auth is optional
 ````
 
-### 125. BR-10.4 — openapi.yml L768-770
+### 125. IC-10.1 — openapi.yml L768-770
 
 PASS — Direct keywords: content
 
@@ -2368,7 +2368,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 
 ### 132. BR-11.2 — endpoints.md L136-140
 
-PASS — Direct keywords: article, authentication, get, slug
+PASS — Direct keywords: article, authentication
 
 Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L136-L140
 
@@ -2382,7 +2382,7 @@ No authentication required, will return [single article](/specifications/backend
 
 ### 133. BR-11.2 — api-response-format.md L38-57
 
-PASS — Direct keywords: article, body, slug
+PASS — Direct keywords: article, body
 
 Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L38-L57
 
@@ -2431,7 +2431,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 
 ### 136. BR-11.5 — openapi.yml L240-259
 
-PASS — Direct keywords: 404, slug
+PASS — Direct keywords: article, error, found, slug
 
 Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L240-L259
 
@@ -2458,7 +2458,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
       description: Update an article. Auth is required
 ````
 
-### 137. BR-11.6 — openapi.yml L240-259
+### 137. IC-11.1 — openapi.yml L240-259
 
 PASS — Direct keywords: 200, 404, 422, article, error, found, generic, get, slug
 
@@ -2587,32 +2587,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 Authentication optional, will return [multiple articles](/specifications/backend/api-response-format#multiple-articles), ordered by most recent first
 ````
 
-### 145. BR-12.3 — api-response-format.md L62-67
-
-PASS — Direct keywords: article, body, list
-
-Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L62-L67
-
-````text
-:::caution
-Starting from the 2024/08/16, the endpoints retrieving a list of articles do no longer return the body of an article for performance reasons.
-It affects:
-- `GET /api/articles`
-- `GET /api/articles/feed`
-:::
-````
-
-### 146. BR-12.3 — api-response-format.md L102
-
-PASS — Direct keywords: article, count
-
-Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L102-L102
-
-````text
-  "articlesCount": 2
-````
-
-### 147. BR-12.4 — templates.md L145-185
+### 145. BR-12.4 — templates.md L145-185
 
 PASS — Direct keywords: author, date, description, more, preview, read, tag
 
@@ -2662,7 +2637,32 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
               <li class="tag-default tag-pill tag-outline">realworld</li>
 ````
 
-### 148. BR-12.5 — openapi.yml L697-745
+### 146. IC-12.1 — api-response-format.md L62-67
+
+PASS — Direct keywords: article, body, list
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L62-L67
+
+````text
+:::caution
+Starting from the 2024/08/16, the endpoints retrieving a list of articles do no longer return the body of an article for performance reasons.
+It affects:
+- `GET /api/articles`
+- `GET /api/articles/feed`
+:::
+````
+
+### 147. IC-12.1 — api-response-format.md L102
+
+PASS — Direct keywords: article, count
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L102-L102
+
+````text
+  "articlesCount": 2
+````
+
+### 148. IC-12.2 — openapi.yml L697-745
 
 PASS — Direct keywords: article, author, count, created, description, favorite, favorited, integer, list, profile, slug, tag, title, updated
 
@@ -2720,7 +2720,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
                 type: integer
 ````
 
-### 149. BR-12.5 — api-response-format.md L62-67
+### 149. IC-12.2 — api-response-format.md L62-67
 
 PASS — Direct keywords: article, body, feed, list
 
@@ -2735,7 +2735,7 @@ It affects:
 :::
 ````
 
-### 150. BR-12.6 — openapi.yml L183-213
+### 150. IC-12.3 — openapi.yml L183-213
 
 PASS — Direct keywords: 200, 401, 422, article, auth, error, generic, get, multiple, optional, unauthorized
 
@@ -2775,7 +2775,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
           $ref: '#/components/responses/GenericError'
 ````
 
-### 151. BR-12.7 — templates.md L126-131
+### 151. IC-12.4 — templates.md L126-131
 
 PASS — Direct keywords: banner, conduit, knowledge, place, share
 
@@ -2867,7 +2867,7 @@ Authentication required, will return [multiple articles](/specifications/backend
 
 ### 159. BR-13.3 — endpoints.md L132
 
-PASS — Direct keywords: like, limit, list, offset
+PASS — Direct keywords: article, list
 
 Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L132-L132
 
@@ -2875,7 +2875,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 Can also take `limit` and `offset` query parameters like [List Articles](/specifications/backend/endpoints#list-articles)
 ````
 
-### 160. BR-13.4 — openapi.yml L164-180
+### 160. IC-13.1 — openapi.yml L164-180
 
 PASS — Direct keywords: 200, 401, 422, article, error, feed, generic, get, multiple, unauthorized
 
@@ -2995,7 +2995,7 @@ Filter by tag:
 
 ### 170. BR-14.3 — endpoints.md L239-243
 
-PASS — Direct keywords: authentication, get, list, tag
+PASS — Direct keywords: authentication, list, tag
 
 Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L239-L243
 
@@ -3023,7 +3023,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 }
 ````
 
-### 172. BR-14.4 — openapi.yml L443-453
+### 172. IC-14.1 — openapi.yml L443-453
 
 PASS — Direct keywords: 200, 422, error, generic, get, tag
 
@@ -3043,7 +3043,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
           $ref: '#/components/responses/GenericError'
 ````
 
-### 173. BR-14.4 — openapi.yml L649-661
+### 173. IC-14.1 — openapi.yml L649-661
 
 PASS — Direct keywords: array, string, tag
 
@@ -3130,7 +3130,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 
 ### 179. BR-15.2 — endpoints.md L118-124
 
-PASS — Direct keywords: 0, 20, article, default, limit, offset
+PASS — Direct keywords: 0, 20, article, default, number
 
 Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L118-L124
 
@@ -3146,7 +3146,7 @@ Offset/skip number of articles (default is 0):
 
 ### 180. BR-15.2 — openapi.yml L895-911
 
-PASS — Direct keywords: 0, 1, 20, default, limit, offset, starting
+PASS — Direct keywords: 0, 1, 20, default, number, starting
 
 Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L895-L911
 
@@ -3182,7 +3182,7 @@ Can also take `limit` and `offset` query parameters like [List Articles](/specif
 
 ### 182. BR-15.5 — openapi.yml L895-911
 
-PASS — Direct keywords: 0, 1, 20, default, integer, item, limit, minimum, number, offset, query, skip
+PASS — Direct keywords: 0, 1, 20, item, number, skip
 
 Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L895-L911
 
@@ -3206,7 +3206,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
       description: The numbers of items to return.
 ````
 
-### 183. BR-15.6 — templates.md L191-196
+### 183. IC-15.1 — templates.md L191-196
 
 PASS — Direct keywords: active, item, link, pagination
 
@@ -3310,7 +3310,7 @@ Required field: `body`
 
 ### 191. BR-16.2 — api-response-format.md L108-122
 
-PASS — Direct keywords: author, body, comment, created, updated
+PASS — Direct keywords: author, body, comment, created
 
 Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L108-L122
 
@@ -3334,7 +3334,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 
 ### 192. BR-16.2 — openapi.yml L338-365
 
-PASS — Direct keywords: 201, body, comment
+PASS — Direct keywords: body, comment
 
 Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L338-L365
 
@@ -3379,7 +3379,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 - CR-D Comments on articles (no updating required)
 ````
 
-### 194. BR-16.4 — openapi.yml L630-636
+### 194. IC-16.1 — openapi.yml L630-636
 
 PASS — Direct keywords: body, comment, object
 
@@ -3395,7 +3395,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
           type: string
 ````
 
-### 195. BR-16.4 — openapi.yml L882-893
+### 195. IC-16.1 — openapi.yml L882-893
 
 PASS — Direct keywords: comment, create, object
 
@@ -3416,7 +3416,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
                 $ref: '#/components/schemas/NewComment'
 ````
 
-### 196. BR-16.5 — openapi.yml L609-629
+### 196. IC-16.2 — openapi.yml L609-629
 
 PASS — Direct keywords: author, body, comment, created, date, integer, profile, string, time, updated
 
@@ -3446,7 +3446,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
           $ref: '#/components/schemas/Profile'
 ````
 
-### 197. BR-16.6 — openapi.yml L338-365
+### 197. IC-16.3 — openapi.yml L338-365
 
 PASS — Direct keywords: 201, 401, 404, 422, article, comment, error, found, generic, slug, unauthorized
 
@@ -3600,7 +3600,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 
 ### 205. BR-17.1 — endpoints.md L211-215
 
-PASS — Direct keywords: article, authentication, comment, get, slug
+PASS — Direct keywords: article, authentication, comment
 
 Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L211-L215
 
@@ -3661,7 +3661,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 - CR-D Comments on articles (no updating required)
 ````
 
-### 209. BR-17.4 — openapi.yml L315-337
+### 209. IC-17.1 — openapi.yml L315-337
 
 PASS — Direct keywords: 200, 401, 404, 422, article, auth, comment, error, found, generic, get, optional, slug, unauthorized
 
@@ -3693,7 +3693,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
       description: Create a comment for an article. Auth is required
 ````
 
-### 210. BR-17.4 — openapi.yml L675-685
+### 210. IC-17.1 — openapi.yml L675-685
 
 PASS — Direct keywords: array, comment
 
@@ -3744,7 +3744,7 @@ Authentication optional, returns [multiple comments](/specifications/backend/api
 
 ### 213. BR-18.1 — endpoints.md L217-221
 
-PASS — Direct keywords: authentication
+PASS — Direct keywords: authentication, comment
 
 Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L217-L221
 
@@ -3758,7 +3758,7 @@ Authentication required
 
 ### 214. BR-18.1 — openapi.yml L366-398
 
-PASS — Direct keywords: 204
+PASS — Direct keywords: comment
 
 Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L366-L398
 
@@ -3819,7 +3819,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
               <i class="ion-trash-a"></i>
 ````
 
-### 217. BR-18.4 — openapi.yml L366-398
+### 217. IC-18.1 — openapi.yml L366-398
 
 PASS — Direct keywords: 204, 401, 403, 404, 422, article, comment, delete, error, forbidden, found, generic, integer, parameter, path, slug, unauthorized
 
@@ -3861,7 +3861,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
       description: Favorite an article. Auth is required
 ````
 
-### 218. BR-18.4 — openapi.yml L768-770
+### 218. IC-18.1 — openapi.yml L768-770
 
 PASS — Direct keywords: content
 
@@ -3992,7 +3992,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 
 ### 226. BR-19.4 — openapi.yml L118-141
 
-PASS — Direct keywords: 404, username
+PASS — Direct keywords: error, found, username
 
 Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L118-L141
 
@@ -4033,7 +4033,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 Authentication required, will return [multiple articles](/specifications/backend/api-response-format#multiple-articles) created by followed users, ordered by most recent first.
 ````
 
-### 228. BR-19.6 — endpoints.md L82-96
+### 228. IC-19.1 — endpoints.md L82-96
 
 PASS — Direct keywords: additional, follow, parameter, profile, unfollow
 
@@ -4057,7 +4057,7 @@ Authentication required, returns a [Profile](/specifications/backend/api-respons
 No additional parameters required
 ````
 
-### 229. BR-19.6 — openapi.yml L118-160
+### 229. IC-19.1 — openapi.yml L118-160
 
 PASS — Direct keywords: 200, 401, 404, 422, error, follow, found, generic, parameter, profile, unauthorized, unfollow
 
@@ -4227,7 +4227,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
   - List of articles populated from author's created articles or author's favorited articles
 ````
 
-### 239. BR-20.5 — endpoints.md L223-237
+### 239. IC-20.1 — endpoints.md L223-237
 
 PASS — Direct keywords: additional, article, favorite, parameter, unfavorite
 
@@ -4251,7 +4251,7 @@ Authentication required, returns the [Article](/specifications/backend/api-respo
 No additional parameters required
 ````
 
-### 240. BR-20.5 — openapi.yml L399-441
+### 240. IC-20.1 — openapi.yml L399-441
 
 PASS — Direct keywords: 200, 401, 404, 422, article, error, favorite, found, generic, parameter, unauthorized, unfavorite
 
@@ -4415,7 +4415,19 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 > the link of the active page should use the **active** css class.
 ````
 
-### 250. BR-21.4 — templates.md L14
+### 250. BR-21.5 — styles.md L16-18
+
+PASS — Direct keywords: avatar, default, display, face, icon, image, profile, smiley, user
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/styles.md#L16-L18
+
+````text
+### Default Avatar
+
+When a user has no profile image, implementations should display the [default avatar](https://github.com/realworld-apps/realworld/blob/main/assets/media/default-avatar.svg) (a smiley face icon).
+````
+
+### 251. IC-21.1 — templates.md L14
 
 PASS — Direct keywords: conduit, title
 
@@ -4425,7 +4437,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
   <title>Conduit</title>
 ````
 
-### 251. BR-21.4 — templates.md L103-111
+### 252. IC-21.1 — templates.md L103-111
 
 PASS — Direct keywords: code, conduit, design, footer, interactive, learning, licensed, mit, project, under
 
@@ -4441,18 +4453,6 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
     </span>
   </div>
 </footer>
-````
-
-### 252. BR-21.5 — styles.md L16-18
-
-PASS — Direct keywords: avatar, default, display, face, icon, image, profile, smiley, user
-
-Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/styles.md#L16-L18
-
-````text
-### Default Avatar
-
-When a user has no profile image, implementations should display the [default avatar](https://github.com/realworld-apps/realworld/blob/main/assets/media/default-avatar.svg) (a smiley face icon).
 ````
 
 ### 253. AC-21.1 — templates.md L36-40
@@ -4496,7 +4496,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 
 ### 256. BR-22.1 — error-handling.md L7-17
 
-PASS — Direct keywords: 422, error, validation
+PASS — Direct keywords: error, validation
 
 Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L7-L17
 
@@ -4516,7 +4516,7 @@ If a request fails any validations, expect a 422 and errors in the following for
 
 ### 257. BR-22.2 — error-handling.md L21
 
-PASS — Direct keywords: 401, authentication
+PASS — Direct keywords: authentication, unauthorized
 
 Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L21-L21
 
@@ -4526,7 +4526,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 
 ### 258. BR-22.3 — error-handling.md L23
 
-PASS — Direct keywords: 403, user, valid
+PASS — Direct keywords: forbidden, user, valid
 
 Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L23-L23
 
@@ -4536,7 +4536,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 
 ### 259. BR-22.4 — error-handling.md L25
 
-PASS — Direct keywords: 404
+PASS — Direct keywords: found
 
 Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L25-L25
 
@@ -4544,7 +4544,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 404 for Not found requests, when a resource can't be found to fulfill the request
 ````
 
-### 260. BR-22.5 — openapi.yml L791-810
+### 260. IC-22.1 — openapi.yml L791-810
 
 PASS — Direct keywords: article, comment, error, key, profile, resource, type
 
@@ -4573,7 +4573,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
                 - "not found"
 ````
 
-### 261. BR-22.6 — api-response-format.md L7
+### 261. IC-22.2 — api-response-format.md L7
 
 PASS — Direct keywords: 8, application, charset, content, json, type, utf
 
@@ -4583,7 +4583,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 Make sure the right content type like `Content-Type: application/json; charset=utf-8` is correctly returned.
 ````
 
-### 262. BR-22.7 — openapi.yml L771-780
+### 262. IC-22.3 — openapi.yml L771-780
 
 PASS — Direct keywords: error, example, missing, model, token, unauthorized
 
@@ -4602,7 +4602,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
                 - "is missing"
 ````
 
-### 263. BR-22.8 — openapi.yml L637-647
+### 263. IC-22.4 — openapi.yml L637-647
 
 PASS — Direct keywords: array, error, model, string, type
 
@@ -4622,7 +4622,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
               type: string
 ````
 
-### 264. BR-22.8 — openapi.yml L791-810
+### 264. IC-22.4 — openapi.yml L791-810
 
 PASS — Direct keywords: error, example, forbidden, found, identifie, key, model, resource, type
 
@@ -4701,7 +4701,7 @@ If a request fails any validations, expect a 422 and errors in the following for
 
 ### 267. BR-23.1 — cors.md L7
 
-PASS — Direct keywords: acces, allow, backend, content, control, correct, different, frontend, header, host, option, origin, port, run, type
+PASS — Direct keywords: allow, backend, different, frontend, header, host, origin, port, run
 
 Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/cors.md#L7-L7
 
@@ -11576,7 +11576,110 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 - Follow other users
 ````
 
-### 364. AC-18.1 — templates.md L599-600
+### 364. BR-05.5 — openapi.yml L846-857
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L846-L857
+
+````text
+    UpdateUserRequest:
+      required: true
+      description: User details to update. At least **one** field is required.
+      content:
+        application/json:
+          schema:
+            required:
+              - user
+            type: object
+            properties:
+              user:
+                $ref: '#/components/schemas/UpdateUser'
+````
+
+### 365. BR-08.10 — templates.md L444-446
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L444-L446
+
+````text
+        <ul class="error-messages">
+          <li>That title is required</li>
+        </ul>
+````
+
+### 366. BR-08.10 — templates.md L464-466
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L464-L466
+
+````text
+              <input type="text" class="form-control" placeholder="Enter tags" />
+              <div class="tag-list">
+                <span class="tag-default tag-pill"> <i class="ion-close-round"></i> tag </span>
+````
+
+### 367. BR-08.10 — templates.md L482
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L482-L482
+
+````text
+// TODO : update to switch between follow/favorite AND edit/delete
+````
+
+### 368. BR-08.10 — templates.md L505-507
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L505-L507
+
+````text
+        <button class="btn btn-sm btn-outline-secondary">
+          <i class="ion-edit"></i> Edit Article
+        </button>
+````
+
+### 369. BR-13.3 — endpoints.md L132
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L132-L132
+
+````text
+Can also take `limit` and `offset` query parameters like [List Articles](/specifications/backend/endpoints#list-articles)
+````
+
+### 370. BR-15.5 — openapi.yml L895-911
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L895-L911
+
+````text
+    offsetParam:
+      in: query
+      name: offset
+      required: false
+      schema:
+        type: integer
+        minimum: 0
+      description: The number of items to skip before starting to collect the result set.
+    limitParam:
+      in: query
+      name: limit
+      required: false
+      schema:
+        type: integer
+        minimum: 1
+        default: 20
+      description: The numbers of items to return.
+````
+
+### 371. AC-18.1 — templates.md L599-600
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -11587,7 +11690,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
               <i class="ion-trash-a"></i>
 ````
 
-### 365. AC-18.1 — routing.md L18
+### 372. AC-18.1 — routing.md L18
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -11597,7 +11700,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
   - Delete comment button (only shown to comment's author)
 ````
 
-### 366. AC-03.1 — routing.md L10
+### 373. AC-03.1 — routing.md L10
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -11607,7 +11710,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
   - Uses JWT (store the token in localStorage)
 ````
 
-### 367. OQ-03.3 — routing.md L10
+### 374. OQ-03.3 — routing.md L10
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -11617,7 +11720,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
   - Uses JWT (store the token in localStorage)
 ````
 
-### 368. OQ-09.4 — openapi.yml L260-288
+### 375. OQ-09.4 — openapi.yml L260-288
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -11655,7 +11758,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
       description: Delete an article. Auth is required
 ````
 
-### 369. OQ-09.4 — error-handling.md L23
+### 376. OQ-09.4 — error-handling.md L23
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -11665,7 +11768,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 403 for Forbidden requests, when a request may be valid but the user doesn't have permissions to perform the action
 ````
 
-### 370. OQ-09.4 — templates.md L482
+### 377. OQ-09.4 — templates.md L482
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -11675,7 +11778,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 // TODO : update to switch between follow/favorite AND edit/delete
 ````
 
-### 371. OQ-10.4 — routing.md L15
+### 378. OQ-10.4 — routing.md L15
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -11685,7 +11788,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
   - Delete article button (only shown to article's author)
 ````
 
-### 372. OQ-10.4 — openapi.yml L289-315
+### 379. OQ-10.4 — openapi.yml L289-315
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -11721,7 +11824,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
       description: Get the comments for an article. Auth is optional
 ````
 
-### 373. OQ-10.4 — error-handling.md L23
+### 380. OQ-10.4 — error-handling.md L23
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -11731,7 +11834,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 403 for Forbidden requests, when a request may be valid but the user doesn't have permissions to perform the action
 ````
 
-### 374. OQ-18.2 — routing.md L18
+### 381. OQ-18.2 — routing.md L18
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -11741,7 +11844,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
   - Delete comment button (only shown to comment's author)
 ````
 
-### 375. OQ-18.2 — openapi.yml L366-398
+### 382. OQ-18.2 — openapi.yml L366-398
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -11783,7 +11886,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
       description: Favorite an article. Auth is required
 ````
 
-### 376. OQ-18.2 — error-handling.md L23
+### 383. OQ-18.2 — error-handling.md L23
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -11793,7 +11896,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 403 for Forbidden requests, when a request may be valid but the user doesn't have permissions to perform the action
 ````
 
-### 377. OQ-19.4 — api-response-format.md L25-33
+### 384. OQ-19.4 — api-response-format.md L25-33
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -11811,7 +11914,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 }
 ````
 
-### 378. OQ-19.4 — openapi.yml L521-540
+### 385. OQ-19.4 — openapi.yml L521-540
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -11840,7 +11943,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
           type: boolean
 ````
 
-### 379. OQ-15.3 — api-response-format.md L102
+### 386. OQ-15.3 — api-response-format.md L102
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -11850,7 +11953,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
   "articlesCount": 2
 ````
 
-### 380. OQ-15.3 — openapi.yml L697-745
+### 387. OQ-15.3 — openapi.yml L697-745
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -11908,7 +12011,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
                 type: integer
 ````
 
-### 381. OQ-20.3 — api-response-format.md L48-49
+### 388. OQ-20.3 — api-response-format.md L48-49
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -11919,7 +12022,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
     "favoritesCount": 0,
 ````
 
-### 382. OQ-20.3 — endpoints.md L223-237
+### 389. OQ-20.3 — endpoints.md L223-237
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -11943,7 +12046,7 @@ Authentication required, returns the [Article](/specifications/backend/api-respo
 No additional parameters required
 ````
 
-### 383. BR-02.4 — openapi.yml L28-42
+### 390. BR-02.4 — openapi.yml L28-42
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -11967,7 +12070,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
         - User and Authentication
 ````
 
-### 384. BR-03.4 — routing.md L10
+### 391. BR-03.4 — routing.md L10
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -11977,7 +12080,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
   - Uses JWT (store the token in localStorage)
 ````
 
-### 385. BR-09.4 — openapi.yml L260-288
+### 392. BR-09.4 — openapi.yml L260-288
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12015,7 +12118,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
       description: Delete an article. Auth is required
 ````
 
-### 386. BR-09.4 — openapi.yml L791-792
+### 393. BR-09.4 — openapi.yml L791-792
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12026,7 +12129,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
       description: Forbidden. The error key identifies the resource type (article, comment, etc.)
 ````
 
-### 387. BR-10.3 — openapi.yml L289-315
+### 394. BR-10.3 — openapi.yml L289-315
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12062,7 +12165,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
       description: Get the comments for an article. Auth is optional
 ````
 
-### 388. BR-18.3 — openapi.yml L366-398
+### 395. BR-18.3 — openapi.yml L366-398
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12104,7 +12207,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
       description: Favorite an article. Auth is required
 ````
 
-### 389. BR-18.3 — openapi.yml L791-792
+### 396. BR-18.3 — openapi.yml L791-792
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12115,7 +12218,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
       description: Forbidden. The error key identifies the resource type (article, comment, etc.)
 ````
 
-### 390. BR-19.2 — api-response-format.md L25-33
+### 397. BR-19.2 — api-response-format.md L25-33
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12133,7 +12236,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 }
 ````
 
-### 391. BR-15.4 — api-response-format.md L102
+### 398. BR-15.4 — api-response-format.md L102
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12143,7 +12246,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
   "articlesCount": 2
 ````
 
-### 392. BR-20.2 — api-response-format.md L48-49
+### 399. BR-20.2 — api-response-format.md L48-49
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12154,7 +12257,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
     "favoritesCount": 0,
 ````
 
-### 393. AC-02.3 — openapi.yml L28-42
+### 400. AC-02.3 — openapi.yml L28-42
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12178,7 +12281,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
         - User and Authentication
 ````
 
-### 394. AC-09.3 — openapi.yml L260-288
+### 401. AC-09.3 — openapi.yml L260-288
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12216,7 +12319,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
       description: Delete an article. Auth is required
 ````
 
-### 395. AC-09.3 — openapi.yml L791-792
+### 402. AC-09.3 — openapi.yml L791-792
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12227,7 +12330,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
       description: Forbidden. The error key identifies the resource type (article, comment, etc.)
 ````
 
-### 396. AC-10.3 — openapi.yml L289-315
+### 403. AC-10.3 — openapi.yml L289-315
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12263,7 +12366,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
       description: Get the comments for an article. Auth is optional
 ````
 
-### 397. AC-18.3 — openapi.yml L366-398
+### 404. AC-18.3 — openapi.yml L366-398
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12305,7 +12408,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
       description: Favorite an article. Auth is required
 ````
 
-### 398. AC-19.2 — endpoints.md L82-88
+### 405. AC-19.2 — endpoints.md L82-88
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12321,7 +12424,7 @@ Authentication required, returns a [Profile](/specifications/backend/api-respons
 No additional parameters required
 ````
 
-### 399. AC-19.3 — endpoints.md L90-96
+### 406. AC-19.3 — endpoints.md L90-96
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12337,7 +12440,7 @@ Authentication required, returns a [Profile](/specifications/backend/api-respons
 No additional parameters required
 ````
 
-### 400. AC-20.1 — templates.md L155
+### 407. AC-20.1 — templates.md L155
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12347,7 +12450,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
               <i class="ion-heart"></i> 29
 ````
 
-### 401. AC-20.1 — api-response-format.md L48-49
+### 408. AC-20.1 — api-response-format.md L48-49
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12358,7 +12461,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
     "favoritesCount": 0,
 ````
 
-### 402. AC-20.2 — endpoints.md L223-229
+### 409. AC-20.2 — endpoints.md L223-229
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12374,7 +12477,7 @@ Authentication required, returns the [Article](/specifications/backend/api-respo
 No additional parameters required
 ````
 
-### 403. AC-20.3 — endpoints.md L231-237
+### 410. AC-20.3 — endpoints.md L231-237
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12390,7 +12493,7 @@ Authentication required, returns the [Article](/specifications/backend/api-respo
 No additional parameters required
 ````
 
-### 404. AC-15.2 — endpoints.md L118
+### 411. AC-15.2 — endpoints.md L118
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12400,7 +12503,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 Limit number of articles (default is 20):
 ````
 
-### 405. AC-15.2 — api-response-format.md L102
+### 412. AC-15.2 — api-response-format.md L102
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12410,7 +12513,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
   "articlesCount": 2
 ````
 
-### 406. OQ-03.4 — openapi.yml L93-117
+### 413. OQ-03.4 — openapi.yml L93-117
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12444,7 +12547,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
       description: Follow a user by username
 ````
 
-### 407. OQ-03.4 — openapi.yml L183-213
+### 414. OQ-03.4 — openapi.yml L183-213
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12484,7 +12587,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
           $ref: '#/components/responses/GenericError'
 ````
 
-### 408. OQ-03.4 — openapi.yml L315-337
+### 415. OQ-03.4 — openapi.yml L315-337
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12516,7 +12619,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
       description: Create a comment for an article. Auth is required
 ````
 
-### 409. OQ-01.5 — openapi.yml L456-480
+### 416. OQ-01.5 — openapi.yml L456-480
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12550,7 +12653,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
           format: password
 ````
 
-### 410. OQ-07.4 — endpoints.md L102-126
+### 417. OQ-07.4 — endpoints.md L102-126
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12584,7 +12687,7 @@ Offset/skip number of articles (default is 0):
 Authentication optional, will return [multiple articles](/specifications/backend/api-response-format#multiple-articles), ordered by most recent first
 ````
 
-### 411. OQ-15.4 — endpoints.md L118-134
+### 418. OQ-15.4 — endpoints.md L118-134
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12610,7 +12713,7 @@ Can also take `limit` and `offset` query parameters like [List Articles](/specif
 Authentication required, will return [multiple articles](/specifications/backend/api-response-format#multiple-articles) created by followed users, ordered by most recent first.
 ````
 
-### 412. OQ-20.4 — endpoints.md L231-237
+### 419. OQ-20.4 — endpoints.md L231-237
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12626,7 +12729,7 @@ Authentication required, returns the [Article](/specifications/backend/api-respo
 No additional parameters required
 ````
 
-### 413. OQ-19.5 — endpoints.md L90-96
+### 420. OQ-19.5 — endpoints.md L90-96
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12642,7 +12745,7 @@ Authentication required, returns a [Profile](/specifications/backend/api-respons
 No additional parameters required
 ````
 
-### 414. OQ-05.6 — openapi.yml L76-94
+### 421. OQ-05.6 — openapi.yml L76-94
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12670,7 +12773,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
       description: Get a profile of a user of the system. Auth is optional
 ````
 
-### 415. OQ-05.6 — openapi.yml L846-857
+### 422. OQ-05.6 — openapi.yml L846-857
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12691,7 +12794,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
                 $ref: '#/components/schemas/UpdateUser'
 ````
 
-### 416. OQ-05.6 — endpoints.md L74
+### 423. OQ-05.6 — endpoints.md L74
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12701,7 +12804,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 Accepted fields: `email`, `username`, `password`, `image`, `bio`
 ````
 
-### 417. OQ-21.3 — routing.md L5-21
+### 424. OQ-21.3 — routing.md L5-21
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12727,7 +12830,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
   - List of articles populated from author's created articles or author's favorited articles
 ````
 
-### 418. OQ-21.3 — templates.md L145-155
+### 425. OQ-21.3 — templates.md L145-155
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12747,7 +12850,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
               <i class="ion-heart"></i> 29
 ````
 
-### 419. OQ-21.3 — templates.md L231-247
+### 426. OQ-21.3 — templates.md L231-247
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12773,7 +12876,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
           <button class="btn btn-lg btn-primary pull-xs-right">Sign in</button>
 ````
 
-### 420. OQ-22.2 — openapi.yml L567-572
+### 427. OQ-22.2 — openapi.yml L567-572
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12788,7 +12891,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
           format: date-time
 ````
 
-### 421. OQ-22.2 — api-response-format.md L46-47
+### 428. OQ-22.2 — api-response-format.md L46-47
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12799,7 +12902,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
     "updatedAt": "2016-02-18T03:48:35.824Z",
 ````
 
-### 422. OQ-09.1 — endpoints.md L181
+### 429. OQ-09.1 — endpoints.md L181
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12809,7 +12912,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 Optional fields: `title`, `description`, `body`
 ````
 
-### 423. OQ-09.1 — openapi.yml L596-608
+### 430. OQ-09.1 — openapi.yml L596-608
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12831,7 +12934,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
             type: string
 ````
 
-### 424. BR-01.8 — openapi.yml L481-503
+### 431. BR-01.8 — openapi.yml L481-503
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12863,7 +12966,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
             - 'null'
 ````
 
-### 425. BR-01.9 — openapi.yml L834-845
+### 432. BR-01.9 — openapi.yml L834-845
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12884,7 +12987,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
                 $ref: '#/components/schemas/NewUser'
 ````
 
-### 426. BR-01.9 — openapi.yml L467-480
+### 433. BR-01.9 — openapi.yml L467-480
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12907,7 +13010,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
           format: password
 ````
 
-### 427. BR-01.10 — templates.md L262-265
+### 434. BR-01.10 — templates.md L262-265
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12920,7 +13023,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
         </p>
 ````
 
-### 428. BR-02.7 — openapi.yml L822-833
+### 435. BR-02.7 — openapi.yml L822-833
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12941,7 +13044,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
                 $ref: '#/components/schemas/LoginUser'
 ````
 
-### 429. BR-02.7 — openapi.yml L456-466
+### 436. BR-02.7 — openapi.yml L456-466
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12961,7 +13064,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
           format: password
 ````
 
-### 430. BR-02.8 — openapi.yml L28-37
+### 437. BR-02.8 — openapi.yml L28-37
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12980,7 +13083,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
           $ref: '#/components/responses/GenericError'
 ````
 
-### 431. BR-02.9 — templates.md L231-234
+### 438. BR-02.9 — templates.md L231-234
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -12993,7 +13096,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
         </p>
 ````
 
-### 432. BR-03.5 — openapi.yml L61-68
+### 439. BR-03.5 — openapi.yml L61-68
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13010,7 +13113,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
           $ref: '#/components/responses/GenericError'
 ````
 
-### 433. BR-05.5 — openapi.yml L846-857
+### 440. BR-05.5 — openapi.yml L846-857
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13031,7 +13134,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
                 $ref: '#/components/schemas/UpdateUser'
 ````
 
-### 434. BR-05.6 — openapi.yml L76-87
+### 441. BR-05.6 — openapi.yml L76-87
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13052,7 +13155,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
         - Token: [ ]
 ````
 
-### 435. BR-06.5 — openapi.yml L521-540
+### 442. BR-06.5 — openapi.yml L521-540
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13081,7 +13184,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
           type: boolean
 ````
 
-### 436. BR-06.5 — openapi.yml L746-756
+### 443. BR-06.5 — openapi.yml L746-756
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13101,7 +13204,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
                 $ref: '#/components/schemas/Profile'
 ````
 
-### 437. BR-06.6 — openapi.yml L93-111
+### 444. BR-06.6 — openapi.yml L93-111
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13129,7 +13232,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
           $ref: '#/components/responses/GenericError'
 ````
 
-### 438. BR-08.7 — openapi.yml L579-595
+### 445. BR-08.7 — openapi.yml L579-595
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13155,7 +13258,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
             type: string
 ````
 
-### 439. BR-08.7 — openapi.yml L858-869
+### 446. BR-08.7 — openapi.yml L858-869
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13176,7 +13279,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
                 $ref: '#/components/schemas/NewArticle'
 ````
 
-### 440. BR-08.8 — openapi.yml L541-578
+### 447. BR-08.8 — openapi.yml L541-578
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13223,7 +13326,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
           $ref: '#/components/schemas/Profile'
 ````
 
-### 441. BR-08.9 — openapi.yml L219-230
+### 448. BR-08.9 — openapi.yml L219-230
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13244,7 +13347,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
           $ref: '#/components/responses/GenericError'
 ````
 
-### 442. BR-08.10 — templates.md L444-446
+### 449. BR-08.10 — templates.md L444-446
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13256,7 +13359,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
         </ul>
 ````
 
-### 443. BR-08.10 — templates.md L464-466
+### 450. BR-08.10 — templates.md L464-466
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13268,7 +13371,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
                 <span class="tag-default tag-pill"> <i class="ion-close-round"></i> tag </span>
 ````
 
-### 444. BR-08.10 — templates.md L482
+### 451. BR-08.10 — templates.md L482
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13278,7 +13381,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 // TODO : update to switch between follow/favorite AND edit/delete
 ````
 
-### 445. BR-08.10 — templates.md L505-507
+### 452. BR-08.10 — templates.md L505-507
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13290,7 +13393,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
         </button>
 ````
 
-### 446. BR-09.5 — openapi.yml L260-288
+### 453. BR-09.5 — openapi.yml L260-288
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13328,7 +13431,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
       description: Delete an article. Auth is required
 ````
 
-### 447. BR-09.5 — error-handling.md L23-25
+### 454. BR-09.5 — error-handling.md L23-25
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13340,7 +13443,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 404 for Not found requests, when a resource can't be found to fulfill the request
 ````
 
-### 448. BR-10.4 — openapi.yml L289-315
+### 455. BR-10.4 — openapi.yml L289-315
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13376,7 +13479,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
       description: Get the comments for an article. Auth is optional
 ````
 
-### 449. BR-10.4 — openapi.yml L768-770
+### 456. BR-10.4 — openapi.yml L768-770
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13388,7 +13491,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
       content: { }
 ````
 
-### 450. BR-11.6 — openapi.yml L240-259
+### 457. BR-11.6 — openapi.yml L240-259
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13417,7 +13520,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
       description: Update an article. Auth is required
 ````
 
-### 451. BR-12.5 — openapi.yml L697-745
+### 458. BR-12.5 — openapi.yml L697-745
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13475,7 +13578,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
                 type: integer
 ````
 
-### 452. BR-12.5 — api-response-format.md L62-67
+### 459. BR-12.5 — api-response-format.md L62-67
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13490,7 +13593,7 @@ It affects:
 :::
 ````
 
-### 453. BR-12.6 — openapi.yml L183-213
+### 460. BR-12.6 — openapi.yml L183-213
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13530,7 +13633,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
           $ref: '#/components/responses/GenericError'
 ````
 
-### 454. BR-12.7 — templates.md L126-131
+### 461. BR-12.7 — templates.md L126-131
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13545,7 +13648,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
   </div>
 ````
 
-### 455. BR-13.4 — openapi.yml L164-180
+### 462. BR-13.4 — openapi.yml L164-180
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13571,7 +13674,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
         - Token: [ ]
 ````
 
-### 456. BR-14.4 — openapi.yml L443-453
+### 463. BR-14.4 — openapi.yml L443-453
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13591,7 +13694,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
           $ref: '#/components/responses/GenericError'
 ````
 
-### 457. BR-14.4 — openapi.yml L649-661
+### 464. BR-14.4 — openapi.yml L649-661
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13613,7 +13716,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
                   type: string
 ````
 
-### 458. BR-15.5 — openapi.yml L895-911
+### 465. BR-15.5 — openapi.yml L895-911
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13639,7 +13742,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
       description: The numbers of items to return.
 ````
 
-### 459. BR-15.6 — templates.md L191-196
+### 466. BR-15.6 — templates.md L191-196
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13654,7 +13757,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
             <a class="page-link" href="">2</a>
 ````
 
-### 460. BR-16.4 — openapi.yml L630-636
+### 467. BR-16.4 — openapi.yml L630-636
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13670,7 +13773,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
           type: string
 ````
 
-### 461. BR-16.4 — openapi.yml L882-893
+### 468. BR-16.4 — openapi.yml L882-893
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13691,7 +13794,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
                 $ref: '#/components/schemas/NewComment'
 ````
 
-### 462. BR-16.5 — openapi.yml L609-629
+### 469. BR-16.5 — openapi.yml L609-629
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13721,7 +13824,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
           $ref: '#/components/schemas/Profile'
 ````
 
-### 463. BR-16.6 — openapi.yml L338-365
+### 470. BR-16.6 — openapi.yml L338-365
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13758,7 +13861,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
       description: Delete a comment for an article. Auth is required
 ````
 
-### 464. BR-17.4 — openapi.yml L315-337
+### 471. BR-17.4 — openapi.yml L315-337
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13790,7 +13893,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
       description: Create a comment for an article. Auth is required
 ````
 
-### 465. BR-17.4 — openapi.yml L675-685
+### 472. BR-17.4 — openapi.yml L675-685
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13810,7 +13913,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
                   $ref: '#/components/schemas/Comment'
 ````
 
-### 466. BR-18.4 — openapi.yml L366-398
+### 473. BR-18.4 — openapi.yml L366-398
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13852,7 +13955,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
       description: Favorite an article. Auth is required
 ````
 
-### 467. BR-18.4 — openapi.yml L768-770
+### 474. BR-18.4 — openapi.yml L768-770
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13864,7 +13967,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
       content: { }
 ````
 
-### 468. BR-19.6 — endpoints.md L82-96
+### 475. BR-19.6 — endpoints.md L82-96
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13888,7 +13991,7 @@ Authentication required, returns a [Profile](/specifications/backend/api-respons
 No additional parameters required
 ````
 
-### 469. BR-19.6 — openapi.yml L118-160
+### 476. BR-19.6 — openapi.yml L118-160
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13940,7 +14043,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
         - Token: [ ]
 ````
 
-### 470. BR-20.5 — endpoints.md L223-237
+### 477. BR-20.5 — endpoints.md L223-237
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -13964,7 +14067,7 @@ Authentication required, returns the [Article](/specifications/backend/api-respo
 No additional parameters required
 ````
 
-### 471. BR-20.5 — openapi.yml L399-441
+### 478. BR-20.5 — openapi.yml L399-441
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -14016,7 +14119,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
         - Token: [ ]
 ````
 
-### 472. BR-21.4 — templates.md L14
+### 479. BR-21.4 — templates.md L14
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -14026,7 +14129,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
   <title>Conduit</title>
 ````
 
-### 473. BR-21.4 — templates.md L103-111
+### 480. BR-21.4 — templates.md L103-111
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -14044,7 +14147,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 </footer>
 ````
 
-### 474. BR-21.5 — styles.md L16-18
+### 481. BR-21.5 — styles.md L16-18
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -14056,7 +14159,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
 When a user has no profile image, implementations should display the [default avatar](https://github.com/realworld-apps/realworld/blob/main/assets/media/default-avatar.svg) (a smiley face icon).
 ````
 
-### 475. BR-22.7 — openapi.yml L771-780
+### 482. BR-22.7 — openapi.yml L771-780
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -14075,7 +14178,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
                 - "is missing"
 ````
 
-### 476. BR-22.8 — openapi.yml L637-647
+### 483. BR-22.8 — openapi.yml L637-647
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -14095,7 +14198,7 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
               type: string
 ````
 
-### 477. BR-22.8 — openapi.yml L791-810
+### 484. BR-22.8 — openapi.yml L791-810
 
 PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
 
@@ -14122,6 +14225,6474 @@ Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c78
             errors:
               resource:
                 - "not found"
+````
+
+### 485. BR-01.3 — endpoints.md L46
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L46-L46
+
+````text
+No authentication required, returns a [User](/specifications/backend/api-response-format#users-for-authentication)
+````
+
+### 486. BR-01.3 — api-response-format.md L11-20
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L11-L20
+
+````text
+```json
+{
+  "user": {
+    "email": "jake@jake.jake",
+    "token": "jwt.token.here",
+    "username": "jake",
+    "bio": null,
+    "image": null
+  }
+}
+````
+
+### 487. BR-01.3 — openapi.yml L44-60
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L44-L60
+
+````text
+      operationId: CreateUser
+      requestBody:
+        $ref: '#/components/requestBodies/NewUserRequest'
+      responses:
+        '201':
+          $ref: '#/components/responses/UserResponse'
+        '409':
+          $ref: '#/components/responses/ConflictError'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      x-codegen-request-body-name: body
+  /user:
+    get:
+      tags:
+        - User and Authentication
+      summary: Get current user
+      description: Gets the currently logged-in user
+````
+
+### 488. BR-01.7 — routing.md L10
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L10-L10
+
+````text
+  - Uses JWT (store the token in localStorage)
+````
+
+### 489. BR-01.8 — openapi.yml L481-503
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L481-L503
+
+````text
+    User:
+      required:
+        - bio
+        - email
+        - image
+        - token
+        - username
+      type: object
+      properties:
+        email:
+          type: string
+        token:
+          type: string
+        username:
+          type: string
+        bio:
+          type:
+            - string
+            - 'null'
+        image:
+          type:
+            - string
+            - 'null'
+````
+
+### 490. BR-01.9 — openapi.yml L834-845
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L834-L845
+
+````text
+    NewUserRequest:
+      required: true
+      description: Details of the new user to register
+      content:
+        application/json:
+          schema:
+            required:
+              - user
+            type: object
+            properties:
+              user:
+                $ref: '#/components/schemas/NewUser'
+````
+
+### 491. BR-01.9 — openapi.yml L467-480
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L467-L480
+
+````text
+    NewUser:
+      required:
+        - email
+        - password
+        - username
+      type: object
+      properties:
+        username:
+          type: string
+        email:
+          type: string
+        password:
+          type: string
+          format: password
+````
+
+### 492. BR-01.10 — templates.md L262-265
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L262-L265
+
+````text
+        <h1 class="text-xs-center">Sign up</h1>
+        <p class="text-xs-center">
+          <a href="/login">Have an account?</a>
+        </p>
+````
+
+### 493. BR-02.6 — routing.md L10
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L10-L10
+
+````text
+  - Uses JWT (store the token in localStorage)
+````
+
+### 494. BR-02.7 — openapi.yml L822-833
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L822-L833
+
+````text
+    LoginUserRequest:
+      required: true
+      description: Credentials to use
+      content:
+        application/json:
+          schema:
+            required:
+              - user
+            type: object
+            properties:
+              user:
+                $ref: '#/components/schemas/LoginUser'
+````
+
+### 495. BR-02.7 — openapi.yml L456-466
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L456-L466
+
+````text
+    LoginUser:
+      required:
+        - email
+        - password
+      type: object
+      properties:
+        email:
+          type: string
+        password:
+          type: string
+          format: password
+````
+
+### 496. BR-02.8 — openapi.yml L28-37
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L28-L37
+
+````text
+      operationId: Login
+      requestBody:
+        $ref: '#/components/requestBodies/LoginUserRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/UserResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '422':
+          $ref: '#/components/responses/GenericError'
+````
+
+### 497. BR-02.9 — templates.md L231-234
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L231-L234
+
+````text
+        <h1 class="text-xs-center">Sign in</h1>
+        <p class="text-xs-center">
+          <a href="/register">Need an account?</a>
+        </p>
+````
+
+### 498. BR-03.1 — endpoints.md L5-9
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L5-L9
+
+````text
+### Authentication Header:
+
+You can read the authentication header from the headers of the request
+
+`Authorization: Token jwt.token.here`
+````
+
+### 499. BR-03.5 — openapi.yml L61-68
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L61-L68
+
+````text
+      operationId: GetCurrentUser
+      responses:
+        '200':
+          $ref: '#/components/responses/UserResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '422':
+          $ref: '#/components/responses/GenericError'
+````
+
+### 500. BR-05.6 — openapi.yml L76-87
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L76-L87
+
+````text
+      operationId: UpdateCurrentUser
+      requestBody:
+        $ref: '#/components/requestBodies/UpdateUserRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/UserResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+````
+
+### 501. BR-06.5 — openapi.yml L521-540
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L521-L540
+
+````text
+    Profile:
+      required:
+        - bio
+        - following
+        - image
+        - username
+      type: object
+      properties:
+        username:
+          type: string
+        bio:
+          type:
+            - string
+            - 'null'
+        image:
+          type:
+            - string
+            - 'null'
+        following:
+          type: boolean
+````
+
+### 502. BR-06.5 — openapi.yml L746-756
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L746-L756
+
+````text
+    ProfileResponse:
+      description: Profile
+      content:
+        application/json:
+          schema:
+            required:
+              - profile
+            type: object
+            properties:
+              profile:
+                $ref: '#/components/schemas/Profile'
+````
+
+### 503. BR-06.6 — openapi.yml L93-111
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L93-L111
+
+````text
+      summary: Get a profile
+      description: Get a profile of a user of the system. Auth is optional
+      operationId: GetProfileByUsername
+      parameters:
+        - name: username
+          in: path
+          description: Username of the profile to get
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/ProfileResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+````
+
+### 504. BR-08.5 — api-response-format.md L38-57
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L38-L57
+
+````text
+```json
+{
+  "article": {
+    "slug": "how-to-train-your-dragon",
+    "title": "How to train your dragon",
+    "description": "Ever wonder how?",
+    "body": "It takes a Jacobian",
+    "tagList": ["dragons", "training"],
+    "createdAt": "2016-02-18T03:22:56.637Z",
+    "updatedAt": "2016-02-18T03:48:35.824Z",
+    "favorited": false,
+    "favoritesCount": 0,
+    "author": {
+      "username": "jake",
+      "bio": "I work at statefarm",
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "following": false
+    }
+  }
+}
+````
+
+### 505. BR-08.5 — openapi.yml L219-239
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L219-L239
+
+````text
+      operationId: CreateArticle
+      requestBody:
+        $ref: '#/components/requestBodies/NewArticleRequest'
+      responses:
+        '201':
+          $ref: '#/components/responses/SingleArticleResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '409':
+          $ref: '#/components/responses/ConflictError'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+      x-codegen-request-body-name: article
+  /articles/{slug}:
+    get:
+      tags:
+        - Articles
+      summary: Get an article
+      description: Get an article. Auth not required
+````
+
+### 506. BR-08.7 — openapi.yml L579-595
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L579-L595
+
+````text
+    NewArticle:
+      required:
+        - body
+        - description
+        - title
+      type: object
+      properties:
+        title:
+          type: string
+        description:
+          type: string
+        body:
+          type: string
+        tagList:
+          type: array
+          items:
+            type: string
+````
+
+### 507. BR-08.7 — openapi.yml L858-869
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L858-L869
+
+````text
+    NewArticleRequest:
+      required: true
+      description: Article to create
+      content:
+        application/json:
+          schema:
+            required:
+              - article
+            type: object
+            properties:
+              article:
+                $ref: '#/components/schemas/NewArticle'
+````
+
+### 508. BR-08.8 — openapi.yml L541-578
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L541-L578
+
+````text
+    Article:
+      required:
+        - author
+        - body
+        - createdAt
+        - description
+        - favorited
+        - favoritesCount
+        - slug
+        - tagList
+        - title
+        - updatedAt
+      type: object
+      properties:
+        slug:
+          type: string
+        title:
+          type: string
+        description:
+          type: string
+        body:
+          type: string
+        tagList:
+          type: array
+          items:
+            type: string
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        favorited:
+          type: boolean
+        favoritesCount:
+          type: integer
+        author:
+          $ref: '#/components/schemas/Profile'
+````
+
+### 509. BR-08.9 — openapi.yml L219-230
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L219-L230
+
+````text
+      operationId: CreateArticle
+      requestBody:
+        $ref: '#/components/requestBodies/NewArticleRequest'
+      responses:
+        '201':
+          $ref: '#/components/responses/SingleArticleResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '409':
+          $ref: '#/components/responses/ConflictError'
+        '422':
+          $ref: '#/components/responses/GenericError'
+````
+
+### 510. BR-09.5 — openapi.yml L260-288
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L260-L288
+
+````text
+      operationId: UpdateArticle
+      parameters:
+        - name: slug
+          in: path
+          description: Slug of the article to update
+          required: true
+          schema:
+            type: string
+      requestBody:
+        $ref: '#/components/requestBodies/UpdateArticleRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/SingleArticleResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+      x-codegen-request-body-name: article
+    delete:
+      tags:
+        - Articles
+      summary: Delete an article
+      description: Delete an article. Auth is required
+````
+
+### 511. BR-09.5 — error-handling.md L23-25
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L23-L25
+
+````text
+403 for Forbidden requests, when a request may be valid but the user doesn't have permissions to perform the action
+
+404 for Not found requests, when a resource can't be found to fulfill the request
+````
+
+### 512. BR-10.4 — openapi.yml L289-315
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L289-L315
+
+````text
+      operationId: DeleteArticle
+      parameters:
+        - name: slug
+          in: path
+          description: Slug of the article to delete
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          $ref: '#/components/responses/EmptyOkResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+  /articles/{slug}/comments:
+    get:
+      tags:
+        - Comments
+      summary: Get comments for an article
+      description: Get the comments for an article. Auth is optional
+````
+
+### 513. BR-10.4 — openapi.yml L768-770
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L768-L770
+
+````text
+    EmptyOkResponse:
+      description: No content
+      content: { }
+````
+
+### 514. BR-11.6 — openapi.yml L240-259
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L240-L259
+
+````text
+      operationId: GetArticle
+      parameters:
+        - name: slug
+          in: path
+          description: Slug of the article to get
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/SingleArticleResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+    put:
+      tags:
+        - Articles
+      summary: Update an article
+      description: Update an article. Auth is required
+````
+
+### 515. BR-12.3 — api-response-format.md L62-67
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L62-L67
+
+````text
+:::caution
+Starting from the 2024/08/16, the endpoints retrieving a list of articles do no longer return the body of an article for performance reasons.
+It affects:
+- `GET /api/articles`
+- `GET /api/articles/feed`
+:::
+````
+
+### 516. BR-12.3 — api-response-format.md L102
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L102-L102
+
+````text
+  "articlesCount": 2
+````
+
+### 517. BR-12.5 — openapi.yml L697-745
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L697-L745
+
+````text
+    MultipleArticlesResponse:
+      description: Multiple articles
+      content:
+        application/json:
+          schema:
+            required:
+              - articles
+              - articlesCount
+            type: object
+            properties:
+              articles:
+                type: array
+                items:
+                  required:
+                    - author
+                    - createdAt
+                    - description
+                    - favorited
+                    - favoritesCount
+                    - slug
+                    - tagList
+                    - title
+                    - updatedAt
+                  type: object
+                  properties:
+                    slug:
+                      type: string
+                    title:
+                      type: string
+                    description:
+                      type: string
+                    tagList:
+                      type: array
+                      items:
+                        type: string
+                    createdAt:
+                      type: string
+                      format: date-time
+                    updatedAt:
+                      type: string
+                      format: date-time
+                    favorited:
+                      type: boolean
+                    favoritesCount:
+                      type: integer
+                    author:
+                      $ref: '#/components/schemas/Profile'
+              articlesCount:
+                type: integer
+````
+
+### 518. BR-12.5 — api-response-format.md L62-67
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L62-L67
+
+````text
+:::caution
+Starting from the 2024/08/16, the endpoints retrieving a list of articles do no longer return the body of an article for performance reasons.
+It affects:
+- `GET /api/articles`
+- `GET /api/articles/feed`
+:::
+````
+
+### 519. BR-12.6 — openapi.yml L183-213
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L183-L213
+
+````text
+      tags:
+        - Articles
+      summary: Get recent articles globally
+      description: Get most recent articles globally. Use query parameters to filter
+        results. Auth is optional
+      operationId: GetArticles
+      parameters:
+        - name: tag
+          in: query
+          description: Filter by tag
+          schema:
+            type: string
+        - name: author
+          in: query
+          description: Filter by author (username)
+          schema:
+            type: string
+        - name: favorited
+          in: query
+          description: Filter by favorites of a user (username)
+          schema:
+            type: string
+        - $ref: '#/components/parameters/offsetParam'
+        - $ref: '#/components/parameters/limitParam'
+      responses:
+        '200':
+          $ref: '#/components/responses/MultipleArticlesResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '422':
+          $ref: '#/components/responses/GenericError'
+````
+
+### 520. BR-12.7 — templates.md L126-131
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L126-L131
+
+````text
+  <div class="banner">
+    <div class="container">
+      <h1 class="logo-font">conduit</h1>
+      <p>A place to share your knowledge.</p>
+    </div>
+  </div>
+````
+
+### 521. BR-13.4 — openapi.yml L164-180
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L164-L180
+
+````text
+        - Articles
+      summary: Get recent articles from users you follow
+      description: Get most recent articles from users you follow. Use query parameters
+        to limit. Auth is required
+      operationId: GetArticlesFeed
+      parameters:
+        - $ref: '#/components/parameters/offsetParam'
+        - $ref: '#/components/parameters/limitParam'
+      responses:
+        '200':
+          $ref: '#/components/responses/MultipleArticlesResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+````
+
+### 522. BR-14.4 — openapi.yml L443-453
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L443-L453
+
+````text
+    get:
+      tags:
+        - Tags
+      summary: Get tags
+      description: Get tags. Auth not required
+      operationId: GetTags
+      responses:
+        '200':
+          $ref: '#/components/responses/TagsResponse'
+        '422':
+          $ref: '#/components/responses/GenericError'
+````
+
+### 523. BR-14.4 — openapi.yml L649-661
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L649-L661
+
+````text
+    TagsResponse:
+      description: Tags
+      content:
+        application/json:
+          schema:
+            required:
+              - tags
+            type: object
+            properties:
+              tags:
+                type: array
+                items:
+                  type: string
+````
+
+### 524. BR-15.6 — templates.md L191-196
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L191-L196
+
+````text
+        <ul class="pagination">
+          <li class="page-item active">
+            <a class="page-link" href="">1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="">2</a>
+````
+
+### 525. BR-16.4 — openapi.yml L630-636
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L630-L636
+
+````text
+    NewComment:
+      required:
+        - body
+      type: object
+      properties:
+        body:
+          type: string
+````
+
+### 526. BR-16.4 — openapi.yml L882-893
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L882-L893
+
+````text
+    NewCommentRequest:
+      required: true
+      description: Comment you want to create
+      content:
+        application/json:
+          schema:
+            required:
+              - comment
+            type: object
+            properties:
+              comment:
+                $ref: '#/components/schemas/NewComment'
+````
+
+### 527. BR-16.5 — openapi.yml L609-629
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L609-L629
+
+````text
+    Comment:
+      required:
+        - author
+        - body
+        - createdAt
+        - id
+        - updatedAt
+      type: object
+      properties:
+        id:
+          type: integer
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        body:
+          type: string
+        author:
+          $ref: '#/components/schemas/Profile'
+````
+
+### 528. BR-16.6 — openapi.yml L338-365
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L338-L365
+
+````text
+      operationId: CreateArticleComment
+      parameters:
+        - name: slug
+          in: path
+          description: Slug of the article that you want to create a comment for
+          required: true
+          schema:
+            type: string
+      requestBody:
+        $ref: '#/components/requestBodies/NewCommentRequest'
+      responses:
+        '201':
+          $ref: '#/components/responses/SingleCommentResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+      x-codegen-request-body-name: comment
+  /articles/{slug}/comments/{id}:
+    delete:
+      tags:
+        - Comments
+      summary: Delete a comment for an article
+      description: Delete a comment for an article. Auth is required
+````
+
+### 529. BR-17.4 — openapi.yml L315-337
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L315-L337
+
+````text
+      description: Get the comments for an article. Auth is optional
+      operationId: GetArticleComments
+      parameters:
+        - name: slug
+          in: path
+          description: Slug of the article that you want to get comments for
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/MultipleCommentsResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+    post:
+      tags:
+        - Comments
+      summary: Create a comment for an article
+      description: Create a comment for an article. Auth is required
+````
+
+### 530. BR-17.4 — openapi.yml L675-685
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L675-L685
+
+````text
+      content:
+        application/json:
+          schema:
+            required:
+              - comments
+            type: object
+            properties:
+              comments:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Comment'
+````
+
+### 531. BR-18.4 — openapi.yml L366-398
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L366-L398
+
+````text
+      operationId: DeleteArticleComment
+      parameters:
+        - name: slug
+          in: path
+          description: Slug of the article that you want to delete a comment for
+          required: true
+          schema:
+            type: string
+        - name: id
+          in: path
+          description: ID of the comment you want to delete
+          required: true
+          schema:
+            type: integer
+      responses:
+        '204':
+          $ref: '#/components/responses/EmptyOkResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+  /articles/{slug}/favorite:
+    post:
+      tags:
+        - Favorites
+      summary: Favorite an article
+      description: Favorite an article. Auth is required
+````
+
+### 532. BR-18.4 — openapi.yml L768-770
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L768-L770
+
+````text
+    EmptyOkResponse:
+      description: No content
+      content: { }
+````
+
+### 533. BR-19.6 — endpoints.md L82-96
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L82-L96
+
+````text
+### Follow user
+
+`POST /api/profiles/:username/follow`
+
+Authentication required, returns a [Profile](/specifications/backend/api-response-format#profile)
+
+No additional parameters required
+
+### Unfollow user
+
+`DELETE /api/profiles/:username/follow`
+
+Authentication required, returns a [Profile](/specifications/backend/api-response-format#profile)
+
+No additional parameters required
+````
+
+### 534. BR-19.6 — openapi.yml L118-160
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L118-L160
+
+````text
+      operationId: FollowUserByUsername
+      parameters:
+        - name: username
+          in: path
+          description: Username of the profile you want to follow
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/ProfileResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+    delete:
+      tags:
+        - Profile
+      summary: Unfollow a user
+      description: Unfollow a user by username
+      operationId: UnfollowUserByUsername
+      parameters:
+        - name: username
+          in: path
+          description: Username of the profile you want to unfollow
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/ProfileResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+````
+
+### 535. BR-20.5 — endpoints.md L223-237
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L223-L237
+
+````text
+### Favorite Article
+
+`POST /api/articles/:slug/favorite`
+
+Authentication required, returns the [Article](/specifications/backend/api-response-format#single-article)
+
+No additional parameters required
+
+### Unfavorite Article
+
+`DELETE /api/articles/:slug/favorite`
+
+Authentication required, returns the [Article](/specifications/backend/api-response-format#single-article)
+
+No additional parameters required
+````
+
+### 536. BR-20.5 — openapi.yml L399-441
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L399-L441
+
+````text
+      operationId: CreateArticleFavorite
+      parameters:
+        - name: slug
+          in: path
+          description: Slug of the article that you want to favorite
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/SingleArticleResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+    delete:
+      tags:
+        - Favorites
+      summary: Unfavorite an article
+      description: Unfavorite an article. Auth is required
+      operationId: DeleteArticleFavorite
+      parameters:
+        - name: slug
+          in: path
+          description: Slug of the article that you want to unfavorite
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/SingleArticleResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+````
+
+### 537. BR-21.4 — templates.md L14
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L14-L14
+
+````text
+  <title>Conduit</title>
+````
+
+### 538. BR-21.4 — templates.md L103-111
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L103-L111
+
+````text
+```html
+<footer>
+  <div class="container">
+    <a href="/" class="logo-font">conduit</a>
+    <span class="attribution">
+      An interactive learning project. Code &amp; design licensed under MIT.
+    </span>
+  </div>
+</footer>
+````
+
+### 539. BR-22.5 — openapi.yml L791-810
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L791-L810
+
+````text
+    Forbidden:
+      description: Forbidden. The error key identifies the resource type (article, comment, etc.)
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GenericErrorModel'
+          example:
+            errors:
+              resource:
+                - "forbidden"
+    NotFound:
+      description: Not Found. The error key identifies the resource type (article, profile, comment, etc.)
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GenericErrorModel'
+          example:
+            errors:
+              resource:
+                - "not found"
+````
+
+### 540. BR-22.6 — api-response-format.md L7
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L7-L7
+
+````text
+Make sure the right content type like `Content-Type: application/json; charset=utf-8` is correctly returned.
+````
+
+### 541. BR-22.7 — openapi.yml L771-780
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L771-L780
+
+````text
+    Unauthorized:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GenericErrorModel'
+          example:
+            errors:
+              token:
+                - "is missing"
+````
+
+### 542. BR-22.8 — openapi.yml L637-647
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L637-L647
+
+````text
+    GenericErrorModel:
+      required:
+        - errors
+      type: object
+      properties:
+        errors:
+          type: object
+          additionalProperties:
+            type: array
+            items:
+              type: string
+````
+
+### 543. BR-22.8 — openapi.yml L791-810
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L791-L810
+
+````text
+    Forbidden:
+      description: Forbidden. The error key identifies the resource type (article, comment, etc.)
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GenericErrorModel'
+          example:
+            errors:
+              resource:
+                - "forbidden"
+    NotFound:
+      description: Not Found. The error key identifies the resource type (article, profile, comment, etc.)
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GenericErrorModel'
+          example:
+            errors:
+              resource:
+                - "not found"
+````
+
+### 544. BR-01.4 — openapi.yml L44-60
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L44-L60
+
+````text
+      operationId: CreateUser
+      requestBody:
+        $ref: '#/components/requestBodies/NewUserRequest'
+      responses:
+        '201':
+          $ref: '#/components/responses/UserResponse'
+        '409':
+          $ref: '#/components/responses/ConflictError'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      x-codegen-request-body-name: body
+  /user:
+    get:
+      tags:
+        - User and Authentication
+      summary: Get current user
+      description: Gets the currently logged-in user
+````
+
+### 545. BR-01.4 — openapi.yml L781-790
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L781-L790
+
+````text
+    ConflictError:
+      description: Conflict - resource already exists
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GenericErrorModel'
+          example:
+            errors:
+              username:
+                - "has already been taken"
+````
+
+### 546. BR-01.5 — error-handling.md L7-17
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L7-L17
+
+````text
+If a request fails any validations, expect a 422 and errors in the following format:
+
+```json
+{
+  "errors":{
+    "body": [
+      "can't be empty"
+    ]
+  }
+}
+```
+````
+
+### 547. BR-02.3 — endpoints.md L26
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L26-L26
+
+````text
+No authentication required, returns a [User](/specifications/backend/api-response-format#users-for-authentication)
+````
+
+### 548. BR-02.3 — openapi.yml L28-42
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L28-L42
+
+````text
+      operationId: Login
+      requestBody:
+        $ref: '#/components/requestBodies/LoginUserRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/UserResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      x-codegen-request-body-name: body
+  /users:
+    post:
+      tags:
+        - User and Authentication
+````
+
+### 549. BR-03.2 — endpoints.md L50-54
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L50-L54
+
+````text
+### Get Current User
+
+`GET /api/user`
+
+Authentication required, returns a [User](/specifications/backend/api-response-format#users-for-authentication) that's the current user
+````
+
+### 550. BR-03.3 — error-handling.md L21
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L21-L21
+
+````text
+401 for Unauthorized requests, when a request requires authentication but it isn't provided
+````
+
+### 551. BR-03.3 — openapi.yml L771-780
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L771-L780
+
+````text
+    Unauthorized:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GenericErrorModel'
+          example:
+            errors:
+              token:
+                - "is missing"
+````
+
+### 552. BR-05.3 — endpoints.md L56-74
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L56-L74
+
+````text
+### Update User
+
+`PUT /api/user`
+
+Example request body:
+
+```json
+{
+  "user":{
+    "email": "jake@jake.jake",
+    "bio": "I like to skateboard",
+    "image": "https://i.stack.imgur.com/xHWG8.jpg"
+  }
+}
+```
+
+Authentication required, returns the [User](/specifications/backend/api-response-format#users-for-authentication)
+
+Accepted fields: `email`, `username`, `password`, `image`, `bio`
+````
+
+### 553. BR-06.2 — endpoints.md L76-80
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L76-L80
+
+````text
+### Get Profile
+
+`GET /api/profiles/:username`
+
+Authentication optional, returns a [Profile](/specifications/backend/api-response-format#profile)
+````
+
+### 554. BR-06.2 — api-response-format.md L25-33
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L25-L33
+
+````text
+```json
+{
+  "profile": {
+    "username": "jake",
+    "bio": "I work at statefarm",
+    "image": "https://api.realworld.io/images/smiley-cyrus.jpg",
+    "following": false
+  }
+}
+````
+
+### 555. BR-06.3 — openapi.yml L95-117
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L95-L117
+
+````text
+      operationId: GetProfileByUsername
+      parameters:
+        - name: username
+          in: path
+          description: Username of the profile to get
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/ProfileResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+  /profiles/{username}/follow:
+    post:
+      tags:
+        - Profile
+      summary: Follow a user
+      description: Follow a user by username
+````
+
+### 556. BR-07.2 — endpoints.md L110-116
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L110-L116
+
+````text
+Filter by author:
+
+`?author=jake`
+
+Favorited by user:
+
+`?favorited=jake`
+````
+
+### 557. BR-10.1 — endpoints.md L187-191
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L187-L191
+
+````text
+### Delete Article
+
+`DELETE /api/articles/:slug`
+
+Authentication required
+````
+
+### 558. BR-10.1 — openapi.yml L289-315
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L289-L315
+
+````text
+      operationId: DeleteArticle
+      parameters:
+        - name: slug
+          in: path
+          description: Slug of the article to delete
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          $ref: '#/components/responses/EmptyOkResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+  /articles/{slug}/comments:
+    get:
+      tags:
+        - Comments
+      summary: Get comments for an article
+      description: Get the comments for an article. Auth is optional
+````
+
+### 559. BR-11.2 — endpoints.md L136-140
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L136-L140
+
+````text
+### Get Article
+
+`GET /api/articles/:slug`
+
+No authentication required, will return [single article](/specifications/backend/api-response-format#single-article)
+````
+
+### 560. BR-11.2 — api-response-format.md L38-57
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L38-L57
+
+````text
+```json
+{
+  "article": {
+    "slug": "how-to-train-your-dragon",
+    "title": "How to train your dragon",
+    "description": "Ever wonder how?",
+    "body": "It takes a Jacobian",
+    "tagList": ["dragons", "training"],
+    "createdAt": "2016-02-18T03:22:56.637Z",
+    "updatedAt": "2016-02-18T03:48:35.824Z",
+    "favorited": false,
+    "favoritesCount": 0,
+    "author": {
+      "username": "jake",
+      "bio": "I work at statefarm",
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "following": false
+    }
+  }
+}
+````
+
+### 561. BR-11.5 — openapi.yml L240-259
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L240-L259
+
+````text
+      operationId: GetArticle
+      parameters:
+        - name: slug
+          in: path
+          description: Slug of the article to get
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/SingleArticleResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+    put:
+      tags:
+        - Articles
+      summary: Update an article
+      description: Update an article. Auth is required
+````
+
+### 562. BR-13.2 — endpoints.md L134
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L134-L134
+
+````text
+Authentication required, will return [multiple articles](/specifications/backend/api-response-format#multiple-articles) created by followed users, ordered by most recent first.
+````
+
+### 563. BR-14.3 — endpoints.md L239-243
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L239-L243
+
+````text
+### Get Tags
+
+`GET /api/tags`
+
+No authentication required, returns a [List of Tags](/specifications/backend/api-response-format#list-of-tags)
+````
+
+### 564. BR-14.3 — api-response-format.md L146-152
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L146-L152
+
+````text
+```json
+{
+  "tags": [
+    "reactjs",
+    "angularjs"
+  ]
+}
+````
+
+### 565. BR-15.2 — endpoints.md L118-124
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L118-L124
+
+````text
+Limit number of articles (default is 20):
+
+`?limit=20`
+
+Offset/skip number of articles (default is 0):
+
+`?offset=0`
+````
+
+### 566. BR-15.2 — openapi.yml L895-911
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L895-L911
+
+````text
+    offsetParam:
+      in: query
+      name: offset
+      required: false
+      schema:
+        type: integer
+        minimum: 0
+      description: The number of items to skip before starting to collect the result set.
+    limitParam:
+      in: query
+      name: limit
+      required: false
+      schema:
+        type: integer
+        minimum: 1
+        default: 20
+      description: The numbers of items to return.
+````
+
+### 567. BR-16.2 — endpoints.md L207-209
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L207-L209
+
+````text
+Authentication required, returns the created [Comment](/specifications/backend/api-response-format#single-comment)
+
+Required field: `body`
+````
+
+### 568. BR-16.2 — api-response-format.md L108-122
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L108-L122
+
+````text
+```json
+{
+  "comment": {
+    "id": 1,
+    "createdAt": "2016-02-18T03:22:56.637Z",
+    "updatedAt": "2016-02-18T03:22:56.637Z",
+    "body": "It takes a Jacobian",
+    "author": {
+      "username": "jake",
+      "bio": "I work at statefarm",
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "following": false
+    }
+  }
+}
+````
+
+### 569. BR-16.2 — openapi.yml L338-365
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L338-L365
+
+````text
+      operationId: CreateArticleComment
+      parameters:
+        - name: slug
+          in: path
+          description: Slug of the article that you want to create a comment for
+          required: true
+          schema:
+            type: string
+      requestBody:
+        $ref: '#/components/requestBodies/NewCommentRequest'
+      responses:
+        '201':
+          $ref: '#/components/responses/SingleCommentResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+      x-codegen-request-body-name: comment
+  /articles/{slug}/comments/{id}:
+    delete:
+      tags:
+        - Comments
+      summary: Delete a comment for an article
+      description: Delete a comment for an article. Auth is required
+````
+
+### 570. BR-17.1 — endpoints.md L211-215
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L211-L215
+
+````text
+### Get Comments from an Article
+
+`GET /api/articles/:slug/comments`
+
+Authentication optional, returns [multiple comments](/specifications/backend/api-response-format#multiple-comments)
+````
+
+### 571. BR-17.1 — api-response-format.md L127-141
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L127-L141
+
+````text
+```json
+{
+  "comments": [{
+    "id": 1,
+    "createdAt": "2016-02-18T03:22:56.637Z",
+    "updatedAt": "2016-02-18T03:22:56.637Z",
+    "body": "It takes a Jacobian",
+    "author": {
+      "username": "jake",
+      "bio": "I work at statefarm",
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "following": false
+    }
+  }]
+}
+````
+
+### 572. BR-18.1 — endpoints.md L217-221
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L217-L221
+
+````text
+### Delete Comment
+
+`DELETE /api/articles/:slug/comments/:id`
+
+Authentication required
+````
+
+### 573. BR-18.1 — openapi.yml L366-398
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L366-L398
+
+````text
+      operationId: DeleteArticleComment
+      parameters:
+        - name: slug
+          in: path
+          description: Slug of the article that you want to delete a comment for
+          required: true
+          schema:
+            type: string
+        - name: id
+          in: path
+          description: ID of the comment you want to delete
+          required: true
+          schema:
+            type: integer
+      responses:
+        '204':
+          $ref: '#/components/responses/EmptyOkResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+  /articles/{slug}/favorite:
+    post:
+      tags:
+        - Favorites
+      summary: Favorite an article
+      description: Favorite an article. Auth is required
+````
+
+### 574. BR-19.4 — openapi.yml L118-141
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L118-L141
+
+````text
+      operationId: FollowUserByUsername
+      parameters:
+        - name: username
+          in: path
+          description: Username of the profile you want to follow
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/ProfileResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+    delete:
+      tags:
+        - Profile
+      summary: Unfollow a user
+      description: Unfollow a user by username
+````
+
+### 575. BR-22.1 — error-handling.md L7-17
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L7-L17
+
+````text
+If a request fails any validations, expect a 422 and errors in the following format:
+
+```json
+{
+  "errors":{
+    "body": [
+      "can't be empty"
+    ]
+  }
+}
+```
+````
+
+### 576. BR-22.2 — error-handling.md L21
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L21-L21
+
+````text
+401 for Unauthorized requests, when a request requires authentication but it isn't provided
+````
+
+### 577. BR-22.3 — error-handling.md L23
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L23-L23
+
+````text
+403 for Forbidden requests, when a request may be valid but the user doesn't have permissions to perform the action
+````
+
+### 578. BR-22.4 — error-handling.md L25
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L25-L25
+
+````text
+404 for Not found requests, when a resource can't be found to fulfill the request
+````
+
+### 579. BR-23.1 — cors.md L7
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/cors.md#L7-L7
+
+````text
+If the backend is about to run on a different host/port than the frontend, make sure to handle `OPTIONS` too and return correct `Access-Control-Allow-Origin` and `Access-Control-Allow-Headers` (e.g. `Content-Type`).
+````
+
+### 580. US-01 — endpoints.md L48
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L48-L48
+
+````text
+Required fields: `email`, `username`, `password`
+````
+
+### 581. US-01 — endpoints.md L46
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L46-L46
+
+````text
+No authentication required, returns a [User](/specifications/backend/api-response-format#users-for-authentication)
+````
+
+### 582. US-01 — endpoints.md L46
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L46-L46
+
+````text
+No authentication required, returns a [User](/specifications/backend/api-response-format#users-for-authentication)
+````
+
+### 583. US-01 — api-response-format.md L11-20
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L11-L20
+
+````text
+```json
+{
+  "user": {
+    "email": "jake@jake.jake",
+    "token": "jwt.token.here",
+    "username": "jake",
+    "bio": null,
+    "image": null
+  }
+}
+````
+
+### 584. US-01 — openapi.yml L44-60
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L44-L60
+
+````text
+      operationId: CreateUser
+      requestBody:
+        $ref: '#/components/requestBodies/NewUserRequest'
+      responses:
+        '201':
+          $ref: '#/components/responses/UserResponse'
+        '409':
+          $ref: '#/components/responses/ConflictError'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      x-codegen-request-body-name: body
+  /user:
+    get:
+      tags:
+        - User and Authentication
+      summary: Get current user
+      description: Gets the currently logged-in user
+````
+
+### 585. US-01 — openapi.yml L44-60
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L44-L60
+
+````text
+      operationId: CreateUser
+      requestBody:
+        $ref: '#/components/requestBodies/NewUserRequest'
+      responses:
+        '201':
+          $ref: '#/components/responses/UserResponse'
+        '409':
+          $ref: '#/components/responses/ConflictError'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      x-codegen-request-body-name: body
+  /user:
+    get:
+      tags:
+        - User and Authentication
+      summary: Get current user
+      description: Gets the currently logged-in user
+````
+
+### 586. US-01 — openapi.yml L781-790
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L781-L790
+
+````text
+    ConflictError:
+      description: Conflict - resource already exists
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GenericErrorModel'
+          example:
+            errors:
+              username:
+                - "has already been taken"
+````
+
+### 587. US-01 — error-handling.md L7-17
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L7-L17
+
+````text
+If a request fails any validations, expect a 422 and errors in the following format:
+
+```json
+{
+  "errors":{
+    "body": [
+      "can't be empty"
+    ]
+  }
+}
+```
+````
+
+### 588. US-01 — routing.md L9
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L9-L9
+
+````text
+- Sign in/Sign up pages (URL: `/login`, `/register` )
+````
+
+### 589. US-01 — templates.md L262-281
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L262-L281
+
+````text
+        <h1 class="text-xs-center">Sign up</h1>
+        <p class="text-xs-center">
+          <a href="/login">Have an account?</a>
+        </p>
+
+        <ul class="error-messages">
+          <li>That email is already taken</li>
+        </ul>
+
+        <form>
+          <fieldset class="form-group">
+            <input class="form-control form-control-lg" type="text" placeholder="Username" />
+          </fieldset>
+          <fieldset class="form-group">
+            <input class="form-control form-control-lg" type="text" placeholder="Email" />
+          </fieldset>
+          <fieldset class="form-group">
+            <input class="form-control form-control-lg" type="password" placeholder="Password" />
+          </fieldset>
+          <button class="btn btn-lg btn-primary pull-xs-right">Sign up</button>
+````
+
+### 590. US-01 — templates.md L267
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L267-L267
+
+````text
+        <ul class="error-messages">
+````
+
+### 591. US-01 — routing.md L10
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L10-L10
+
+````text
+  - Uses JWT (store the token in localStorage)
+````
+
+### 592. US-01 — openapi.yml L481-503
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L481-L503
+
+````text
+    User:
+      required:
+        - bio
+        - email
+        - image
+        - token
+        - username
+      type: object
+      properties:
+        email:
+          type: string
+        token:
+          type: string
+        username:
+          type: string
+        bio:
+          type:
+            - string
+            - 'null'
+        image:
+          type:
+            - string
+            - 'null'
+````
+
+### 593. US-01 — openapi.yml L834-845
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L834-L845
+
+````text
+    NewUserRequest:
+      required: true
+      description: Details of the new user to register
+      content:
+        application/json:
+          schema:
+            required:
+              - user
+            type: object
+            properties:
+              user:
+                $ref: '#/components/schemas/NewUser'
+````
+
+### 594. US-01 — openapi.yml L467-480
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L467-L480
+
+````text
+    NewUser:
+      required:
+        - email
+        - password
+        - username
+      type: object
+      properties:
+        username:
+          type: string
+        email:
+          type: string
+        password:
+          type: string
+          format: password
+````
+
+### 595. US-01 — templates.md L262-265
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L262-L265
+
+````text
+        <h1 class="text-xs-center">Sign up</h1>
+        <p class="text-xs-center">
+          <a href="/login">Have an account?</a>
+        </p>
+````
+
+### 596. US-01 — routing.md L9-10
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L9-L10
+
+````text
+- Sign in/Sign up pages (URL: `/login`, `/register` )
+  - Uses JWT (store the token in localStorage)
+````
+
+### 597. US-01 — templates.md L262-281
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L262-L281
+
+````text
+        <h1 class="text-xs-center">Sign up</h1>
+        <p class="text-xs-center">
+          <a href="/login">Have an account?</a>
+        </p>
+
+        <ul class="error-messages">
+          <li>That email is already taken</li>
+        </ul>
+
+        <form>
+          <fieldset class="form-group">
+            <input class="form-control form-control-lg" type="text" placeholder="Username" />
+          </fieldset>
+          <fieldset class="form-group">
+            <input class="form-control form-control-lg" type="text" placeholder="Email" />
+          </fieldset>
+          <fieldset class="form-group">
+            <input class="form-control form-control-lg" type="password" placeholder="Password" />
+          </fieldset>
+          <button class="btn btn-lg btn-primary pull-xs-right">Sign up</button>
+````
+
+### 598. US-01 — openapi.yml L44-60
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L44-L60
+
+````text
+      operationId: CreateUser
+      requestBody:
+        $ref: '#/components/requestBodies/NewUserRequest'
+      responses:
+        '201':
+          $ref: '#/components/responses/UserResponse'
+        '409':
+          $ref: '#/components/responses/ConflictError'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      x-codegen-request-body-name: body
+  /user:
+    get:
+      tags:
+        - User and Authentication
+      summary: Get current user
+      description: Gets the currently logged-in user
+````
+
+### 599. US-01 — api-response-format.md L11-20
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L11-L20
+
+````text
+```json
+{
+  "user": {
+    "email": "jake@jake.jake",
+    "token": "jwt.token.here",
+    "username": "jake",
+    "bio": null,
+    "image": null
+  }
+}
+````
+
+### 600. US-01 — openapi.yml L781-790
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L781-L790
+
+````text
+    ConflictError:
+      description: Conflict - resource already exists
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GenericErrorModel'
+          example:
+            errors:
+              username:
+                - "has already been taken"
+````
+
+### 601. US-01 — endpoints.md L48
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L48-L48
+
+````text
+Required fields: `email`, `username`, `password`
+````
+
+### 602. US-01 — error-handling.md L7-17
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L7-L17
+
+````text
+If a request fails any validations, expect a 422 and errors in the following format:
+
+```json
+{
+  "errors":{
+    "body": [
+      "can't be empty"
+    ]
+  }
+}
+```
+````
+
+### 603. US-02 — endpoints.md L28
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L28-L28
+
+````text
+Required fields: `email`, `password`
+````
+
+### 604. US-02 — endpoints.md L26
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L26-L26
+
+````text
+No authentication required, returns a [User](/specifications/backend/api-response-format#users-for-authentication)
+````
+
+### 605. US-02 — endpoints.md L26
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L26-L26
+
+````text
+No authentication required, returns a [User](/specifications/backend/api-response-format#users-for-authentication)
+````
+
+### 606. US-02 — openapi.yml L28-42
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L28-L42
+
+````text
+      operationId: Login
+      requestBody:
+        $ref: '#/components/requestBodies/LoginUserRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/UserResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      x-codegen-request-body-name: body
+  /users:
+    post:
+      tags:
+        - User and Authentication
+````
+
+### 607. US-02 — routing.md L9
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L9-L9
+
+````text
+- Sign in/Sign up pages (URL: `/login`, `/register` )
+````
+
+### 608. US-02 — templates.md L231-247
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L231-L247
+
+````text
+        <h1 class="text-xs-center">Sign in</h1>
+        <p class="text-xs-center">
+          <a href="/register">Need an account?</a>
+        </p>
+
+        <ul class="error-messages">
+          <li>That email is already taken</li>
+        </ul>
+
+        <form>
+          <fieldset class="form-group">
+            <input class="form-control form-control-lg" type="text" placeholder="Email" />
+          </fieldset>
+          <fieldset class="form-group">
+            <input class="form-control form-control-lg" type="password" placeholder="Password" />
+          </fieldset>
+          <button class="btn btn-lg btn-primary pull-xs-right">Sign in</button>
+````
+
+### 609. US-02 — templates.md L236
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L236-L236
+
+````text
+        <ul class="error-messages">
+````
+
+### 610. US-02 — routing.md L10
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L10-L10
+
+````text
+  - Uses JWT (store the token in localStorage)
+````
+
+### 611. US-02 — openapi.yml L822-833
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L822-L833
+
+````text
+    LoginUserRequest:
+      required: true
+      description: Credentials to use
+      content:
+        application/json:
+          schema:
+            required:
+              - user
+            type: object
+            properties:
+              user:
+                $ref: '#/components/schemas/LoginUser'
+````
+
+### 612. US-02 — openapi.yml L456-466
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L456-L466
+
+````text
+    LoginUser:
+      required:
+        - email
+        - password
+      type: object
+      properties:
+        email:
+          type: string
+        password:
+          type: string
+          format: password
+````
+
+### 613. US-02 — openapi.yml L28-37
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L28-L37
+
+````text
+      operationId: Login
+      requestBody:
+        $ref: '#/components/requestBodies/LoginUserRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/UserResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '422':
+          $ref: '#/components/responses/GenericError'
+````
+
+### 614. US-02 — templates.md L231-234
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L231-L234
+
+````text
+        <h1 class="text-xs-center">Sign in</h1>
+        <p class="text-xs-center">
+          <a href="/register">Need an account?</a>
+        </p>
+````
+
+### 615. US-02 — templates.md L231-247
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L231-L247
+
+````text
+        <h1 class="text-xs-center">Sign in</h1>
+        <p class="text-xs-center">
+          <a href="/register">Need an account?</a>
+        </p>
+
+        <ul class="error-messages">
+          <li>That email is already taken</li>
+        </ul>
+
+        <form>
+          <fieldset class="form-group">
+            <input class="form-control form-control-lg" type="text" placeholder="Email" />
+          </fieldset>
+          <fieldset class="form-group">
+            <input class="form-control form-control-lg" type="password" placeholder="Password" />
+          </fieldset>
+          <button class="btn btn-lg btn-primary pull-xs-right">Sign in</button>
+````
+
+### 616. US-02 — templates.md L66-71
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L66-L71
+
+````text
+If a user is logged in, then the header should include links to:
+
+- the home page
+- the new article page
+- the settings page
+- the profile page
+````
+
+### 617. US-02 — openapi.yml L28-42
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L28-L42
+
+````text
+      operationId: Login
+      requestBody:
+        $ref: '#/components/requestBodies/LoginUserRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/UserResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      x-codegen-request-body-name: body
+  /users:
+    post:
+      tags:
+        - User and Authentication
+````
+
+### 618. US-02 — api-response-format.md L11-20
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L11-L20
+
+````text
+```json
+{
+  "user": {
+    "email": "jake@jake.jake",
+    "token": "jwt.token.here",
+    "username": "jake",
+    "bio": null,
+    "image": null
+  }
+}
+````
+
+### 619. US-02 — openapi.yml L28-42
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L28-L42
+
+````text
+      operationId: Login
+      requestBody:
+        $ref: '#/components/requestBodies/LoginUserRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/UserResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      x-codegen-request-body-name: body
+  /users:
+    post:
+      tags:
+        - User and Authentication
+````
+
+### 620. US-02 — endpoints.md L28
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L28-L28
+
+````text
+Required fields: `email`, `password`
+````
+
+### 621. US-02 — error-handling.md L7
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L7-L7
+
+````text
+If a request fails any validations, expect a 422 and errors in the following format:
+````
+
+### 622. US-03 — endpoints.md L5-9
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L5-L9
+
+````text
+### Authentication Header:
+
+You can read the authentication header from the headers of the request
+
+`Authorization: Token jwt.token.here`
+````
+
+### 623. US-03 — endpoints.md L50-54
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L50-L54
+
+````text
+### Get Current User
+
+`GET /api/user`
+
+Authentication required, returns a [User](/specifications/backend/api-response-format#users-for-authentication) that's the current user
+````
+
+### 624. US-03 — error-handling.md L21
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L21-L21
+
+````text
+401 for Unauthorized requests, when a request requires authentication but it isn't provided
+````
+
+### 625. US-03 — openapi.yml L771-780
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L771-L780
+
+````text
+    Unauthorized:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GenericErrorModel'
+          example:
+            errors:
+              token:
+                - "is missing"
+````
+
+### 626. US-03 — openapi.yml L61-68
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L61-L68
+
+````text
+      operationId: GetCurrentUser
+      responses:
+        '200':
+          $ref: '#/components/responses/UserResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '422':
+          $ref: '#/components/responses/GenericError'
+````
+
+### 627. US-03 — routing.md L10
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L10-L10
+
+````text
+  - Uses JWT (store the token in localStorage)
+````
+
+### 628. US-03 — error-handling.md L21
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L21-L21
+
+````text
+401 for Unauthorized requests, when a request requires authentication but it isn't provided
+````
+
+### 629. US-04 — features.md L7
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/implementation-creation/features.md#L7-L7
+
+````text
+- Authenticate users via JWT (login/signup pages + logout button on settings page)
+````
+
+### 630. US-04 — templates.md L430
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L430-L430
+
+````text
+        <button class="btn btn-outline-danger">Or click here to logout.</button>
+````
+
+### 631. US-04 — templates.md L36-40
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L36-L40
+
+````text
+If no user is logged in, then the header should include links to:
+
+- the home page
+- the login page
+- the register page
+````
+
+### 632. US-04 — templates.md L430
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L430-L430
+
+````text
+        <button class="btn btn-outline-danger">Or click here to logout.</button>
+````
+
+### 633. US-04 — templates.md L36-40
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L36-L40
+
+````text
+If no user is logged in, then the header should include links to:
+
+- the home page
+- the login page
+- the register page
+````
+
+### 634. US-05 — routing.md L12
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L12-L12
+
+````text
+- Settings page (URL: `/settings` )
+````
+
+### 635. US-05 — templates.md L404-426
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L404-L426
+
+````text
+              <input class="form-control" type="text" placeholder="URL of profile picture" />
+            </fieldset>
+            <fieldset class="form-group">
+              <input class="form-control form-control-lg" type="text" placeholder="Your Name" />
+            </fieldset>
+            <fieldset class="form-group">
+              <textarea
+                class="form-control form-control-lg"
+                rows="8"
+                placeholder="Short bio about you"
+              ></textarea>
+            </fieldset>
+            <fieldset class="form-group">
+              <input class="form-control form-control-lg" type="text" placeholder="Email" />
+            </fieldset>
+            <fieldset class="form-group">
+              <input
+                class="form-control form-control-lg"
+                type="password"
+                placeholder="New Password"
+              />
+            </fieldset>
+            <button class="btn btn-lg btn-primary pull-xs-right">Update Settings</button>
+````
+
+### 636. US-05 — endpoints.md L56-74
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L56-L74
+
+````text
+### Update User
+
+`PUT /api/user`
+
+Example request body:
+
+```json
+{
+  "user":{
+    "email": "jake@jake.jake",
+    "bio": "I like to skateboard",
+    "image": "https://i.stack.imgur.com/xHWG8.jpg"
+  }
+}
+```
+
+Authentication required, returns the [User](/specifications/backend/api-response-format#users-for-authentication)
+
+Accepted fields: `email`, `username`, `password`, `image`, `bio`
+````
+
+### 637. US-05 — features.md L8
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/implementation-creation/features.md#L8-L8
+
+````text
+- CRU- users (sign up & settings page - no deleting required)
+````
+
+### 638. US-05 — openapi.yml L846-857
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L846-L857
+
+````text
+    UpdateUserRequest:
+      required: true
+      description: User details to update. At least **one** field is required.
+      content:
+        application/json:
+          schema:
+            required:
+              - user
+            type: object
+            properties:
+              user:
+                $ref: '#/components/schemas/UpdateUser'
+````
+
+### 639. US-05 — openapi.yml L76-87
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L76-L87
+
+````text
+      operationId: UpdateCurrentUser
+      requestBody:
+        $ref: '#/components/requestBodies/UpdateUserRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/UserResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+````
+
+### 640. US-05 — templates.md L404-426
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L404-L426
+
+````text
+              <input class="form-control" type="text" placeholder="URL of profile picture" />
+            </fieldset>
+            <fieldset class="form-group">
+              <input class="form-control form-control-lg" type="text" placeholder="Your Name" />
+            </fieldset>
+            <fieldset class="form-group">
+              <textarea
+                class="form-control form-control-lg"
+                rows="8"
+                placeholder="Short bio about you"
+              ></textarea>
+            </fieldset>
+            <fieldset class="form-group">
+              <input class="form-control form-control-lg" type="text" placeholder="Email" />
+            </fieldset>
+            <fieldset class="form-group">
+              <input
+                class="form-control form-control-lg"
+                type="password"
+                placeholder="New Password"
+              />
+            </fieldset>
+            <button class="btn btn-lg btn-primary pull-xs-right">Update Settings</button>
+````
+
+### 641. US-05 — routing.md L20
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L20-L20
+
+````text
+  - Show basic user info
+````
+
+### 642. US-05 — endpoints.md L72
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L72-L72
+
+````text
+Authentication required, returns the [User](/specifications/backend/api-response-format#users-for-authentication)
+````
+
+### 643. US-05 — error-handling.md L21
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L21-L21
+
+````text
+401 for Unauthorized requests, when a request requires authentication but it isn't provided
+````
+
+### 644. US-06 — routing.md L19-20
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L19-L20
+
+````text
+- Profile page (URL: `/profile/:username`, `/profile/:username/favorites` )
+  - Show basic user info
+````
+
+### 645. US-06 — templates.md L289-309
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L289-L309
+
+````text
+### Profile
+
+```html
+<div class="profile-page">
+  <div class="user-info">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-10 offset-md-1">
+          <img src="http://i.imgur.com/Qr71crq.jpg" class="user-img" />
+          <h4>Eric Simons</h4>
+          <p>
+            Cofounder @GoThinkster, lived in Aol's HQ for a few months, kinda looks like Peeta from
+            the Hunger Games
+          </p>
+          <button class="btn btn-sm btn-outline-secondary action-btn">
+            <i class="ion-plus-round"></i>
+            &nbsp; Follow Eric Simons
+          </button>
+          <button class="btn btn-sm btn-outline-secondary action-btn">
+            <i class="ion-gear-a"></i>
+            &nbsp; Edit Profile Settings
+````
+
+### 646. US-06 — endpoints.md L76-80
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L76-L80
+
+````text
+### Get Profile
+
+`GET /api/profiles/:username`
+
+Authentication optional, returns a [Profile](/specifications/backend/api-response-format#profile)
+````
+
+### 647. US-06 — api-response-format.md L25-33
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L25-L33
+
+````text
+```json
+{
+  "profile": {
+    "username": "jake",
+    "bio": "I work at statefarm",
+    "image": "https://api.realworld.io/images/smiley-cyrus.jpg",
+    "following": false
+  }
+}
+````
+
+### 648. US-06 — openapi.yml L95-117
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L95-L117
+
+````text
+      operationId: GetProfileByUsername
+      parameters:
+        - name: username
+          in: path
+          description: Username of the profile to get
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/ProfileResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+  /profiles/{username}/follow:
+    post:
+      tags:
+        - Profile
+      summary: Follow a user
+      description: Follow a user by username
+````
+
+### 649. US-06 — templates.md L305
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L305-L305
+
+````text
+            &nbsp; Follow Eric Simons
+````
+
+### 650. US-06 — templates.md L309
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L309-L309
+
+````text
+            &nbsp; Edit Profile Settings
+````
+
+### 651. US-06 — openapi.yml L521-540
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L521-L540
+
+````text
+    Profile:
+      required:
+        - bio
+        - following
+        - image
+        - username
+      type: object
+      properties:
+        username:
+          type: string
+        bio:
+          type:
+            - string
+            - 'null'
+        image:
+          type:
+            - string
+            - 'null'
+        following:
+          type: boolean
+````
+
+### 652. US-06 — openapi.yml L746-756
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L746-L756
+
+````text
+    ProfileResponse:
+      description: Profile
+      content:
+        application/json:
+          schema:
+            required:
+              - profile
+            type: object
+            properties:
+              profile:
+                $ref: '#/components/schemas/Profile'
+````
+
+### 653. US-06 — openapi.yml L93-111
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L93-L111
+
+````text
+      summary: Get a profile
+      description: Get a profile of a user of the system. Auth is optional
+      operationId: GetProfileByUsername
+      parameters:
+        - name: username
+          in: path
+          description: Username of the profile to get
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/ProfileResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+````
+
+### 654. US-06 — routing.md L19-20
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L19-L20
+
+````text
+- Profile page (URL: `/profile/:username`, `/profile/:username/favorites` )
+  - Show basic user info
+````
+
+### 655. US-07 — routing.md L19-21
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L19-L21
+
+````text
+- Profile page (URL: `/profile/:username`, `/profile/:username/favorites` )
+  - Show basic user info
+  - List of articles populated from author's created articles or author's favorited articles
+````
+
+### 656. US-07 — templates.md L322-325
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L322-L325
+
+````text
+              <a class="nav-link active" href="">My Articles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Favorited Articles</a>
+````
+
+### 657. US-07 — endpoints.md L110-116
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L110-L116
+
+````text
+Filter by author:
+
+`?author=jake`
+
+Favorited by user:
+
+`?favorited=jake`
+````
+
+### 658. US-07 — routing.md L21
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L21-L21
+
+````text
+  - List of articles populated from author's created articles or author's favorited articles
+````
+
+### 659. US-07 — routing.md L19-21
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L19-L21
+
+````text
+- Profile page (URL: `/profile/:username`, `/profile/:username/favorites` )
+  - Show basic user info
+  - List of articles populated from author's created articles or author's favorited articles
+````
+
+### 660. US-07 — endpoints.md L110-112
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L110-L112
+
+````text
+Filter by author:
+
+`?author=jake`
+````
+
+### 661. US-07 — endpoints.md L114-116
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L114-L116
+
+````text
+Favorited by user:
+
+`?favorited=jake`
+````
+
+### 662. US-08 — routing.md L13
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L13-L13
+
+````text
+- Editor page to create/edit articles (URL: `/editor`, `/editor/article-slug-here` )
+````
+
+### 663. US-08 — templates.md L451-470
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L451-L470
+
+````text
+              <input type="text" class="form-control form-control-lg" placeholder="Article Title" />
+            </fieldset>
+            <fieldset class="form-group">
+              <input type="text" class="form-control" placeholder="What's this article about?" />
+            </fieldset>
+            <fieldset class="form-group">
+              <textarea
+                class="form-control"
+                rows="8"
+                placeholder="Write your article (in markdown)"
+              ></textarea>
+            </fieldset>
+            <fieldset class="form-group">
+              <input type="text" class="form-control" placeholder="Enter tags" />
+              <div class="tag-list">
+                <span class="tag-default tag-pill"> <i class="ion-close-round"></i> tag </span>
+              </div>
+            </fieldset>
+            <button class="btn btn-lg pull-xs-right btn-primary" type="button">
+              Publish Article
+````
+
+### 664. US-08 — endpoints.md L159
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L159-L159
+
+````text
+Authentication required, will return an [Article](/specifications/backend/api-response-format#single-article)
+````
+
+### 665. US-08 — endpoints.md L161-163
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L161-L163
+
+````text
+Required fields: `title`, `description`, `body`
+
+Optional fields: `tagList` as an array of Strings
+````
+
+### 666. US-08 — api-response-format.md L38-57
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L38-L57
+
+````text
+```json
+{
+  "article": {
+    "slug": "how-to-train-your-dragon",
+    "title": "How to train your dragon",
+    "description": "Ever wonder how?",
+    "body": "It takes a Jacobian",
+    "tagList": ["dragons", "training"],
+    "createdAt": "2016-02-18T03:22:56.637Z",
+    "updatedAt": "2016-02-18T03:48:35.824Z",
+    "favorited": false,
+    "favoritesCount": 0,
+    "author": {
+      "username": "jake",
+      "bio": "I work at statefarm",
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "following": false
+    }
+  }
+}
+````
+
+### 667. US-08 — openapi.yml L219-239
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L219-L239
+
+````text
+      operationId: CreateArticle
+      requestBody:
+        $ref: '#/components/requestBodies/NewArticleRequest'
+      responses:
+        '201':
+          $ref: '#/components/responses/SingleArticleResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '409':
+          $ref: '#/components/responses/ConflictError'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+      x-codegen-request-body-name: article
+  /articles/{slug}:
+    get:
+      tags:
+        - Articles
+      summary: Get an article
+      description: Get an article. Auth not required
+````
+
+### 668. US-08 — endpoints.md L185
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L185-L185
+
+````text
+> The `slug` is the article's URL identifier. The spec only requires it to be a unique string that you can use to fetch, update, and delete the article — duplicate titles must still produce distinct slugs. How you derive it is up to your implementation (commonly a kebab-cased title); no particular format is enforced by the test suite.
+````
+
+### 669. US-08 — openapi.yml L579-595
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L579-L595
+
+````text
+    NewArticle:
+      required:
+        - body
+        - description
+        - title
+      type: object
+      properties:
+        title:
+          type: string
+        description:
+          type: string
+        body:
+          type: string
+        tagList:
+          type: array
+          items:
+            type: string
+````
+
+### 670. US-08 — openapi.yml L858-869
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L858-L869
+
+````text
+    NewArticleRequest:
+      required: true
+      description: Article to create
+      content:
+        application/json:
+          schema:
+            required:
+              - article
+            type: object
+            properties:
+              article:
+                $ref: '#/components/schemas/NewArticle'
+````
+
+### 671. US-08 — openapi.yml L541-578
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L541-L578
+
+````text
+    Article:
+      required:
+        - author
+        - body
+        - createdAt
+        - description
+        - favorited
+        - favoritesCount
+        - slug
+        - tagList
+        - title
+        - updatedAt
+      type: object
+      properties:
+        slug:
+          type: string
+        title:
+          type: string
+        description:
+          type: string
+        body:
+          type: string
+        tagList:
+          type: array
+          items:
+            type: string
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        favorited:
+          type: boolean
+        favoritesCount:
+          type: integer
+        author:
+          $ref: '#/components/schemas/Profile'
+````
+
+### 672. US-08 — openapi.yml L219-230
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L219-L230
+
+````text
+      operationId: CreateArticle
+      requestBody:
+        $ref: '#/components/requestBodies/NewArticleRequest'
+      responses:
+        '201':
+          $ref: '#/components/responses/SingleArticleResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '409':
+          $ref: '#/components/responses/ConflictError'
+        '422':
+          $ref: '#/components/responses/GenericError'
+````
+
+### 673. US-08 — templates.md L444-446
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L444-L446
+
+````text
+        <ul class="error-messages">
+          <li>That title is required</li>
+        </ul>
+````
+
+### 674. US-08 — templates.md L464-466
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L464-L466
+
+````text
+              <input type="text" class="form-control" placeholder="Enter tags" />
+              <div class="tag-list">
+                <span class="tag-default tag-pill"> <i class="ion-close-round"></i> tag </span>
+````
+
+### 675. US-08 — templates.md L482
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L482-L482
+
+````text
+// TODO : update to switch between follow/favorite AND edit/delete
+````
+
+### 676. US-08 — templates.md L505-507
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L505-L507
+
+````text
+        <button class="btn btn-sm btn-outline-secondary">
+          <i class="ion-edit"></i> Edit Article
+        </button>
+````
+
+### 677. US-08 — templates.md L451-470
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L451-L470
+
+````text
+              <input type="text" class="form-control form-control-lg" placeholder="Article Title" />
+            </fieldset>
+            <fieldset class="form-group">
+              <input type="text" class="form-control" placeholder="What's this article about?" />
+            </fieldset>
+            <fieldset class="form-group">
+              <textarea
+                class="form-control"
+                rows="8"
+                placeholder="Write your article (in markdown)"
+              ></textarea>
+            </fieldset>
+            <fieldset class="form-group">
+              <input type="text" class="form-control" placeholder="Enter tags" />
+              <div class="tag-list">
+                <span class="tag-default tag-pill"> <i class="ion-close-round"></i> tag </span>
+              </div>
+            </fieldset>
+            <button class="btn btn-lg pull-xs-right btn-primary" type="button">
+              Publish Article
+````
+
+### 678. US-08 — routing.md L14
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L14-L14
+
+````text
+- Article page (URL: `/article/article-slug-here` )
+````
+
+### 679. US-08 — openapi.yml L219-239
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L219-L239
+
+````text
+      operationId: CreateArticle
+      requestBody:
+        $ref: '#/components/requestBodies/NewArticleRequest'
+      responses:
+        '201':
+          $ref: '#/components/responses/SingleArticleResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '409':
+          $ref: '#/components/responses/ConflictError'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+      x-codegen-request-body-name: article
+  /articles/{slug}:
+    get:
+      tags:
+        - Articles
+      summary: Get an article
+      description: Get an article. Auth not required
+````
+
+### 680. US-08 — api-response-format.md L38-57
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L38-L57
+
+````text
+```json
+{
+  "article": {
+    "slug": "how-to-train-your-dragon",
+    "title": "How to train your dragon",
+    "description": "Ever wonder how?",
+    "body": "It takes a Jacobian",
+    "tagList": ["dragons", "training"],
+    "createdAt": "2016-02-18T03:22:56.637Z",
+    "updatedAt": "2016-02-18T03:48:35.824Z",
+    "favorited": false,
+    "favoritesCount": 0,
+    "author": {
+      "username": "jake",
+      "bio": "I work at statefarm",
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "following": false
+    }
+  }
+}
+````
+
+### 681. US-08 — endpoints.md L161
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L161-L161
+
+````text
+Required fields: `title`, `description`, `body`
+````
+
+### 682. US-08 — error-handling.md L7-17
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L7-L17
+
+````text
+If a request fails any validations, expect a 422 and errors in the following format:
+
+```json
+{
+  "errors":{
+    "body": [
+      "can't be empty"
+    ]
+  }
+}
+```
+````
+
+### 683. US-08 — error-handling.md L21
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L21-L21
+
+````text
+401 for Unauthorized requests, when a request requires authentication but it isn't provided
+````
+
+### 684. US-09 — routing.md L13
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L13-L13
+
+````text
+- Editor page to create/edit articles (URL: `/editor`, `/editor/article-slug-here` )
+````
+
+### 685. US-09 — endpoints.md L179-181
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L179-L181
+
+````text
+Authentication required, returns the updated [Article](/specifications/backend/api-response-format#single-article)
+
+Optional fields: `title`, `description`, `body`
+````
+
+### 686. US-09 — endpoints.md L183
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L183-L183
+
+````text
+The `slug` also gets updated when the `title` is changed
+````
+
+### 687. US-09 — openapi.yml L260-288
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L260-L288
+
+````text
+      operationId: UpdateArticle
+      parameters:
+        - name: slug
+          in: path
+          description: Slug of the article to update
+          required: true
+          schema:
+            type: string
+      requestBody:
+        $ref: '#/components/requestBodies/UpdateArticleRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/SingleArticleResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+      x-codegen-request-body-name: article
+    delete:
+      tags:
+        - Articles
+      summary: Delete an article
+      description: Delete an article. Auth is required
+````
+
+### 688. US-09 — error-handling.md L23-25
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L23-L25
+
+````text
+403 for Forbidden requests, when a request may be valid but the user doesn't have permissions to perform the action
+
+404 for Not found requests, when a resource can't be found to fulfill the request
+````
+
+### 689. US-09 — openapi.yml L260-288
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L260-L288
+
+````text
+      operationId: UpdateArticle
+      parameters:
+        - name: slug
+          in: path
+          description: Slug of the article to update
+          required: true
+          schema:
+            type: string
+      requestBody:
+        $ref: '#/components/requestBodies/UpdateArticleRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/SingleArticleResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+      x-codegen-request-body-name: article
+    delete:
+      tags:
+        - Articles
+      summary: Delete an article
+      description: Delete an article. Auth is required
+````
+
+### 690. US-09 — openapi.yml L791-792
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L791-L792
+
+````text
+    Forbidden:
+      description: Forbidden. The error key identifies the resource type (article, comment, etc.)
+````
+
+### 691. US-10 — endpoints.md L187-191
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L187-L191
+
+````text
+### Delete Article
+
+`DELETE /api/articles/:slug`
+
+Authentication required
+````
+
+### 692. US-10 — openapi.yml L289-315
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L289-L315
+
+````text
+      operationId: DeleteArticle
+      parameters:
+        - name: slug
+          in: path
+          description: Slug of the article to delete
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          $ref: '#/components/responses/EmptyOkResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+  /articles/{slug}/comments:
+    get:
+      tags:
+        - Comments
+      summary: Get comments for an article
+      description: Get the comments for an article. Auth is optional
+````
+
+### 693. US-10 — routing.md L15
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L15-L15
+
+````text
+  - Delete article button (only shown to article's author)
+````
+
+### 694. US-10 — templates.md L509
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L509-L509
+
+````text
+          <i class="ion-trash-a"></i> Delete Article
+````
+
+### 695. US-10 — openapi.yml L289-315
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L289-L315
+
+````text
+      operationId: DeleteArticle
+      parameters:
+        - name: slug
+          in: path
+          description: Slug of the article to delete
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          $ref: '#/components/responses/EmptyOkResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+  /articles/{slug}/comments:
+    get:
+      tags:
+        - Comments
+      summary: Get comments for an article
+      description: Get the comments for an article. Auth is optional
+````
+
+### 696. US-10 — openapi.yml L768-770
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L768-L770
+
+````text
+    EmptyOkResponse:
+      description: No content
+      content: { }
+````
+
+### 697. US-10 — templates.md L509
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L509-L509
+
+````text
+          <i class="ion-trash-a"></i> Delete Article
+````
+
+### 698. US-10 — routing.md L15
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L15-L15
+
+````text
+  - Delete article button (only shown to article's author)
+````
+
+### 699. US-10 — openapi.yml L289-315
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L289-L315
+
+````text
+      operationId: DeleteArticle
+      parameters:
+        - name: slug
+          in: path
+          description: Slug of the article to delete
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          $ref: '#/components/responses/EmptyOkResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+  /articles/{slug}/comments:
+    get:
+      tags:
+        - Comments
+      summary: Get comments for an article
+      description: Get the comments for an article. Auth is optional
+````
+
+### 700. US-10 — openapi.yml L289-315
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L289-L315
+
+````text
+      operationId: DeleteArticle
+      parameters:
+        - name: slug
+          in: path
+          description: Slug of the article to delete
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          $ref: '#/components/responses/EmptyOkResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+  /articles/{slug}/comments:
+    get:
+      tags:
+        - Comments
+      summary: Get comments for an article
+      description: Get the comments for an article. Auth is optional
+````
+
+### 701. US-10 — openapi.yml L240-259
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L240-L259
+
+````text
+      operationId: GetArticle
+      parameters:
+        - name: slug
+          in: path
+          description: Slug of the article to get
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/SingleArticleResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+    put:
+      tags:
+        - Articles
+      summary: Update an article
+      description: Update an article. Auth is required
+````
+
+### 702. US-11 — routing.md L14
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L14-L14
+
+````text
+- Article page (URL: `/article/article-slug-here` )
+````
+
+### 703. US-11 — endpoints.md L136-140
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L136-L140
+
+````text
+### Get Article
+
+`GET /api/articles/:slug`
+
+No authentication required, will return [single article](/specifications/backend/api-response-format#single-article)
+````
+
+### 704. US-11 — api-response-format.md L38-57
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L38-L57
+
+````text
+```json
+{
+  "article": {
+    "slug": "how-to-train-your-dragon",
+    "title": "How to train your dragon",
+    "description": "Ever wonder how?",
+    "body": "It takes a Jacobian",
+    "tagList": ["dragons", "training"],
+    "createdAt": "2016-02-18T03:22:56.637Z",
+    "updatedAt": "2016-02-18T03:48:35.824Z",
+    "favorited": false,
+    "favoritesCount": 0,
+    "author": {
+      "username": "jake",
+      "bio": "I work at statefarm",
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "following": false
+    }
+  }
+}
+````
+
+### 705. US-11 — routing.md L16
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L16-L16
+
+````text
+  - Render markdown from server client side
+````
+
+### 706. US-11 — routing.md L17
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L17-L17
+
+````text
+  - Comments section at bottom of page
+````
+
+### 707. US-11 — openapi.yml L240-259
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L240-L259
+
+````text
+      operationId: GetArticle
+      parameters:
+        - name: slug
+          in: path
+          description: Slug of the article to get
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/SingleArticleResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+    put:
+      tags:
+        - Articles
+      summary: Update an article
+      description: Update an article. Auth is required
+````
+
+### 708. US-11 — routing.md L14-17
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L14-L17
+
+````text
+- Article page (URL: `/article/article-slug-here` )
+  - Delete article button (only shown to article's author)
+  - Render markdown from server client side
+  - Comments section at bottom of page
+````
+
+### 709. US-11 — endpoints.md L136-140
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L136-L140
+
+````text
+### Get Article
+
+`GET /api/articles/:slug`
+
+No authentication required, will return [single article](/specifications/backend/api-response-format#single-article)
+````
+
+### 710. US-12 — routing.md L5-7
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L5-L7
+
+````text
+- Home page (URL: `/` )
+  - List of tags
+  - List of articles pulled from either Feed, Global, or by Tag
+````
+
+### 711. US-12 — templates.md L118-120
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L118-L120
+
+````text
+The Home page includes up to three tabs:
+
+- a default **Global Feed** tab
+````
+
+### 712. US-12 — endpoints.md L102
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L102-L102
+
+````text
+Returns most recent articles globally by default, provide `tag`, `author` or `favorited` query parameter to filter results
+````
+
+### 713. US-12 — endpoints.md L126
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L126-L126
+
+````text
+Authentication optional, will return [multiple articles](/specifications/backend/api-response-format#multiple-articles), ordered by most recent first
+````
+
+### 714. US-12 — api-response-format.md L62-67
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L62-L67
+
+````text
+:::caution
+Starting from the 2024/08/16, the endpoints retrieving a list of articles do no longer return the body of an article for performance reasons.
+It affects:
+- `GET /api/articles`
+- `GET /api/articles/feed`
+:::
+````
+
+### 715. US-12 — api-response-format.md L102
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L102-L102
+
+````text
+  "articlesCount": 2
+````
+
+### 716. US-12 — templates.md L145-185
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L145-L185
+
+````text
+        </div>
+
+        <div class="article-preview">
+          <div class="article-meta">
+            <a href="/profile/eric-simons"><img src="http://i.imgur.com/Qr71crq.jpg" /></a>
+            <div class="info">
+              <a href="/profile/eric-simons" class="author">Eric Simons</a>
+              <span class="date">January 20th</span>
+            </div>
+            <button class="btn btn-outline-primary btn-sm pull-xs-right">
+              <i class="ion-heart"></i> 29
+            </button>
+          </div>
+          <a href="/article/how-to-build-webapps-that-scale" class="preview-link">
+            <h1>How to build webapps that scale</h1>
+            <p>This is the description for the post.</p>
+            <span>Read more...</span>
+            <ul class="tag-list">
+              <li class="tag-default tag-pill tag-outline">realworld</li>
+              <li class="tag-default tag-pill tag-outline">implementations</li>
+            </ul>
+          </a>
+        </div>
+
+        <div class="article-preview">
+          <div class="article-meta">
+            <a href="/profile/albert-pai"><img src="http://i.imgur.com/N4VcUeJ.jpg" /></a>
+            <div class="info">
+              <a href="/profile/albert-pai" class="author">Albert Pai</a>
+              <span class="date">January 20th</span>
+            </div>
+            <button class="btn btn-outline-primary btn-sm pull-xs-right">
+              <i class="ion-heart"></i> 32
+            </button>
+          </div>
+          <a href="/article/the-song-you" class="preview-link">
+            <h1>The song you won't ever stop singing. No matter how hard you try.</h1>
+            <p>This is the description for the post.</p>
+            <span>Read more...</span>
+            <ul class="tag-list">
+              <li class="tag-default tag-pill tag-outline">realworld</li>
+````
+
+### 717. US-12 — openapi.yml L697-745
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L697-L745
+
+````text
+    MultipleArticlesResponse:
+      description: Multiple articles
+      content:
+        application/json:
+          schema:
+            required:
+              - articles
+              - articlesCount
+            type: object
+            properties:
+              articles:
+                type: array
+                items:
+                  required:
+                    - author
+                    - createdAt
+                    - description
+                    - favorited
+                    - favoritesCount
+                    - slug
+                    - tagList
+                    - title
+                    - updatedAt
+                  type: object
+                  properties:
+                    slug:
+                      type: string
+                    title:
+                      type: string
+                    description:
+                      type: string
+                    tagList:
+                      type: array
+                      items:
+                        type: string
+                    createdAt:
+                      type: string
+                      format: date-time
+                    updatedAt:
+                      type: string
+                      format: date-time
+                    favorited:
+                      type: boolean
+                    favoritesCount:
+                      type: integer
+                    author:
+                      $ref: '#/components/schemas/Profile'
+              articlesCount:
+                type: integer
+````
+
+### 718. US-12 — api-response-format.md L62-67
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L62-L67
+
+````text
+:::caution
+Starting from the 2024/08/16, the endpoints retrieving a list of articles do no longer return the body of an article for performance reasons.
+It affects:
+- `GET /api/articles`
+- `GET /api/articles/feed`
+:::
+````
+
+### 719. US-12 — openapi.yml L183-213
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L183-L213
+
+````text
+      tags:
+        - Articles
+      summary: Get recent articles globally
+      description: Get most recent articles globally. Use query parameters to filter
+        results. Auth is optional
+      operationId: GetArticles
+      parameters:
+        - name: tag
+          in: query
+          description: Filter by tag
+          schema:
+            type: string
+        - name: author
+          in: query
+          description: Filter by author (username)
+          schema:
+            type: string
+        - name: favorited
+          in: query
+          description: Filter by favorites of a user (username)
+          schema:
+            type: string
+        - $ref: '#/components/parameters/offsetParam'
+        - $ref: '#/components/parameters/limitParam'
+      responses:
+        '200':
+          $ref: '#/components/responses/MultipleArticlesResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '422':
+          $ref: '#/components/responses/GenericError'
+````
+
+### 720. US-12 — templates.md L126-131
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L126-L131
+
+````text
+  <div class="banner">
+    <div class="container">
+      <h1 class="logo-font">conduit</h1>
+      <p>A place to share your knowledge.</p>
+    </div>
+  </div>
+````
+
+### 721. US-12 — templates.md L120
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L120-L120
+
+````text
+- a default **Global Feed** tab
+````
+
+### 722. US-12 — endpoints.md L126
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L126-L126
+
+````text
+Authentication optional, will return [multiple articles](/specifications/backend/api-response-format#multiple-articles), ordered by most recent first
+````
+
+### 723. US-12 — endpoints.md L126
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L126-L126
+
+````text
+Authentication optional, will return [multiple articles](/specifications/backend/api-response-format#multiple-articles), ordered by most recent first
+````
+
+### 724. US-12 — api-response-format.md L62-67
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L62-L67
+
+````text
+:::caution
+Starting from the 2024/08/16, the endpoints retrieving a list of articles do no longer return the body of an article for performance reasons.
+It affects:
+- `GET /api/articles`
+- `GET /api/articles/feed`
+:::
+````
+
+### 725. US-12 — api-response-format.md L102
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L102-L102
+
+````text
+  "articlesCount": 2
+````
+
+### 726. US-13 — templates.md L122
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L122-L122
+
+````text
+- an optional **Your Feed** tab, appears after logging in
+````
+
+### 727. US-13 — endpoints.md L134
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L134-L134
+
+````text
+Authentication required, will return [multiple articles](/specifications/backend/api-response-format#multiple-articles) created by followed users, ordered by most recent first.
+````
+
+### 728. US-13 — endpoints.md L132
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L132-L132
+
+````text
+Can also take `limit` and `offset` query parameters like [List Articles](/specifications/backend/endpoints#list-articles)
+````
+
+### 729. US-13 — openapi.yml L164-180
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L164-L180
+
+````text
+        - Articles
+      summary: Get recent articles from users you follow
+      description: Get most recent articles from users you follow. Use query parameters
+        to limit. Auth is required
+      operationId: GetArticlesFeed
+      parameters:
+        - $ref: '#/components/parameters/offsetParam'
+        - $ref: '#/components/parameters/limitParam'
+      responses:
+        '200':
+          $ref: '#/components/responses/MultipleArticlesResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+````
+
+### 730. US-13 — endpoints.md L134
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L134-L134
+
+````text
+Authentication required, will return [multiple articles](/specifications/backend/api-response-format#multiple-articles) created by followed users, ordered by most recent first.
+````
+
+### 731. US-13 — error-handling.md L21
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L21-L21
+
+````text
+401 for Unauthorized requests, when a request requires authentication but it isn't provided
+````
+
+### 732. US-14 — routing.md L6
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L6-L6
+
+````text
+  - List of tags
+````
+
+### 733. US-14 — templates.md L203
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L203-L203
+
+````text
+          <p>Popular Tags</p>
+````
+
+### 734. US-14 — templates.md L121
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L121-L121
+
+````text
+- an optional **tag name** tab, appears after clicking one of the popular tags
+````
+
+### 735. US-14 — endpoints.md L106-108
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L106-L108
+
+````text
+Filter by tag:
+
+`?tag=AngularJS`
+````
+
+### 736. US-14 — endpoints.md L239-243
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L239-L243
+
+````text
+### Get Tags
+
+`GET /api/tags`
+
+No authentication required, returns a [List of Tags](/specifications/backend/api-response-format#list-of-tags)
+````
+
+### 737. US-14 — api-response-format.md L146-152
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L146-L152
+
+````text
+```json
+{
+  "tags": [
+    "reactjs",
+    "angularjs"
+  ]
+}
+````
+
+### 738. US-14 — openapi.yml L443-453
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L443-L453
+
+````text
+    get:
+      tags:
+        - Tags
+      summary: Get tags
+      description: Get tags. Auth not required
+      operationId: GetTags
+      responses:
+        '200':
+          $ref: '#/components/responses/TagsResponse'
+        '422':
+          $ref: '#/components/responses/GenericError'
+````
+
+### 739. US-14 — openapi.yml L649-661
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L649-L661
+
+````text
+    TagsResponse:
+      description: Tags
+      content:
+        application/json:
+          schema:
+            required:
+              - tags
+            type: object
+            properties:
+              tags:
+                type: array
+                items:
+                  type: string
+````
+
+### 740. US-14 — templates.md L121
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L121-L121
+
+````text
+- an optional **tag name** tab, appears after clicking one of the popular tags
+````
+
+### 741. US-14 — api-response-format.md L146-152
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L146-L152
+
+````text
+```json
+{
+  "tags": [
+    "reactjs",
+    "angularjs"
+  ]
+}
+````
+
+### 742. US-14 — endpoints.md L106-108
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L106-L108
+
+````text
+Filter by tag:
+
+`?tag=AngularJS`
+````
+
+### 743. US-15 — routing.md L8
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L8-L8
+
+````text
+  - Pagination for list of articles
+````
+
+### 744. US-15 — templates.md L191-196
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L191-L196
+
+````text
+        <ul class="pagination">
+          <li class="page-item active">
+            <a class="page-link" href="">1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="">2</a>
+````
+
+### 745. US-15 — endpoints.md L118-124
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L118-L124
+
+````text
+Limit number of articles (default is 20):
+
+`?limit=20`
+
+Offset/skip number of articles (default is 0):
+
+`?offset=0`
+````
+
+### 746. US-15 — openapi.yml L895-911
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L895-L911
+
+````text
+    offsetParam:
+      in: query
+      name: offset
+      required: false
+      schema:
+        type: integer
+        minimum: 0
+      description: The number of items to skip before starting to collect the result set.
+    limitParam:
+      in: query
+      name: limit
+      required: false
+      schema:
+        type: integer
+        minimum: 1
+        default: 20
+      description: The numbers of items to return.
+````
+
+### 747. US-15 — endpoints.md L132
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L132-L132
+
+````text
+Can also take `limit` and `offset` query parameters like [List Articles](/specifications/backend/endpoints#list-articles)
+````
+
+### 748. US-15 — openapi.yml L895-911
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L895-L911
+
+````text
+    offsetParam:
+      in: query
+      name: offset
+      required: false
+      schema:
+        type: integer
+        minimum: 0
+      description: The number of items to skip before starting to collect the result set.
+    limitParam:
+      in: query
+      name: limit
+      required: false
+      schema:
+        type: integer
+        minimum: 1
+        default: 20
+      description: The numbers of items to return.
+````
+
+### 749. US-15 — templates.md L191-196
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L191-L196
+
+````text
+        <ul class="pagination">
+          <li class="page-item active">
+            <a class="page-link" href="">1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="">2</a>
+````
+
+### 750. US-15 — endpoints.md L118
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L118-L118
+
+````text
+Limit number of articles (default is 20):
+````
+
+### 751. US-15 — api-response-format.md L102
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L102-L102
+
+````text
+  "articlesCount": 2
+````
+
+### 752. US-15 — endpoints.md L118-124
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L118-L124
+
+````text
+Limit number of articles (default is 20):
+
+`?limit=20`
+
+Offset/skip number of articles (default is 0):
+
+`?offset=0`
+````
+
+### 753. US-16 — templates.md L562-566
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L562-L566
+
+````text
+            <textarea class="form-control" placeholder="Write a comment..." rows="3"></textarea>
+          </div>
+          <div class="card-footer">
+            <img src="http://i.imgur.com/Qr71crq.jpg" class="comment-author-img" />
+            <button class="btn btn-sm btn-primary">Post Comment</button>
+````
+
+### 754. US-16 — routing.md L17
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L17-L17
+
+````text
+  - Comments section at bottom of page
+````
+
+### 755. US-16 — endpoints.md L207-209
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L207-L209
+
+````text
+Authentication required, returns the created [Comment](/specifications/backend/api-response-format#single-comment)
+
+Required field: `body`
+````
+
+### 756. US-16 — api-response-format.md L108-122
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L108-L122
+
+````text
+```json
+{
+  "comment": {
+    "id": 1,
+    "createdAt": "2016-02-18T03:22:56.637Z",
+    "updatedAt": "2016-02-18T03:22:56.637Z",
+    "body": "It takes a Jacobian",
+    "author": {
+      "username": "jake",
+      "bio": "I work at statefarm",
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "following": false
+    }
+  }
+}
+````
+
+### 757. US-16 — openapi.yml L338-365
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L338-L365
+
+````text
+      operationId: CreateArticleComment
+      parameters:
+        - name: slug
+          in: path
+          description: Slug of the article that you want to create a comment for
+          required: true
+          schema:
+            type: string
+      requestBody:
+        $ref: '#/components/requestBodies/NewCommentRequest'
+      responses:
+        '201':
+          $ref: '#/components/responses/SingleCommentResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+      x-codegen-request-body-name: comment
+  /articles/{slug}/comments/{id}:
+    delete:
+      tags:
+        - Comments
+      summary: Delete a comment for an article
+      description: Delete a comment for an article. Auth is required
+````
+
+### 758. US-16 — features.md L10
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/implementation-creation/features.md#L10-L10
+
+````text
+- CR-D Comments on articles (no updating required)
+````
+
+### 759. US-16 — openapi.yml L630-636
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L630-L636
+
+````text
+    NewComment:
+      required:
+        - body
+      type: object
+      properties:
+        body:
+          type: string
+````
+
+### 760. US-16 — openapi.yml L882-893
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L882-L893
+
+````text
+    NewCommentRequest:
+      required: true
+      description: Comment you want to create
+      content:
+        application/json:
+          schema:
+            required:
+              - comment
+            type: object
+            properties:
+              comment:
+                $ref: '#/components/schemas/NewComment'
+````
+
+### 761. US-16 — openapi.yml L609-629
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L609-L629
+
+````text
+    Comment:
+      required:
+        - author
+        - body
+        - createdAt
+        - id
+        - updatedAt
+      type: object
+      properties:
+        id:
+          type: integer
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        body:
+          type: string
+        author:
+          $ref: '#/components/schemas/Profile'
+````
+
+### 762. US-16 — openapi.yml L338-365
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L338-L365
+
+````text
+      operationId: CreateArticleComment
+      parameters:
+        - name: slug
+          in: path
+          description: Slug of the article that you want to create a comment for
+          required: true
+          schema:
+            type: string
+      requestBody:
+        $ref: '#/components/requestBodies/NewCommentRequest'
+      responses:
+        '201':
+          $ref: '#/components/responses/SingleCommentResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+      x-codegen-request-body-name: comment
+  /articles/{slug}/comments/{id}:
+    delete:
+      tags:
+        - Comments
+      summary: Delete a comment for an article
+      description: Delete a comment for an article. Auth is required
+````
+
+### 763. US-16 — templates.md L562-566
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L562-L566
+
+````text
+            <textarea class="form-control" placeholder="Write a comment..." rows="3"></textarea>
+          </div>
+          <div class="card-footer">
+            <img src="http://i.imgur.com/Qr71crq.jpg" class="comment-author-img" />
+            <button class="btn btn-sm btn-primary">Post Comment</button>
+````
+
+### 764. US-16 — openapi.yml L338-365
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L338-L365
+
+````text
+      operationId: CreateArticleComment
+      parameters:
+        - name: slug
+          in: path
+          description: Slug of the article that you want to create a comment for
+          required: true
+          schema:
+            type: string
+      requestBody:
+        $ref: '#/components/requestBodies/NewCommentRequest'
+      responses:
+        '201':
+          $ref: '#/components/responses/SingleCommentResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+      x-codegen-request-body-name: comment
+  /articles/{slug}/comments/{id}:
+    delete:
+      tags:
+        - Comments
+      summary: Delete a comment for an article
+      description: Delete a comment for an article. Auth is required
+````
+
+### 765. US-16 — api-response-format.md L108-122
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L108-L122
+
+````text
+```json
+{
+  "comment": {
+    "id": 1,
+    "createdAt": "2016-02-18T03:22:56.637Z",
+    "updatedAt": "2016-02-18T03:22:56.637Z",
+    "body": "It takes a Jacobian",
+    "author": {
+      "username": "jake",
+      "bio": "I work at statefarm",
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "following": false
+    }
+  }
+}
+````
+
+### 766. US-16 — endpoints.md L209
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L209-L209
+
+````text
+Required field: `body`
+````
+
+### 767. US-16 — error-handling.md L7
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L7-L7
+
+````text
+If a request fails any validations, expect a 422 and errors in the following format:
+````
+
+### 768. US-16 — endpoints.md L207
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L207-L207
+
+````text
+Authentication required, returns the created [Comment](/specifications/backend/api-response-format#single-comment)
+````
+
+### 769. US-16 — error-handling.md L21
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L21-L21
+
+````text
+401 for Unauthorized requests, when a request requires authentication but it isn't provided
+````
+
+### 770. US-17 — endpoints.md L211-215
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L211-L215
+
+````text
+### Get Comments from an Article
+
+`GET /api/articles/:slug/comments`
+
+Authentication optional, returns [multiple comments](/specifications/backend/api-response-format#multiple-comments)
+````
+
+### 771. US-17 — api-response-format.md L127-141
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L127-L141
+
+````text
+```json
+{
+  "comments": [{
+    "id": 1,
+    "createdAt": "2016-02-18T03:22:56.637Z",
+    "updatedAt": "2016-02-18T03:22:56.637Z",
+    "body": "It takes a Jacobian",
+    "author": {
+      "username": "jake",
+      "bio": "I work at statefarm",
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "following": false
+    }
+  }]
+}
+````
+
+### 772. US-17 — templates.md L577-582
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L577-L582
+
+````text
+            <a href="/profile/author" class="comment-author">
+              <img src="http://i.imgur.com/Qr71crq.jpg" class="comment-author-img" />
+            </a>
+            &nbsp;
+            <a href="/profile/jacob-schmidt" class="comment-author">Jacob Schmidt</a>
+            <span class="date-posted">Dec 29th</span>
+````
+
+### 773. US-17 — features.md L10
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/implementation-creation/features.md#L10-L10
+
+````text
+- CR-D Comments on articles (no updating required)
+````
+
+### 774. US-17 — openapi.yml L315-337
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L315-L337
+
+````text
+      description: Get the comments for an article. Auth is optional
+      operationId: GetArticleComments
+      parameters:
+        - name: slug
+          in: path
+          description: Slug of the article that you want to get comments for
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/MultipleCommentsResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+    post:
+      tags:
+        - Comments
+      summary: Create a comment for an article
+      description: Create a comment for an article. Auth is required
+````
+
+### 775. US-17 — openapi.yml L675-685
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L675-L685
+
+````text
+      content:
+        application/json:
+          schema:
+            required:
+              - comments
+            type: object
+            properties:
+              comments:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Comment'
+````
+
+### 776. US-17 — endpoints.md L211-215
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L211-L215
+
+````text
+### Get Comments from an Article
+
+`GET /api/articles/:slug/comments`
+
+Authentication optional, returns [multiple comments](/specifications/backend/api-response-format#multiple-comments)
+````
+
+### 777. US-18 — endpoints.md L217-221
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L217-L221
+
+````text
+### Delete Comment
+
+`DELETE /api/articles/:slug/comments/:id`
+
+Authentication required
+````
+
+### 778. US-18 — openapi.yml L366-398
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L366-L398
+
+````text
+      operationId: DeleteArticleComment
+      parameters:
+        - name: slug
+          in: path
+          description: Slug of the article that you want to delete a comment for
+          required: true
+          schema:
+            type: string
+        - name: id
+          in: path
+          description: ID of the comment you want to delete
+          required: true
+          schema:
+            type: integer
+      responses:
+        '204':
+          $ref: '#/components/responses/EmptyOkResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+  /articles/{slug}/favorite:
+    post:
+      tags:
+        - Favorites
+      summary: Favorite an article
+      description: Favorite an article. Auth is required
+````
+
+### 779. US-18 — routing.md L18
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L18-L18
+
+````text
+  - Delete comment button (only shown to comment's author)
+````
+
+### 780. US-18 — templates.md L599-600
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L599-L600
+
+````text
+            <span class="mod-options">
+              <i class="ion-trash-a"></i>
+````
+
+### 781. US-18 — openapi.yml L366-398
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L366-L398
+
+````text
+      operationId: DeleteArticleComment
+      parameters:
+        - name: slug
+          in: path
+          description: Slug of the article that you want to delete a comment for
+          required: true
+          schema:
+            type: string
+        - name: id
+          in: path
+          description: ID of the comment you want to delete
+          required: true
+          schema:
+            type: integer
+      responses:
+        '204':
+          $ref: '#/components/responses/EmptyOkResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+  /articles/{slug}/favorite:
+    post:
+      tags:
+        - Favorites
+      summary: Favorite an article
+      description: Favorite an article. Auth is required
+````
+
+### 782. US-18 — openapi.yml L768-770
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L768-L770
+
+````text
+    EmptyOkResponse:
+      description: No content
+      content: { }
+````
+
+### 783. US-18 — templates.md L599-600
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L599-L600
+
+````text
+            <span class="mod-options">
+              <i class="ion-trash-a"></i>
+````
+
+### 784. US-18 — routing.md L18
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L18-L18
+
+````text
+  - Delete comment button (only shown to comment's author)
+````
+
+### 785. US-18 — routing.md L18
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L18-L18
+
+````text
+  - Delete comment button (only shown to comment's author)
+````
+
+### 786. US-18 — openapi.yml L366-398
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L366-L398
+
+````text
+      operationId: DeleteArticleComment
+      parameters:
+        - name: slug
+          in: path
+          description: Slug of the article that you want to delete a comment for
+          required: true
+          schema:
+            type: string
+        - name: id
+          in: path
+          description: ID of the comment you want to delete
+          required: true
+          schema:
+            type: integer
+      responses:
+        '204':
+          $ref: '#/components/responses/EmptyOkResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+  /articles/{slug}/favorite:
+    post:
+      tags:
+        - Favorites
+      summary: Favorite an article
+      description: Favorite an article. Auth is required
+````
+
+### 787. US-19 — endpoints.md L82-96
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L82-L96
+
+````text
+### Follow user
+
+`POST /api/profiles/:username/follow`
+
+Authentication required, returns a [Profile](/specifications/backend/api-response-format#profile)
+
+No additional parameters required
+
+### Unfollow user
+
+`DELETE /api/profiles/:username/follow`
+
+Authentication required, returns a [Profile](/specifications/backend/api-response-format#profile)
+
+No additional parameters required
+````
+
+### 788. US-19 — templates.md L305
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L305-L305
+
+````text
+            &nbsp; Follow Eric Simons
+````
+
+### 789. US-19 — templates.md L498
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L498-L498
+
+````text
+          &nbsp; Follow Eric Simons <span class="counter">(10)</span>
+````
+
+### 790. US-19 — openapi.yml L118-141
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L118-L141
+
+````text
+      operationId: FollowUserByUsername
+      parameters:
+        - name: username
+          in: path
+          description: Username of the profile you want to follow
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/ProfileResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+    delete:
+      tags:
+        - Profile
+      summary: Unfollow a user
+      description: Unfollow a user by username
+````
+
+### 791. US-19 — endpoints.md L134
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L134-L134
+
+````text
+Authentication required, will return [multiple articles](/specifications/backend/api-response-format#multiple-articles) created by followed users, ordered by most recent first.
+````
+
+### 792. US-19 — endpoints.md L82-96
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L82-L96
+
+````text
+### Follow user
+
+`POST /api/profiles/:username/follow`
+
+Authentication required, returns a [Profile](/specifications/backend/api-response-format#profile)
+
+No additional parameters required
+
+### Unfollow user
+
+`DELETE /api/profiles/:username/follow`
+
+Authentication required, returns a [Profile](/specifications/backend/api-response-format#profile)
+
+No additional parameters required
+````
+
+### 793. US-19 — openapi.yml L118-160
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L118-L160
+
+````text
+      operationId: FollowUserByUsername
+      parameters:
+        - name: username
+          in: path
+          description: Username of the profile you want to follow
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/ProfileResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+    delete:
+      tags:
+        - Profile
+      summary: Unfollow a user
+      description: Unfollow a user by username
+      operationId: UnfollowUserByUsername
+      parameters:
+        - name: username
+          in: path
+          description: Username of the profile you want to unfollow
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/ProfileResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+````
+
+### 794. US-19 — templates.md L305
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L305-L305
+
+````text
+            &nbsp; Follow Eric Simons
+````
+
+### 795. US-19 — endpoints.md L134
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L134-L134
+
+````text
+Authentication required, will return [multiple articles](/specifications/backend/api-response-format#multiple-articles) created by followed users, ordered by most recent first.
+````
+
+### 796. US-19 — endpoints.md L82-88
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L82-L88
+
+````text
+### Follow user
+
+`POST /api/profiles/:username/follow`
+
+Authentication required, returns a [Profile](/specifications/backend/api-response-format#profile)
+
+No additional parameters required
+````
+
+### 797. US-19 — endpoints.md L90-96
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L90-L96
+
+````text
+### Unfollow user
+
+`DELETE /api/profiles/:username/follow`
+
+Authentication required, returns a [Profile](/specifications/backend/api-response-format#profile)
+
+No additional parameters required
+````
+
+### 798. US-19 — error-handling.md L21
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L21-L21
+
+````text
+401 for Unauthorized requests, when a request requires authentication but it isn't provided
+````
+
+### 799. US-20 — endpoints.md L223-237
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L223-L237
+
+````text
+### Favorite Article
+
+`POST /api/articles/:slug/favorite`
+
+Authentication required, returns the [Article](/specifications/backend/api-response-format#single-article)
+
+No additional parameters required
+
+### Unfavorite Article
+
+`DELETE /api/articles/:slug/favorite`
+
+Authentication required, returns the [Article](/specifications/backend/api-response-format#single-article)
+
+No additional parameters required
+````
+
+### 800. US-20 — templates.md L155
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L155-L155
+
+````text
+              <i class="ion-heart"></i> 29
+````
+
+### 801. US-20 — templates.md L503
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L503-L503
+
+````text
+          &nbsp; Favorite Post <span class="counter">(29)</span>
+````
+
+### 802. US-20 — routing.md L19-21
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/routing.md#L19-L21
+
+````text
+- Profile page (URL: `/profile/:username`, `/profile/:username/favorites` )
+  - Show basic user info
+  - List of articles populated from author's created articles or author's favorited articles
+````
+
+### 803. US-20 — endpoints.md L223-237
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L223-L237
+
+````text
+### Favorite Article
+
+`POST /api/articles/:slug/favorite`
+
+Authentication required, returns the [Article](/specifications/backend/api-response-format#single-article)
+
+No additional parameters required
+
+### Unfavorite Article
+
+`DELETE /api/articles/:slug/favorite`
+
+Authentication required, returns the [Article](/specifications/backend/api-response-format#single-article)
+
+No additional parameters required
+````
+
+### 804. US-20 — openapi.yml L399-441
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L399-L441
+
+````text
+      operationId: CreateArticleFavorite
+      parameters:
+        - name: slug
+          in: path
+          description: Slug of the article that you want to favorite
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/SingleArticleResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+    delete:
+      tags:
+        - Favorites
+      summary: Unfavorite an article
+      description: Unfavorite an article. Auth is required
+      operationId: DeleteArticleFavorite
+      parameters:
+        - name: slug
+          in: path
+          description: Slug of the article that you want to unfavorite
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/SingleArticleResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/GenericError'
+      security:
+        - Token: [ ]
+````
+
+### 805. US-20 — templates.md L155
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L155-L155
+
+````text
+              <i class="ion-heart"></i> 29
+````
+
+### 806. US-20 — api-response-format.md L48-49
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L48-L49
+
+````text
+    "favorited": false,
+    "favoritesCount": 0,
+````
+
+### 807. US-20 — endpoints.md L223-229
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L223-L229
+
+````text
+### Favorite Article
+
+`POST /api/articles/:slug/favorite`
+
+Authentication required, returns the [Article](/specifications/backend/api-response-format#single-article)
+
+No additional parameters required
+````
+
+### 808. US-20 — endpoints.md L231-237
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/endpoints.md#L231-L237
+
+````text
+### Unfavorite Article
+
+`DELETE /api/articles/:slug/favorite`
+
+Authentication required, returns the [Article](/specifications/backend/api-response-format#single-article)
+
+No additional parameters required
+````
+
+### 809. US-20 — error-handling.md L21
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L21-L21
+
+````text
+401 for Unauthorized requests, when a request requires authentication but it isn't provided
+````
+
+### 810. US-21 — templates.md L36-40
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L36-L40
+
+````text
+If no user is logged in, then the header should include links to:
+
+- the home page
+- the login page
+- the register page
+````
+
+### 811. US-21 — templates.md L66-71
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L66-L71
+
+````text
+If a user is logged in, then the header should include links to:
+
+- the home page
+- the new article page
+- the settings page
+- the profile page
+````
+
+### 812. US-21 — templates.md L42
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L42-L42
+
+````text
+> the link of the active page should use the **active** css class.
+````
+
+### 813. US-21 — templates.md L73
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L73-L73
+
+````text
+> the link of the active page should use the **active** css class.
+````
+
+### 814. US-21 — templates.md L14
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L14-L14
+
+````text
+  <title>Conduit</title>
+````
+
+### 815. US-21 — templates.md L103-111
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L103-L111
+
+````text
+```html
+<footer>
+  <div class="container">
+    <a href="/" class="logo-font">conduit</a>
+    <span class="attribution">
+      An interactive learning project. Code &amp; design licensed under MIT.
+    </span>
+  </div>
+</footer>
+````
+
+### 816. US-21 — styles.md L16-18
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/styles.md#L16-L18
+
+````text
+### Default Avatar
+
+When a user has no profile image, implementations should display the [default avatar](https://github.com/realworld-apps/realworld/blob/main/assets/media/default-avatar.svg) (a smiley face icon).
+````
+
+### 817. US-21 — templates.md L73
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/frontend/templates.md#L73-L73
+
+````text
+> the link of the active page should use the **active** css class.
+````
+
+### 818. US-22 — error-handling.md L7-17
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L7-L17
+
+````text
+If a request fails any validations, expect a 422 and errors in the following format:
+
+```json
+{
+  "errors":{
+    "body": [
+      "can't be empty"
+    ]
+  }
+}
+```
+````
+
+### 819. US-22 — error-handling.md L21
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L21-L21
+
+````text
+401 for Unauthorized requests, when a request requires authentication but it isn't provided
+````
+
+### 820. US-22 — error-handling.md L23
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L23-L23
+
+````text
+403 for Forbidden requests, when a request may be valid but the user doesn't have permissions to perform the action
+````
+
+### 821. US-22 — error-handling.md L25
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L25-L25
+
+````text
+404 for Not found requests, when a resource can't be found to fulfill the request
+````
+
+### 822. US-22 — openapi.yml L791-810
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L791-L810
+
+````text
+    Forbidden:
+      description: Forbidden. The error key identifies the resource type (article, comment, etc.)
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GenericErrorModel'
+          example:
+            errors:
+              resource:
+                - "forbidden"
+    NotFound:
+      description: Not Found. The error key identifies the resource type (article, profile, comment, etc.)
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GenericErrorModel'
+          example:
+            errors:
+              resource:
+                - "not found"
+````
+
+### 823. US-22 — api-response-format.md L7
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/api-response-format.md#L7-L7
+
+````text
+Make sure the right content type like `Content-Type: application/json; charset=utf-8` is correctly returned.
+````
+
+### 824. US-22 — openapi.yml L771-780
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L771-L780
+
+````text
+    Unauthorized:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GenericErrorModel'
+          example:
+            errors:
+              token:
+                - "is missing"
+````
+
+### 825. US-22 — openapi.yml L637-647
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L637-L647
+
+````text
+    GenericErrorModel:
+      required:
+        - errors
+      type: object
+      properties:
+        errors:
+          type: object
+          additionalProperties:
+            type: array
+            items:
+              type: string
+````
+
+### 826. US-22 — openapi.yml L791-810
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml#L791-L810
+
+````text
+    Forbidden:
+      description: Forbidden. The error key identifies the resource type (article, comment, etc.)
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GenericErrorModel'
+          example:
+            errors:
+              resource:
+                - "forbidden"
+    NotFound:
+      description: Not Found. The error key identifies the resource type (article, profile, comment, etc.)
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GenericErrorModel'
+          example:
+            errors:
+              resource:
+                - "not found"
+````
+
+### 827. US-22 — error-handling.md L7-25
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/error-handling.md#L7-L25
+
+````text
+If a request fails any validations, expect a 422 and errors in the following format:
+
+```json
+{
+  "errors":{
+    "body": [
+      "can't be empty"
+    ]
+  }
+}
+```
+
+#### Other status codes:
+
+401 for Unauthorized requests, when a request requires authentication but it isn't provided
+
+403 for Forbidden requests, when a request may be valid but the user doesn't have permissions to perform the action
+
+404 for Not found requests, when a resource can't be found to fulfill the request
+````
+
+### 828. US-23 — cors.md L7
+
+PASS — Change-log range only: Historical/content-change evidence, not an additional current assertion.
+
+Source: https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/docs/src/content/docs/specifications/backend/cors.md#L7-L7
+
+````text
+If the backend is about to run on a different host/port than the frontend, make sure to handle `OPTIONS` too and return correct `Access-Control-Allow-Origin` and `Access-Control-Allow-Headers` (e.g. `Content-Type`).
 ````
 
 ## Historical roll-up consistency

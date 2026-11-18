@@ -112,4 +112,77 @@ Save the workbook, tell Dmitry, and add your name and the date on the **Sign-off
 
 ## 6. Decision list (most blocking first)
 
-*To be generated in run 2 by the agent: one line per open question with its ID, story, kind proposed by the agent, and why it is ranked where it is. Everything above this section is fixed; the agent must not change it.*
+Agent-proposed kinds and ranking only; no decisions or approvals. Spec conflicts and security first, then descending estimated number of affected current ACs, with response-field meaning questions last. Ties use stable numeric OQ ID. Impact sets are conservative design estimates, not executed coverage; a missing rule may require new ACs.
+
+| Rank | OQ ID | Story | Proposed kind | Rank reason |
+| --- | --- | --- | --- | --- |
+| 1 | OQ-09.4 | US-09 | Missing rule | Spec conflict/security first; 2 potentially affected current AC (AC-09.2, AC-09.3). |
+| 2 | OQ-10.4 | US-10 | Missing rule | Spec conflict/security first; 3 potentially affected current AC (AC-10.2, AC-10.3, AC-10.4). |
+| 3 | OQ-18.2 | US-18 | Missing rule | Spec conflict/security first; 3 potentially affected current AC (AC-18.1, AC-18.2, AC-18.3). |
+| 4 | OQ-02.1 | US-02 | Conflict | Spec conflict/security first; 2 potentially affected current AC (AC-02.3, AC-22.1). |
+| 5 | OQ-11.2 | US-11 | Missing rule | Spec conflict/security first; 3 potentially affected current AC (AC-08.1, AC-09.1, AC-11.1). |
+| 6 | OQ-01.1 | US-01 | Missing rule | Spec conflict/security first; 4 potentially affected current AC (AC-01.1, AC-01.2, AC-02.1, AC-02.2). |
+| 7 | OQ-01.5 | US-01 | Missing rule | Spec conflict/security first; 5 potentially affected current AC (AC-01.1, AC-01.2, AC-02.1, AC-02.2, AC-05.2). |
+| 8 | OQ-22.1 | US-22 | Conflict | Spec conflict/security first; 5 potentially affected current AC (AC-01.4, AC-02.4, AC-08.4, AC-16.3, AC-22.2). |
+| 9 | OQ-01.2 | US-01 | Missing rule | Spec conflict/security first; 4 potentially affected current AC (AC-01.1, AC-01.2, AC-01.3, AC-05.2). |
+| 10 | OQ-01.3 | US-01 | Missing rule | Spec conflict/security first; 4 potentially affected current AC (AC-01.1, AC-01.2, AC-06.1, AC-06.2). |
+| 11 | OQ-02.2 | US-02 | Missing rule | Spec conflict/security first; 3 potentially affected current AC (AC-02.1, AC-02.2, AC-02.3). |
+| 12 | OQ-02.3 | US-02 | Missing rule | Spec conflict/security first; 3 potentially affected current AC (AC-03.1, AC-03.2, AC-03.3). |
+| 13 | OQ-03.1 | US-03 | Missing rule | Spec conflict/security first; 3 potentially affected current AC (AC-03.1, AC-03.2, AC-21.2). |
+| 14 | OQ-03.2 | US-03 | Missing rule | Spec conflict/security first; 3 potentially affected current AC (AC-03.2, AC-03.3, AC-22.1). |
+| 15 | OQ-03.4 | US-03 | Missing rule | Spec conflict/security first; 3 potentially affected current AC (AC-06.2, AC-12.2, AC-17.2). |
+| 16 | OQ-05.6 | US-05 | Missing rule | Spec conflict/security first; 3 potentially affected current AC (AC-05.2, AC-03.1, AC-03.2). |
+| 17 | OQ-09.1 | US-09 | Conflict | Spec conflict/security first; 3 potentially affected current AC (AC-08.1, AC-09.1, AC-09.2). |
+| 18 | OQ-18.1 | US-18 | Missing rule | Spec conflict/security first; 3 potentially affected current AC (AC-18.1, AC-18.2, AC-18.3). |
+| 19 | OQ-21.1 | US-21 | Missing rule | Spec conflict/security first; 3 potentially affected current AC (AC-08.1, AC-09.1, AC-05.1). |
+| 20 | OQ-04.2 | US-04 | Missing rule | Spec conflict/security first; 2 potentially affected current AC (AC-04.1, AC-03.2). |
+| 21 | OQ-05.3 | US-05 | Conflict | Spec conflict/security first; 2 potentially affected current AC (AC-05.2, AC-06.1). |
+| 22 | OQ-08.1 | US-08 | Conflict | Spec conflict/security first; 2 potentially affected current AC (AC-08.2, AC-08.3). |
+| 23 | OQ-09.2 | US-09 | Missing rule | Spec conflict/security first; 2 potentially affected current AC (AC-09.1, AC-09.3). |
+| 24 | OQ-03.3 | US-03 | Missing rule | Spec conflict/security first; 1 potentially affected current AC (AC-03.1). |
+| 25 | OQ-05.2 | US-05 | Missing rule | Spec conflict/security first; 1 potentially affected current AC (AC-05.2). |
+| 26 | OQ-19.1 | US-19 | Conflict | Spec conflict/security first; 1 potentially affected current AC (AC-19.1). |
+| 27 | OQ-23.1 | US-23 | Missing rule | Spec conflict/security first; 1 potentially affected current AC (AC-23.1). |
+| 28 | OQ-22.2 | US-22 | Missing rule | Other missing behaviour; 8 potentially affected current AC (AC-01.2, AC-05.2, AC-08.2, AC-09.2, AC-11.2, AC-12.2, AC-16.2, AC-17.2). |
+| 29 | OQ-21.3 | US-21 | Missing rule | Other missing behaviour; 5 potentially affected current AC (AC-02.1, AC-03.1, AC-12.1, AC-13.1, AC-17.1). |
+| 30 | OQ-08.2 | US-08 | Missing rule | Other missing behaviour; 4 potentially affected current AC (AC-08.1, AC-08.2, AC-14.1, AC-14.3). |
+| 31 | OQ-07.2 | US-07 | Missing rule | Other missing behaviour; 3 potentially affected current AC (AC-07.3, AC-07.4, AC-14.3). |
+| 32 | OQ-07.4 | US-07 | Missing rule | Other missing behaviour; 3 potentially affected current AC (AC-07.3, AC-07.4, AC-14.3). |
+| 33 | OQ-08.3 | US-08 | Missing rule | Other missing behaviour; 3 potentially affected current AC (AC-08.1, AC-08.2, AC-09.2). |
+| 34 | OQ-09.3 | US-09 | Missing rule | Other missing behaviour; 3 potentially affected current AC (AC-09.1, AC-09.2, AC-11.2). |
+| 35 | OQ-10.2 | US-10 | Missing rule | Other missing behaviour; 3 potentially affected current AC (AC-10.4, AC-17.2, AC-07.4). |
+| 36 | OQ-15.4 | US-15 | Missing rule | Other missing behaviour; 3 potentially affected current AC (AC-12.2, AC-13.3, AC-15.3). |
+| 37 | OQ-16.2 | US-16 | Missing rule | Other missing behaviour; 3 potentially affected current AC (AC-16.1, AC-16.2, AC-16.3). |
+| 38 | OQ-05.1 | US-05 | Missing rule | Other missing behaviour; 2 potentially affected current AC (AC-05.1, AC-05.2). |
+| 39 | OQ-05.4 | US-05 | Missing rule | Other missing behaviour; 2 potentially affected current AC (AC-05.1, AC-05.2). |
+| 40 | OQ-06.1 | US-06 | Missing rule | Other missing behaviour; 2 potentially affected current AC (AC-06.1, AC-19.1). |
+| 41 | OQ-07.1 | US-07 | Missing rule | Other missing behaviour; 2 potentially affected current AC (AC-07.1, AC-07.2). |
+| 42 | OQ-07.3 | US-07 | Missing rule | Other missing behaviour; 2 potentially affected current AC (AC-07.3, AC-07.4). |
+| 43 | OQ-12.1 | US-12 | Missing rule | Other missing behaviour; 2 potentially affected current AC (AC-12.1, AC-12.2). |
+| 44 | OQ-13.1 | US-13 | Missing rule | Other missing behaviour; 2 potentially affected current AC (AC-12.1, AC-13.1). |
+| 45 | OQ-13.2 | US-13 | Missing rule | Other missing behaviour; 2 potentially affected current AC (AC-13.1, AC-13.3). |
+| 46 | OQ-14.1 | US-14 | Missing rule | Other missing behaviour; 2 potentially affected current AC (AC-14.1, AC-14.2). |
+| 47 | OQ-14.2 | US-14 | Missing rule | Other missing behaviour; 2 potentially affected current AC (AC-14.1, AC-14.3). |
+| 48 | OQ-15.2 | US-15 | Missing rule | Other missing behaviour; 2 potentially affected current AC (AC-15.2, AC-15.3). |
+| 49 | OQ-16.1 | US-16 | Missing rule | Other missing behaviour; 2 potentially affected current AC (AC-16.1, AC-16.4). |
+| 50 | OQ-17.1 | US-17 | Missing rule | Other missing behaviour; 2 potentially affected current AC (AC-17.1, AC-17.2). |
+| 51 | OQ-17.2 | US-17 | Missing rule | Other missing behaviour; 2 potentially affected current AC (AC-17.1, AC-17.2). |
+| 52 | OQ-19.2 | US-19 | Missing rule | Other missing behaviour; 2 potentially affected current AC (AC-19.1, AC-19.2). |
+| 53 | OQ-19.3 | US-19 | Missing rule | Other missing behaviour; 2 potentially affected current AC (AC-19.1, AC-19.4). |
+| 54 | OQ-20.1 | US-20 | Missing rule | Other missing behaviour; 2 potentially affected current AC (AC-20.1, AC-20.2). |
+| 55 | OQ-20.2 | US-20 | Missing rule | Other missing behaviour; 2 potentially affected current AC (AC-20.1, AC-20.4). |
+| 56 | OQ-01.4 | US-01 | Missing rule | Other missing behaviour; 1 potentially affected current AC (AC-01.1). |
+| 57 | OQ-04.1 | US-04 | Missing rule | Other missing behaviour; 1 potentially affected current AC (AC-04.1). |
+| 58 | OQ-05.5 | US-05 | Missing rule | Other missing behaviour; 1 potentially affected current AC (AC-05.2). |
+| 59 | OQ-08.4 | US-08 | Missing rule | Other missing behaviour; 1 potentially affected current AC (AC-08.1). |
+| 60 | OQ-10.1 | US-10 | Missing rule | Other missing behaviour; 1 potentially affected current AC (AC-10.1). |
+| 61 | OQ-10.3 | US-10 | Missing rule | Other missing behaviour; 1 potentially affected current AC (AC-10.1). |
+| 62 | OQ-13.3 | US-13 | Missing rule | Other missing behaviour; 1 potentially affected current AC (AC-13.3). |
+| 63 | OQ-15.1 | US-15 | Missing rule | Other missing behaviour; 1 potentially affected current AC (AC-15.1). |
+| 64 | OQ-19.5 | US-19 | Missing rule | Other missing behaviour; 1 potentially affected current AC (AC-19.3). |
+| 65 | OQ-20.4 | US-20 | Missing rule | Other missing behaviour; 1 potentially affected current AC (AC-20.3). |
+| 66 | OQ-21.2 | US-21 | Missing rule | Other missing behaviour; 0 potentially affected current AC; new acceptance coverage needed. |
+| 67 | OQ-20.3 | US-20 | Missing rule | Field-meaning question last; 3 potentially affected current AC (AC-20.1, AC-20.2, AC-20.3). |
+| 68 | OQ-19.4 | US-19 | Missing rule | Field-meaning question last; 2 potentially affected current AC (AC-19.2, AC-19.3). |
+| 69 | OQ-11.1 | US-11 | Missing rule | Field-meaning question last; 1 potentially affected current AC (AC-11.2). |
+| 70 | OQ-15.3 | US-15 | Missing rule | Field-meaning question last; 1 potentially affected current AC (AC-15.2). |

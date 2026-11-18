@@ -84,7 +84,7 @@ Pin: ebbcdeb8d55b42a3a613c787560498b8ef10003f. Older analyses are leads only. Ev
 | --- | --- | --- | --- | --- |
 | X-01 | Existing + new questions; rules converted | OQ-18.1; OQ-09.4; OQ-10.4; OQ-18.2 | error-handling.md L23; openapi.yml L275-276; openapi.yml L302-303; openapi.yml L385-386; routing.md L15-18 | 403 is explicit; API author-only predicate is not. Retired BR-09.4/10.3/18.3; UI ownership stays. |
 | X-02 | Already an open question; rule converted | OQ-02.1 | error-handling.md L7; openapi.yml L32-37 | 401 and 422 are declared; bad-credential classification is not selected. BR-02.4 retired. |
-| X-03 | Resolved by specification | BR-01.3; BR-08.5; BR-10.1; BR-16.2; BR-18.1 | openapi.yml L32-37; openapi.yml L48-53; openapi.yml L223-230; openapi.yml L298-307; openapi.yml L349-356; openapi.yml L381-390 | Prose omission is not contradiction; OpenAPI supplies success codes. |
+| X-03 | Resolved by specification | IC-01.1; IC-08.1; BR-10.1; BR-16.2; BR-18.1 | openapi.yml L32-37; openapi.yml L48-53; openapi.yml L223-230; openapi.yml L298-307; openapi.yml L349-356; openapi.yml L381-390 | Prose omission is not contradiction; OpenAPI supplies success codes. |
 | X-04 | Already open; partial resolution | OQ-01.2; OQ-05.1; OQ-08.1; BR-01.4 | openapi.yml L48-53; openapi.yml L223-230; openapi.yml L781-790 | 409 and username-taken example explicit; email uniqueness and article conflict conditions remain unanswered. |
 | X-05 | Already an open question | OQ-22.1 | error-handling.md L9-15; openapi.yml L811-820 | empty versus blank wording differs; do not select. |
 | X-06 | Existing + new question | OQ-01.1; OQ-01.2; OQ-01.3; OQ-08.2; OQ-08.3; OQ-16.2; OQ-01.5 | openapi.yml L456-480; openapi.yml L579-608; endpoints.md L161-163 | Length, format and normalisation rules absent; required fields and paging minimums are not absent. |
@@ -122,20 +122,20 @@ Pin: ebbcdeb8d55b42a3a613c787560498b8ef10003f. Older analyses are leads only. Ev
 
 ## Run 2a coverage
 
-Pin: ebbcdeb8d55b42a3a613c787560498b8ef10003f. The 210-row older recount is an inventory of leads, not an authority. Each row is re-located below. Covered means designed requirement coverage, not executed tests or proven software. Exclusions include engineering/styling/deployment scope and unsupported or conflicting statements; their questions remain unanswered. A declared response code is not an invented trigger.
+Pin: ebbcdeb8d55b42a3a613c787560498b8ef10003f. The 210-row older recount is an inventory of leads, not an authority. Each row is re-located below. Covered means designed BR/IC/AC requirement coverage, not executed tests or proven software. Exclusions include engineering/styling/deployment scope and unsupported or conflicting statements; their questions remain unanswered. A declared response code is not an invented trigger.
 
 | Checklist ID | Historical statement (lead only) | Evidence at pin | Disposition | Coverage / reason | Qualification |
 | --- | --- | --- | --- | --- | --- |
-| B-001 | Responses carry a JSON content type `application/json; charset=utf-8`. | api-response-format.md L7 | Covered | BR-22.6 |  |
-| B-002 | Protected requests read credentials from header `Authorization: Token <jwt>`. | endpoints.md L5-9; openapi.yml L912-922 | Covered | BR-03.1 |  |
+| B-001 | Responses carry a JSON content type `application/json; charset=utf-8`. | api-response-format.md L7 | Covered | IC-22.2 |  |
+| B-002 | Protected requests read credentials from header `Authorization: Token <jwt>`. | endpoints.md L5-9; openapi.yml L912-922 | Covered | IC-03.1 |  |
 | B-003 | A request failing validation returns HTTP 422. | error-handling.md L7 | Covered | BR-22.1 |  |
-| B-004 | A 422 body has shape `{"errors":{<field>:[<message>...]}}`. | error-handling.md L7-17; openapi.yml L637-647 | Covered | BR-22.1; BR-22.8 |  |
+| B-004 | A 422 body has shape `{"errors":{<field>:[<message>...]}}`. | error-handling.md L7-17; openapi.yml L637-647 | Covered | BR-22.1; IC-22.4 |  |
 | B-005 | Request needing auth without credentials returns 401. | error-handling.md L21 | Covered | BR-03.3 |  |
 | B-006 | Valid request by a user lacking permission returns 403. | error-handling.md L23 | Covered | BR-22.3 |  |
 | B-007 | Request for a resource that cannot be found returns 404. | error-handling.md L25 | Covered | BR-22.4 |  |
-| B-008 | 401 body is `{"errors":{...}}` (example key `token: ["is missing"]`). | openapi.yml L771-780 | Covered | BR-22.7 |  |
-| B-009 | 403 body is `{"errors":{"resource":["forbidden"]}}`, where the key identifies the resource type. | openapi.yml L791-800 | Covered | BR-22.8 |  |
-| B-010 | 404 body is `{"errors":{"resource":["not found"]}}`, where the key identifies the resource type. | openapi.yml L801-810 | Covered | BR-22.8 |  |
+| B-008 | 401 body is `{"errors":{...}}` (example key `token: ["is missing"]`). | openapi.yml L771-780 | Covered | IC-22.3 |  |
+| B-009 | 403 body is `{"errors":{"resource":["forbidden"]}}`, where the key identifies the resource type. | openapi.yml L791-800 | Covered | IC-22.4 |  |
+| B-010 | 404 body is `{"errors":{"resource":["not found"]}}`, where the key identifies the resource type. | openapi.yml L801-810 | Covered | IC-22.4 |  |
 | B-011 | 409 body is `{"errors":{<field>:["has already been taken"]}}` (example `username`). | openapi.yml L781-790 | Covered | BR-01.4; AC-01.3 |  |
 | B-012 | Backend on a different origin handles `OPTIONS`. | cors.md L7 | Covered | BR-23.1 |  |
 | B-013 | CORS preflight response returns correct `Access-Control-Allow-Origin`. | cors.md L7 | Covered | BR-23.1 |  |
@@ -143,24 +143,24 @@ Pin: ebbcdeb8d55b42a3a613c787560498b8ef10003f. The 210-row older recount is an i
 | B-015 | Backend includes at least one unit test. | backend-tests.md L5 | Out of asserted scope | Engineering delivery requirement, not a Conduit business outcome; no unit-test code or suite was read. |  |
 | B-016 | Backend adheres to the OpenAPI spec. | backend-introduction.md L5 | Out of asserted scope | Overarching implementation conformance directive, not a discrete business outcome; operation contracts are mapped individually below. |  |
 | U-001 | `POST /api/users/login` needs no authentication. | endpoints.md L26 | Covered | BR-02.2 |  |
-| U-002 | Login body is `{"user":{"email","password"}}`. | endpoints.md L15-24; openapi.yml L822-833 | Covered | BR-02.7 |  |
+| U-002 | Login body is `{"user":{"email","password"}}`. | endpoints.md L15-24; openapi.yml L822-833 | Covered | IC-02.2 |  |
 | U-003 | Login with missing `email` is rejected. | endpoints.md L28; openapi.yml L457-459 | Covered | BR-02.1; AC-02.4 |  |
 | U-004 | Login with missing `password` is rejected. | endpoints.md L28; openapi.yml L457-459 | Covered | BR-02.1; AC-02.4 |  |
 | U-005 | Successful login returns 200 with a `{"user":{...}}` object. | openapi.yml L32-33 | Covered | BR-02.3; AC-02.2 |  |
-| U-006 | Failed login returns 401. | openapi.yml L34-37; error-handling.md L7 | Covered | BR-02.8; OQ-02.1 | Only the 401 declaration is covered, not a selected wrong-password predicate; OQ-02.1 is still Open. |
-| U-007 | Login with invalid payload returns 422. | openapi.yml L36-37; error-handling.md L7 | Covered | BR-02.8; BR-22.1 |  |
-| U-008 | User object contains `email`, `token`, `username`, `bio`, `image`, all required. | openapi.yml L481-503 | Covered | BR-01.8 |  |
-| U-009 | `bio` and `image` may be `null`. | openapi.yml L496-503 | Covered | BR-01.8 |  |
+| U-006 | Failed login returns 401. | openapi.yml L34-37; error-handling.md L7 | Covered | IC-02.3; OQ-02.1 | Only the 401 declaration is covered, not a selected wrong-password predicate; OQ-02.1 is still Open. |
+| U-007 | Login with invalid payload returns 422. | openapi.yml L36-37; error-handling.md L7 | Covered | IC-02.3; BR-22.1 |  |
+| U-008 | User object contains `email`, `token`, `username`, `bio`, `image`, all required. | openapi.yml L481-503 | Covered | IC-01.3 |  |
+| U-009 | `bio` and `image` may be `null`. | openapi.yml L496-503 | Covered | IC-01.3 |  |
 | U-010 | `POST /api/users` needs no authentication. | endpoints.md L46 | Covered | BR-01.2 |  |
-| U-011 | Registration body is `{"user":{"username","email","password"}}`. | endpoints.md L34-44; openapi.yml L834-845 | Covered | BR-01.9 |  |
+| U-011 | Registration body is `{"user":{"username","email","password"}}`. | endpoints.md L34-44; openapi.yml L834-845 | Covered | IC-01.4 |  |
 | U-012 | Registration with missing `email` is rejected. | endpoints.md L48; openapi.yml L467-471 | Covered | BR-01.1; AC-01.4 |  |
 | U-013 | Registration with missing `username` is rejected. | endpoints.md L48; openapi.yml L467-471 | Covered | BR-01.1; AC-01.4 |  |
 | U-014 | Registration with missing `password` is rejected. | endpoints.md L48; openapi.yml L467-471 | Covered | BR-01.1; AC-01.4 |  |
-| U-015 | Successful registration returns 201 with a User. | openapi.yml L48-49 | Covered | BR-01.3 |  |
+| U-015 | Successful registration returns 201 with a User. | openapi.yml L48-49 | Covered | IC-01.1 |  |
 | U-016 | Registration with an already-taken value returns 409. | openapi.yml L50-51; openapi.yml L781-790 | Covered | BR-01.4 |  |
 | U-017 | Registration with invalid payload returns 422. | openapi.yml L52-53; error-handling.md L7 | Covered | BR-01.5; BR-22.1 |  |
 | U-018 | `GET /api/user` requires authentication. | endpoints.md L54 | Covered | BR-03.2 |  |
-| U-019 | `GET /api/user` returns the current user (200). | openapi.yml L63-64 | Covered | BR-03.5 |  |
+| U-019 | `GET /api/user` returns the current user (200). | openapi.yml L63-64 | Covered | IC-03.2 |  |
 | U-020 | `GET /api/user` unauthenticated returns 401. | openapi.yml L65-66 | Covered | BR-03.3 |  |
 | U-021 | `PUT /api/user` requires authentication. | endpoints.md L72 | Covered | BR-05.3 |  |
 | U-022 | `PUT /api/user` accepts `email`. | endpoints.md L74 | Covered | BR-05.3 |  |
@@ -168,27 +168,27 @@ Pin: ebbcdeb8d55b42a3a613c787560498b8ef10003f. The 210-row older recount is an i
 | U-024 | `PUT /api/user` accepts `password`. | endpoints.md L74 | Covered | BR-05.3 |  |
 | U-025 | `PUT /api/user` accepts `image`. | endpoints.md L74 | Covered | BR-05.3 |  |
 | U-026 | `PUT /api/user` accepts `bio`. | endpoints.md L74 | Covered | BR-05.3 |  |
-| U-027 | `PUT /api/user` returns the updated User (200). | openapi.yml L80-81; endpoints.md L72 | Covered | BR-05.6 |  |
+| U-027 | `PUT /api/user` returns the updated User (200). | openapi.yml L80-81; endpoints.md L72 | Covered | IC-05.1 |  |
 | U-028 | `PUT /api/user` with no fields is invalid ("at least one field is required"). | openapi.yml L846-857 | Covered | BR-05.5 |  |
-| U-029 | `PUT /api/user` unauthenticated returns 401. | openapi.yml L82-83 | Covered | BR-05.6; BR-22.2 |  |
-| U-030 | `PUT /api/user` invalid payload returns 422. | openapi.yml L84-85; error-handling.md L7 | Covered | BR-05.6; BR-22.1 |  |
-| U-031 | Auth token is a JWT. | routing.md L10; features.md L7 | Covered | BR-01.7; BR-03.1 |  |
+| U-029 | `PUT /api/user` unauthenticated returns 401. | openapi.yml L82-83 | Covered | IC-05.1; BR-22.2 |  |
+| U-030 | `PUT /api/user` invalid payload returns 422. | openapi.yml L84-85; error-handling.md L7 | Covered | IC-05.1; BR-22.1 |  |
+| U-031 | Auth token is a JWT. | routing.md L10; features.md L7 | Covered | IC-01.2; IC-03.1 |  |
 | P-001 | `GET /api/profiles/:username` authentication is optional. | endpoints.md L80 | Covered | BR-06.2 |  |
-| P-002 | It returns `{"profile":{username,bio,image,following}}`. | openapi.yml L521-540; openapi.yml L746-756 | Covered | BR-06.5 |  |
-| P-003 | `following` reflects whether the current user follows the profile. | api-response-format.md L25-33; openapi.yml L539-540 | Out of asserted scope | Viewer-relative following meaning is inferred, not stated. BR-19.2 became OQ-19.4; field presence/type is BR-06.5, not a proof of semantics. |  |
+| P-002 | It returns `{"profile":{username,bio,image,following}}`. | openapi.yml L521-540; openapi.yml L746-756 | Covered | IC-06.1 |  |
+| P-003 | `following` reflects whether the current user follows the profile. | api-response-format.md L25-33; openapi.yml L539-540 | Out of asserted scope | Viewer-relative following meaning is inferred, not stated. BR-19.2 became OQ-19.4; field presence/type is IC-06.1, not a proof of semantics. |  |
 | P-004 | Unknown username returns 404. | openapi.yml L108-109 | Covered | BR-06.3 |  |
 | P-005 | `POST /api/profiles/:username/follow` requires authentication. | endpoints.md L86 | Covered | BR-19.1 |  |
-| P-006 | Follow takes no additional parameters. | endpoints.md L88 | Covered | BR-19.6 |  |
-| P-007 | Follow returns the Profile (200). | openapi.yml L127-128 | Covered | BR-19.6 |  |
+| P-006 | Follow takes no additional parameters. | endpoints.md L88 | Covered | IC-19.1 |  |
+| P-007 | Follow returns the Profile (200). | openapi.yml L127-128 | Covered | IC-19.1 |  |
 | P-008 | Follow unknown user returns 404. | openapi.yml L131-132 | Covered | BR-19.4 |  |
-| P-009 | Follow unauthenticated returns 401. | openapi.yml L129-130; error-handling.md L21 | Covered | BR-19.6; BR-22.2 |  |
+| P-009 | Follow unauthenticated returns 401. | openapi.yml L129-130; error-handling.md L21 | Covered | IC-19.1; BR-22.2 |  |
 | P-010 | `DELETE /api/profiles/:username/follow` requires authentication. | endpoints.md L94 | Covered | BR-19.1 |  |
-| P-011 | Unfollow takes no additional parameters. | endpoints.md L96 | Covered | BR-19.6 |  |
-| P-012 | Unfollow returns the Profile (200). | openapi.yml L151-152 | Covered | BR-19.6 |  |
-| P-013 | Unfollow unknown user returns 404. | openapi.yml L155-156 | Covered | BR-19.6; BR-22.4 |  |
-| P-014 | Unfollow unauthenticated returns 401. | openapi.yml L153-154; error-handling.md L21 | Covered | BR-19.6; BR-22.2 |  |
-| P-015 | Profile endpoints return 422 for invalid input. | openapi.yml L110-111; openapi.yml L133-134; openapi.yml L157-158 | Covered | BR-06.6; BR-19.6; BR-22.1 | 422 declarations plus generic validation rule; specific invalid-input boundaries remain X-06 questions. |
-| P-016 | `GET /profiles/:username` may return 401 (declared in OA despite optional auth). | openapi.yml L106-107 | Covered | BR-06.6; OQ-03.4 | Declared 401 only; optional authentication is retained and invalid-token classification is OQ-03.4. |
+| P-011 | Unfollow takes no additional parameters. | endpoints.md L96 | Covered | IC-19.1 |  |
+| P-012 | Unfollow returns the Profile (200). | openapi.yml L151-152 | Covered | IC-19.1 |  |
+| P-013 | Unfollow unknown user returns 404. | openapi.yml L155-156 | Covered | IC-19.1; BR-22.4 |  |
+| P-014 | Unfollow unauthenticated returns 401. | openapi.yml L153-154; error-handling.md L21 | Covered | IC-19.1; BR-22.2 |  |
+| P-015 | Profile endpoints return 422 for invalid input. | openapi.yml L110-111; openapi.yml L133-134; openapi.yml L157-158 | Covered | IC-06.2; IC-19.1; BR-22.1 | 422 declarations plus generic validation rule; specific invalid-input boundaries remain X-06 questions. |
+| P-016 | `GET /profiles/:username` may return 401 (declared in OA despite optional auth). | openapi.yml L106-107 | Covered | IC-06.2; OQ-03.4 | Declared 401 only; optional authentication is retained and invalid-token classification is OQ-03.4. |
 | A-001 | `GET /api/articles` authentication is optional. | endpoints.md L126 | Covered | BR-12.2 |  |
 | A-002 | It returns most recent articles first. | endpoints.md L102; endpoints.md L126 | Covered | BR-12.2 |  |
 | A-003 | Filter by `tag`. | endpoints.md L106-108 | Covered | BR-14.2; AC-14.3 |  |
@@ -200,86 +200,86 @@ Pin: ebbcdeb8d55b42a3a613c787560498b8ef10003f. The 210-row older recount is an i
 | A-009 | `offset` skips items. | endpoints.md L122-124 | Covered | BR-15.2; AC-15.3 |  |
 | A-010 | `offset` defaults to 0. | endpoints.md L122 | Covered | BR-15.2 |  |
 | A-011 | `offset` must be an integer >= 0. | openapi.yml L895-902 | Covered | BR-15.5 |  |
-| A-012 | List response is `{"articles":[...],"articlesCount":n}`. | openapi.yml L697-745 | Covered | BR-12.5 |  |
-| A-013 | List items do NOT include `body`. | api-response-format.md L62-67 | Covered | BR-12.3 |  |
-| A-014 | List item has `slug,title,description,tagList,createdAt,updatedAt,favorited,favoritesCount,author`. | openapi.yml L710-743 | Covered | BR-12.5 |  |
-| A-015 | `articlesCount` is an integer, required. | openapi.yml L702-745 | Covered | BR-12.5 | Required integer presence only; filtered-total meaning remains OQ-15.3. |
-| A-016 | List with invalid params returns 422. | openapi.yml L212-213; error-handling.md L7 | Covered | BR-12.6; BR-22.1 |  |
-| A-017 | List declares 401. | openapi.yml L210-211 | Covered | BR-12.6; OQ-03.4 | Declared 401 only; no rule rejecting ordinary anonymous listing was added. |
+| A-012 | List response is `{"articles":[...],"articlesCount":n}`. | openapi.yml L697-745 | Covered | IC-12.2 |  |
+| A-013 | List items do NOT include `body`. | api-response-format.md L62-67 | Covered | IC-12.1 |  |
+| A-014 | List item has `slug,title,description,tagList,createdAt,updatedAt,favorited,favoritesCount,author`. | openapi.yml L710-743 | Covered | IC-12.2 |  |
+| A-015 | `articlesCount` is an integer, required. | openapi.yml L702-745 | Covered | IC-12.2 | Required integer presence only; filtered-total meaning remains OQ-15.3. |
+| A-016 | List with invalid params returns 422. | openapi.yml L212-213; error-handling.md L7 | Covered | IC-12.3; BR-22.1 |  |
+| A-017 | List declares 401. | openapi.yml L210-211 | Covered | IC-12.3; OQ-03.4 | Declared 401 only; no rule rejecting ordinary anonymous listing was added. |
 | A-018 | `GET /api/articles/feed` requires authentication. | endpoints.md L134 | Covered | BR-13.2 |  |
 | A-019 | Feed accepts `limit`. | endpoints.md L132 | Covered | BR-13.3 |  |
 | A-020 | Feed accepts `offset`. | endpoints.md L132 | Covered | BR-13.3 |  |
 | A-021 | Feed returns articles created by followed users. | endpoints.md L134 | Covered | BR-13.2 |  |
 | A-022 | Feed is ordered most recent first. | endpoints.md L134 | Covered | BR-13.2 |  |
-| A-023 | Feed list items omit `body`. | api-response-format.md L62-67 | Covered | BR-12.3 |  |
-| A-024 | Feed unauthenticated returns 401. | openapi.yml L175-176 | Covered | BR-13.4; AC-13.4 |  |
+| A-023 | Feed list items omit `body`. | api-response-format.md L62-67 | Covered | IC-12.1 |  |
+| A-024 | Feed unauthenticated returns 401. | openapi.yml L175-176 | Covered | IC-13.1; AC-13.4 |  |
 | A-025 | `GET /api/articles/:slug` needs no authentication. | endpoints.md L140 | Covered | BR-11.2 |  |
-| A-026 | It returns a single Article (200). | openapi.yml L249-250; endpoints.md L140 | Covered | BR-11.6 |  |
-| A-027 | Single Article includes `body`. | api-response-format.md L38-57; openapi.yml L541-578 | Covered | BR-08.5; BR-08.8 |  |
+| A-026 | It returns a single Article (200). | openapi.yml L249-250; endpoints.md L140 | Covered | IC-11.1 |  |
+| A-027 | Single Article includes `body`. | api-response-format.md L38-57; openapi.yml L541-578 | Covered | IC-08.1; IC-08.3 |  |
 | A-028 | Unknown slug returns 404. | openapi.yml L251-252 | Covered | BR-11.5 |  |
 | A-029 | `POST /api/articles` requires authentication. | endpoints.md L159 | Covered | BR-08.3 |  |
-| A-030 | Create body is `{"article":{title,description,body,tagList}}`. | endpoints.md L148-157; openapi.yml L858-869 | Covered | BR-08.7 |  |
+| A-030 | Create body is `{"article":{title,description,body,tagList}}`. | endpoints.md L148-157; openapi.yml L858-869 | Covered | IC-08.2 |  |
 | A-031 | `title` required. | endpoints.md L161 | Covered | BR-08.4 |  |
 | A-032 | `description` required. | endpoints.md L161 | Covered | BR-08.4 |  |
 | A-033 | `body` required. | endpoints.md L161 | Covered | BR-08.4 |  |
-| A-034 | `tagList` optional, array of strings. | endpoints.md L163; openapi.yml L592-595 | Covered | BR-08.7 |  |
-| A-035 | Create returns 201 with the Article. | openapi.yml L223-224 | Covered | BR-08.5 |  |
-| A-036 | Create unauthenticated returns 401. | openapi.yml L225-226; error-handling.md L21 | Covered | BR-08.9; AC-08.5 |  |
-| A-037 | Create with conflict returns 409. | openapi.yml L227-228 | Covered | BR-08.9; OQ-08.1 | 409 declaration covered; conflict trigger remains OQ-08.1; unique duplicate-title slugs remain BR-08.6. |
-| A-038 | Create invalid returns 422. | openapi.yml L229-230; error-handling.md L7 | Covered | BR-08.9; BR-22.1 |  |
+| A-034 | `tagList` optional, array of strings. | endpoints.md L163; openapi.yml L592-595 | Covered | IC-08.2 |  |
+| A-035 | Create returns 201 with the Article. | openapi.yml L223-224 | Covered | IC-08.1 |  |
+| A-036 | Create unauthenticated returns 401. | openapi.yml L225-226; error-handling.md L21 | Covered | IC-08.4; AC-08.5 |  |
+| A-037 | Create with conflict returns 409. | openapi.yml L227-228 | Covered | IC-08.4; OQ-08.1 | 409 declaration covered; conflict trigger remains OQ-08.1; unique duplicate-title slugs remain BR-08.6. |
+| A-038 | Create invalid returns 422. | openapi.yml L229-230; error-handling.md L7 | Covered | IC-08.4; BR-22.1 |  |
 | A-039 | `PUT /api/articles/:slug` requires authentication. | endpoints.md L179 | Covered | BR-09.2 |  |
 | A-040 | Update accepts optional `title`. | endpoints.md L181 | Covered | BR-09.2 |  |
 | A-041 | Update accepts optional `description`. | endpoints.md L181 | Covered | BR-09.2 |  |
 | A-042 | Update accepts optional `body`. | endpoints.md L181 | Covered | BR-09.2 |  |
 | A-043 | Update accepts `tagList` (OA only). | endpoints.md L181; openapi.yml L596-608 | Out of asserted scope | Prose omits tagList while UpdateArticle schema includes it; OQ-09.1 retains both sources. No business decision or new assertion about editable tags. |  |
 | A-044 | Slug changes when `title` changes. | endpoints.md L183 | Covered | BR-09.3 |  |
-| A-045 | Update returns the updated Article (200). | openapi.yml L271-272; endpoints.md L179 | Covered | BR-09.5 |  |
-| A-046 | Update unauthenticated returns 401. | openapi.yml L273-274; error-handling.md L21 | Covered | BR-09.5; BR-22.2 |  |
-| A-047 | Update where user lacks permission returns 403. | openapi.yml L275-276; error-handling.md L23 | Covered | BR-09.5; BR-22.3 |  |
-| A-048 | Update unknown slug returns 404. | openapi.yml L277-278; error-handling.md L25 | Covered | BR-09.5; BR-22.4 |  |
-| A-049 | Update invalid returns 422. | openapi.yml L279-280; error-handling.md L7 | Covered | BR-09.5; BR-22.1 |  |
+| A-045 | Update returns the updated Article (200). | openapi.yml L271-272; endpoints.md L179 | Covered | IC-09.1 |  |
+| A-046 | Update unauthenticated returns 401. | openapi.yml L273-274; error-handling.md L21 | Covered | IC-09.1; BR-22.2 |  |
+| A-047 | Update where user lacks permission returns 403. | openapi.yml L275-276; error-handling.md L23 | Covered | IC-09.1; BR-22.3 |  |
+| A-048 | Update unknown slug returns 404. | openapi.yml L277-278; error-handling.md L25 | Covered | IC-09.1; BR-22.4 |  |
+| A-049 | Update invalid returns 422. | openapi.yml L279-280; error-handling.md L7 | Covered | IC-09.1; BR-22.1 |  |
 | A-050 | `DELETE /api/articles/:slug` requires authentication. | endpoints.md L187-191 | Covered | BR-10.1 |  |
-| A-051 | Delete returns 204. | openapi.yml L298-299; openapi.yml L768-770 | Covered | BR-10.4 |  |
-| A-052 | Delete unauthenticated returns 401. | openapi.yml L300-301; error-handling.md L21 | Covered | BR-10.4; BR-22.2 |  |
-| A-053 | Delete without permission returns 403. | openapi.yml L302-303; error-handling.md L23 | Covered | BR-10.4; BR-22.3 |  |
-| A-054 | Delete unknown slug returns 404. | openapi.yml L304-305; error-handling.md L25 | Covered | BR-10.4; BR-22.4 |  |
-| A-055 | Delete invalid returns 422. | openapi.yml L306-307; error-handling.md L7 | Covered | BR-10.4; BR-22.1 |  |
-| A-056 | Article `createdAt`/`updatedAt` are date-time strings. | openapi.yml L567-572 | Covered | BR-08.8 |  |
-| A-057 | Article `favoritesCount` is an integer. | openapi.yml L575-576 | Covered | BR-08.8 |  |
-| A-058 | Article `author` is a Profile object. | openapi.yml L577-578 | Covered | BR-08.8 |  |
+| A-051 | Delete returns 204. | openapi.yml L298-299; openapi.yml L768-770 | Covered | IC-10.1 |  |
+| A-052 | Delete unauthenticated returns 401. | openapi.yml L300-301; error-handling.md L21 | Covered | IC-10.1; BR-22.2 |  |
+| A-053 | Delete without permission returns 403. | openapi.yml L302-303; error-handling.md L23 | Covered | IC-10.1; BR-22.3 |  |
+| A-054 | Delete unknown slug returns 404. | openapi.yml L304-305; error-handling.md L25 | Covered | IC-10.1; BR-22.4 |  |
+| A-055 | Delete invalid returns 422. | openapi.yml L306-307; error-handling.md L7 | Covered | IC-10.1; BR-22.1 |  |
+| A-056 | Article `createdAt`/`updatedAt` are date-time strings. | openapi.yml L567-572 | Covered | IC-08.3 |  |
+| A-057 | Article `favoritesCount` is an integer. | openapi.yml L575-576 | Covered | IC-08.3 |  |
+| A-058 | Article `author` is a Profile object. | openapi.yml L577-578 | Covered | IC-08.3 |  |
 | C-001 | `POST /api/articles/:slug/comments` requires authentication. | endpoints.md L207 | Covered | BR-16.2 |  |
-| C-002 | Body is `{"comment":{"body"}}`. | endpoints.md L197-205; openapi.yml L882-893 | Covered | BR-16.4 |  |
+| C-002 | Body is `{"comment":{"body"}}`. | endpoints.md L197-205; openapi.yml L882-893 | Covered | IC-16.1 |  |
 | C-003 | `body` is required. | endpoints.md L209; openapi.yml L630-636 | Covered | BR-16.2 |  |
 | C-004 | Create returns the Comment, 201. | openapi.yml L349-350 | Covered | BR-16.2 |  |
-| C-005 | Create unauthenticated returns 401. | openapi.yml L351-352; error-handling.md L21 | Covered | BR-16.6; AC-16.4 |  |
-| C-006 | Create on unknown article returns 404. | openapi.yml L353-354; error-handling.md L25 | Covered | BR-16.6; BR-22.4 |  |
-| C-007 | Create invalid returns 422. | openapi.yml L355-356; error-handling.md L7 | Covered | BR-16.6; BR-22.1 |  |
+| C-005 | Create unauthenticated returns 401. | openapi.yml L351-352; error-handling.md L21 | Covered | IC-16.3; AC-16.4 |  |
+| C-006 | Create on unknown article returns 404. | openapi.yml L353-354; error-handling.md L25 | Covered | IC-16.3; BR-22.4 |  |
+| C-007 | Create invalid returns 422. | openapi.yml L355-356; error-handling.md L7 | Covered | IC-16.3; BR-22.1 |  |
 | C-008 | `GET /api/articles/:slug/comments` authentication is optional. | endpoints.md L215 | Covered | BR-17.1 |  |
-| C-009 | It returns `{"comments":[...]}` (200). | openapi.yml L325-326; api-response-format.md L127-141 | Covered | BR-17.4 |  |
-| C-010 | Unknown article returns 404. | openapi.yml L329-330; error-handling.md L25 | Covered | BR-17.4; BR-22.4 |  |
-| C-011 | Comment has `id, createdAt, updatedAt, body, author`. | openapi.yml L609-629 | Covered | BR-16.5 |  |
-| C-012 | `id` is an integer. | openapi.yml L618-619 | Covered | BR-16.5 |  |
+| C-009 | It returns `{"comments":[...]}` (200). | openapi.yml L325-326; api-response-format.md L127-141 | Covered | IC-17.1 |  |
+| C-010 | Unknown article returns 404. | openapi.yml L329-330; error-handling.md L25 | Covered | IC-17.1; BR-22.4 |  |
+| C-011 | Comment has `id, createdAt, updatedAt, body, author`. | openapi.yml L609-629 | Covered | IC-16.2 |  |
+| C-012 | `id` is an integer. | openapi.yml L618-619 | Covered | IC-16.2 |  |
 | C-013 | `DELETE /api/articles/:slug/comments/:id` requires authentication. | endpoints.md L217-221 | Covered | BR-18.1 |  |
-| C-014 | Delete returns 204. | openapi.yml L381-382; openapi.yml L768-770 | Covered | BR-18.4 |  |
-| C-015 | Delete unauthenticated returns 401. | openapi.yml L383-384; error-handling.md L21 | Covered | BR-18.4; BR-22.2 |  |
-| C-016 | Delete without permission returns 403. | openapi.yml L385-386; error-handling.md L23 | Covered | BR-18.4; BR-22.3 |  |
-| C-017 | Delete unknown comment/article returns 404. | openapi.yml L387-388; error-handling.md L25 | Covered | BR-18.4; BR-22.4 |  |
-| C-018 | Delete invalid returns 422. | openapi.yml L389-390; error-handling.md L7 | Covered | BR-18.4; BR-22.1 |  |
-| C-019 | Comment `id` path parameter is an integer. | openapi.yml L374-379 | Covered | BR-18.4 |  |
+| C-014 | Delete returns 204. | openapi.yml L381-382; openapi.yml L768-770 | Covered | IC-18.1 |  |
+| C-015 | Delete unauthenticated returns 401. | openapi.yml L383-384; error-handling.md L21 | Covered | IC-18.1; BR-22.2 |  |
+| C-016 | Delete without permission returns 403. | openapi.yml L385-386; error-handling.md L23 | Covered | IC-18.1; BR-22.3 |  |
+| C-017 | Delete unknown comment/article returns 404. | openapi.yml L387-388; error-handling.md L25 | Covered | IC-18.1; BR-22.4 |  |
+| C-018 | Delete invalid returns 422. | openapi.yml L389-390; error-handling.md L7 | Covered | IC-18.1; BR-22.1 |  |
+| C-019 | Comment `id` path parameter is an integer. | openapi.yml L374-379 | Covered | IC-18.1 |  |
 | F-001 | `POST /api/articles/:slug/favorite` requires authentication. | endpoints.md L227 | Covered | BR-20.1 |  |
-| F-002 | No additional parameters. | endpoints.md L229 | Covered | BR-20.5 |  |
-| F-003 | Returns the Article (200). | openapi.yml L408-409 | Covered | BR-20.5 |  |
-| F-004 | Unauthenticated returns 401. | openapi.yml L410-411; error-handling.md L21 | Covered | BR-20.5; BR-22.2 |  |
-| F-005 | Unknown article returns 404. | openapi.yml L412-413; error-handling.md L25 | Covered | BR-20.5; BR-22.4 |  |
+| F-002 | No additional parameters. | endpoints.md L229 | Covered | IC-20.1 |  |
+| F-003 | Returns the Article (200). | openapi.yml L408-409 | Covered | IC-20.1 |  |
+| F-004 | Unauthenticated returns 401. | openapi.yml L410-411; error-handling.md L21 | Covered | IC-20.1; BR-22.2 |  |
+| F-005 | Unknown article returns 404. | openapi.yml L412-413; error-handling.md L25 | Covered | IC-20.1; BR-22.4 |  |
 | F-006 | `DELETE /api/articles/:slug/favorite` requires authentication. | endpoints.md L235 | Covered | BR-20.1 |  |
-| F-007 | No additional parameters. | endpoints.md L237 | Covered | BR-20.5 |  |
-| F-008 | Returns the Article (200). | openapi.yml L432-433 | Covered | BR-20.5 |  |
-| F-009 | Unauthenticated returns 401. | openapi.yml L434-435; error-handling.md L21 | Covered | BR-20.5; BR-22.2 |  |
-| F-010 | Unknown article returns 404. | openapi.yml L436-437; error-handling.md L25 | Covered | BR-20.5; BR-22.4 |  |
+| F-007 | No additional parameters. | endpoints.md L237 | Covered | IC-20.1 |  |
+| F-008 | Returns the Article (200). | openapi.yml L432-433 | Covered | IC-20.1 |  |
+| F-009 | Unauthenticated returns 401. | openapi.yml L434-435; error-handling.md L21 | Covered | IC-20.1; BR-22.2 |  |
+| F-010 | Unknown article returns 404. | openapi.yml L436-437; error-handling.md L25 | Covered | IC-20.1; BR-22.4 |  |
 | F-011 | Favoriting updates `favorited` and `favoritesCount` on the Article (implied). | api-response-format.md L48-49; endpoints.md L223-237 | Out of asserted scope | The recount explicitly labels the state/count transition implied; not a stated expected result. See OQ-20.3 and retained BA-ASSUMPTION scenarios. |  |
 | F-012 | `GET /api/tags` needs no authentication. | endpoints.md L243 | Covered | BR-14.3 |  |
-| F-013 | It returns `{"tags":[string...]}` (200). | openapi.yml L450-451; api-response-format.md L146-152 | Covered | BR-14.4 |  |
-| F-014 | Declares 422 for errors. | openapi.yml L452-453 | Covered | BR-14.4 |  |
+| F-013 | It returns `{"tags":[string...]}` (200). | openapi.yml L450-451; api-response-format.md L146-152 | Covered | IC-14.1 |  |
+| F-014 | Declares 422 for errors. | openapi.yml L452-453 | Covered | IC-14.1 |  |
 | FE-001 | Home at `/`. | routing.md L5 | Covered | BR-12.1 |  |
 | FE-002 | Home shows list of tags. | routing.md L6 | Covered | BR-14.1 |  |
 | FE-003 | Home shows articles from Feed, Global or by Tag. | routing.md L7 | Covered | BR-12.2; BR-13.2; BR-14.2 |  |
@@ -287,15 +287,15 @@ Pin: ebbcdeb8d55b42a3a613c787560498b8ef10003f. The 210-row older recount is an i
 | FE-005 | Home has a default Global Feed tab. | templates.md L120 | Covered | BR-12.1 |  |
 | FE-006 | A tag tab appears after clicking a popular tag. | templates.md L121 | Covered | BR-14.2 |  |
 | FE-007 | A Your Feed tab appears after login. | templates.md L122 | Covered | BR-13.1 |  |
-| FE-008 | Home shows a banner with "conduit" and "A place to share your knowledge.". | templates.md L126-131 | Covered | BR-12.7 |  |
+| FE-008 | Home shows a banner with "conduit" and "A place to share your knowledge.". | templates.md L126-131 | Covered | IC-12.4 |  |
 | FE-009 | Sidebar labelled "Popular Tags". | templates.md L203 | Covered | BR-14.1 |  |
-| FE-010 | Pagination uses `page-item`/`page-link`, active page marked `active`. | templates.md L191-196 | Covered | BR-15.6 |  |
+| FE-010 | Pagination uses `page-item`/`page-link`, active page marked `active`. | templates.md L191-196 | Covered | IC-15.1 |  |
 | FE-011 | Article preview shows author link, date, favorite count button, title, description, "Read more...", tag list. | templates.md L145-185 | Covered | BR-12.4 |  |
 | FE-012 | Login at `/login`. | routing.md L9 | Covered | BR-02.5 |  |
 | FE-013 | Register at `/register`. | routing.md L9 | Covered | BR-01.6 |  |
-| FE-014 | JWT stored in localStorage. | routing.md L10 | Covered | BR-01.7 |  |
-| FE-015 | Login page: heading "Sign in", link "Need an account?", email + password inputs, "Sign in" button. | templates.md L231-247 | Covered | BR-02.5; BR-02.9 |  |
-| FE-016 | Register page: heading "Sign up", link "Have an account?", username/email/password, "Sign up" button. | templates.md L262-281 | Covered | BR-01.6; BR-01.10 |  |
+| FE-014 | JWT stored in localStorage. | routing.md L10 | Covered | IC-01.2 |  |
+| FE-015 | Login page: heading "Sign in", link "Need an account?", email + password inputs, "Sign in" button. | templates.md L231-247 | Covered | BR-02.5; IC-02.4 |  |
+| FE-016 | Register page: heading "Sign up", link "Have an account?", username/email/password, "Sign up" button. | templates.md L262-281 | Covered | BR-01.6; IC-01.5 |  |
 | FE-017 | Auth pages show errors in `ul.error-messages`. | templates.md L236-238; templates.md L267-269 | Covered | BR-01.6; BR-02.5 |  |
 | FE-018 | Settings at `/settings`. | routing.md L12 | Covered | BR-05.1 |  |
 | FE-019 | Settings fields: profile picture URL, name, bio, email, new password, "Update Settings". | templates.md L404-426 | Covered | BR-05.2 |  |
@@ -322,17 +322,141 @@ Pin: ebbcdeb8d55b42a3a613c787560498b8ef10003f. The 210-row older recount is an i
 | FE-040 | Header unauth: Home, Sign in, Sign up. | templates.md L36-40 | Covered | BR-21.1 |  |
 | FE-041 | Header auth: Home, New Article, Settings, profile link. | templates.md L66-71 | Covered | BR-21.2 |  |
 | FE-042 | Active page's header link has class `active`. | templates.md L42; templates.md L73 | Covered | BR-21.3 |  |
-| FE-043 | Footer with "conduit" link and MIT attribution text. | templates.md L103-111 | Covered | BR-21.4 |  |
-| FE-044 | Head includes title "Conduit". | templates.md L14 | Covered | BR-21.4 |  |
+| FE-043 | Footer with "conduit" link and MIT attribution text. | templates.md L103-111 | Covered | IC-21.1 |  |
+| FE-044 | Head includes title "Conduit". | templates.md L14 | Covered | IC-21.1 |  |
 | FE-045 | Use shared `styles.css` (Conduit Minimal CSS v4). | styles.md L5-14; templates.md L7-26 | Out of asserted scope | Stylesheet packaging/theme-class choice is styling/implementation scope, not a new business rule. Current sources agree; old theme-CDN conflict is resolved. No asset was fetched. |  |
 | FE-046 | Missing profile image shows default avatar. | styles.md L16-18 | Covered | BR-21.5 |  |
 | FE-047 | Conform to SELECTORS.md contract (names, classes, text, routes, debug interface, localStorage key, avatar). | frontend-tests.md L11-19 | Out of asserted scope | Automation compatibility contract outside business requirements. Its oracle-directory target was never opened; no selector values or debug interface were inferred. |  |
 | FE-048 | Include at least one unit test. | frontend-tests.md L5 | Out of asserted scope | Engineering delivery/unit-test requirement, not business behaviour; no tests opened. |  |
 | FE-049 | Do not use hosted API for tests: unauth sees only demo content. | frontend-api.md L25-34 | Out of asserted scope | Hosted-demo deployment limitation, not universal Conduit behaviour. Do not copy its visibility restriction into product requirements; no hosted API queried. |  |
-| FT-001 | JWT auth with login/signup pages. | features.md L7; routing.md L9-10 | Covered | BR-01.6; BR-01.7; BR-02.5; BR-03.1 |  |
+| FT-001 | JWT auth with login/signup pages. | features.md L7; routing.md L9-10 | Covered | BR-01.6; IC-01.2; BR-02.5; IC-03.1 |  |
 | FT-002 | Users: create, read, update (no delete). | features.md L8 | Covered | BR-01.1; BR-05.3; BR-05.4; BR-03.2 |  |
 | FT-003 | Articles: full CRUD. | features.md L9 | Covered | BR-08.3; BR-09.2; BR-10.1; BR-11.2 |  |
 | FT-004 | Comments: create, read, delete (no update). | features.md L10 | Covered | BR-16.2; BR-16.3; BR-17.1; BR-18.1 |  |
 | FT-005 | Paginated article lists. | features.md L11 | Covered | BR-15.1; BR-15.2 |  |
 | FT-006 | Favorite articles. | features.md L12 | Covered | BR-20.1 |  |
 | FT-007 | Follow users. | features.md L13 | Covered | BR-19.1 |  |
+
+## Run 2b D-06 classification
+
+All 117 pre-split rules classified. Old IDs in this table are historical; New IDs are current. IC is excluded from BA review but retained for C1/C2. Mixed and doubtful items remain BR.
+
+| Old ID | New ID | Class | Reason |
+| --- | --- | --- | --- |
+| BR-01.1 | BR-01.1 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-01.2 | BR-01.2 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-01.3 | IC-01.1 | IC | Only successful-response fields and declared success status; no separate user entitlement or validation predicate. |
+| BR-01.4 | BR-01.4 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-01.5 | BR-01.5 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-01.6 | BR-01.6 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-01.7 | IC-01.2 | IC | Only the token storage mechanism, not session validity or persistence policy (OQ-03.3 remains open). |
+| BR-01.8 | IC-01.3 | IC | Only User schema fields, types and nullability. |
+| BR-01.9 | IC-01.4 | IC | Only registration request envelope/required schema fields; business required inputs remain BR-01.1. |
+| BR-01.10 | IC-01.5 | IC | Only fixed heading/link text and its template destination. |
+| BR-02.1 | BR-02.1 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-02.2 | BR-02.2 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-02.3 | BR-02.3 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-02.5 | BR-02.5 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-02.6 | IC-02.1 | IC | Only token storage mechanism; not a session-validity or permission rule. |
+| BR-02.7 | IC-02.2 | IC | Only login request envelope/required schema fields; business required inputs remain BR-02.1. |
+| BR-02.8 | IC-02.3 | IC | Only declared responses; the wrong-credential condition is explicitly undecided. |
+| BR-02.9 | IC-02.4 | IC | Only fixed heading/link text and its template destination. |
+| BR-03.1 | IC-03.1 | IC | Only credential header wire format; authentication permissions remain BR-03.2/03.3. |
+| BR-03.2 | BR-03.2 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-03.3 | BR-03.3 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-03.5 | IC-03.2 | IC | Only declared response codes and response names. |
+| BR-04.1 | BR-04.1 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-04.2 | BR-04.2 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-05.1 | BR-05.1 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-05.2 | BR-05.2 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-05.3 | BR-05.3 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-05.4 | BR-05.4 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-05.5 | BR-05.5 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-05.6 | IC-05.1 | IC | Only declared response codes and response names. |
+| BR-06.1 | BR-06.1 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-06.2 | BR-06.2 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-06.3 | BR-06.3 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-06.4 | BR-06.4 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-06.5 | IC-06.1 | IC | Only profile wrapper, schema fields, boolean type and nullability. |
+| BR-06.6 | IC-06.2 | IC | Only declared responses; optional-auth token behaviour remains an unanswered question. |
+| BR-07.1 | BR-07.1 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-07.2 | BR-07.2 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-08.1 | BR-08.1 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-08.2 | BR-08.2 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-08.3 | BR-08.3 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-08.4 | BR-08.4 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-08.5 | IC-08.1 | IC | Only published-article response fields and declared success status; publishing permissions remain BR-08.3. |
+| BR-08.6 | BR-08.6 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-08.7 | IC-08.2 | IC | Only request envelope/field types and schema optionality; business required/optional inputs remain BR-08.4. |
+| BR-08.8 | IC-08.3 | IC | Only Article schema fields and types, including author reference. |
+| BR-08.9 | IC-08.4 | IC | Only declared responses; the conflict condition is explicitly undecided. |
+| BR-08.10 | BR-08.10 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-09.1 | BR-09.1 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-09.2 | BR-09.2 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-09.3 | BR-09.3 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-09.5 | IC-09.1 | IC | Only declared responses; no API ownership predicate is asserted. |
+| BR-10.1 | BR-10.1 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-10.2 | BR-10.2 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-10.4 | IC-10.1 | IC | Only declared responses and empty response shape; no API ownership predicate is asserted. |
+| BR-11.1 | BR-11.1 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-11.2 | BR-11.2 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-11.3 | BR-11.3 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-11.4 | BR-11.4 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-11.5 | BR-11.5 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-11.6 | IC-11.1 | IC | Only declared response codes and response names. |
+| BR-12.1 | BR-12.1 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-12.2 | BR-12.2 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-12.3 | IC-12.1 | IC | Only list response shape (body omitted, articlesCount present), not count meaning. |
+| BR-12.4 | BR-12.4 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-12.5 | IC-12.2 | IC | Only list/feed response schema fields/types; no filtered-total semantics. |
+| BR-12.6 | IC-12.3 | IC | Only declared responses; optional-auth handling remains unanswered. |
+| BR-12.7 | IC-12.4 | IC | Only fixed home-banner text. |
+| BR-13.1 | BR-13.1 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-13.2 | BR-13.2 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-13.3 | BR-13.3 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-13.4 | IC-13.1 | IC | Only declared response codes and response names. |
+| BR-14.1 | BR-14.1 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-14.2 | BR-14.2 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-14.3 | BR-14.3 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-14.4 | IC-14.1 | IC | Only declared response codes and tags response schema. |
+| BR-15.1 | BR-15.1 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-15.2 | BR-15.2 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-15.3 | BR-15.3 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-15.5 | BR-15.5 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-15.6 | IC-15.1 | IC | Only pagination markup/CSS classes, not page-size or navigation behaviour. |
+| BR-16.1 | BR-16.1 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-16.2 | BR-16.2 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-16.3 | BR-16.3 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-16.4 | IC-16.1 | IC | Only comment request envelope/required schema field; business body requirement remains BR-16.2. |
+| BR-16.5 | IC-16.2 | IC | Only Comment schema fields and types, including author reference. |
+| BR-16.6 | IC-16.3 | IC | Only declared response codes and response names. |
+| BR-17.1 | BR-17.1 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-17.2 | BR-17.2 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-17.3 | BR-17.3 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-17.4 | IC-17.1 | IC | Only declared responses and array wrapper; optional-auth behaviour remains unanswered. |
+| BR-18.1 | BR-18.1 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-18.2 | BR-18.2 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-18.4 | IC-18.1 | IC | Only path-parameter type and declared responses/empty shape; the ownership condition is not decided. |
+| BR-19.1 | BR-19.1 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-19.3 | BR-19.3 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-19.4 | BR-19.4 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-19.5 | BR-19.5 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-19.6 | IC-19.1 | IC | Only no-extra-parameter request shape and declared responses; authentication permission remains BR-19.1. |
+| BR-20.1 | BR-20.1 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-20.3 | BR-20.3 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-20.4 | BR-20.4 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-20.5 | IC-20.1 | IC | Only no-extra-parameter request shape and declared responses; authentication permission remains BR-20.1. |
+| BR-21.1 | BR-21.1 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-21.2 | BR-21.2 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-21.3 | BR-21.3 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-21.4 | IC-21.1 | IC | Only fixed document-title/footer text and a fixed footer link. |
+| BR-21.5 | BR-21.5 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-22.1 | BR-22.1 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-22.2 | BR-22.2 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-22.3 | BR-22.3 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-22.4 | BR-22.4 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
+| BR-22.5 | IC-22.1 | IC | Only error-key schema for declared 403/404 responses, not the condition for allowing or refusing access. |
+| BR-22.6 | IC-22.2 | IC | Only response media type and charset. |
+| BR-22.7 | IC-22.3 | IC | Only error response schema/example, not a new token-validation or permission rule. |
+| BR-22.8 | IC-22.4 | IC | Only error schema and illustrative keys/messages, not a resource permission predicate. |
+| BR-23.1 | BR-23.1 | BR | User-visible behaviour, permission, validation, limit or navigation outcome; retain mixed/uncertain items as BR (D-06). |
