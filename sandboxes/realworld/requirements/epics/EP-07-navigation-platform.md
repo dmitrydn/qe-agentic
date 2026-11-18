@@ -13,6 +13,8 @@ As a user, I want a header that shows the right links for my situation, so that 
 - **BR-21.1** Signed out, the header links to the home, sign-in and sign-up pages. — `templates.md` L36-40
 - **BR-21.2** Signed in, the header links to the home, new article, settings and profile pages. — `templates.md` L66-71
 - **BR-21.3** The link for the current page is highlighted (active). — `templates.md` L42; `templates.md` L73
+- **BR-21.4** The document title is Conduit; the footer links conduit to / and displays An interactive learning project. Code & design licensed under MIT. — `templates.md` L14; `templates.md` L103-111
+- **BR-21.5** When a user has no profile image, display the default avatar, a smiley face icon. — `styles.md` L16-18
 
 ### Acceptance criteria
 
@@ -53,6 +55,7 @@ Scenario: Current page is highlighted
 
 - **OQ-21.1** What happens when a visitor opens /editor, /settings or another signed-in page directly? → [open-questions.md](../open-questions.md)
 - **OQ-21.2** What does the user see for an unknown URL? → [open-questions.md](../open-questions.md)
+- **OQ-21.3** What should users see during loading, after sign-in, and for non-422 errors or token expiry; how are dates displayed? → [open-questions.md](../open-questions.md)
 
 ## US-22 Consistent API error responses
 
@@ -68,6 +71,8 @@ As an API consumer, I want every error to use the same status codes and JSON for
 - **BR-22.4** A request for something that doesn't exist returns 404. — `error-handling.md` L25
 - **BR-22.5** For 403 and 404, the error key names the resource type (article, comment, profile). — `openapi.yml` L791-810
 - **BR-22.6** Responses are JSON with Content-Type application/json; charset=utf-8. — `api-response-format.md` L7
+- **BR-22.7** Unauthorized responses use the errors model; the specification's missing-token example is errors.token containing is missing. — `openapi.yml` L771-780
+- **BR-22.8** The errors model contains field-name arrays of strings. Forbidden and NotFound examples contain forbidden and not found respectively; their error key identifies the resource type, not a literal resource name. — `openapi.yml` L637-647; `openapi.yml` L791-810
 
 ### Acceptance criteria
 
@@ -105,6 +110,7 @@ Scenario: Validation error format
 ### Open questions
 
 - **OQ-22.1** Is the empty-field message "can't be empty" or "can't be blank"? → [open-questions.md](../open-questions.md)
+- **OQ-22.2** Must date-time values use a particular precision or timezone representation beyond the declared date-time format? → [open-questions.md](../open-questions.md)
 
 ## US-23 Cross-origin access
 

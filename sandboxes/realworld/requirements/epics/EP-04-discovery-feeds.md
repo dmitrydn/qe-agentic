@@ -14,6 +14,9 @@ As a reader, I want to see the latest articles from everyone, so that I can disc
 - **BR-12.2** The list contains the most recent articles from all authors, newest first, and needs no authentication. — `endpoints.md` L102; `endpoints.md` L126
 - **BR-12.3** List responses leave out the article body and include articlesCount. — `api-response-format.md` L62-67; `api-response-format.md` L102
 - **BR-12.4** Each preview shows author, date, favourites count, title, description, "Read more..." and tags. — `templates.md` L145-185
+- **BR-12.5** Article list and feed responses require articles and integer articlesCount. Each article entry requires slug, title, description, tagList, createdAt, updatedAt, favorited, favoritesCount and author, without a body field; author is a Profile. — `openapi.yml` L697-745; `api-response-format.md` L62-67
+- **BR-12.6** GET /api/articles declares 200 MultipleArticles, 401 Unauthorized and 422 GenericError responses; optional-auth token handling remains OQ-03.4. — `openapi.yml` L183-213
+- **BR-12.7** The home banner shows conduit and A place to share your knowledge. — `templates.md` L126-131
 
 ### Acceptance criteria
 
@@ -58,6 +61,7 @@ As a member, I want a feed of articles from the authors I follow, so that I don'
 - **BR-13.1** A "Your Feed" tab appears on the home page after signing in. — `templates.md` L122
 - **BR-13.2** GET /api/articles/feed requires authentication and returns only articles by followed authors, newest first. — `endpoints.md` L134
 - **BR-13.3** The feed supports limit and offset like the global list. — `endpoints.md` L132
+- **BR-13.4** GET /api/articles/feed declares 200 MultipleArticles, 401 Unauthorized and 422 GenericError responses. — `openapi.yml` L164-180
 
 ### Acceptance criteria
 
@@ -123,6 +127,7 @@ As a reader, I want to pick a popular tag and see articles about that topic, so 
 - **BR-14.1** The home page shows a list of tags under "Popular Tags". — `routing.md` L6; `templates.md` L203
 - **BR-14.2** Clicking a tag adds a tab named after the tag, listing articles with that tag. — `templates.md` L121; `endpoints.md` L106-108
 - **BR-14.3** GET /api/tags needs no authentication and returns a list of tag strings. — `endpoints.md` L239-243; `api-response-format.md` L146-152
+- **BR-14.4** GET /api/tags declares 200 Tags and 422 GenericError responses, with a required tags array of strings. — `openapi.yml` L443-453; `openapi.yml` L649-661
 
 ### Acceptance criteria
 
@@ -177,7 +182,8 @@ As a reader, I want long article lists split into pages, so that the page loads 
 - **BR-15.1** Home-page article lists are paginated. — `routing.md` L8; `templates.md` L191-196
 - **BR-15.2** The API returns 20 articles by default (limit) starting at 0 (offset); limit must be at least 1 and offset at least 0. — `endpoints.md` L118-124; `openapi.yml` L895-911
 - **BR-15.3** The feed supports the same paging parameters. — `endpoints.md` L132
-- **BR-15.4** articlesCount gives the total number of matching articles. — `api-response-format.md` L102
+- **BR-15.5** The limit query parameter is an integer with minimum 1 and default 20; offset is an integer with minimum 0 describing the number of items to skip. — `openapi.yml` L895-911
+- **BR-15.6** Pagination markup uses page-item and page-link classes, with the active page marked active. — `templates.md` L191-196
 
 ### Acceptance criteria
 
@@ -196,6 +202,8 @@ Scenario: Reader goes to page 2
 #### AC-15.2 Default page size via API (API)
 
 Spec: `endpoints.md` L118; `api-response-format.md` L102
+
+**BA-ASSUMPTION:** The assertion on total articlesCount awaits OQ-15.3; only its presence/type is explicit.
 
 ```gherkin
 Scenario: Default page size via API
@@ -220,3 +228,5 @@ Scenario: Limit and offset via API
 
 - **OQ-15.1** How many articles per page does the UI show? → [open-questions.md](../open-questions.md)
 - **OQ-15.2** What is the maximum limit, and what happens with invalid values (limit=0, negative, non-numeric)? → [open-questions.md](../open-questions.md)
+- **OQ-15.3** Is articlesCount the filtered total before pagination, the returned page size, or something else? → [open-questions.md](../open-questions.md)
+- **OQ-15.4** What happens beyond the last offset, and which timestamp and tie-break define most-recent article order? → [open-questions.md](../open-questions.md)

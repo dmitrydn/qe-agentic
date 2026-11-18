@@ -16,6 +16,10 @@ As a member, I want to write and publish an article with a title, summary, Markd
 - **BR-08.4** Title, description and body are required; tags are optional. — `endpoints.md` L161-163
 - **BR-08.5** A published article has slug, title, description, body, tagList, createdAt, updatedAt, favorited, favoritesCount and author; status 201. — `api-response-format.md` L38-57; `openapi.yml` L219-239
 - **BR-08.6** Every article gets a unique slug; two articles with the same title get different slugs. — `endpoints.md` L185
+- **BR-08.7** The create request requires an article object containing title, description and body; optional tagList is an array of strings. — `openapi.yml` L579-595; `openapi.yml` L858-869
+- **BR-08.8** An Article requires slug, title, description, body, tagList, createdAt, updatedAt, favorited, favoritesCount and author. createdAt and updatedAt are date-time strings, favorited is boolean, favoritesCount is integer, and author is a Profile. — `openapi.yml` L541-578
+- **BR-08.9** POST /api/articles declares 201 Article, 401 Unauthorized, 409 ConflictError and 422 GenericError responses; the conflict trigger remains OQ-08.1. — `openapi.yml` L219-230
+- **BR-08.10** The create/edit editor shows an error-messages list and a tag-list with a remove icon; the article page includes an Edit Article control without a resolved visibility switch. — `templates.md` L444-446; `templates.md` L464-466; `templates.md` L482; `templates.md` L505-507
 
 ### Acceptance criteria
 
@@ -103,7 +107,7 @@ As an author, I want to edit my published article, so that I can correct mistake
 - **BR-09.1** The editor for an existing article is at /editor/:slug. — `routing.md` L13
 - **BR-09.2** Editing requires authentication; title, description and body can each be changed independently; the updated article is returned. — `endpoints.md` L179-181
 - **BR-09.3** Changing the title changes the slug. — `endpoints.md` L183
-- **BR-09.4** Only the author may edit: other members get 403 with an "article" error key; an unknown slug gives 404. — `openapi.yml` L260-288; `openapi.yml` L791-792
+- **BR-09.5** PUT /api/articles/{slug} declares 200 Article, 401 Unauthorized, 403 Forbidden, 404 NotFound and 422 GenericError responses; the API ownership condition remains OQ-09.4. — `openapi.yml` L260-288; `error-handling.md` L23-25
 
 ### Acceptance criteria
 
@@ -137,6 +141,8 @@ Scenario: Partial update via API
 
 Spec: `openapi.yml` L260-288; `openapi.yml` L791-792
 
+**BA-ASSUMPTION:** API author-only edit permission awaits OQ-09.4; the declared 403 alone does not establish this condition.
+
 ```gherkin
 Scenario: Another member tries to edit
   Given "anna" wrote an article
@@ -151,6 +157,7 @@ Scenario: Another member tries to edit
 - **OQ-09.1** Can tags be changed when editing? The list of editable fields leaves out tagList. → [open-questions.md](../open-questions.md)
 - **OQ-09.2** Who sees the "Edit Article" button? The spec has an unresolved TODO here. → [open-questions.md](../open-questions.md)
 - **OQ-09.3** Do old links (the previous slug) still work after a title change? → [open-questions.md](../open-questions.md)
+- **OQ-09.4** Which users may update an article through the API: only its author, or others with permissions? → [open-questions.md](../open-questions.md)
 
 ## US-10 Delete my article
 
@@ -162,7 +169,7 @@ As an author, I want to delete an article I no longer want published, so that it
 
 - **BR-10.1** Deleting requires authentication and returns status 204. — `endpoints.md` L187-191; `openapi.yml` L289-315
 - **BR-10.2** The "Delete Article" button is shown only to the article's author. — `routing.md` L15; `templates.md` L509
-- **BR-10.3** Other members get 403; an unknown slug gives 404. — `openapi.yml` L289-315
+- **BR-10.4** DELETE /api/articles/{slug} declares 204 with no content, 401 Unauthorized, 403 Forbidden, 404 NotFound and 422 GenericError responses; the API ownership condition remains OQ-10.4. — `openapi.yml` L289-315; `openapi.yml` L768-770
 
 ### Acceptance criteria
 
@@ -195,6 +202,8 @@ Scenario: Non-author does not see the delete button
 
 Spec: `openapi.yml` L289-315
 
+**BA-ASSUMPTION:** API author-only delete permission awaits OQ-10.4; UI visibility does not establish API enforcement.
+
 ```gherkin
 Scenario: Another member tries to delete via API
   Given "anna" wrote an article
@@ -221,6 +230,7 @@ Scenario: Delete via API
 - **OQ-10.1** Is the author asked to confirm before deleting? → [open-questions.md](../open-questions.md)
 - **OQ-10.2** What happens to the article's comments and favourites when it is deleted? → [open-questions.md](../open-questions.md)
 - **OQ-10.3** Where does the author land after deleting? → [open-questions.md](../open-questions.md)
+- **OQ-10.4** Which users may delete an article through the API, and when exactly is 403 returned? → [open-questions.md](../open-questions.md)
 
 ## US-11 Read an article
 
@@ -235,6 +245,7 @@ As a reader, I want to open an article and read it formatted, so that long conte
 - **BR-11.3** The Markdown body is rendered in the browser. — `routing.md` L16
 - **BR-11.4** The comments section is at the bottom of the article page. — `routing.md` L17
 - **BR-11.5** An unknown slug returns 404. — `openapi.yml` L240-259
+- **BR-11.6** GET /api/articles/{slug} declares 200 Article, 404 NotFound and 422 GenericError responses. — `openapi.yml` L240-259
 
 ### Acceptance criteria
 

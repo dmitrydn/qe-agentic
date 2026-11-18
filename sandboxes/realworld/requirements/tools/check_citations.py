@@ -6,7 +6,7 @@ import subprocess
 from pathlib import Path
 
 from convert import PIN, records
-from markdown_io import markdown_records
+from markdown_io import markdown_records, plain_citations, read_table
 from workbook import ROOT, read_workbook
 
 SPEC = Path("/tmp/rw-spec")
@@ -20,6 +20,11 @@ ALLOWED = {
     "templates.md": "docs/src/content/docs/specifications/frontend/templates.md",
     "features.md": "docs/src/content/docs/implementation-creation/features.md",
     "openapi.yml": "specs/api/openapi.yml",
+    "styles.md": "docs/src/content/docs/specifications/frontend/styles.md",
+    "frontend-api.md": "docs/src/content/docs/specifications/frontend/api.md",
+    "frontend-tests.md": "docs/src/content/docs/specifications/frontend/tests.md",
+    "backend-tests.md": "docs/src/content/docs/specifications/backend/tests.md",
+    "backend-introduction.md": "docs/src/content/docs/specifications/backend/introduction.md",
 }
 STOP = set("a an the and or to of in on at for from with without is are be being been was were it its this that these those as by i my me we our you your they their them has have had do does did not no only any all each other same can cannot could should shall must may will would when then given which what how why where whether if so than into through also via shown stated requires require required returns return contains contain includes include needs need request requests response responses page pages api ui spec specification rule rules status successful successfully".split())
 
@@ -112,7 +117,7 @@ def audit_entry(index, result):
             "Source: " + url, "````text\n" + result["excerpt"] + "\n````"]
 
 
-def main():
+def historical_main():
     head = subprocess.check_output(["git", "-C", str(SPEC), "rev-parse", "HEAD"], text=True).strip()
     assert head == PIN, head
     book = read_workbook()
@@ -199,6 +204,117 @@ def main():
         print("ROLLUP FAIL", sid, citation)
     print("REPORT", ROOT / "citation-report.md")
     return bool(failures or rollup_failures)
+
+
+def main():
+    """Audit the full current item set; disclose all retired original occurrences."""
+    head = subprocess.check_output(["git", "-C", str(SPEC), "rev-parse", "HEAD"], text=True).strip()
+    assert head == PIN, head
+    book = read_workbook()
+    items, stories = markdown_records()
+    exceptions = read_exceptions()
+    cache, results, retired, metadata, rollups, used_exceptions = {}, [], [], [], [], set()
+    sheets = [("Business Rules", "Rule ID", "Spec traces"),
+              ("Acceptance Criteria", "AC ID", "Spec traces"),
+              ("Open Questions", "OQ ID", "Spec evidence")]
+    originals = {row[id_key]: (sheet, trace_key, row)
+                 for sheet, id_key, trace_key in sheets for row in records(book[sheet])}
+    changelog = (ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+    change_rows = read_table(changelog.split("## Run 2a — step 4", 1)[1].split("## Run 2a — step 5", 1)[0])
+    retirements = {r["ID"]: r for r in change_rows if r["Change"].startswith("Rule turned into ")}
+    assert set(originals) - set(items) == set(retirements), "Every retired source ID must have a logged conversion"
+    for item in set(originals) - set(items):
+        sheet, trace_key, source = originals[item]
+        target = re.search(r"Rule turned into (OQ-\d+\.\d+)", retirements[item]["Change"]).group(1)
+        assert target in items and retirements[item]["Reason"], (item, target)
+        for c in citations(source[trace_key]):
+            raw = evidence(c, cache)
+            raw.update(id=item, method="Retired assertion — range only", detail="Converted to " + target + "; see CHANGELOG. Not counted as current supported behaviour.")
+            retired.append(raw)
+    for item, row in items.items():
+        sheet, trace_key = ("Business Rules", "Spec traces") if item.startswith("BR-") else (("Acceptance Criteria", "Spec traces") if item.startswith("AC-") else ("Open Questions", "Spec evidence"))
+        current = citations(row[trace_key])
+        assert current, ("Missing citation", item)
+        assert len(current) == len({c[0] for c in current}), ("Duplicate citation", item)
+        source_citations = []
+        if item in originals:
+            _, _, source = originals[item]
+            assert row["Story ID"] == source["Story ID"], item
+            source_citations = [c[0] for c in citations(source[trace_key])]
+            assert not Counter(source_citations) - Counter(c[0] for c in current), ("Unlogged removed citation", item)
+        else:
+            assert "| " + item + " | New " in changelog, ("Unlogged new item", item)
+        companions = [evidence(c, cache) for c in current]
+        for citation, raw in zip(current, companions):
+            result = classify(dict(raw), item, row, trace_key, companions, exceptions)
+            result.update(sheet=sheet, origin="Retained original" if citation[0] in source_citations else "Added")
+            results.append(result)
+            if result["method"] == "Reviewed exception":
+                used_exceptions.add((item, citation[0]))
+    assert sum(r["origin"] == "Retained original" for r in results) + len(retired) == 284
+    assert set(exceptions) == used_exceptions, ("Unused exception", set(exceptions) - used_exceptions)
+    assert set(stories) == {s["Story ID"] for s in records(book["Backlog"])}
+    trace = (ROOT / "traceability.md").read_text(encoding="utf-8")
+    for heading in ("Run 2a gap reconciliation", "Run 2a coverage"):
+        section = trace.split("## " + heading, 1)[1].split("\n## ", 1)[0]
+        for row in read_table(section):
+            item = row.get("Gap", row.get("Checklist ID"))
+            for c in citations(plain_citations(row["Evidence at pin"])):
+                result = evidence(c, cache)
+                result.update(id=item, method="Traceability range only", detail="Reconciliation/coverage evidence; semantic disposition is documented in traceability.")
+                metadata.append(result)
+    for section in re.split(r"\n## ", changelog)[1:]:
+        if "| ID | Change | Reason | Citation |" not in section:
+            continue
+        for row in read_table(section):
+            for c in citations(plain_citations(row["Citation"])):
+                result = evidence(c, cache)
+                result.update(id=row["ID"], method="Change-log range only", detail="Historical/content-change evidence, not an additional current assertion.")
+                metadata.append(result)
+    # Historical roll-ups may point at a retired source rule, never at an unexplained omission.
+    for story in records(book["Backlog"]):
+        sid = story["Story ID"]
+        current = {c[0] for i, r in items.items() if i.startswith("BR-") and r["Story ID"] == sid for c in citations(r["Spec traces"])}
+        removed = {c[0] for i in retirements if originals[i][2]["Story ID"] == sid for c in citations(originals[i][2]["Spec traces"])}
+        for c in citations(story["Spec traces (rules)"]):
+            status = "Current rule" if c[0] in current else ("Logged retired rule" if c[0] in removed else "FAIL")
+            rollups.append((sid, c[0], status))
+    failures = [r for r in results + retired + metadata if r["reason"]]
+    bad_rollups = [r for r in rollups if r[2] == "FAIL"]
+    methods = Counter(r["method"] for r in results)
+    summary = "Current citations: " + str(len(results)) + " checked / " + str(sum(not r["reason"] for r in results)) + " passed / " + str(sum(bool(r["reason"]) for r in results)) + " unexplained failures."
+    report = ["# Run 2a citation report", "Specification pin: " + PIN, "## Result", summary,
+              "Original 284 occurrence accounting: " + str(sum(r["origin"] == "Retained original" for r in results)) + " retained, " + str(len(retired)) + " retired with logged question conversions. Added current occurrences: " + str(sum(r["origin"] == "Added" for r in results)) + ".",
+              "Metadata citations: " + str(len(metadata)) + " range-checked. Retired citations: " + str(len(retired)) + " range-checked, not asserted as supported rules.",
+              "Backlog historical roll-ups: " + str(len(rollups)) + " checked; " + str(sum(r[2] == "Current rule" for r in rollups)) + " match current rule citations; " + str(sum(r[2] == "Logged retired rule" for r in rollups)) + " match logged retired rules; " + str(len(bad_rollups)) + " unexplained omissions.",
+              "## Current outcome breakdown"]
+    report.extend("- " + method + ": " + str(count) for method, count in sorted(methods.items()))
+    report += ["## Method and limitations",
+               "All current BR/AC/OQ items are read from canonical Markdown, including every newly added item and citation. Original IDs may disappear only through an explicit logged rule-to-question conversion; retained original citations must remain. Every range must exist at the verified pin in the explicit 13-file requirement-source allowlist. No test suite or implementation is an input.",
+               "The prior lexical policy is unchanged: ordinary wording requires direct substantive-token overlap or explicitly reported same-item citation-set context. OQ citations are existence-only because they may locate silence. BA-ASSUMPTION scenarios are range-checked, not promoted to specification-backed predicates. Exact exceptions use their current recorded reviewer; all five currently name Dmitry, 2026-11-18. No new exception has been introduced.",
+               "Reconciliation/coverage and change-log evidence is checked for range existence separately; historical checklist wording is only a lead, not a new asserted requirement. Historical roll-ups distinguish current rule membership from a logged retired assertion. These lexical/structural checks are not semantic proof, executed tests or BA approval. Responses declared by OpenAPI do not establish unstated triggers.",
+               "## Reviewed exceptions"]
+    report.extend("- " + r["id"] + " — " + r["citation"] + ": " + r["detail"] for r in results if r["method"] == "Reviewed exception")
+    report += ["## Every unexplained failure"]
+    report.extend("- " + r["id"] + " — " + r["citation"] + ": " + r["reason"] for r in failures)
+    report.extend("- Backlog " + sid + " — " + c + ": missing" for sid, c, _ in bad_rollups)
+    if not failures and not bad_rollups:
+        report.append("None.")
+    for heading, group in [("Current citation audit", results), ("Retired original citation audit", sorted(retired, key=lambda r: (r["id"], r["citation"]))), ("Traceability and change-log citation audit", metadata)]:
+        report.append("## " + heading)
+        for index, result in enumerate(group, 1):
+            report.extend(audit_entry(index, result))
+    report.append("## Historical roll-up consistency")
+    report.extend("- " + sid + " — " + c + ": " + status for sid, c, status in rollups)
+    (ROOT / "citation-report.md").write_text("\n\n".join(report) + "\n", encoding="utf-8")
+    print(summary)
+    print("Current outcome breakdown:", dict(sorted(methods.items())))
+    print("Retired occurrences:", len(retired), "; metadata occurrences:", len(metadata))
+    print("Historical roll-ups:", dict(Counter(r[2] for r in rollups)))
+    for r in failures:
+        print("FAIL", r["id"], r["citation"], r["reason"])
+    print("REPORT", ROOT / "citation-report.md")
+    return bool(failures or bad_rollups)
 
 
 if __name__ == "__main__":

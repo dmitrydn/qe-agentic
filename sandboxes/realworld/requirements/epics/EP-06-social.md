@@ -11,10 +11,10 @@ As a member, I want to follow authors I like, so that their new articles appear 
 ### Business rules
 
 - **BR-19.1** Following and unfollowing require authentication and return the author's profile. — `endpoints.md` L82-96
-- **BR-19.2** The profile's following flag shows whether I follow that author. — `api-response-format.md` L25-33
 - **BR-19.3** A Follow button appears on the profile page and on the article page. — `templates.md` L305; `templates.md` L498
 - **BR-19.4** Following an unknown username returns 404. — `openapi.yml` L118-141
 - **BR-19.5** Followed authors' articles appear in Your Feed (see US-13). — `endpoints.md` L134
+- **BR-19.6** Follow and unfollow require no additional parameters and declare 200 Profile, 401 Unauthorized, 404 NotFound and 422 GenericError responses. — `endpoints.md` L82-96; `openapi.yml` L118-160
 
 ### Acceptance criteria
 
@@ -35,6 +35,8 @@ Scenario: Member follows an author
 
 Spec: `endpoints.md` L82-88
 
+**BA-ASSUMPTION:** The following=true interpretation awaits OQ-19.4; the schema states only boolean type.
+
 ```gherkin
 Scenario: Follow via API
   Given I am signed in
@@ -47,6 +49,8 @@ Scenario: Follow via API
 #### AC-19.3 Unfollow via API (API)
 
 Spec: `endpoints.md` L90-96
+
+**BA-ASSUMPTION:** The following=false interpretation awaits OQ-19.4; the schema states only boolean type.
 
 ```gherkin
 Scenario: Unfollow via API
@@ -72,6 +76,8 @@ Scenario: Follow without a token
 - **OQ-19.1** The article page shows a follower count next to Follow, but the profile data has no follower count. Is the count required? → [open-questions.md](../open-questions.md)
 - **OQ-19.2** Can I follow myself? What happens if I follow someone twice? → [open-questions.md](../open-questions.md)
 - **OQ-19.3** What happens when a visitor clicks Follow? → [open-questions.md](../open-questions.md)
+- **OQ-19.4** Precisely whose follow relationship does profile.following represent, including unauthenticated responses? → [open-questions.md](../open-questions.md)
+- **OQ-19.5** What happens when an unfollow is repeated or the target was never followed? → [open-questions.md](../open-questions.md)
 
 ## US-20 Favourite and unfavourite articles
 
@@ -82,15 +88,17 @@ As a member, I want to favourite articles, so that I can show appreciation and f
 ### Business rules
 
 - **BR-20.1** Favouriting and unfavouriting require authentication and return the article. — `endpoints.md` L223-237
-- **BR-20.2** Each article shows whether I favourited it (favorited) and how many times it was favourited (favoritesCount). — `api-response-format.md` L48-49
 - **BR-20.3** A heart button with the count appears on previews and on the article page. — `templates.md` L155; `templates.md` L503
 - **BR-20.4** Favourited articles appear on my profile's favourites tab (see US-07). — `routing.md` L19-21
+- **BR-20.5** Favorite and unfavorite require no additional parameters and declare 200 Article, 401 Unauthorized, 404 NotFound and 422 GenericError responses. — `endpoints.md` L223-237; `openapi.yml` L399-441
 
 ### Acceptance criteria
 
 #### AC-20.1 Member favourites an article (UI)
 
 Spec: `templates.md` L155; `api-response-format.md` L48-49
+
+**BA-ASSUMPTION:** Favourite count/state transitions await OQ-20.3; the example is not a transition rule.
 
 ```gherkin
 Scenario: Member favourites an article
@@ -105,6 +113,8 @@ Scenario: Member favourites an article
 
 Spec: `endpoints.md` L223-229
 
+**BA-ASSUMPTION:** The favorited=true and favoritesCount transition interpretation awaits OQ-20.3.
+
 ```gherkin
 Scenario: Favourite via API
   Given I am signed in
@@ -118,6 +128,8 @@ Scenario: Favourite via API
 #### AC-20.3 Unfavourite via API (API)
 
 Spec: `endpoints.md` L231-237
+
+**BA-ASSUMPTION:** The favorited=false transition interpretation awaits OQ-20.3.
 
 ```gherkin
 Scenario: Unfavourite via API
@@ -142,3 +154,5 @@ Scenario: Favourite without a token
 
 - **OQ-20.1** Can I favourite my own article? What happens if I favourite twice? → [open-questions.md](../open-questions.md)
 - **OQ-20.2** What happens when a visitor clicks the heart? → [open-questions.md](../open-questions.md)
+- **OQ-20.3** Whose favourite state does favorited represent, and how exactly must favoritesCount change after favorite or unfavorite? → [open-questions.md](../open-questions.md)
+- **OQ-20.4** What happens when an article that is not favourited is unfavourited again? → [open-questions.md](../open-questions.md)

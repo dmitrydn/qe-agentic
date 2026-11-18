@@ -14,6 +14,8 @@ As a member, I want to update my picture, username, bio, email and password, so 
 - **BR-05.2** The form has fields for profile picture URL, username (placeholder "Your Name"), bio, email and new password, and an "Update Settings" button. — `templates.md` L404-426
 - **BR-05.3** PUT /api/user requires authentication, accepts email, username, password, image and bio, and returns the updated user. — `endpoints.md` L56-74
 - **BR-05.4** Accounts cannot be deleted. — `features.md` L8
+- **BR-05.5** The user update request requires a user object and at least one field to update. — `openapi.yml` L846-857
+- **BR-05.6** PUT /api/user declares 200 User, 401 Unauthorized and 422 GenericError responses. — `openapi.yml` L76-87
 
 ### Acceptance criteria
 
@@ -61,6 +63,7 @@ Scenario: Update without a token
 - **OQ-05.3** The field placeholder says "Your Name" but it edits the username. Is that intended? → [open-questions.md](../open-questions.md)
 - **OQ-05.4** Does leaving a field empty clear it or leave it unchanged? → [open-questions.md](../open-questions.md)
 - **OQ-05.5** Is the picture URL validated? → [open-questions.md](../open-questions.md)
+- **OQ-05.6** What is the response for an empty user update, and what happens to existing sessions after a password change? → [open-questions.md](../open-questions.md)
 
 ## US-06 View a member's profile
 
@@ -74,6 +77,8 @@ As a reader, I want to view an author's profile, so that I can learn who they ar
 - **BR-06.2** GET /api/profiles/:username works with or without authentication and returns username, bio, image and following. — `endpoints.md` L76-80; `api-response-format.md` L25-33
 - **BR-06.3** An unknown username returns 404. — `openapi.yml` L95-117
 - **BR-06.4** The profile page has a "Follow <name>" button and an "Edit Profile Settings" button. — `templates.md` L305; `templates.md` L309
+- **BR-06.5** The profile response requires a profile object containing username, bio, image and following; following is boolean and bio and image may be null. — `openapi.yml` L521-540; `openapi.yml` L746-756
+- **BR-06.6** GET /api/profiles/{username} declares 200 Profile, 401 Unauthorized, 404 NotFound and 422 GenericError responses; optional-auth token handling remains OQ-03.4. — `openapi.yml` L93-111
 
 ### Acceptance criteria
 
@@ -177,3 +182,4 @@ Scenario: Filter by favourited via API
 - **OQ-07.1** Should the tab read "My Articles" on someone else's profile? → [open-questions.md](../open-questions.md)
 - **OQ-07.2** Can author and favorited (and tag) filters be combined? → [open-questions.md](../open-questions.md)
 - **OQ-07.3** Does filtering by an unknown username return an empty list or 404? → [open-questions.md](../open-questions.md)
+- **OQ-07.4** Are author and favorited filters case-sensitive, and what happens for an unknown tag? → [open-questions.md](../open-questions.md)

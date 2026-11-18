@@ -1,6 +1,6 @@
-# Conduit requirements — unchanged workbook conversion
+# Conduit requirements — draft refinement
 
-Derived, not stakeholder-authored. Run 1 preserves source wording; no BA decisions have been made.
+Derived, not stakeholder-authored. Run 1 preserved source wording; Run 2a reconciles gaps and fills explicit coverage at the same pin. No BA decisions have been made.
 
 Specification pin: ebbcdeb8d55b42a3a613c787560498b8ef10003f
 
@@ -8,9 +8,9 @@ Specification pin: ebbcdeb8d55b42a3a613c787560498b8ef10003f
 
 - epics: 7
 - stories: 23
-- rules: 89
+- rules: 117
 - scenarios: 72
-- open questions: 54
+- open questions: 70
 - traceability rows: 73
 
 ## Workbook README (verbatim cell text)
@@ -363,3 +363,7 @@ A developer or client application integrating with the Conduit REST API.
 
 
 Workbook verification statements above are historical claims, not the current check result. See citation-report.md for Run 1 results. BA-ASSUMPTION: personas, value statements, epic grouping, proposed priorities and example data are authored judgement as described above; per-item tidy-up is deferred to step 6.
+
+Run 2a: counts above describe current Markdown. The verbatim workbook sections are historical source material, not updated source totals. See [traceability.md](traceability.md) for the 37 gap/correction dispositions and 210-row coverage inventory. All stories remain Draft; all questions remain Open and unanswered.
+
+Current validation: use tools/run2a.py --check and tools/check_citations.py. The older conversion checks intentionally expect the original item set; do not rerun the workbook generator over this refinement.

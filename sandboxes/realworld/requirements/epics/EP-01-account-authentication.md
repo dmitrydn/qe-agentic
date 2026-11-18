@@ -17,6 +17,9 @@ As a visitor, I want to create an account with a username, email and password, s
 - **BR-01.5** A request missing a required field is rejected with status 422 and field-level error messages. — `error-handling.md` L7-17
 - **BR-01.6** The sign-up page is at /register and has Username, Email and Password fields and a "Sign up" button; errors are listed on the form. — `routing.md` L9; `templates.md` L262-281; `templates.md` L267
 - **BR-01.7** The app stores the returned token in the browser (localStorage). — `routing.md` L10
+- **BR-01.8** The User response requires email, token and username strings, plus bio and image, each a string or null. — `openapi.yml` L481-503
+- **BR-01.9** The registration request body contains a required user object with username, email and password. — `openapi.yml` L834-845; `openapi.yml` L467-480
+- **BR-01.10** The Sign up page has a Sign up heading and a Have an account? link to /login. — `templates.md` L262-265
 
 ### Acceptance criteria
 
@@ -81,6 +84,7 @@ Scenario Outline: Required field missing
 - **OQ-01.2** What makes an email valid, and must emails be unique like usernames? → [open-questions.md](../open-questions.md)
 - **OQ-01.3** Which characters and lengths are allowed in a username? → [open-questions.md](../open-questions.md)
 - **OQ-01.4** Where does the user land after a successful sign-up? → [open-questions.md](../open-questions.md)
+- **OQ-01.5** Are leading/trailing whitespace and case normalised for usernames, email addresses and other submitted text? → [open-questions.md](../open-questions.md)
 
 ## US-02 Sign in
 
@@ -93,9 +97,11 @@ As a returning member, I want to sign in with my email and password, so that I c
 - **BR-02.1** Sign-in requires email and password. — `endpoints.md` L28
 - **BR-02.2** Sign-in does not require an existing session. — `endpoints.md` L26
 - **BR-02.3** Valid credentials return the user's details including an authentication token, with status 200. — `endpoints.md` L26; `openapi.yml` L28-42
-- **BR-02.4** Invalid credentials are rejected with status 401. — `openapi.yml` L28-42
 - **BR-02.5** The sign-in page is at /login and has Email and Password fields and a "Sign in" button; errors are listed on the form. — `routing.md` L9; `templates.md` L231-247; `templates.md` L236
 - **BR-02.6** The app stores the token in the browser (localStorage). — `routing.md` L10
+- **BR-02.7** The login request body contains a required user object with email and password. — `openapi.yml` L822-833; `openapi.yml` L456-466
+- **BR-02.8** The login API declares 200 User, 401 Unauthorized and 422 GenericError responses; bad-credential classification remains OQ-02.1. — `openapi.yml` L28-37
+- **BR-02.9** The Sign in page has a Sign in heading and a Need an account? link to /register. — `templates.md` L231-234
 
 ### Acceptance criteria
 
@@ -128,6 +134,8 @@ Scenario: Sign-in via API returns a token
 #### AC-02.3 Wrong password (API)
 
 Spec: `openapi.yml` L28-42
+
+**BA-ASSUMPTION:** Wrong-password classification remains unresolved in OQ-02.1; 401 is declared but its bad-credential trigger is not explicit.
 
 ```gherkin
 Scenario: Wrong password
@@ -169,7 +177,7 @@ As a member, I want to stay signed in when I reload or return to the app, so tha
 - **BR-03.1** Authenticated requests carry the header Authorization: Token <jwt>. — `endpoints.md` L5-9
 - **BR-03.2** GET /api/user requires authentication and returns the current user. — `endpoints.md` L50-54
 - **BR-03.3** A request that needs authentication but has no token is rejected with status 401. — `error-handling.md` L21; `openapi.yml` L771-780
-- **BR-03.4** The token is kept in localStorage, so it survives a page reload. — `routing.md` L10
+- **BR-03.5** GET /api/user declares 200 User, 401 Unauthorized and 422 GenericError responses. — `openapi.yml` L61-68
 
 ### Acceptance criteria
 
@@ -213,6 +221,8 @@ Scenario: Current user without a token
 
 - **OQ-03.1** What should the app do when the stored token is invalid or expired? → [open-questions.md](../open-questions.md)
 - **OQ-03.2** Is an invalid (not missing) token also a 401? → [open-questions.md](../open-questions.md)
+- **OQ-03.3** Must the user remain signed in across a reload, and under what token-validity conditions? → [open-questions.md](../open-questions.md)
+- **OQ-03.4** What happens to malformed, invalid or expired tokens on optional-auth profile, list and comment endpoints that also declare 401? → [open-questions.md](../open-questions.md)
 
 ## US-04 Sign out
 

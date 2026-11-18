@@ -369,3 +369,286 @@ Read in full by the citation checker through its unchanged explicit allowlist at
 - `https://github.com/realworld-apps/realworld/blob/ebbcdeb8d55b42a3a613c787560498b8ef10003f/specs/api/openapi.yml`
 
 Literal links inside the eight specification files are covered by those local-file reads; none was followed. Pinned line URLs were constructed in the regenerated citation report, not fetched. No gap-analysis files, held-out suites, Postman collection, implementation sources or review guide were opened. Work stops here.
+
+## Run 2a
+
+**Date:** 2026-11-18. **Status: complete through step 5 after the authorised continuation below.** The initial attempt stopped on the step 5 pre-write validation failure; its record is preserved below as history. The single authorised retry and extended citation audit passed. Only steps 4–5 were authorised. No step 6 work, commit, push or merge was performed.
+
+### Completed and current counts
+
+Step 4 produced **37 distinct dispositions** in [traceability.md](traceability.md): X-01..X-22, G-01..G-11 and the four corrections. Its check passed. Every requirement-content change saved in this run is recorded by ID, reason and evidence in [CHANGELOG.md](CHANGELOG.md).
+
+| Item | Before Run 2a | Current saved Markdown |
+| --- | ---: | ---: |
+| Stories | 23 | 23 |
+| Rules | 89 | 81 |
+| Scenarios | 72 | 72 |
+| Open questions | 54 | 70 |
+
+All questions were verified Open with blank answers after step 4. Story introductions and metadata were preserved by the writer; no status change was requested or applied. The stronger final workbook-preservation/status check was prepared but has **not run**. README still contains the historical 89-rule/54-question counts because step 5 stopped before its README write. The citation report remains the earlier Run 1c report and is **not a citation verification of Run 2a**.
+
+### Saved requirement changes
+
+Eight unsupported rule assertions were converted to unanswered questions; their numbers are retired, not reused:
+
+| Retired rule | Target question | Reason |
+| --- | --- | --- |
+| BR-02.4 | OQ-02.1 (existing) | Declared 401 does not explicitly classify wrong credentials versus validation 422. |
+| BR-03.4 | OQ-03.3 | localStorage is explicit; reload/session validity was inferred. |
+| BR-09.4 | OQ-09.4 | API author-only edit predicate is unstated. |
+| BR-10.3 | OQ-10.4 | Author-only UI does not establish API deletion permissions. |
+| BR-18.3 | OQ-18.2 | Comment deletion 403 does not specify the ownership predicate. |
+| BR-19.2 | OQ-19.4 | Boolean following type does not fully define viewer-relative meaning. |
+| BR-15.4 | OQ-15.3 | Integer articlesCount does not define filtered-total semantics. |
+| BR-20.2 | OQ-20.3 | Field examples do not define favourite state/count transitions. |
+
+New questions (16): **OQ-03.3, OQ-09.4, OQ-10.4, OQ-18.2, OQ-19.4, OQ-15.3, OQ-20.3, OQ-03.4, OQ-01.5, OQ-07.4, OQ-15.4, OQ-20.4, OQ-19.5, OQ-05.6, OQ-21.3, OQ-22.2**. These address the converted assertions, optional-auth invalid-token handling, normalisation/filter silence, paging/order, repeated reverse operations, empty updates/password sessions, UI loading/errors/dates and timestamp precision. OQ-09.1 gained the UpdateArticle schema evidence without an answer or wording change.
+
+Related existing scenarios retained verbatim Gherkin, with explicit BA-ASSUMPTION caveats rather than silently asserting the retired predicates: **AC-02.3, AC-09.3, AC-10.3, AC-18.3, AC-19.2, AC-19.3, AC-20.1, AC-20.2, AC-20.3, AC-15.2**. AC-03.1's exact earlier reload caveat was retained. This narrow caveating is follow-through to step 4, not the general step 6 labelling/tidy-up. No new BR or AC was saved.
+
+### Current-pin findings
+
+- **BR-08.6 retained:** distinct slugs for duplicate titles are explicit at endpoints.md L185; AC-08.3 retained. The older recount's rejection is stale.
+- X-03/G-04: OpenAPI supplies success codes; absence in prose is not a contradiction.
+- X-15: DELETE 204 references No content with an empty content map.
+- X-16/X-18: client-side Markdown conversion is explicit; sanitisation remains open.
+- X-20: current shared stylesheet guidance and template head agree; no asset was fetched.
+- X-21: username/password update fields are accepted explicitly; example omissions do not override the contract. Session effects remain unanswered.
+- G-11/correction: hosted-demo visibility is deployment-specific, not a universal product rule.
+- 401/403/409/422 declarations were not turned into invented bad-input, ownership or conflict predicates.
+
+### Step 5 blocker and unverified tooling
+
+Prepared [tools/coverage2a.py](tools/coverage2a.py) with 210 explicit mapping decisions and exclusions, and extended [tools/run2a.py](tools/run2a.py) with supported-rule additions and coverage generation. These are **unapplied migration inputs**, not completed coverage output.
+
+Executed the step 5 migration. It parsed the historical 210-row checklist successfully and constructed candidate additions in memory, but the pre-write reference check failed on **P-003**: the exclusion text says “BR-19.2 became OQ-19.4”. The validator incorrectly requires every mentioned BR/AC/OQ ID, including a retired historical reference in an exclusion explanation, to exist in the current item set. BR-19.2 was correctly retired in step 4. The failure occurred **before write_items, traceability append, README update or CHANGELOG append**. Thus no step 5 rule/coverage additions were saved and no candidate IDs were consumed in the canonical requirements.
+
+Following the existing stop-on-check-failure rule, no validation repair or retry was attempted. Suggested continuation for Dmitry to authorise: distinguish historical references in exclusion reasons from current coverage targets, rerun step 5 once, then run all final checks. Do **not** rerun step4 or the original workbook generator over current Markdown.
+
+Extended [tools/check_citations.py](tools/check_citations.py) to handle current items, logged retirements, all additions and traceability/change-log range checks, with a 13-file requirement-source allowlist and unchanged lexical/exception classification. This extension has no editor diagnostics, but **has not executed**: it was chained after step 5 and that command stopped at the assertion. Accordingly there is **no Run 2a zero-failure citation result**. Dmitry's five human-review exception entries were read and preserved; no new exception was added. Old conversion checks still intentionally expect the original item set and must not be used to regenerate this refinement.
+
+### Boundaries, pin and deviations
+
+- Pin verified locally: ebbcdeb8d55b42a3a613c787560498b8ef10003f. No network request was made.
+- Existing sparse paths (not changed in Run 2a):
+
+  ```text
+  docs/src/content/docs/specifications/
+  docs/src/content/docs/implementation-creation/features.md
+  specs/api/openapi.yml
+  ```
+
+- No oracle suite, Postman collection or implementation was read, listed or fetched. Prose requirements named backend/tests.md and frontend/tests.md were read; their suite links were not followed.
+- Only the two specifically permitted research files were read; RESULTS.md, logs and other research files were not accessed.
+- Source SHA-256 verified before each migration dispatch: eb1a9ef70058438926454d9f0f8bcf316aa014162d4db8633b657073eafe9b58. Source, research, intent, decisions and REVIEW-GUIDE were not edited.
+- No features or BA review workbook were generated. No step 6 general labelling, technical-detail relocation or readability rewrite was performed.
+- A read-only delegated backend investigation was used, constrained to the same boundaries. Its line mappings/semantic conclusions included inaccuracies and were not treated as authoritative; direct current-source reads determined the saved dispositions.
+- Deviation: Run 2a is partial because of the step 5 tooling assertion. Counts/coverage/citation requirements for completion have not been claimed as passed. The pending README/citation-report updates are explicitly disclosed above.
+
+### Complete Run 2a read log
+
+Repeated reads are consolidated. Includes direct reads, script/import reads, the constrained delegated investigation, and editor diagnostics. Created files subsequently imported/read are included. No linked target was followed.
+
+**Repository files** (paths relative to /Users/dmitry.dayneko/Projects/qe-agentic):
+
+- .github/copilot-instructions.md — provided in conversation context.
+- docs/handover/2026-11-17-realworld-sandbox/03-next-task-business-requirements.md — current full brief, including §2, §3, steps 4–5 and §6.
+- DECISIONS.md — full; intent.md — relevant principles, lines 20–75.
+- research/realworld-spike/realworld-requirements-baseline.md — full, permitted input.
+- research/realworld-spike/requirements-recount.md — full, permitted input; checklist parsed again by step 5.
+- sandboxes/realworld/requirements/epics/EP-01-account-authentication.md
+- sandboxes/realworld/requirements/epics/EP-02-profiles-settings.md
+- sandboxes/realworld/requirements/epics/EP-03-articles.md
+- sandboxes/realworld/requirements/epics/EP-04-discovery-feeds.md
+- sandboxes/realworld/requirements/epics/EP-05-comments.md
+- sandboxes/realworld/requirements/epics/EP-06-social.md
+- sandboxes/realworld/requirements/epics/EP-07-navigation-platform.md
+- sandboxes/realworld/requirements/open-questions.md
+- sandboxes/realworld/requirements/traceability.md — step 4 append reads the original table.
+- sandboxes/realworld/requirements/CHANGELOG.md — direct reads and stable-ID allocation.
+- sandboxes/realworld/requirements/README.md — directly read; not rewritten in Run 2a.
+- sandboxes/realworld/requirements/HANDBACK.md — prior sections read for append; current section written.
+- sandboxes/realworld/requirements/tools/citation-exceptions.md — user-reviewed entries read, not edited.
+- sandboxes/realworld/requirements/tools/check_citations.py — read, edited, diagnostics; not executed in Run 2a.
+- sandboxes/realworld/requirements/tools/markdown_io.py — read directly/imported.
+- sandboxes/realworld/requirements/tools/convert.py — direct partial read/imported.
+- sandboxes/realworld/requirements/tools/workbook.py — imported.
+- sandboxes/realworld/requirements/tools/run2a.py — created, read, executed; step 4 passed, step 5 stopped before output writes.
+- sandboxes/realworld/requirements/tools/coverage2a.py — created/imported for the failed step 5 pre-write check.
+- sandboxes/realworld/requirements/source/Conduit-backlog.xlsx — read for SHA-256 only in migration dispatch; unchanged. Prepared final workbook parsing check did not run.
+
+**Local specification files:**
+
+- /tmp/rw-spec/specs/api/openapi.yml
+- /tmp/rw-spec/docs/src/content/docs/specifications/backend/endpoints.md
+- /tmp/rw-spec/docs/src/content/docs/specifications/backend/api-response-format.md
+- /tmp/rw-spec/docs/src/content/docs/specifications/backend/error-handling.md
+- /tmp/rw-spec/docs/src/content/docs/specifications/backend/cors.md
+- /tmp/rw-spec/docs/src/content/docs/specifications/backend/introduction.md
+- /tmp/rw-spec/docs/src/content/docs/specifications/backend/tests.md
+- /tmp/rw-spec/docs/src/content/docs/specifications/frontend/templates.md
+- /tmp/rw-spec/docs/src/content/docs/specifications/frontend/routing.md
+- /tmp/rw-spec/docs/src/content/docs/specifications/frontend/styles.md
+- /tmp/rw-spec/docs/src/content/docs/specifications/frontend/api.md
+- /tmp/rw-spec/docs/src/content/docs/specifications/frontend/tests.md — prose requirements only, first 25 lines.
+- /tmp/rw-spec/docs/src/content/docs/implementation-creation/features.md
+
+**Directories/metadata:** /tmp/rw-spec/.git/ via rev-parse HEAD; requirements/epics/ filename glob; /memories/ empty listing (no memory file read/written). No broad research search/listing was performed.
+
+**Tool-output files read** (prefix /Users/dmitry.dayneko/Library/Application Support/Code/User/workspaceStorage/1aef6cdeac1a60baed6f2809b359fc19/GitHub.copilot-chat/chat-session-resources/655d700b-b0b0-4cff-89c2-ed2d06ee862a/):
+
+- call_abzuUngJ1IL2waAghidcL0Sq__vscode-1794927803087/content.txt
+- call_HfztUsVlnLx6DLAc9g3V3muM__vscode-1794927803042/content.txt
+- call_f6exoiurVt42evWc2lTzTWIs__vscode-1794927803094/content.txt
+- call_tbaQgRZVGD8ZuwMAccJuxx7A__vscode-1794927803107/content.txt
+
+**URLs accessed/fetched: none.** GitHub repository/source URLs in the brief, historical inputs, README, prior handback and local specification were read as local text only. Source-index URL strings are already enumerated in the preceding Run 1c log (the same pin/eight original source paths). The clone URL https://github.com/realworld-apps/realworld.git appeared as brief/prior-handback text only. Links to API servers, demo instances, assets, fonts/icons, implementation repositories and oracle targets embedded in local prose were not opened. No new citation-report URL was fetched or generated in this incomplete run.
+
+**Stop point:** waiting for Dmitry's direction on correcting the step 5 validator; no further requirement changes or checks attempted after its failure.
+
+### Authorised continuation — validator correction and step 5 completion
+
+**Date:** 2026-11-18. This continuation supersedes the incomplete status, saved counts and stop point above; those paragraphs describe the initial attempt, not the final state.
+
+#### Narrow validator change
+
+Updated [tools/run2a.py](tools/run2a.py) with a shared `coverage_references()` check used before writing and when validating saved coverage. Only an **Out of asserted scope** explanation may mention an absent ID, and only if a structured CHANGELOG row records that ID's retirement (`Rule turned into ...`). Every **Covered** target must still exist in the current canonical item set. No other validation or citation policy was loosened; no exception was added or edited.
+
+Boundary smoke checks passed: the logged BR-19.2 retirement is accepted in exclusion prose; BR-19.2 as a current coverage target is rejected; an unlogged BR-99.99 is rejected both as a target and in an exclusion explanation. Expected rejections were caught test assertions, not failed task checks.
+
+Ran step 5 **once** in this continuation. It passed, saved the additions and coverage inventory, updated [README.md](README.md) counts, and passed its final preservation/status check. Step 4 and the original workbook generator were **not** rerun. Importing the converter's read-only comparison helpers did not invoke its generator.
+
+#### Step 5 additions — IDs and pinned citations
+
+**36 new rules; 0 new scenarios.** Existing scenarios and Gherkin were preserved; no new AC IDs or AC citations were needed. All additions are logged individually in [CHANGELOG.md](CHANGELOG.md). The source aliases/ranges below refer to specification pin **ebbcdeb8d55b42a3a613c787560498b8ef10003f**, not to implementation or oracle assets.
+
+| New rule | Detail made explicit | Citation at pin |
+| --- | --- | --- |
+| BR-01.8 | User fields/types/nullability | openapi.yml L481-503 |
+| BR-01.9 | Registration user envelope | openapi.yml L834-845; openapi.yml L467-480 |
+| BR-01.10 | Sign-up heading and login link | templates.md L262-265 |
+| BR-02.7 | Login user envelope | openapi.yml L822-833; openapi.yml L456-466 |
+| BR-02.8 | Declared login responses; credential predicate unresolved | openapi.yml L28-37 |
+| BR-02.9 | Sign-in heading and registration link | templates.md L231-234 |
+| BR-03.5 | Declared current-user responses | openapi.yml L61-68 |
+| BR-05.5 | Update envelope and at-least-one-field requirement | openapi.yml L846-857 |
+| BR-05.6 | Declared user-update responses | openapi.yml L76-87 |
+| BR-06.5 | Profile wrapper, fields/types/nullability | openapi.yml L521-540; openapi.yml L746-756 |
+| BR-06.6 | Declared profile responses; optional-auth question retained | openapi.yml L93-111 |
+| BR-08.7 | Create-article envelope and optional string-array tags | openapi.yml L579-595; openapi.yml L858-869 |
+| BR-08.8 | Article fields/types/date-time/Profile author | openapi.yml L541-578 |
+| BR-08.9 | Declared create responses; conflict trigger unresolved | openapi.yml L219-230 |
+| BR-08.10 | Editor errors/remove icon and Edit Article control presence | templates.md L444-446; templates.md L464-466; templates.md L482; templates.md L505-507 |
+| BR-09.5 | Declared update responses; ownership unresolved | openapi.yml L260-288; error-handling.md L23-25 |
+| BR-10.4 | Declared delete responses and no-content 204 | openapi.yml L289-315; openapi.yml L768-770 |
+| BR-11.6 | Declared single-article responses | openapi.yml L240-259 |
+| BR-12.5 | List/feed fields and integer articlesCount, without inferred total semantics | openapi.yml L697-745; api-response-format.md L62-67 |
+| BR-12.6 | Declared global-list responses | openapi.yml L183-213 |
+| BR-12.7 | Home banner text | templates.md L126-131 |
+| BR-13.4 | Declared feed responses | openapi.yml L164-180 |
+| BR-14.4 | Tags wrapper/type and declared responses | openapi.yml L443-453; openapi.yml L649-661 |
+| BR-15.5 | Integer pagination parameters/minima/default limit | openapi.yml L895-911 |
+| BR-15.6 | Pagination markup and active-page class | templates.md L191-196 |
+| BR-16.4 | Create-comment envelope | openapi.yml L630-636; openapi.yml L882-893 |
+| BR-16.5 | Comment fields/types/date-time/Profile author | openapi.yml L609-629 |
+| BR-16.6 | Declared create-comment responses | openapi.yml L338-365 |
+| BR-17.4 | Comments wrapper and declared responses | openapi.yml L315-337; openapi.yml L675-685 |
+| BR-18.4 | Integer comment path ID, declared responses and no-content 204 | openapi.yml L366-398; openapi.yml L768-770 |
+| BR-19.6 | Follow/unfollow parameters and declared responses | endpoints.md L82-96; openapi.yml L118-160 |
+| BR-20.5 | Favorite/unfavorite parameters and declared responses | endpoints.md L223-237; openapi.yml L399-441 |
+| BR-21.4 | Document title and footer attribution | templates.md L14; templates.md L103-111 |
+| BR-21.5 | Default smiley avatar | styles.md L16-18 |
+| BR-22.7 | Unauthorized schema and missing-token example | openapi.yml L771-780 |
+| BR-22.8 | Errors schema and forbidden/not-found examples | openapi.yml L637-647; openapi.yml L791-810 |
+
+Declared status codes remain contract declarations, not invented triggering conditions. Ownership, wrong-password classification, optional-auth invalid tokens, conflict triggers, following/favorite/count semantics and editable-tag conflicts remain unanswered where previously identified.
+
+#### Coverage list summary
+
+[traceability.md](traceability.md) now retains the original **73 baseline mappings**, the **37 reconciliation dispositions**, and **210 unique checklist rows**. **201 Covered / 9 Out of asserted scope.** Covered means mapped requirement design, not executed tests, implementation correctness or BA approval. Every Covered row has current BR/AC targets; questions and qualifications do not substitute for those targets.
+
+The nine exclusions are:
+
+| Checklist ID | Reason outside asserted business coverage |
+| --- | --- |
+| B-015 | Backend unit testing is engineering delivery, not a business outcome. |
+| B-016 | Overarching implementation conformance directive; atomic operation contracts are mapped separately. |
+| P-003 | Viewer-relative following semantics are inferred; BR-19.2 is retired into OQ-19.4. Field presence/type is covered separately. |
+| A-043 | Prose/schema disagree on editable tagList; OQ-09.1 retains both without a business decision. |
+| F-011 | Favorite state/count transition was explicitly implied, not stated; OQ-20.3 and scenario assumption caveats retain the uncertainty. |
+| FE-045 | Stylesheet packaging/theme classes are styling/implementation scope; current-source conflict was resolved without fetching assets. |
+| FE-047 | Automation compatibility contract is outside business requirements; no oracle target or selector values were inspected. |
+| FE-048 | Frontend unit testing is engineering delivery, not business behaviour. |
+| FE-049 | Hosted-demo deployment visibility restriction is not universal Conduit behaviour; no hosted API was queried. |
+
+#### Final counts and checks
+
+| Item | Before Run 2a | After step 4 | Final after step 5 |
+| --- | ---: | ---: | ---: |
+| Epics | 7 | 7 | 7 |
+| Stories | 23 | 23 | 23 |
+| Rules | 89 | 81 | 117 |
+| Scenarios | 72 | 72 | 72 |
+| Open questions | 54 | 70 | 70 |
+
+The final validator passed: original story metadata/wording preserved, all 23 stories Draft, all 70 questions Open with blank answers, retained original item fields preserved (with the authorised OQ-09.1 evidence addition), eight retired rule IDs absent and logged, original 73 traceability rows unchanged, 37 reconciliation rows present, 210 unique coverage rows present, README counts matching, and BR-08.6 retained. No retired ID was reused. Source SHA-256 verified unchanged: **eb1a9ef70058438926454d9f0f8bcf316aa014162d4db8633b657073eafe9b58**.
+
+Extended citation checker **PASS, exit 0** at the verified pin; full audit: [citation-report.md](citation-report.md).
+
+- **362 current citations checked / 362 passed / 0 unexplained failures**, including all new items. Original accounting: 274 retained + 10 logged retired = 284; 88 added current occurrences.
+- Current methods: 247 direct keyword matches; 2 same-item citation-set contexts; 94 OQ existence-only; 14 BA-ASSUMPTION range-only; 5 existing reviewed exceptions naming Dmitry, 2026-11-18. No new exception or keyword-policy adjustment.
+- **477 traceability/changelog citation occurrences** and **10 retired citation occurrences** range-checked, with zero failures. These range checks are not claims of semantic proof.
+- **120 historical roll-ups** accounted for: 114 current-rule memberships + 6 logged-retired-rule memberships; 0 unexplained omissions.
+- Editor diagnostics found no errors in the validator or README.
+
+#### Complete continuation read log
+
+This log covers only this authorised continuation; the initial Run 2a log above is preserved. Includes direct reads, Python imports/input reads, validation and diagnostics. Repeated reads are consolidated. Paths below are repository-relative unless absolute. No URL was fetched, no suite link was followed, and no implementation was read.
+
+**Repository files:**
+
+- .github/copilot-instructions.md — provided in conversation context, not separately opened.
+- sandboxes/realworld/requirements/tools/run2a.py — read directly, narrowly edited, imported for guard smoke checks, executed once with step5, checked by diagnostics.
+- sandboxes/realworld/requirements/tools/coverage2a.py — read directly and imported by step5.
+- sandboxes/realworld/requirements/tools/check_citations.py — read directly and executed unchanged.
+- sandboxes/realworld/requirements/tools/markdown_io.py — read directly and imported by checks.
+- sandboxes/realworld/requirements/tools/workbook.py — imported; XLSX reader executed by validation and citation checker.
+- sandboxes/realworld/requirements/tools/convert.py — imported for read-only comparison helpers; generator not invoked.
+- sandboxes/realworld/requirements/tools/citation-exceptions.md — read by citation checker; unchanged.
+- sandboxes/realworld/requirements/source/Conduit-backlog.xlsx — whole-file SHA-256 and read-only ZIP/XML parsing of all sheets, including workbook XML, relationships, resolved worksheets and shared strings if present; never written.
+- research/realworld-spike/requirements-recount.md — permitted historical checklist input, read by step5. No other research file was read in this continuation.
+- sandboxes/realworld/requirements/epics/EP-01-account-authentication.md — read by parser/writer, final validator and citation checker.
+- sandboxes/realworld/requirements/epics/EP-02-profiles-settings.md — same.
+- sandboxes/realworld/requirements/epics/EP-03-articles.md — same.
+- sandboxes/realworld/requirements/epics/EP-04-discovery-feeds.md — same.
+- sandboxes/realworld/requirements/epics/EP-05-comments.md — same.
+- sandboxes/realworld/requirements/epics/EP-06-social.md — same.
+- sandboxes/realworld/requirements/epics/EP-07-navigation-platform.md — same.
+- sandboxes/realworld/requirements/open-questions.md — read by parser, final validator and citation checker; rewritten with unchanged current questions.
+- sandboxes/realworld/requirements/CHANGELOG.md — read directly and by retirement/stable-ID checks, step5 append and citation checker.
+- sandboxes/realworld/requirements/traceability.md — read for append, preservation/coverage validation and citation checker.
+- sandboxes/realworld/requirements/README.md — read directly, updated by step5, checked by validator and diagnostics.
+- sandboxes/realworld/requirements/citation-report.md — regenerated by checker; result/method/exception summary and initial excerpt read directly (first 62 lines).
+- sandboxes/realworld/requirements/HANDBACK.md — prior sections read directly; this continuation appended and current Run 2a status updated; diagnostics checked.
+
+**Local specification files read by the checker, all at the verified pin:**
+
+- /tmp/rw-spec/specs/api/openapi.yml
+- /tmp/rw-spec/docs/src/content/docs/specifications/backend/endpoints.md
+- /tmp/rw-spec/docs/src/content/docs/specifications/backend/api-response-format.md
+- /tmp/rw-spec/docs/src/content/docs/specifications/backend/error-handling.md
+- /tmp/rw-spec/docs/src/content/docs/specifications/backend/cors.md
+- /tmp/rw-spec/docs/src/content/docs/specifications/backend/introduction.md
+- /tmp/rw-spec/docs/src/content/docs/specifications/backend/tests.md — prose requirements only; no linked suite opened.
+- /tmp/rw-spec/docs/src/content/docs/specifications/frontend/templates.md
+- /tmp/rw-spec/docs/src/content/docs/specifications/frontend/routing.md
+- /tmp/rw-spec/docs/src/content/docs/specifications/frontend/styles.md
+- /tmp/rw-spec/docs/src/content/docs/specifications/frontend/api.md
+- /tmp/rw-spec/docs/src/content/docs/specifications/frontend/tests.md — prose requirements only; no linked suite opened.
+- /tmp/rw-spec/docs/src/content/docs/implementation-creation/features.md
+
+**Directories/metadata:** requirements/epics/ filename globs; /tmp/rw-spec/.git/ HEAD metadata via rev-parse; /memories/ empty listing (no memory file read or written). No external tool-output file was opened in this continuation.
+
+**URLs accessed/fetched: none.** URLs encountered in local workbook, README, prior handback and specification prose were text only; the same eight source-index URLs are enumerated in the preceding Run 1c log. The citation-report summary read also contained the first pinned endpoints source URL ending in #L48-L48; it was not followed. Checker-generated report URLs were constructed locally, not requested. No oracle directory, official suite, Postman collection, backend/frontend implementation, protected document or source file was edited or accessed beyond the explicitly permitted read-only inputs.
+
+**Final stop point:** steps 4–5 complete under the authorised continuation; zero unexplained citation failures. No step 6 work, commit, push or merge. No further work performed.

@@ -13,6 +13,9 @@ As a member, I want to comment on an article, so that I can respond to the autho
 - **BR-16.1** The comment form ("Write a comment...", "Post Comment") is in the comments section at the bottom of the article page. — `templates.md` L562-566; `routing.md` L17
 - **BR-16.2** Posting requires authentication; body is required; the created comment (id, createdAt, updatedAt, body, author) is returned with status 201. — `endpoints.md` L207-209; `api-response-format.md` L108-122; `openapi.yml` L338-365
 - **BR-16.3** Comments cannot be edited after posting. — `features.md` L10
+- **BR-16.4** The create-comment request body contains a required comment object whose body field is required. — `openapi.yml` L630-636; `openapi.yml` L882-893
+- **BR-16.5** A Comment requires id, createdAt, updatedAt, body and author. id is integer, createdAt and updatedAt are date-time strings, body is string and author is a Profile. — `openapi.yml` L609-629
+- **BR-16.6** POST /api/articles/{slug}/comments declares 201 Comment, 401 Unauthorized, 404 NotFound and 422 GenericError responses. — `openapi.yml` L338-365
 
 ### Acceptance criteria
 
@@ -80,6 +83,7 @@ As a reader, I want to read the discussion under an article, so that I can see w
 - **BR-17.1** GET /api/articles/:slug/comments works with or without authentication and returns a list of comments. — `endpoints.md` L211-215; `api-response-format.md` L127-141
 - **BR-17.2** Each comment shows the author's picture and name, the date and the text. — `templates.md` L577-582
 - **BR-17.3** Comments cannot be edited. — `features.md` L10
+- **BR-17.4** GET /api/articles/{slug}/comments declares 200 with a comments array, 401 Unauthorized, 404 NotFound and 422 GenericError responses; optional-auth token handling remains OQ-03.4. — `openapi.yml` L315-337; `openapi.yml` L675-685
 
 ### Acceptance criteria
 
@@ -121,7 +125,7 @@ As a comment author, I want to delete my comment, so that I can remove something
 
 - **BR-18.1** Deleting requires authentication and returns status 204. — `endpoints.md` L217-221; `openapi.yml` L366-398
 - **BR-18.2** The delete icon is shown only to the comment's author. — `routing.md` L18; `templates.md` L599-600
-- **BR-18.3** Other members get 403 with a "comment" error key. — `openapi.yml` L366-398; `openapi.yml` L791-792
+- **BR-18.4** DELETE /api/articles/{slug}/comments/{id} requires an integer id path parameter and declares 204 with no content, 401 Unauthorized, 403 Forbidden, 404 NotFound and 422 GenericError responses; the ownership condition remains OQ-18.2. — `openapi.yml` L366-398; `openapi.yml` L768-770
 
 ### Acceptance criteria
 
@@ -153,6 +157,8 @@ Scenario: Others do not see the delete icon
 
 Spec: `openapi.yml` L366-398
 
+**BA-ASSUMPTION:** API author-only comment deletion awaits OQ-18.2; 403 is declared without this predicate.
+
 ```gherkin
 Scenario: Another member tries to delete via API
   Given "anna" commented on an article
@@ -165,3 +171,4 @@ Scenario: Another member tries to delete via API
 ### Open questions
 
 - **OQ-18.1** May an article's author delete other people's comments on their own article? → [open-questions.md](../open-questions.md)
+- **OQ-18.2** Which users may delete a comment through the API, and does being a non-author always cause 403? → [open-questions.md](../open-questions.md)
