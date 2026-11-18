@@ -74,6 +74,7 @@ First, split business rules from interface contract (`DECISIONS.md` D-06). Class
 - **BR (business rule)** if it states a condition and an outcome a user or the business cares about, even if it names a status code or message (e.g. "a taken username is rejected with 409 *has already been taken*"). If in doubt, keep it BR.
 Move IC items into a per-story section `### Interface contract (not for BA review)` with IDs `IC-nn.m` (nn = story number), keeping text and citations unchanged. Retire the old BR IDs and log each move in `CHANGELOG.md`. Update every reference (traceability, coverage list, scenarios, open questions). The BA review workbook lists BR only.
 Check: a classification table in `traceability.md` (old ID, new ID, class, one-line reason); counts of BR and IC in `README.md`; the citation check still passes.
+In the hand-back, list separately as **borderline** every rule moved to IC that mentions an actor, a permission, a limit or a condition, with the reason it is not a business rule. Dmitry reviews only that list.
 Tag BA judgement (`BA-ASSUMPTION`), keep status `Draft`, and make each story readable on its own. Plain business language in the story and rules; technical detail (endpoints, status codes) only in API-level scenarios.
 
 **Step 7: generate Gherkin feature files** from the same data (one `.feature` per epic), by script, never by hand.
