@@ -69,6 +69,11 @@ Map the requirement statements of the specification to rules or scenarios. Use t
 Check: a coverage list where every item is covered by a BR/AC ID, or marked out of scope with a reason (for example "implementation detail", "styling").
 
 **Step 6: label and tidy for a human reader**
+First, split business rules from interface contract (`DECISIONS.md` D-06). Classify every rule with this test:
+- **IC (interface contract)** if it *only* lists declared status codes, schema fields or types, request/response shapes, markup or CSS classes, or fixed static text (headings, banner, footer).
+- **BR (business rule)** if it states a condition and an outcome a user or the business cares about, even if it names a status code or message (e.g. "a taken username is rejected with 409 *has already been taken*"). If in doubt, keep it BR.
+Move IC items into a per-story section `### Interface contract (not for BA review)` with IDs `IC-nn.m` (nn = story number), keeping text and citations unchanged. Retire the old BR IDs and log each move in `CHANGELOG.md`. Update every reference (traceability, coverage list, scenarios, open questions). The BA review workbook lists BR only.
+Check: a classification table in `traceability.md` (old ID, new ID, class, one-line reason); counts of BR and IC in `README.md`; the citation check still passes.
 Tag BA judgement (`BA-ASSUMPTION`), keep status `Draft`, and make each story readable on its own. Plain business language in the story and rules; technical detail (endpoints, status codes) only in API-level scenarios.
 
 **Step 7: generate Gherkin feature files** from the same data (one `.feature` per epic), by script, never by hand.
@@ -116,6 +121,9 @@ As a visitor, I want to …, so that … (so-that: BA-ASSUMPTION)
 
 ### Open questions
 - **OQ-01.1** What are the password rules? → `open-questions.md`
+
+### Interface contract (not for BA review)
+- **IC-01.1** <contract detail> — `openapi.yml` L…
 ```
 
 ## 6. Done when

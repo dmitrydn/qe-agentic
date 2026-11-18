@@ -29,6 +29,7 @@ Sheet **Stories** in `review/BA-review.xlsx`, one row per user story. For each s
 
 - Does the "As a … I want … so that …" make sense for a blogging site? (The "so that" part and the personas were written by the agent; they are tagged `BA-ASSUMPTION`.)
 - Do the business rules say what a user of this site should be able to do, in plain language?
+- Skip the section **Interface contract (not for BA review)** under each story. It lists technical detail (status codes, data fields, page markup) taken from the specification for the test agents; it needs no business decision (`DECISIONS.md` D-06).
 - Is anything obviously missing that a user would expect? (Note it; don't invent the rule. It becomes a new open question.)
 
 Record in the sheet:
