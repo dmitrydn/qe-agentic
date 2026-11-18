@@ -46,11 +46,11 @@ git checkout --detach ebbcdeb8d55b42a3a613c787560498b8ef10003f
 Check: `git rev-parse HEAD` prints `ebbcdeb8…`, and `ls specs/api` shows only `openapi.yml`.
 
 **Step 2: convert the backlog to Markdown, unchanged**
-Write a script (keep it under `sandboxes/realworld/requirements/tools/`) that reads the xlsx and writes the files in §5. Content must match the spreadsheet word for word at this stage.
+Write a script (keep it under `sandboxes/realworld/requirements/tools/`) that reads the xlsx and writes **only** `README.md`, `epics/EP-0n-*.md`, `open-questions.md` and `traceability.md` (at this stage only the baseline R-ID → story mapping from the Traceability sheet). Content must match the spreadsheet word for word at this stage. Feature files (step 7), `review/`, the `REVIEW-GUIDE.md` §6 list and `CHANGELOG.md` (step 8) are **not** written in run 1.
 Check: the script reports 7 epics, 23 stories, 89 rules, 72 scenarios, 54 open questions, 73 traceability rows.
 
 **Step 3: re-verify every citation at `ebbcdeb8`**
-For each cited file and line range, confirm the range exists and contains the cited wording (keyword match). Record failures; don't fix them yet.
+For each of the 284 citations on the Business Rules, Acceptance Criteria and Open Questions sheets, confirm the cited file and line range exist and contain the cited wording (keyword match). The Backlog sheet's *Spec traces (rules)* column is a roll-up: only confirm each entry appears among that story's business-rule citations. Record failures; don't fix them yet. Write the report to `sandboxes/realworld/requirements/citation-report.md`.
 Check: a citation report with the number checked, passed and failed.
 
 **Step 4: reconcile with the gap analyses**
